@@ -1,10 +1,12 @@
 import Home from './pages/home'
+import NavBar from './components/navbar'
 
-import './App.css'
+import '../src/style/global.scss'
 
 function App () {
   return (
     <>
+        <NavBar />
         <Home />
     </>
 

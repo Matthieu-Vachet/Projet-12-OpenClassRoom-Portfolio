@@ -1,11 +1,14 @@
-import { Fragment } from "react";
-import Navbar from "../../components/navbar";
+import TopBackground from "../../components/background/topBackground";
+import Header from "../../components/header";
+import SocialBar from "../../components/socialBar";
 
 function Home () {
   return (
-    <div>
-        <Navbar />
-    </div>
+    <>
+      <Header />
+      <TopBackground />
+      <SocialBar />
+    </>
 
   );
 }
