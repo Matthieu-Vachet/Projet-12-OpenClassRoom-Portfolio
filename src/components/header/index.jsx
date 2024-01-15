@@ -1,13 +1,11 @@
 import './style.scss';
-import Logo from "../../../public/images/LogoM.svg";
+import Logo from "../../assets/images/LogoM.svg";
 
 
-function Header() {
+export default function Header() {
     return (
         <header>
             <img className="logo_header" src={Logo} alt="logo" />
         </header>
     );
-    }
-
-export default Header;
+}

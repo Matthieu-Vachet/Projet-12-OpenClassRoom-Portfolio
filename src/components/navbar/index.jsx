@@ -8,7 +8,7 @@ import { BiMessageSquareDetail } from 'react-icons/bi';
 
 import './style.scss';
 
-function Navbar() {
+export default function Navbar() {
 
   const [activeNav, setActiveNav] = useState('#home');
 
@@ -22,5 +22,3 @@ function Navbar() {
     </nav>
   );
 }
-
-export default Navbar;

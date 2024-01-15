@@ -1,6 +1,6 @@
 import './style.scss'
 
-function TopBackground() {
+export default function TopBackground() {
     return (
         <div className='topBackground'>
             <div className='ellipse1' />
@@ -9,5 +9,3 @@ function TopBackground() {
         </div>
     )
 }
-
-export default TopBackground
