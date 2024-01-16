@@ -8,7 +8,7 @@ export default function ScrollMouse() {
                     <div className='scroller'></div>
                 </div>
             </div>
-            <span>Scroll me</span>
+            <span className='scroll-text'>Scroll me</span>
         </div>
     );
 }

@@ -3,9 +3,47 @@
 header {
     width: 100vw;
     height: auto;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+
+    .logo_header {
+        width: 8rem;
+        color: $darkWhite70;
+    }
+
+    .button_header {
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-right: 2%;
+        margin-top: 20px;
+        
+        .button_fr,
+        .button_en {
+            width: 42px;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid $strockGlass;
+            background-color: $glassGlassDark60;
+            backdrop-filter: blur(2px);
+            cursor: pointer;
+
+            .text_fr,
+            .text_en {
+                @include spaceGrotesk16Regular;
+                color: $basicWhite;
+            }
+
+            
+        }
+        .button_sun {
+            font-size: 30px;
+            color: $basicDarkGray;
+            cursor: pointer;
+        }
+    }
 }
-.logo_header {
-    width: 114px;
-    height: 80px;
-    color: $darkWhite70;
-}
+
