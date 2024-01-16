@@ -1,16 +1,6 @@
-// Variable color
-
-$basic-black: #0d0d0d;
-$Dark-white-70: #ffffffb2;
-$Dark-grey: #808080;
-$Light-grey: #c5c5c5;
-
-// Variable background
-
-$glass-glass-dark-60: rgba(24, 24, 29, 0.3);
-$dark-white-10: rgba(255, 255, 255, 0.1);
-
-$Strock-Glass: rgba(192, 192, 199, 0.721);
+/*
+IMPORT FONT COPPERPLATE
+*/
 
 @font-face {
     font-family: 'Copperplate';
@@ -19,7 +9,11 @@ $Strock-Glass: rgba(192, 192, 199, 0.721);
     font-style: normal;
 }
 
-// VARIABLE COLOR
+
+/*
+VARIABLES COLORS
+*/
+
 $strockGlass: rgba(182, 181, 187, 0.4);
 $basicBlack: rgba(13, 13, 13, 1);
 $basicDarkGray: rgba(128, 128, 128, 1);
@@ -39,7 +33,11 @@ $lightFaintWhite: rgba(243, 243, 243, 1);
 $glassGlassDark60: rgba(24, 24, 29, 0.6);
 $glassGlassDark30: rgba(24, 24, 29, 0.3);
 
-//MIXIN FONT SPACE GROTESK
+
+/*
+MIXINS FONT SPACE GROTESK
+*/
+
 @mixin spaceGrotesk25Regular() {
     font-size: 25px;
     font-family: 'Space Grotesk';
@@ -389,7 +387,11 @@ $glassGlassDark30: rgba(24, 24, 29, 0.3);
     text-transform: none;
 }
 
-//MIXIN FONT COPPERPLATE
+
+/*
+MIXINS FONT COPPERPLATE
+*/
+
 @mixin copperplate250Bold() {
     font-size: 250px;
     font-family: 'Copperplate';
@@ -472,7 +474,41 @@ $glassGlassDark30: rgba(24, 24, 29, 0.3);
     text-transform: none;
 }
 
-//MIXIN BLUR GLASS
+
+/*
+MIXINS FONT COPPERPLATE
+*/
+
 @mixin blurGlass() {
     backdrop-filter: blur(4px);
+}
+
+
+
+/*
+MIXINS MEDIA QUERIES
+*/
+
+@mixin mobile {
+    @media screen and (max-widht: 719px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: 720px) and (max-width: 1023px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 1024px) and (max-width: 1439px) {
+        @content;
+    }
+}
+
+@mixin largeDesktop {
+    @media screen and (min-width: 1440px) {
+        @content;
+    }
 }

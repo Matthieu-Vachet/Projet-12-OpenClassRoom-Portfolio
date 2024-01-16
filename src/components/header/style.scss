@@ -1,7 +1,11 @@
 @import '../../style/variable.scss';
 
+header {
+    width: 100vw;
+    height: auto;
+}
 .logo_header {
     width: 114px;
     height: 80px;
-    color: $Dark-white-70;
+    color: $darkWhite70;
 }

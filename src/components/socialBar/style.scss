@@ -9,6 +9,7 @@
     padding: 5px;
     margin-left: 15px;
     gap: 1px;
+    z-index: 1;
 
     .social_top_bar {
         display: flex;
@@ -17,7 +18,7 @@
     }
 
     .social_link {
-        color: $Dark-grey;
+        color: $basicDarkGray;
         font-size: 35px;
         cursor: pointer;
         transition: 0.1s;

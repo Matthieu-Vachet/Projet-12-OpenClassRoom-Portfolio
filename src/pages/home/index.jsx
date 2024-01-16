@@ -12,7 +12,9 @@ export default function Home() {
             <TopBackground />
             <div className='heroBanner'>
                 <SocialBar />
+                <div>
                 <Hero />
+                </div>
             </div>
         </>
     );
