@@ -1,0 +1,106 @@
+.loader {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@-webkit-keyframes animate-svg-stroke-1 {
+    0% {
+        stroke-dashoffset: 2.5098971724510193px;
+        stroke-dasharray: 2.5098971724510193px;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 2.5098971724510193px;
+    }
+}
+
+@keyframes animate-svg-stroke-1 {
+    0% {
+        stroke-dashoffset: 2.5098971724510193px;
+        stroke-dasharray: 2.5098971724510193px;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 2.5098971724510193px;
+    }
+}
+
+.svg-elem-1 {
+    -webkit-animation: animate-svg-stroke-1 2s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
+    animation: animate-svg-stroke-1 2s cubic-bezier(0.47, 0, 0.745, 0.715) 0s both;
+}
+
+@-webkit-keyframes animate-svg-stroke-2 {
+    0% {
+        stroke-dashoffset: 1690.5252685546875px;
+        stroke-dasharray: 1690.5252685546875px;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 1690.5252685546875px;
+    }
+}
+
+@keyframes animate-svg-stroke-2 {
+    0% {
+        stroke-dashoffset: 1690.5252685546875px;
+        stroke-dasharray: 1690.5252685546875px;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 1690.5252685546875px;
+    }
+}
+
+.svg-elem-2 {
+    -webkit-animation: animate-svg-stroke-2 2s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s both;
+    animation: animate-svg-stroke-2 2s cubic-bezier(0.47, 0, 0.745, 0.715) 0.12s both;
+}
+
+@-webkit-keyframes animate-svg-stroke-3 {
+    0% {
+        stroke-dashoffset: 1056.2784423828125px;
+        stroke-dasharray: 1056.2784423828125px;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 1056.2784423828125px;
+    }
+}
+
+@keyframes animate-svg-stroke-3 {
+    0% {
+        stroke-dashoffset: 1056.2784423828125px;
+        stroke-dasharray: 1056.2784423828125px;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 1056.2784423828125px;
+    }
+}
+
+.svg-elem-3 {
+    -webkit-animation: animate-svg-stroke-3 2s cubic-bezier(0.47, 0, 0.745, 0.715) 0.24s both;
+    animation: animate-svg-stroke-3 2s cubic-bezier(0.47, 0, 0.745, 0.715) 0.24s both;
+}
+
+.st0 {
+    fill: none;
+}
+
+.st1 {
+    fill: none;
+    stroke: #949494;
+    stroke-width: 4;
+    stroke-miterlimit: 10;
+}
