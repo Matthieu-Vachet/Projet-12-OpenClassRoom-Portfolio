@@ -1,6 +1,8 @@
+import { motion } from 'framer-motion';
 import './style.scss';
 
 import Data from '../../data/data.json';
+import { TextHeroVariants } from '../../utils/framerMotion/Variante';
 import ScrollMouse from '../scrollMouse';
 
 export default function Hero() {
@@ -30,12 +32,17 @@ export default function Hero() {
                 />
             </svg>
             <div className='hero_content'>
-                <div className='hero_text'>
+                <motion.div
+                    className='hero_text'
+                    initial='hidden'
+                    animate='visible'
+                    variants={TextHeroVariants}
+                >
                     <h1>{Data.Information[0].firstname}</h1>
                     <h2>{Data.Information[0].name}</h2>
                     <h3>{Data.Information[0].profession}</h3>
                     <h4>{Data.Information[0].number}</h4>
-                </div>
+                </motion.div>
                 <ScrollMouse />
             </div>
         </div>
