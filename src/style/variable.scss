@@ -1,20 +1,478 @@
 // Variable color
 
-$basic-black: #0D0D0D;
-$Dark-white-70: #FFFFFFB2;
+$basic-black: #0d0d0d;
+$Dark-white-70: #ffffffb2;
 $Dark-grey: #808080;
-$Light-grey: #C5C5C5;
+$Light-grey: #c5c5c5;
 
 // Variable background
 
-$glass-glass-dark-60: rgba(24, 24, 29, 0.60);
-$dark-white-10: rgba(255, 255, 255, 0.10);
+$glass-glass-dark-60: rgba(24, 24, 29, 0.3);
+$dark-white-10: rgba(255, 255, 255, 0.1);
 
-$Strock-Glass: rgba(24, 24, 29, 0.60);
+$Strock-Glass: rgba(192, 192, 199, 0.721);
 
 @font-face {
     font-family: 'Copperplate';
     src: url('../assets/fonts/Copperplate_Gothic_Bold_Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
+}
+
+// VARIABLE COLOR
+$strockGlass: rgba(182, 181, 187, 0.4);
+$basicBlack: rgba(13, 13, 13, 1);
+$basicDarkGray: rgba(128, 128, 128, 1);
+$basicWhite: rgba(255, 255, 255, 1);
+$basicOnyx: rgba(24, 24, 24, 1);
+$basicMediumGray: rgba(128, 128, 128, 0.5);
+$basicLightGray: rgba(197, 197, 197, 1);
+$darkWhite10: rgba(255, 255, 255, 0.1);
+$darkWhite25: rgba(255, 255, 255, 0.25);
+$darkWhite70: rgba(255, 255, 255, 0.7);
+$darkBlack50: rgba(21, 21, 21, 0.5);
+$darkCardBorder: rgba(56, 55, 55, 1);
+$lightCardBorder: rgba(235, 235, 235, 1);
+$lightCardBg: rgba(246, 246, 246, 1);
+$lightMainBg: rgba(251, 251, 251, 1);
+$lightFaintWhite: rgba(243, 243, 243, 1);
+$glassGlassDark60: rgba(24, 24, 29, 0.6);
+$glassGlassDark30: rgba(24, 24, 29, 0.3);
+
+//MIXIN FONT SPACE GROTESK
+@mixin spaceGrotesk25Regular() {
+    font-size: 25px;
+    font-family: 'Space Grotesk';
+    font-weight: 400;
+    font-style: normal;
+    line-height: 164.6%;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk10Regular() {
+    font-size: 10px;
+    font-family: 'Space Grotesk';
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk10Medium() {
+    font-size: 10px;
+    font-family: 'Space Grotesk';
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk10Bold() {
+    font-size: 10px;
+    font-family: 'Space Grotesk';
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk11Regular() {
+    font-size: 11px;
+    font-family: 'Space Grotesk';
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk11Medium() {
+    font-size: 11px;
+    font-family: 'Space Grotesk';
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk11Bold() {
+    font-size: 11px;
+    font-family: 'Space Grotesk';
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk12Regular() {
+    font-size: 12px;
+    font-family: 'Space Grotesk';
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk12Medium() {
+    font-size: 12px;
+    font-family: 'Space Grotesk';
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk12Bold() {
+    font-size: 12px;
+    font-family: 'Space Grotesk';
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk14Regular() {
+    font-size: 14px;
+    font-family: 'Space Grotesk';
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk14Medium() {
+    font-size: 14px;
+    font-family: 'Space Grotesk';
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk14Bold() {
+    font-size: 14px;
+    font-family: 'Space Grotesk';
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk15Regular() {
+    font-size: 15px;
+    font-family: 'Space Grotesk';
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk15Medium() {
+    font-size: 15px;
+    font-family: 'Space Grotesk';
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk15Bold() {
+    font-size: 15px;
+    font-family: 'Space Grotesk';
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk16Regular() {
+    font-size: 16px;
+    font-family: 'Space Grotesk';
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk16Medium() {
+    font-size: 16px;
+    font-family: 'Space Grotesk';
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk16Bold() {
+    font-size: 16px;
+    font-family: 'Space Grotesk';
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk18Regular() {
+    font-size: 18px;
+    font-family: 'Space Grotesk';
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk18Medium() {
+    font-size: 18px;
+    font-family: 'Space Grotesk';
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk18Bold() {
+    font-size: 18px;
+    font-family: 'Space Grotesk';
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk20Regular() {
+    font-size: 20px;
+    font-family: 'Space Grotesk';
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk20Medium() {
+    font-size: 20px;
+    font-family: 'Space Grotesk';
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk20Bold() {
+    font-size: 20px;
+    font-family: 'Space Grotesk';
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk24Regular() {
+    font-size: 24px;
+    font-family: 'Space Grotesk';
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk24Medium() {
+    font-size: 24px;
+    font-family: 'Space Grotesk';
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk24Bold() {
+    font-size: 24px;
+    font-family: 'Space Grotesk';
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk32Regular() {
+    font-size: 32px;
+    font-family: 'Space Grotesk';
+    font-weight: 400;
+    font-style: normal;
+    line-height: 140%;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk32Medium() {
+    font-size: 32px;
+    font-family: 'Space Grotesk';
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk32Bold() {
+    font-size: 32px;
+    font-family: 'Space Grotesk';
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk40Regular() {
+    font-size: 40px;
+    font-family: 'Space Grotesk';
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk40Medium() {
+    font-size: 40px;
+    font-family: 'Space Grotesk';
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk40Bold() {
+    font-size: 40px;
+    font-family: 'Space Grotesk';
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk48Regular() {
+    font-size: 48px;
+    font-family: 'Space Grotesk';
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk48Medium() {
+    font-size: 48px;
+    font-family: 'Space Grotesk';
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk48Bold() {
+    font-size: 48px;
+    font-family: 'Space Grotesk';
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk60Regular() {
+    font-size: 60px;
+    font-family: 'Space Grotesk';
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk60Medium() {
+    font-size: 60px;
+    font-family: 'Space Grotesk';
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk60Bold() {
+    font-size: 60px;
+    font-family: 'Space Grotesk';
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk80Regular() {
+    font-size: 80px;
+    font-family: 'Space Grotesk';
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk80Medium() {
+    font-size: 80px;
+    font-family: 'Space Grotesk';
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin spaceGrotesk80Bold() {
+    font-size: 80px;
+    font-family: 'Space Grotesk';
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+}
+
+//MIXIN FONT COPPERPLATE
+@mixin copperplate250Bold() {
+    font-size: 250px;
+    font-family: 'Copperplate';
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.5em;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin copperplate200Bold() {
+    font-size: 200px;
+    font-family: 'Copperplate';
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.5em;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin copperplate170Bold() {
+    font-size: 170px;
+    font-family: 'Copperplate';
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.5em;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin copperplate140Bold() {
+    font-size: 140px;
+    font-family: 'Copperplate';
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.5em;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin copperplate100Bold() {
+    font-size: 100px;
+    font-family: 'Copperplate';
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.5em;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin copperplate40Bold() {
+    font-size: 40px;
+    font-family: 'Copperplate';
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.4em;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin copperplate60Bold() {
+    font-size: 60px;
+    font-family: 'Copperplate';
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.4em;
+    text-decoration: none;
+    text-transform: none;
+}
+@mixin copperplate80Bold() {
+    font-size: 80px;
+    font-family: 'Copperplate';
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.4em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+@mixin copperplate20Bold() {
+    font-size: 20px;
+    font-family: 'Copperplate';
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.4em;
+    text-decoration: none;
+    text-transform: none;
+}
+
+//MIXIN BLUR GLASS
+@mixin blurGlass() {
+    backdrop-filter: blur(4px);
 }

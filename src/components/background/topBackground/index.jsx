@@ -1,4 +1,4 @@
-import './style.scss'
+import './style.scss';
 
 export default function TopBackground() {
     return (
@@ -7,5 +7,5 @@ export default function TopBackground() {
             <div className='ellipse2' />
             <div className='ellipse3' />
         </div>
-    )
+    );
 }

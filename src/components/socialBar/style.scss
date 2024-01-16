@@ -1,4 +1,4 @@
-@import "../../style/variable.scss";
+@import '../../style/variable.scss';
 
 .socialBar {
     width: 3%;
@@ -7,6 +7,7 @@
     flex-direction: column;
     align-items: center;
     padding: 5px;
+    margin-left: 15px;
     gap: 1px;
 
     .social_top_bar {
@@ -16,7 +17,7 @@
     }
 
     .social_link {
-        color : $Dark-grey;
+        color: $Dark-grey;
         font-size: 35px;
         cursor: pointer;
         transition: 0.1s;
@@ -30,5 +31,4 @@
     .social_bottom_bar {
         height: 200px;
     }
-
 }

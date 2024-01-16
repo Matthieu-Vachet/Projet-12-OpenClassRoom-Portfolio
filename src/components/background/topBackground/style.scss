@@ -1,33 +1,46 @@
 .topBackground {
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 0 auto;
     position: absolute;
     z-index: -1;
 
     .ellipse1 {
-        width: 25%;
+        width: 30%;
         height: 144.076px;
-        border-radius: 759.682px;
+        border-radius: 500px;
         background: rgba(63, 100, 233, 0.43);
-        filter: blur(120px);
+        filter: blur(100px);
+        animation: move 3s infinite;
     }
 
     .ellipse2 {
         width: 50%;
         height: 275.792px;
-        border-radius: 759.682px;
+        border-radius: 500px;
         background: rgba(233, 63, 63, 0.43);
-        filter: blur(120px);
+        filter: blur(100px);
+        animation: move 4s infinite;
     }
 
     .ellipse3 {
-        width: 25%;
+        width: 30%;
         height: 144.646px;
-        border-radius: 759.682px;
+        border-radius: 500px;
         background: rgba(255, 184, 0, 0.43);
-        filter: blur(120px);
+        filter: blur(100px);
+        animation: move 3s infinite;
+    }
+
+    @keyframes move {
+        0% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(100px);
+        }
+        100% {
+            transform: translateX(0);
+        }
     }
 }
