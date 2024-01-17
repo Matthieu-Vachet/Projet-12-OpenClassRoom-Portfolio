@@ -3,7 +3,7 @@
 .loader {
     width: 100vw;
     height: 100vh;
-    background-color: $basicBlack;
+    background-color: var(--basicBlack);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,6 +12,12 @@
 .svg-loader {
     width: 70%;
     height: 70%;
+
+    @include mobile {
+
+        width: 100%;
+        height: 100%;
+    }
 }
 
 @-webkit-keyframes animate-svg-stroke-1 {

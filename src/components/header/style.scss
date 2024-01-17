@@ -1,16 +1,22 @@
 @import '../../style/variable.scss';
 
 header {
+    position: absolute;
     width: 100vw;
     height: auto;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
 
+    @include mobile {
+        display: none;
+    }
+
 
     .logo_header {
         width: 8rem;
-        color: $darkWhite70;
+        color: var(--darkWhite70);
+
     }
 
     .button_header {
@@ -26,22 +32,26 @@ header {
             width: 42px;
             height: 30px;
             border-radius: 5px;
-            border: 1px solid $strockGlass;
-            background-color: $glassGlassDark60;
+            border: 1px solid var(--strockGlass);
+            background-color: var(--glassGlassDark60);
             backdrop-filter: blur(2px);
             cursor: pointer;
+
+            &:hover {
+                background-color: var(--strockGlass);
+            }
 
             .text_fr,
             .text_en {
                 @include spaceGrotesk16Regular;
-                color: $basicWhite;
+                color: var(--basicWhite);
             }
 
             
         }
         .button_sun {
             font-size: 30px;
-            color: $basicDarkGray;
+            color: var(--basicDarkGray);
             cursor: pointer;
         }
     }

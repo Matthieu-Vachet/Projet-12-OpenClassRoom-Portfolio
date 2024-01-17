@@ -5,10 +5,16 @@
     height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: center;
 
     .hero_logo {
-        width: 80%;
-        height: 80%;
+        width: 90%;
+        height: 90%;
+
+        @include mobile {
+            width: 100%;
+            height: 100%;
+        }
     }
 
     .hero_content {
@@ -23,32 +29,44 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            color: $lightMainBg;
-            // width: 80%;
-            // height: 80%;
+            color: var(--lightMainBg);
             text-align: center;
 
             h1 {
                 @include copperplate80Bold;
-                margin-top: 150px;
+                margin-top: 200px;
                 margin-bottom: 0px;
+
+                @include mobile {
+                    margin-top: 0;
+                    @include copperplate40Bold;
+                }
             }
 
             h2 {
                 @include copperplate80Bold;
                 margin: 0px;
+
+                @include mobile {
+                    @include copperplate40Bold;
+                }
             }
 
             h3 {
                 @include spaceGrotesk40Medium;
                 margin-top: 27px;
                 margin-bottom: 0px;
+
+                @include mobile {
+                    @include spaceGrotesk25Regular;
+                }
             }
 
             h4 {
                 @include copperplate20Bold;
                 margin-top: 0;
                 margin-bottom: 100px;
+
             }
         }
     }

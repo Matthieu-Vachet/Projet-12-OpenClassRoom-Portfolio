@@ -3,10 +3,12 @@
 html {
     width: 100vw;
     height: 100vh;
-    background-color: $basicBlack;
+    background-color: var(--basicBlack);
     overflow-x: hidden;
 }
 
 body {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }

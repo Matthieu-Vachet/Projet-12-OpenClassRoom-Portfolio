@@ -2,23 +2,38 @@
 
 .socialBar {
     width: 3%;
+    height: 100vh;
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 5px;
     margin-left: 15px;
     gap: 1px;
     z-index: 1;
 
+    @include mobile {
+        flex-direction: row;
+        width: 100%;
+        margin: 0;
+        gap: 15px;
+        
+    }
+
     .social_top_bar {
         display: flex;
         height: 200px;
         margin-bottom: 5px;
+
+
+        @include mobile {
+            display: none;
+        }
     }
 
     .social_link {
-        color: $basicDarkGray;
+        color: var(--basicDarkGray);
         font-size: 35px;
         cursor: pointer;
         transition: 0.1s;
@@ -31,5 +46,9 @@
 
     .social_bottom_bar {
         height: 200px;
+
+        @include mobile {
+            display: none;
+        }
     }
 }

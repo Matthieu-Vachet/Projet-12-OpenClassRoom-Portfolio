@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 import { AiOutlineHome } from 'react-icons/ai';
 import { AiOutlineUser } from 'react-icons/ai';
@@ -13,7 +14,13 @@ export default function Navbar() {
     const [activeNav, setActiveNav] = useState('#home');
 
     return (
-        <div className="navbar">
+        
+            <motion.div
+                initial={{ y: -50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 1.9, duration: 1, type: 'spring' }}
+                className='navbar'
+            >
             <nav>
                 <a
                     href='#home'
@@ -51,6 +58,6 @@ export default function Navbar() {
                     <BiMessageSquareDetail />
                 </a>
             </nav>
-        </div>
+            </motion.div>
     );
 }

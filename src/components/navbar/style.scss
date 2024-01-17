@@ -4,7 +4,7 @@
 
     width: 100vw;
     nav {
-        background: $glassGlassDark60;
+        background: var(--glassGlassDark60);
         width: max-content;
         z-index: 2;
         position: fixed;
@@ -14,7 +14,7 @@
         justify-content: space-between;
         align-items: center;
         border-radius: 12px;
-        border: 1px solid $strockGlass;
+        border: 1px solid var(--strockGlass);
         backdrop-filter: blur(2px);
         margin-top: 1%;
         gap: 1px;
@@ -29,18 +29,18 @@
             padding: 8px 10px;
 
             &:hover {
-                background: $darkWhite10;
+                background: var(--darkWhite10);
             }
 
             &.active {
-                background: $darkWhite10;
+                background: var(--darkWhite10);
             }
         }
 
         svg {
             width: 24px;
             height: 24px;
-            color: $basicLightGray;
+            color: var(--basicLightGray);
         }
     }
 }

@@ -1,4 +1,5 @@
 import './style.scss';
+import { motion } from 'framer-motion';
 
 // Importing icons from react-icons
 import { FaTwitterSquare } from 'react-icons/fa';
@@ -12,21 +13,68 @@ import LineBottom from '../../assets/LineBottom.svg';
 
 export default function SocialBar() {
     return (
-        <div className='socialBar'>
-            <img className='social_top_bar' src={LineTop}></img>
-            <a className='social_link' href='#' target='_blank'>
+        <motion.div
+            className='socialBar'
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2, ease: 'easeInOut' }}
+        >
+            <motion.img
+                className='social_top_bar'
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 2.1, duration: 1.5, ease: 'easeInOut' }}
+                src={LineTop}
+                alt='Matthieu Vachet social bar top line'
+            />
+            <motion.a
+                initial={{ x: -50, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ delay: 1.5, duration: 0.5, type: 'spring' }}
+                className='social_link'
+                aria-hidden='true'
+                title="Matthieu Vachet' GitHub Profile"
+            >
                 <FaLinkedin />
-            </a>
-            <a className='social_link' href='#' target='_blank'>
+            </motion.a>
+            <motion.i
+                initial={{ x: -50, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ delay: 1.7, duration: 0.5, type: 'spring' }}
+                className='social_link'
+                aria-hidden='true'
+                title="Matthieu Vachet' LinkedIn Profile"
+            >
                 <FaTwitterSquare />
-            </a>
-            <a className='social_link' href='#' target='_blank'>
+            </motion.i>
+            <motion.i
+                initial={{ x: -50, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ delay: 1.9, duration: 0.5, type: 'spring' }}
+                className='social_link'
+                aria-hidden='true'
+                title="Matthieu Vachet' Instagram Profile"
+            >
                 <FaGithubSquare />
-            </a>
-            <a className='social_link' href='#' target='_blank'>
+            </motion.i>
+            <motion.i
+                initial={{ x: -50, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ delay: 2.1, duration: 0.5, type: 'spring' }}
+                className='social_link'
+                aria-hidden='true'
+                title="Matthieu Vachet' Twitter Profile"
+            >
                 <IoLogoDiscord />
-            </a>
-            <img className='social_bottom_bar' src={LineBottom}></img>
-        </div>
+            </motion.i>
+            <motion.img
+                className='social_top_bar'
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 2.1, duration: 1.5, ease: 'easeInOut' }}
+                src={LineBottom}
+                alt='Matthieu Vachet social bar bottom line'
+            />
+        </motion.div>
     );
 }
