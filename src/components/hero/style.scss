@@ -41,6 +41,10 @@
                     margin-top: 0;
                     @include copperplate40Bold;
                 }
+
+                @include tablet {
+                    @include copperplate60Bold;
+                }
             }
 
             h2 {
@@ -49,6 +53,10 @@
 
                 @include mobile {
                     @include copperplate40Bold;
+                }
+
+                @include tablet {
+                    @include copperplate60Bold;
                 }
             }
 
@@ -60,13 +68,16 @@
                 @include mobile {
                     @include spaceGrotesk25Regular;
                 }
+
+                @include tablet {
+                    @include spaceGrotesk32Regular;
+                }
             }
 
             h4 {
                 @include copperplate20Bold;
                 margin-top: 0;
                 margin-bottom: 100px;
-
             }
         }
     }

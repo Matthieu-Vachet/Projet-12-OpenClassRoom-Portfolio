@@ -12,7 +12,7 @@ export default function Header() {
                 className='logo_header'
                 initial='initial'
                 animate='animate'
-                transition='transition'
+                transition={{ delay: 1.9, duration: 1, type: 'spring' }}
                 variants={HeaderVariants}
                 src={Logo}
                 alt='Matthieu Vachet Logo portfolio'
@@ -20,7 +20,7 @@ export default function Header() {
             <motion.div
                 initial='initial'
                 animate='animate'
-                transition='transition'
+                transition={{ delay: 1.9, duration: 1, type: 'spring' }}
                 variants={HeaderVariants}
                 className='button_header'
             >

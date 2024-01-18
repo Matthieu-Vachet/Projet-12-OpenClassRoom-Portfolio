@@ -7,7 +7,7 @@ import './style.scss';
 
 export default function Home() {
     return (
-        <>
+        <section id='home'>
             <Header />
             <TopBackground />
             <div className='heroBanner'>
@@ -16,6 +16,6 @@ export default function Home() {
                 <Hero />
                 </div>
             </div>
-        </>
+        </section>
     );
 }

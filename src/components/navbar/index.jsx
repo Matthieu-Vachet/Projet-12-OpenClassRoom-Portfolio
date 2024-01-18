@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { HeaderVariants } from '../../utils/framerMotion/Variante';
 
@@ -11,54 +11,71 @@ import { BiMessageSquareDetail } from 'react-icons/bi';
 import './style.scss';
 
 export default function Navbar() {
-
     const [activeNav, setActiveNav] = useState('#home');
 
+    useEffect(() => {
+        const navbarHighlighter = () => {
+            const sections = document.querySelectorAll('section[id]');
+            let activeId = '#home';
+    
+            sections.forEach((section) => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= window.innerHeight / 2 && rect.top + rect.height > window.innerHeight / 2) {
+                    activeId = `#${section.getAttribute('id')}`;
+                }
+            });
+    
+            setActiveNav(activeId);
+            history.pushState(null, null, activeId);
+        };
+    
+        window.addEventListener('scroll', navbarHighlighter);
+    
+        return () => {
+            window.removeEventListener('scroll', navbarHighlighter);
+        };
+    }, []);
+
     return (
-        
-            <motion.div
-                initial='initial'   
-                animate='animate'
-                variants={HeaderVariants}
-                className='navbar'
-            >
+        <motion.div
+            initial='initial'
+            animate='animate'
+            transition={{ delay: 1.9, duration: 1, type: 'spring' }}
+            variants={HeaderVariants}
+            className='navbar'
+        >
             <nav>
                 <a
                     href='#home'
-                    onClick={() => setActiveNav('#home')}
                     className={activeNav === '#home' ? 'active' : ''}
                 >
                     <AiOutlineHome />
                 </a>
                 <a
                     href='#about'
-                    onClick={() => setActiveNav('#about')}
                     className={activeNav === '#about' ? 'active' : ''}
                 >
                     <AiOutlineUser />
                 </a>
                 <a
                     href='#experience'
-                    onClick={() => setActiveNav('#experience')}
                     className={activeNav === '#experience' ? 'active' : ''}
                 >
                     <BiBook />
                 </a>
                 <a
                     href='#portfolio'
-                    onClick={() => setActiveNav('#portfolio')}
                     className={activeNav === '#portfolio' ? 'active' : ''}
                 >
                     <RiServiceLine />
                 </a>
                 <a
                     href='#contact'
-                    onClick={() => setActiveNav('#contact')}
                     className={activeNav === '#contact' ? 'active' : ''}
                 >
                     <BiMessageSquareDetail />
                 </a>
             </nav>
-            </motion.div>
+        </motion.div>
     );
 }

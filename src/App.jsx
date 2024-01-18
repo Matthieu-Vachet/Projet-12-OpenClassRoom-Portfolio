@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import Home from './pages/home';
 import NavBar from './components/navbar';
 import Loader from './components/loader';
+import About from './pages/about';
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
                 >
                     <NavBar />
                     <Home />
+                    <About />
                 </motion.div>
             )}
         </AnimatePresence>

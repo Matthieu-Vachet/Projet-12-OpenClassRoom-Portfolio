@@ -50,7 +50,7 @@ export default function Hero() {
                     <motion.h1
                         initial='initial'
                         animate='animate'
-                        transition='transition'
+                        transition={{ delay: 0.6, duration: 0.8, type: 'spring' }}
                         variants={TextHeroFirstnameVariants}
                     >
                         {Data.Information[0].firstname}
@@ -58,7 +58,7 @@ export default function Hero() {
                     <motion.h2
                         initial='initial'
                         animate='animate'
-                        transition='transition'
+                        transition={{ delay: 0.7, duration: 0.8, type: 'spring'}}
                         variants={TextHeroNameVariants}
                     >
                         {Data.Information[0].name}
@@ -66,7 +66,7 @@ export default function Hero() {
                     <motion.h3
                         initial='initial'
                         animate='animate'
-                        transition='transition'
+                        transition={{ duration: 0.4, type: 'spring' }}
                         variants={TextHeroJobVariants}
                     >
                         {Data.Information[0].profession}
@@ -74,7 +74,7 @@ export default function Hero() {
                     <motion.h4
                         initial='initial'
                         animate='animate'
-                        transition='transition'
+                        transition={{ duration: 0.4, type: 'spring' }}
                         variants={TextHeroNumberVariants}
                     >
                         {/* Typewriter effect for dynamic text animation without a cursor */}
