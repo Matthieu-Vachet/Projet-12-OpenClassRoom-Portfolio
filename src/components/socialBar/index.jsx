@@ -7,9 +7,8 @@ import { FaLinkedin } from 'react-icons/fa';
 import { FaGithubSquare } from 'react-icons/fa';
 import { IoLogoDiscord } from 'react-icons/io5';
 
-// Importing line svg
-import LineTop from '../../assets/LineTop.svg';
-import LineBottom from '../../assets/LineBottom.svg';
+import LineTop from '../../assets/LineTopGray.svg';
+import LineBottom from '../../assets/LineBottomGray.svg';
 
 export default function SocialBar() {
     return (
@@ -25,7 +24,7 @@ export default function SocialBar() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 2.1, duration: 1.5, ease: 'easeInOut' }}
                 src={LineTop}
-                alt='Matthieu Vachet social bar top line'
+                alt='Matthieu Vachet social bar bottom line'
             />
             <motion.a
                 initial={{ x: -50, opacity: 0 }}

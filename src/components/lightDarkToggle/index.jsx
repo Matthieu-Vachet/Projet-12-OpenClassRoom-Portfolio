@@ -25,6 +25,7 @@ const LightDarkToggle = () => {
       ? {
           // Light Colors
           "--basicBlack": "rgba(13, 13, 13, 1)",
+          
         }
       : {
           // Dark Colors

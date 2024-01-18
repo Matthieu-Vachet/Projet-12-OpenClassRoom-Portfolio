@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { HeaderVariants } from '../../utils/framerMotion/Variante';
 
 import { AiOutlineHome } from 'react-icons/ai';
 import { AiOutlineUser } from 'react-icons/ai';
@@ -16,9 +17,9 @@ export default function Navbar() {
     return (
         
             <motion.div
-                initial={{ y: -50, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 1.9, duration: 1, type: 'spring' }}
+                initial='initial'   
+                animate='animate'
+                variants={HeaderVariants}
                 className='navbar'
             >
             <nav>
