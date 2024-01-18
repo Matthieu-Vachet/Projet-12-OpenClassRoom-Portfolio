@@ -8,8 +8,7 @@ export default function AnimatedBackground() {
                 xmlns='http://www.w3.org/2000/svg'
                 version='1.1'
                 viewBox='0 0 1422 800'
-                width='100%'
-                height='100%'
+                preserveAspectRatio='xMidYMid meet'
             >
                 <g
                     shapeRendering='crispEdges'
@@ -17,7 +16,7 @@ export default function AnimatedBackground() {
                     fill='none'
                     strokeWidth='2'
                     strokeOpacity={0.1}
-                    stroke='var(--basicDarkGray)'
+                    stroke='white'
                 >
                     <polygon points='1066.5,200 1422,0 1422,200' className='svg-background-1'></polygon>
                     <polygon
