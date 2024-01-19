@@ -18,10 +18,10 @@ export default function AnimatedBackground() {
             },
             { threshold: 0.1 }
         );
-    
+
         const sections = document.querySelectorAll('section[id]');
         sections.forEach((section) => observer.observe(section));
-    
+
         return () => {
             sections.forEach((section) => observer.unobserve(section));
         };

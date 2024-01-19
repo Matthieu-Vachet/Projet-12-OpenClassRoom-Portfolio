@@ -2,9 +2,7 @@ import './style.scss';
 import { motion } from 'framer-motion';
 
 // Importing icons from react-icons
-import { FaTwitterSquare } from 'react-icons/fa';
-import { FaLinkedin } from 'react-icons/fa';
-import { FaGithubSquare } from 'react-icons/fa';
+import { FaTwitterSquare, FaGithubSquare, FaLinkedin  } from 'react-icons/fa';
 import { IoLogoDiscord } from 'react-icons/io5';
 
 import LineTop from '../../assets/LineTopGray.svg';

@@ -2,15 +2,16 @@ import { motion } from 'framer-motion';
 import './style.scss';
 import '../../style/variable.scss';
 
-import Data from '../../data/data.json';
+import info from '../../data/constants';
 import ScrollMouse from '../scrollMouse';
 import TypewriterComponent from 'typewriter-effect';
-import { 
-    TextHeroFirstnameVariants, 
-    TextHeroNameVariants, 
+import {
+    TextHeroFirstnameVariants,
+    TextHeroNameVariants,
     TextHeroJobVariants,
     TextHeroNumberVariants
 } from '../../utils/framerMotion/Variante';
+
 
 export default function Hero() {
     return (
@@ -25,7 +26,7 @@ export default function Hero() {
             >
                 <path
                     d='M718.514 608.556L707.211 636.105L703.951 644.283L682.431 696.907L661.02 749.53L654.064 766.317L648.304 780.63L635.588 749.53L614.068 696.907L600.918 664.515L592.658 644.283L577.768 607.91L571.138 591.66L549.727 539.037L547.771 534.302L528.208 486.414L521.904 470.81L515.6 486.414L494.624 537.638L494.081 539.037L472.561 591.66H330.293L335.184 579.823L351.812 539.037L373.332 486.414L388.33 449.61L394.743 433.791L416.262 381.06L437.673 328.437L441.477 319.398L450.715 296.583L459.193 275.814L480.712 223.191L494.624 188.97L502.123 170.568L521.034 124.401L539.837 170.568L547.771 190.046L561.248 223.191L582.767 275.814L592.114 298.736L600.918 320.366L604.287 328.437L625.698 381.06L647.217 433.791L648.087 435.836L654.064 450.686L668.737 486.414L690.148 539.037L707.211 580.899L711.667 591.66L718.514 608.556Z'
-                    stroke= 'var(--basicDarkGray)'
+                    stroke='var(--basicDarkGray)'
                     strokeOpacity='0.1'
                     strokeWidth='4'
                     strokeMiterlimit='10'
@@ -40,28 +41,21 @@ export default function Hero() {
             </svg>
             <div className='hero_content'>
                 <div className='hero_text'>
-                    {/* <motion.div
-                    className='hero_text'
-                    initial='hidden'
-                    animate='visible'
-                    variants={TextHeroVariants}
-                > */}
-                    {/* Animated name */}
                     <motion.h1
                         initial='initial'
                         animate='animate'
                         transition={{ delay: 0.6, duration: 0.8, type: 'spring' }}
                         variants={TextHeroFirstnameVariants}
                     >
-                        {Data.Information[0].firstname}
+                        {info[0].firstname}
                     </motion.h1>
                     <motion.h2
                         initial='initial'
                         animate='animate'
-                        transition={{ delay: 0.7, duration: 0.8, type: 'spring'}}
+                        transition={{ delay: 0.7, duration: 0.8, type: 'spring' }}
                         variants={TextHeroNameVariants}
                     >
-                        {Data.Information[0].name}
+                        {info[0].name}
                     </motion.h2>
                     <motion.h3
                         initial='initial'
@@ -69,7 +63,7 @@ export default function Hero() {
                         transition={{ duration: 0.4, type: 'spring' }}
                         variants={TextHeroJobVariants}
                     >
-                        {Data.Information[0].profession}
+                        {info[0].profession}
                     </motion.h3>
                     <motion.h4
                         initial='initial'

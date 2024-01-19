@@ -1,12 +1,9 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { HeaderVariants } from '../../utils/framerMotion/Variante';
+import { navItems } from '../../data/constants';
 
-import { AiOutlineHome } from 'react-icons/ai';
-import { AiOutlineUser } from 'react-icons/ai';
-import { BiBook } from 'react-icons/bi';
-import { RiServiceLine } from 'react-icons/ri';
-import { BiMessageSquareDetail } from 'react-icons/bi';
+
 
 import './style.scss';
 
@@ -38,44 +35,26 @@ export default function Navbar() {
 
     return (
         <motion.div
-            initial='initial'
-            animate='animate'
-            transition={{ delay: 1.9, duration: 1, type: 'spring' }}
-            variants={HeaderVariants}
-            className='navbar'
+          initial='initial'
+          animate='animate'
+          transition={{ delay: 1.9, duration: 1, type: 'spring' }}
+          variants={HeaderVariants}
+          className='navbar'
         >
-            <nav>
+          <nav>
+            {navItems.map((item) => {
+              const Icon = item.icon;
+              return (
                 <a
-                    href='#home'
-                    className={activeNav === '#home' ? 'active' : ''}
+                  key={item.id}
+                  href={`#${item.id}`}
+                  className={activeNav === `#${item.id}` ? 'active' : ''}
                 >
-                    <AiOutlineHome />
+                  <Icon />
                 </a>
-                <a
-                    href='#about'
-                    className={activeNav === '#about' ? 'active' : ''}
-                >
-                    <AiOutlineUser />
-                </a>
-                <a
-                    href='#experience'
-                    className={activeNav === '#experience' ? 'active' : ''}
-                >
-                    <BiBook />
-                </a>
-                <a
-                    href='#portfolio'
-                    className={activeNav === '#portfolio' ? 'active' : ''}
-                >
-                    <RiServiceLine />
-                </a>
-                <a
-                    href='#contact'
-                    className={activeNav === '#contact' ? 'active' : ''}
-                >
-                    <BiMessageSquareDetail />
-                </a>
-            </nav>
+              );
+            })}
+          </nav>
         </motion.div>
-    );
+      );
 }
