@@ -1,10 +1,36 @@
 import './style.scss';
 import '../../../style/variable.scss';
 
+import { useState, useEffect } from 'react';
+
 export default function AnimatedBackground() {
+
+    const [key, setKey] = useState(Date.now());
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setKey(Date.now());
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+    
+        const sections = document.querySelectorAll('section[id]');
+        sections.forEach((section) => observer.observe(section));
+    
+        return () => {
+            sections.forEach((section) => observer.unobserve(section));
+        };
+    }, []);
+
     return (
         <div id='animatedBackground'>
             <svg
+                key={key}
                 xmlns='http://www.w3.org/2000/svg'
                 version='1.1'
                 viewBox='0 0 1422 800'
@@ -16,7 +42,7 @@ export default function AnimatedBackground() {
                     fill='none'
                     strokeWidth='2'
                     strokeOpacity={0.1}
-                    stroke='white'
+                    stroke='var(--basicDarkGray)'
                 >
                     <polygon points='1066.5,200 1422,0 1422,200' className='svg-background-1'></polygon>
                     <polygon
@@ -290,7 +316,7 @@ export default function AnimatedBackground() {
                         className='svg-background-73'
                     ></polygon>
                 </g>
-                <g fill='hsl(220, 62%, 45%)' strokeWidth='3' stroke='hsl(220, 43%, 13%)'></g>
+                <g fill='var(--basicDarkGray)' strokeWidth='3' stroke='var(--basicDarkGray)'></g>
             </svg>
         </div>
     );
