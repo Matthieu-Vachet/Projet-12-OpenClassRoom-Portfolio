@@ -9,29 +9,41 @@ IMPORT FONT COPPERPLATE
     font-style: normal;
 }
 
-
 /*
 VARIABLES COLORS
 */
 :root {
---strockGlass: rgba(182, 181, 187, 0.4);
---basicBlack: rgba(13, 13, 13, 1);
---basicDarkGray: rgba(128, 128, 128, 1);
---basicWhite: rgba(255, 255, 255, 1);
---basicOnyx: rgba(24, 24, 24, 1);
---basicMediumGray: rgba(128, 128, 128, 0.5);
---basicLightGray: rgba(197, 197, 197, 1);
---darkWhite10: rgba(255, 255, 255, 0.1);
---darkWhite25: rgba(255, 255, 255, 0.25);
---darkWhite70: rgba(255, 255, 255, 0.7);
---darkBlack50: rgba(21, 21, 21, 0.5);
---darkCardBorder: rgba(56, 55, 55, 1);
---lightCardBorder: rgba(235, 235, 235, 1);
---lightCardBg: rgba(246, 246, 246, 1);
---lightMainBg: rgba(251, 251, 251, 1);
---lightFaintWhite: rgba(243, 243, 243, 1);
---glassGlassDark60: rgba(24, 24, 29, 0.6);
---glassGlassDark30: rgba(24, 24, 29, 0.3);
+    --strockGlass: rgba(182, 181, 187, 0.4);
+    --basicBlack: rgba(13, 13, 13, 1);
+    --basicDarkGray: rgba(128, 128, 128, 1);
+    --basicWhite: rgba(255, 255, 255, 1);
+    --basicOnyx: rgba(24, 24, 24, 1);
+    --basicMediumGray: rgba(128, 128, 128, 0.5);
+    --basicLightGray: rgba(197, 197, 197, 1);
+    --darkWhite10: rgba(255, 255, 255, 0.1);
+    --darkWhite25: rgba(255, 255, 255, 0.25);
+    --darkWhite70: rgba(255, 255, 255, 0.7);
+    --darkBlack50: rgba(21, 21, 21, 0.5);
+    --darkCardBorder: rgba(56, 55, 55, 1);
+    --lightCardBorder: rgba(235, 235, 235, 1);
+    --lightCardBg: rgba(246, 246, 246, 1);
+    --lightMainBg: rgba(251, 251, 251, 1);
+    --lightFaintWhite: rgba(243, 243, 243, 1);
+    --glassGlassDark60: rgba(24, 24, 29, 0.6);
+    --glassGlassDark30: rgba(24, 24, 29, 0.3);
+}
+
+/*
+MIXINS GLASSEFFECT
+*/
+
+@mixin glassEffect {
+    background: var(--glassGlassDark30);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 /*
@@ -387,7 +399,6 @@ MIXINS FONT SPACE GROTESK
     text-transform: none;
 }
 
-
 /*
 MIXINS FONT COPPERPLATE
 */
@@ -474,7 +485,6 @@ MIXINS FONT COPPERPLATE
     text-transform: none;
 }
 
-
 /*
 MIXINS FONT COPPERPLATE
 */
@@ -482,8 +492,6 @@ MIXINS FONT COPPERPLATE
 @mixin blurGlass() {
     backdrop-filter: blur(4px);
 }
-
-
 
 /*
 MIXINS MEDIA QUERIES

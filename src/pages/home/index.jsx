@@ -13,7 +13,7 @@ export default function Home() {
             <div className='heroBanner'>
                 <SocialBar />
                 <div>
-                <Hero />
+                    <Hero />
                 </div>
             </div>
         </section>

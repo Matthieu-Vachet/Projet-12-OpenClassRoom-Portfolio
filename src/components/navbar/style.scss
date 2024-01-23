@@ -1,22 +1,26 @@
 @import '../../style/variable.scss';
 
 .navbar {
-
-    width: 100vw;
+    // width: 100vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
     nav {
-        background: var(--glassGlassDark60);
+        @include glassEffect;
         width: max-content;
-        z-index: 2;
-        position: fixed;
+        // z-index: 2;
+        // position: fixed;
+        // left: calc(50% - 100px);
+        position: absolute;
         left: 50%;
         transform: translateX(-50%);
+        top: 10px;
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        border-radius: 12px;
-        border: 1px solid var(--strockGlass);
-        backdrop-filter: blur(2px);
-        margin-top: 1%;
         gap: 1px;
 
         a {

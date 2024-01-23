@@ -6,9 +6,7 @@ import NavBar from './components/navbar';
 import Loader from './components/loader';
 import About from './pages/about';
 
-
 function App() {
-
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -22,7 +20,7 @@ function App() {
         <AnimatePresence>
             {loading ? (
                 <motion.div
-                    key="loader"
+                    key='loader'
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -32,7 +30,7 @@ function App() {
                 </motion.div>
             ) : (
                 <motion.div
-                    key="app"
+                    key='app'
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}

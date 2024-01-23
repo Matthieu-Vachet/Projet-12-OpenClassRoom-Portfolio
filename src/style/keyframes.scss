@@ -1,4 +1,3 @@
-
 // Keyframes scroll mouse
 @keyframes scroll {
     0% {
@@ -37,7 +36,8 @@
         transform: translateX(0);
     }
     50% {
-        transform: translateX(100px);
+        transform: translateX(70px);
+        transform: translateY(30px);
     }
     100% {
         transform: translateX(0);

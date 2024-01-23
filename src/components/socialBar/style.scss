@@ -18,14 +18,13 @@
         width: 100%;
         margin: 0;
         gap: 15px;
-        
     }
 
     .social_top_bar {
         display: flex;
         height: 200px;
         margin-bottom: 5px;
-        
+
         @include mobile {
             display: none;
         }
@@ -46,13 +45,8 @@
     .social_bottom_bar {
         height: 200px;
 
-        
-
         @include mobile {
             display: none;
         }
     }
-
-    
 }
-
