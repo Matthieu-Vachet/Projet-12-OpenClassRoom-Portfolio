@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
+    overscroll-behavior: none;
 }
 
 body {
@@ -12,8 +12,14 @@ body {
     height: 100vh;
     background-color: var(--basicBlack);
     overflow-x: hidden;
-    -webkit-overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }

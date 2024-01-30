@@ -3,6 +3,7 @@
 .toggleMode {
     display: flex;
     margin-top: 7px;
+    margin-left: 5px;
     background: none;
     border: none;
     outline: none;
@@ -13,11 +14,9 @@
     .toggleIcon {
         scale: 2;
         cursor: pointer;
-      }
-      
-      .toggleIcon:hover {
+    }
+
+    .toggleIcon:hover {
         color: white;
-      }
-  }
-  
-  
+    }
+}

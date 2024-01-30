@@ -12,11 +12,9 @@ header {
         display: none;
     }
 
-
     .logo_header {
         width: 8rem;
         color: var(--darkWhite70);
-
     }
 
     .button_header {
@@ -26,7 +24,7 @@ header {
         gap: 10px;
         margin-right: 2%;
         margin-top: 20px;
-        
+
         .button_fr,
         .button_en {
             width: 42px;
@@ -46,14 +44,6 @@ header {
                 @include spaceGrotesk16Regular;
                 color: var(--basicWhite);
             }
-
-            
-        }
-        .button_sun {
-            font-size: 30px;
-            color: var(--basicDarkGray);
-            cursor: pointer;
         }
     }
 }
-

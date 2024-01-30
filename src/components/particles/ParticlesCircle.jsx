@@ -1,15 +1,8 @@
-import TopBackground from '../../components/background/topBackground';
-import Header from '../../components/header';
-import Hero from '../../components/hero';
-import SocialBar from '../../components/socialBar';
-
 import { useEffect, useMemo, useState } from 'react';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
 
-import './style.scss';
-
-export default function Home() {
+const ParticlesCircle = () => {
     const [init, setInit] = useState(false);
 
     useEffect(() => {
@@ -26,12 +19,16 @@ export default function Home() {
 
     const options = useMemo(
         () => ({
+            fullScreen: {
+                enable: true,
+                zIndex: -1,
+            },
             background: {
                 color: {
-                    value: '#000000',
+                    value: 'none',
                 },
             },
-            fpsLimit: 120,
+            fpsLimit: 60,
             interactivity: {
                 events: {
                     onClick: {
@@ -48,66 +45,68 @@ export default function Home() {
                         quantity: 4,
                     },
                     repulse: {
-                        distance: 200,
+                        distance: 100,
                         duration: 0.4,
                     },
                 },
             },
             particles: {
                 color: {
-                    value: '#ffffff',
+                    value: '#fff',
                 },
                 links: {
-                    color: '#ffffff',
-                    distance: 150,
-                    enable: true,
-                    opacity: 0.5,
-                    width: 1,
+                    enable: false,
                 },
                 move: {
                     direction: 'none',
                     enable: true,
-                    outModes: {
-                        default: 'bounce',
-                    },
-                    random: false,
-                    speed: 6,
+                    outModes: 'bounce',
+                    random: true,
+                    speed: 1,
                     straight: false,
                 },
                 number: {
                     density: {
                         enable: true,
+                        value_area: 800,
                     },
-                    value: 80,
+                    value: 50,
                 },
                 opacity: {
-                    value: 0.5,
+                    value: { min: 0.1, max: 1 },
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 1,
+                        opacity_min: 0,
+                        sync: false,
+                    },
                 },
                 shape: {
                     type: 'circle',
                 },
                 size: {
-                    value: { min: 1, max: 7 },
+                    value: { min: 0.1, max: 3 },
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 2,
+                        size_min: 0.1,
+                        sync: false,
+                    },
                 },
             },
             detectRetina: true,
         }),
         [],
     );
-
     if (init) {
         return (
-            <section id='home'>
-                <Header />
+            <div>
                 <Particles id='tsparticles' particlesLoaded={particlesLoaded} options={options} />
-                <TopBackground />
-                <div className='heroBanner'>
-                    <SocialBar />
-                    <div>
-                        <Hero />
-                    </div>
-                </div>
-            </section>
+            </div>
         );
     }
-}
+};
+
+export default ParticlesCircle;
