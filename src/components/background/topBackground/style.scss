@@ -1,4 +1,4 @@
-@import '../../../style/keyframes.scss';
+@import '../../../style/variable.scss';
 
 .top-backgroung {
     display: flex;
@@ -15,7 +15,7 @@
             width: 20%;
             height: 100px;
             border-radius: 500px;
-            background: rgba(63, 100, 233, 0.55);
+            background: var(--topBackgroundBlue);
             filter: blur(100px);
         }
 
@@ -23,7 +23,7 @@
             width: 50%;
             height: 200px;
             border-radius: 500px;
-            background: rgba(233, 63, 63, 0.55);
+            background: var(--topBackgroundRed);
             filter: blur(100px);
         }
 
@@ -31,7 +31,7 @@
             width: 20%;
             height: 100px;
             border-radius: 500px;
-            background: rgba(255, 184, 0, 0.55);
+            background: var(--topBackgroundYellow);
             filter: blur(100px);
         }
     }
