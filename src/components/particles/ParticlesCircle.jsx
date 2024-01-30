@@ -21,7 +21,7 @@ const ParticlesCircle = () => {
         () => ({
             fullScreen: {
                 enable: true,
-                zIndex: -1,
+                zIndex: -99,
             },
             background: {
                 color: {

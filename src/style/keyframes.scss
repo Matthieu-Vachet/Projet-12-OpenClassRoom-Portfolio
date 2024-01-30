@@ -31,15 +31,3 @@
 }
 
 // Keyframes ellipse top background
-@keyframes move {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(70px);
-        transform: translateY(30px);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}

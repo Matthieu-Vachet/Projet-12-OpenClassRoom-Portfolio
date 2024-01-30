@@ -2,13 +2,24 @@
 
 #about {
     position: relative;
-    z-index: 10;
+    z-index: 1;
     width: 100%;
+    display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     padding-top: 4rem;
     padding-bottom: 9rem;
+
+    @include mobile {
+        padding: 0;
+        margin: 0;
+    }
+
+    @include tablet {
+        padding: 0;
+        margin: 0;
+    }
 
     .about-container {
         position: relative;
@@ -19,11 +30,90 @@
         flex-direction: column;
         justify-content: center;
 
+        @include mobile {
+            width: 100%;
+            align-items: center;
+            text-align: center;
+        }
+
         .about-title {
             margin-bottom: 2.5rem;
             text-align: left;
-            @include copperplate140Bold;
-            color: #e4ded7;
+            @include Syne(150px, 700, 0.3em);
+            color: var(--basicDarkGray);
+
+            @include mobile {
+                @include Syne(60px, 700, 0.3em);
+                text-align: center;
+            }
+
+            @include tablet {
+                @include Syne(100px, 700, 0.3em);
+                text-align: center;
+            }
+
+            @include xxlDesktop {
+                @include Syne(200px, 700, 0.3em);
+            }
+        }
+
+        .about-content {
+            display: flex;
+            flex-direction: row;
+
+            @include mobile {
+                flex-direction: column;
+            }
+
+            @include tablet {
+                flex-direction: column;
+            }
+
+            .about-text {
+                display: flex;
+                flex-direction: column;
+                width: 70%;
+                color: white;
+                text-align: left;
+                @include spaceGrotesk24Regular;
+                gap: 1rem;
+
+                @include mobile {
+                    width: 100%;
+                    text-align: center;
+                    @include spaceGrotesk20Regular;
+                }
+
+                @include tablet {
+                    width: 100%;
+                    text-align: center;
+                }
+
+                @include xxlDesktop {
+                    @include spaceGrotesk32Regular;
+                }
+            }
+
+            .about-button {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 30%;
+                gap: 5rem;
+
+                @include mobile {
+                    width: 100%;
+                    gap: 2rem;
+                    margin-top: 2rem;
+                }
+
+                @include tablet {
+                    width: 100%;
+                    flex-direction: row;
+                    margin-top: 2rem;
+                }
+            }
         }
     }
 }

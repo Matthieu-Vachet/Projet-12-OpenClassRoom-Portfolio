@@ -2,12 +2,16 @@
 
 .btn-gradient {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15rem;
+    height: 5rem;
     text-decoration: none;
     color: #fff;
     background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
     padding: 14px 25px;
     border-radius: 10px;
-    font-size: 1.25em;
 
     &::before {
         content: '';
@@ -39,7 +43,7 @@
 
     .btn-gradient-text {
         position: relative;
-        @include spaceGrotesk25Regular;
+        @include Syne(24px, 700, 0.3em);
         z-index: 1;
     }
 }

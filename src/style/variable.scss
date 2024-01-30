@@ -485,10 +485,19 @@ MIXINS FONT COPPERPLATE
     text-transform: none;
 }
 
+@mixin Syne($fontSize: 100px, $fontWeight: 700, $letterSpacing: -0.05em) {
+    font-size: $fontSize;
+    font-family: 'syne';
+    font-weight: $fontWeight;
+    font-style: normal;
+    letter-spacing: $letterSpacing;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
 /*
 MIXINS FONT COPPERPLATE
 */
-
 @mixin blurGlass() {
     backdrop-filter: blur(4px);
 }

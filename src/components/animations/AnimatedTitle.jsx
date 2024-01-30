@@ -80,6 +80,4 @@ export default function AnimatedTitle({ text, className }) {
 AnimatedTitle.propTypes = {
     text: PropTypes.string.isRequired,
     className: PropTypes.string.isRequired,
-    wordSpace: PropTypes.string.isRequired,
-    charSpace: PropTypes.string.isRequired,
 };

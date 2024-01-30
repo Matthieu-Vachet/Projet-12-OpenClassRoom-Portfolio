@@ -6,22 +6,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    .hero_logo {
-        width: 90%;
-        height: 90%;
-
-        @include mobile {
-            width: 100%;
-            height: 100%;
-        }
-    }
+    text-align: center;
 
     .hero_content {
         display: flex;
         flex-direction: column;
         align-items: center;
-        position: absolute;
+        justify-content: center;
 
         .hero_text {
             position: relative;
@@ -29,34 +20,37 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            color: var(--lightMainBg);
+            color: var(--darkWhite70);
             text-align: center;
 
+            @include mobile {
+                margin-bottom: 100px;
+            }
+
             h1 {
-                @include copperplate80Bold;
-                margin-top: 200px;
+                @include Syne(100px, 700, 0.2em);
                 margin-bottom: 0px;
 
                 @include mobile {
-                    margin-top: 0;
-                    @include copperplate40Bold;
+                    @include Syne(40px, 700, 0.2em);
                 }
 
                 @include tablet {
-                    @include copperplate60Bold;
+                    @include Syne(60px, 700, 0.2em);
                 }
             }
 
             h2 {
-                @include copperplate80Bold;
+                @include Syne(60px, 600, 0.2em);
                 margin: 0px;
+                text-align: center;
 
                 @include mobile {
-                    @include copperplate40Bold;
+                    @include Syne(40px, 600, 0.2em);
                 }
 
                 @include tablet {
-                    @include copperplate60Bold;
+                    @include Syne(60px, 600, 0.2em);
                 }
             }
 
@@ -64,6 +58,8 @@
                 @include spaceGrotesk40Medium;
                 margin-top: 27px;
                 margin-bottom: 0px;
+                text-align: center;
+                justify-content: center;
 
                 @include mobile {
                     @include spaceGrotesk25Regular;

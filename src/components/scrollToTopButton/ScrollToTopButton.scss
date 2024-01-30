@@ -1,0 +1,38 @@
+@import '../../style/variable.scss';
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    color: var(--basicWhite);
+
+    @include mobile {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .scroll-top-arrow {
+        font-size: 5rem;
+        animation: bounce 1s infinite;
+        transition: all 0.3s ease-in-out;
+
+        @include mobile {
+            font-size: 3rem;
+        }
+
+        &:hover {
+            scale: 1.2;
+        }
+    }
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
