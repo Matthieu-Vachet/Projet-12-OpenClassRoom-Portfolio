@@ -16,7 +16,7 @@
             height: 100px;
             border-radius: 500px;
             background: var(--topBackgroundBlue);
-            filter: blur(100px);
+            filter: blur(70px);
         }
 
         .ellipse2 {
@@ -24,7 +24,7 @@
             height: 200px;
             border-radius: 500px;
             background: var(--topBackgroundRed);
-            filter: blur(100px);
+            filter: blur(70px);
         }
 
         .ellipse3 {
@@ -32,7 +32,7 @@
             height: 100px;
             border-radius: 500px;
             background: var(--topBackgroundYellow);
-            filter: blur(100px);
+            filter: blur(70px);
         }
     }
 }

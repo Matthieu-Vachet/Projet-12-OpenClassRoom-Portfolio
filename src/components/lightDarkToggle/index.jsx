@@ -24,16 +24,16 @@ const LightDarkToggle = () => {
         const colors = !islightMode
             ? {
                   // Black Colors
-                  '--basicBlack': 'rgba(13, 13, 13, 1)',
-                  '--darkWhite70': 'rgba(255, 255, 255, 0.7)',
+                  '--basicOnyx': 'rgba(24, 24, 24, 1)',
+                  '--basicWhite': 'rgba(255, 255, 255, 1)',
                   '--topBackgroundBlue': 'rgba(63, 100, 233, 0.55)',
                   '--topBackgroundRed': 'rgba(233, 63, 63, 0.55)',
                   '--topBackgroundYellow': 'rgba(255, 184, 0, 0.55)',
               }
             : {
                   // Light Colors
-                  '--basicBlack': 'rgba(255, 255, 255, 0.7)',
-                  '--darkWhite70': 'rgba(13, 13, 13, 0.7)',
+                  '--basicOnyx': 'rgba(255, 255, 255, 1)',
+                  '--basicWhite': 'rgba(24, 24, 24, 1)',
                   '--topBackgroundBlue': 'rgba(63, 100, 233, 1)',
                   '--topBackgroundRed': 'rgba(233, 63, 63, 1)',
                   '--topBackgroundYellow': 'rgba(255, 184, 0, 1)',

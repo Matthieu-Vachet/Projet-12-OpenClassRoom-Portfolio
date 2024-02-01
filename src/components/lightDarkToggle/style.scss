@@ -2,21 +2,18 @@
 
 .toggleMode {
     display: flex;
-    margin-top: 7px;
-    margin-left: 5px;
     background: none;
     border: none;
     outline: none;
-    font-size: 15px;
-    color: var(--basicDarkGray);
+    font-size: 2em;
+    color: var(--basicWhite);
     cursor: pointer;
 
     .toggleIcon {
-        scale: 2;
-        cursor: pointer;
-    }
+        transition: all 0.1s ease-in-out;
 
-    .toggleIcon:hover {
-        color: white;
+        &:hover {
+            scale: 1.3;
+        }
     }
 }

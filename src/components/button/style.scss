@@ -8,7 +8,7 @@
     width: 15rem;
     height: 5rem;
     text-decoration: none;
-    color: #fff;
+    color: var(--basicWhite);
     background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
     padding: 14px 25px;
     border-radius: 10px;
@@ -22,7 +22,7 @@
         content: '';
         position: absolute;
         inset: 1px;
-        background: #272727;
+        background: var(--basicOnyx);
         border-radius: 9px;
         transition: 0.5s;
     }

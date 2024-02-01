@@ -34,16 +34,24 @@ header {
             border: 1px solid var(--strockGlass);
             background-color: var(--glassGlassDark60);
             backdrop-filter: blur(2px);
+            transition: all 0.1s;
             cursor: pointer;
 
             &:hover {
-                background-color: var(--strockGlass);
+                background-color: var(--basicWhite);
+                color: var(--basicBlack);
             }
 
             .text_fr,
             .text_en {
+                width: 100%;
                 @include spaceGrotesk16Regular;
                 color: var(--basicWhite);
+                transition: all 0.1s;
+
+                &:hover {
+                    color: var(--basicBlack);
+                }
             }
         }
     }

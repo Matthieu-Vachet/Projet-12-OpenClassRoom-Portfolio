@@ -23,7 +23,7 @@
             width: 4rem;
             border-radius: 10px;
             display: flex;
-            color: white;
+            color: var(--basicWhite);
             align-items: center;
             justify-content: center;
             padding: 8px 10px;
@@ -40,7 +40,7 @@
         svg {
             width: 1.5rem;
             height: 1.5rem;
-            color: var(--basicLightGray);
+            color: var(--basicWhite);
 
             @include xxlDesktop {
                 width: 2rem;

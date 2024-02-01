@@ -52,7 +52,7 @@ const ParticlesCircle = () => {
             },
             particles: {
                 color: {
-                    value: '#fff',
+                    value: ['#fff', '#000'],
                 },
                 links: {
                     enable: false,
@@ -70,7 +70,7 @@ const ParticlesCircle = () => {
                         enable: true,
                         value_area: 800,
                     },
-                    value: 50,
+                    value: 200,
                 },
                 opacity: {
                     value: { min: 0.1, max: 1 },

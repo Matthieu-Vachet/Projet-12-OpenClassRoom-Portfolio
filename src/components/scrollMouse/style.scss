@@ -41,7 +41,7 @@
             width: 3px;
             padding: 10px 15px;
             height: 35px;
-            border: 2px solid var(--lightMainBg);
+            border: 2px solid var(--basicWhite);
             border-radius: 25px;
             opacity: 0.75;
             box-sizing: content-box;
@@ -55,7 +55,7 @@
                 width: 3px;
                 height: 10px;
                 border-radius: 25%;
-                background-color: var(--lightMainBg);
+                background-color: var(--basicWhite);
                 animation-name: scroll;
                 animation-duration: 2s;
                 animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
@@ -73,7 +73,7 @@
         width: 100%;
         text-align: center;
         @include spaceGrotesk16Regular;
-        color: var(--lightMainBg);
+        color: var(--basicWhite);
         margin-top: 20px;
         animation: blink 2s infinite;
 
