@@ -1,7 +1,7 @@
 // Importation des dépendances nécessaires
 // import { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import './Button.scss';
+import './style.scss';
 
 // Définition du composant Button
 const Button = ({ text }) => {

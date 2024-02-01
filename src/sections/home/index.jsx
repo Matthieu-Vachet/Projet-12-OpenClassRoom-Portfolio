@@ -1,6 +1,6 @@
-import TopBackground from '../../components/background/topBackground';
-import Header from '../../components/header';
-import Hero from '../../components/hero';
+import TopBackground from '../../components/topBackground';
+import Header from '../../layouts/header';
+import Hero from '../../layouts/hero';
 import SocialBar from '../../components/socialBar';
 
 import './style.scss';

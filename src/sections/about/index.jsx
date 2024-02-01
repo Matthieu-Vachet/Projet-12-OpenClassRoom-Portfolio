@@ -2,15 +2,17 @@
 // import Marquee from '../../components/paralaxText';
 import AnimatedTitle from '../../components/animations/AnimatedTitle';
 import AnimatedText from '../../components/animations/AnimatedText';
-import Button from '../../components/button/Button';
-import ScrollToTopButton from '../../components/scrollToTopButton/ScrollToTopButton';
+import Button from '../../components/button';
+import ScrollToTopButton from '../../components/scrollToTopButton';
+import { motion } from 'framer-motion';
+import { ButtonVariant } from '../../utils/framerMotion/Variante';
 import './style.scss';
 
 export default function About() {
     return (
         <section id='about'>
             <div className='about-container'>
-                <AnimatedTitle delay={0.1} text={'About'} className={'about-title'} />
+                <AnimatedTitle delay={0.1} text={'Get to Know Me'} className={'about-title'} />
                 <div className='about-content'>
                     <div className='about-text'>
                         <AnimatedText
@@ -26,10 +28,16 @@ export default function About() {
                             text="Toujours avide de nouvelles technologies, je suis en constante quête d'innovation. Actuellement engagé dans des projets passionnants, je reste ouvert à de nouvelles opportunités et collaborations."
                         />
                     </div>
-                    <div className='about-button'>
+                    <motion.div
+                        className='about-button'
+                        initial='initial'
+                        animate='animate'
+                        transition={{ delay: 1.9, duration: 1, type: 'spring' }}
+                        variants={ButtonVariant}
+                    >
                         <Button text={'Mon Cv'} />
                         <Button text={'Contact'} />
-                    </div>
+                    </motion.div>
                 </div>
             </div>
             <ScrollToTopButton />

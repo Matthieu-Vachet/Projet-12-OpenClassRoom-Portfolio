@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { MdKeyboardDoubleArrowUp } from 'react-icons/md';
-import './ScrollToTopButton.scss'; // Assurez-vous d'avoir le fichier CSS correspondant
+import './style.scss'; // Assurez-vous d'avoir le fichier CSS correspondant
 
 const ScrollToTopButton = () => {
     const [isVisible, setIsVisible] = useState(false);

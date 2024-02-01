@@ -32,7 +32,7 @@ const LightDarkToggle = () => {
               }
             : {
                   // Light Colors
-                  '--basicBlack': 'rgba(255, 255, 255, 1)',
+                  '--basicBlack': 'rgba(255, 255, 255, 0.7)',
                   '--darkWhite70': 'rgba(13, 13, 13, 0.7)',
                   '--topBackgroundBlue': 'rgba(63, 100, 233, 1)',
                   '--topBackgroundRed': 'rgba(233, 63, 63, 1)',

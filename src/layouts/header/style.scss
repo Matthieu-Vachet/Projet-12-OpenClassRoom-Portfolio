@@ -1,4 +1,4 @@
-@import '../../style/variable.scss';
+@import '../../styles/variable.scss';
 
 header {
     position: absolute;
@@ -13,8 +13,9 @@ header {
     }
 
     .logo_header {
-        width: 8rem;
-        color: var(--darkWhite70);
+        width: 10rem;
+        color: var(--basicWhite);
+        margin-top: 1em;
     }
 
     .button_header {

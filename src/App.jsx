@@ -2,12 +2,12 @@ import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
 // Importation des composants
-import ParticlesCircle from './components/particles/ParticlesCircle';
-import Home from './sections/home';
-import NavBar from './components/navbar';
-import Loader from './components/loader';
-import About from './sections/about';
-import Blur from './components/overlay/blur/Blur';
+import ParticlesCircle from './components/background/particles';
+import Home from './sections/Home';
+import NavBar from './layouts/navbar';
+import Loader from './layouts/loader';
+import About from './sections/About';
+import Blur from './components/background/overlay/blur';
 
 function App() {
     // État pour gérer l'affichage du loader

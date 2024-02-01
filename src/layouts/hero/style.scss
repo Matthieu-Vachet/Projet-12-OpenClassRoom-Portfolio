@@ -1,4 +1,4 @@
-@import '../../style/variable.scss';
+@import '../../styles/variable.scss';
 
 .hero {
     width: 100vw;
@@ -28,7 +28,7 @@
             }
 
             h1 {
-                @include Syne(100px, 700, 0.2em);
+                @include Syne(100px, 600, 0.05em);
                 margin-bottom: 0px;
 
                 @include mobile {
@@ -55,18 +55,18 @@
             }
 
             h3 {
-                @include spaceGrotesk40Medium;
+                @include Syne(40px, 400, 0.05em);
                 margin-top: 27px;
                 margin-bottom: 0px;
                 text-align: center;
                 justify-content: center;
 
                 @include mobile {
-                    @include spaceGrotesk25Regular;
+                    @include Syne(25px, 400, 0.05em);
                 }
 
                 @include tablet {
-                    @include spaceGrotesk32Regular;
+                    @include Syne(32px, 400, 0.05em);
                 }
             }
 

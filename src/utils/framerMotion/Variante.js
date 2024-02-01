@@ -5,29 +5,21 @@ export const TextHeroVariants = {
 
 // Variante Hero
 
-export const TextHeroFirstnameVariants = {
+export const TextHeroVariant = {
     initial: { scale: 0.5, opacity: 0 },
     animate: { scale: 1, opacity: 1 },
-};
-
-export const TextHeroNameVariants = {
-    initial: { scale: 0.5, opacity: 0 },
-    animate: { scale: 1, opacity: 1 },
-};
-
-export const TextHeroJobVariants = {
-    initial: { y: -100, opacity: 0 },
-    animate: { y: 0, opacity: 1 },
-};
-
-export const TextHeroNumberVariants = {
-    initial: { y: -100, opacity: 0 },
-    animate: { y: 0, opacity: 1 },
 };
 
 // Variante Header
 
 export const HeaderVariants = {
+    initial: { y: -50, opacity: 0 },
+    animate: { y: 0, opacity: 1 },
+};
+
+// Variante Button
+
+export const ButtonVariant = {
     initial: { y: -50, opacity: 0 },
     animate: { y: 0, opacity: 1 },
 };

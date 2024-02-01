@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { HeaderVariants } from '../../utils/framerMotion/Variante';
 
 import Logo from '../../assets/images/LogoM.svg';
-import LightDarkToggle from '../lightDarkToggle';
+import LightDarkToggle from '../../components/lightDarkToggle';
 
 export default function Header() {
     return (

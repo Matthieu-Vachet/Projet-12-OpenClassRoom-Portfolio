@@ -9,8 +9,8 @@ export default function AnimatedTitle({ text, className }) {
     const ctrls = useAnimation();
 
     const { ref, inView } = useInView({
-        threshold: 1,
-        triggerOnce: true,
+        threshold: 0.4, // L'élément est considéré comme dans le viewport quand il est entièrement visible
+        triggerOnce: true, // L'observation s'arrête après la première détection
     });
 
     useEffect(() => {
@@ -29,23 +29,25 @@ export default function AnimatedTitle({ text, className }) {
 
     const characterAnimation = {
         hidden: {
-            opacity: 0,
-            y: `0.25em`,
+            opacity: 0, // Opacité initiale à 0 (invisible)
+            y: `0.25em`, // Position initiale décalée vers le bas
         },
         visible: {
-            opacity: 1,
-            y: `0em`,
+            opacity: 1, // Opacité finale à 1 (visible)
+            y: `0em`, // Position finale à l'origine
             transition: {
-                duration: 5,
-                ease: [0.2, 0.65, 0.3, 0.9],
+                duration: 1, // Durée de l'animation
+                ease: [0.2, 0.65, 0.3, 0.9], // Courbe d'accélération de l'animation
             },
         },
     };
 
     return (
         <h1 aria-label={text} className={className}>
-            {text.split(' ').map((word, index) => {
-                return (
+            {text.split(/(\s+)/).map((word, index) => {
+                return word === ' ' ? (
+                    ' '
+                ) : (
                     <motion.span
                         ref={ref}
                         aria-hidden='true'

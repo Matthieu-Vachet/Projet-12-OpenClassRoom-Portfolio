@@ -1,4 +1,4 @@
-@import '/src/style/variable.scss';
+@import '../../styles/variable.scss';
 
 #about {
     position: relative;
@@ -26,7 +26,7 @@
         margin-left: auto;
         margin-right: auto;
         display: flex;
-        width: 90%;
+        width: 95%;
         flex-direction: column;
         justify-content: center;
 
@@ -39,7 +39,7 @@
         .about-title {
             margin-bottom: 2.5rem;
             text-align: left;
-            @include Syne(150px, 700, 0.3em);
+            @include Syne(100px, 700, 0.2em);
             color: var(--basicDarkGray);
 
             @include mobile {
@@ -73,7 +73,7 @@
                 display: flex;
                 flex-direction: column;
                 width: 70%;
-                color: white;
+                color: var(--basicWhite);
                 text-align: left;
                 @include spaceGrotesk24Regular;
                 gap: 1rem;
