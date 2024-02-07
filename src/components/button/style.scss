@@ -5,13 +5,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 15rem;
-    height: 5rem;
+    width: 12rem;
+    height: 4rem;
     text-decoration: none;
     color: var(--basicWhite);
     background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
-    padding: 14px 25px;
-    border-radius: 10px;
+    padding: 10px 20px;
+    border-radius: 20px;
     transition: transform 0.5s ease-in-out;
 
     &:hover {
@@ -23,7 +23,7 @@
         position: absolute;
         inset: 1px;
         background: var(--basicOnyx);
-        border-radius: 9px;
+        border-radius: 19px;
         transition: 0.5s;
     }
 
@@ -36,7 +36,7 @@
         position: absolute;
         inset: 0px;
         background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
-        border-radius: 10px;
+        border-radius: 20px;
         transition: 0.5s;
         opacity: 0;
         filter: blur(20px);
@@ -48,7 +48,7 @@
 
     .btn-gradient-text {
         position: relative;
-        @include Syne(24px, 700, 0.3em);
+        @include Syne(20px, 500, 0.3em);
         z-index: 1;
     }
 }

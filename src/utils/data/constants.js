@@ -34,9 +34,10 @@ const info = [
     {
         firstname: 'Matthieu',
         name: 'Vachet',
-        profession: 'Front-End Developpeur',
+        profession: 'Développeur Front-end',
         number: '07.69.81.73.16',
+        slogan: 'Plongez dans ma créativité codée.',
     },
 ];
 
-export default info
+export default info;

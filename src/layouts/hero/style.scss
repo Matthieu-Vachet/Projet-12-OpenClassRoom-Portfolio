@@ -9,52 +9,62 @@
     text-align: center;
 
     .hero_content {
+        width: 100%;
         display: flex;
-        flex-direction: column;
-        align-items: center;
         justify-content: center;
 
         .hero_text {
+            width: 50%;
             position: relative;
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             color: var(--basicWhite);
             text-align: center;
 
             @include mobile {
-                margin-bottom: 100px;
+                margin-bottom: 150px;
             }
 
-            h1 {
-                @include Syne(100px, 700, 0.2em);
+            .hero_slogan {
+                @include Syne(60px, 700, 0.03em);
                 margin-bottom: 0px;
 
                 @include mobile {
-                    @include Syne(40px, 700, 0.2em);
+                    display: none;
                 }
 
                 @include tablet {
                     @include Syne(60px, 700, 0.2em);
                 }
+
+                @include xxlDesktop {
+                    @include Syne(90px, 700, 0.03em);
+                }
             }
 
-            h2 {
-                @include Syne(60px, 600, 0.2em);
-                margin: 0px;
-                text-align: center;
-
-                @include mobile {
-                    @include Syne(40px, 600, 0.2em);
-                }
+            .hero_slogan_mobile {
+                @include Syne(30px, 700, 0.2em);
 
                 @include tablet {
-                    @include Syne(60px, 600, 0.2em);
+                    display: none;
+                }
+
+                @include desktop {
+                    display: none;
+                }
+
+                @include largeDesktop {
+                    display: none;
+                }
+
+                @include xxlDesktop {
+                    display: none;
                 }
             }
 
-            h3 {
+            .hero_profession {
                 @include Syne(40px, 400, 0.05em);
                 margin-top: 27px;
                 margin-bottom: 0px;
@@ -70,10 +80,26 @@
                 }
             }
 
-            h4 {
+            .hero_number {
                 @include copperplate20Bold;
-                margin-top: 0;
+                margin-top: 27px;
                 margin-bottom: 100px;
+                text-decoration: none;
+                color: var(--basicWhite);
+                border-radius: 32px;
+                border: 2px solid #69007f;
+                padding: 10px 20px;
+
+                @include mobile {
+                    @include copperplate20Bold;
+                }
+            }
+        }
+        .hero_svg {
+            width: 30%;
+
+            @include mobile {
+                display: none;
             }
         }
     }

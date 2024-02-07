@@ -1,3 +1,6 @@
+{
+    /* Importation des modules */
+}
 import { useEffect } from 'react';
 import { useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';

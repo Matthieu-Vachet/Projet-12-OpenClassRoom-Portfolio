@@ -1,3 +1,6 @@
+{
+    /* Importation des modules */
+}
 import { useEffect, useMemo, useState } from 'react';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
@@ -52,7 +55,7 @@ const ParticlesCircle = () => {
             },
             particles: {
                 color: {
-                    value: ['#fff', '#000'],
+                    value: ['#fff'],
                 },
                 links: {
                     enable: false,
@@ -70,7 +73,7 @@ const ParticlesCircle = () => {
                         enable: true,
                         value_area: 800,
                     },
-                    value: 200,
+                    value: 150,
                 },
                 opacity: {
                     value: { min: 0.1, max: 1 },

@@ -12,19 +12,30 @@ header {
         display: none;
     }
 
-    .logo_header {
-        width: 10rem;
-        color: var(--basicWhite);
-        margin-top: 1em;
+    .logo_content {
+        display: flex;
+        justify-content: center;
+
+        .logo_header {
+            width: 7rem;
+            color: var(--basicWhite);
+            margin-top: 1em;
+        }
+
+        .name_header {
+            @include spaceGrotesk20Regular;
+            color: var(--basicWhite);
+            margin-top: 2em;
+        }
     }
 
     .button_header {
         z-index: 1;
         display: flex;
         justify-content: center;
-        gap: 10px;
+        gap: 0.5em;
         margin-right: 2%;
-        margin-top: 20px;
+        margin-top: 2em;
 
         .button_fr,
         .button_en {

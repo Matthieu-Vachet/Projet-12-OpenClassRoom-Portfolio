@@ -1,6 +1,7 @@
 import './style.scss';
 import { motion } from 'framer-motion';
 import { HeaderVariants } from '../../utils/framerMotion/Variante';
+import info from '../../utils/data/constants';
 
 import Logo from '../../assets/images/LogoM.svg';
 import LightDarkToggle from '../../components/lightDarkToggle';
@@ -8,15 +9,30 @@ import LightDarkToggle from '../../components/lightDarkToggle';
 export default function Header() {
     return (
         <header>
-            <motion.img
-                className='logo_header'
-                initial='initial'
-                animate='animate'
-                transition={{ delay: 1.9, duration: 1, type: 'spring' }}
-                variants={HeaderVariants}
-                src={Logo}
-                alt='Matthieu Vachet Logo portfolio'
-            />
+            {/* Logo */}
+            <div className='logo_content'>
+                <motion.img
+                    className='logo_header'
+                    initial='initial'
+                    animate='animate'
+                    transition={{ delay: 1.9, duration: 1, type: 'spring' }}
+                    variants={HeaderVariants}
+                    src={Logo}
+                    alt='Matthieu Vachet Logo portfolio'
+                />
+                {/* Name */}
+                <motion.h1
+                    initial='initial'
+                    animate='animate'
+                    transition={{ delay: 1.9, duration: 1, type: 'spring' }}
+                    variants={HeaderVariants}
+                    className='name_header'
+                >
+                    {info[0].firstname + ' '}
+                    {info[0].name}
+                </motion.h1>
+            </div>
+            {/* Buttons FR - EN - Toggle */}
             <motion.div
                 initial='initial'
                 animate='animate'
