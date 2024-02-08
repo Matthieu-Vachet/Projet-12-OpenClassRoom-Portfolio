@@ -40,11 +40,6 @@ const BackgroundHero = () => {
                         id='stop28'
                     />
                 </linearGradient>
-                {/* <radialGradient id='radialGradient' cx='50%' cy='50%' r='50%' fx='50%' fy='50%'>
-                    <stop offset='0%' style={{ stopColor: '#808080', stopOpacity: '0' }} />
-                    <stop offset='50%' style={{ stopColor: '#ffffff', stopOpacity: '0.5' }} />
-                    <stop offset='100%' style={{ stopColor: '#fefefe', stopOpacity: '0' }} />
-                </radialGradient> */}
                 <filter
                     id='filter0_b_415_11747-0'
                     x='50.039799'
