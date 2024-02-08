@@ -1,9 +1,13 @@
-// Importation des hooks nécessaires depuis React
+{
+    /* Importation des modules React */
+}
 import { useState, useEffect } from 'react';
-// Importation du fichier de style
+
+{
+    /* Importation des styles */
+}
 import './style.scss';
 
-// Déclaration du composant fonctionnel Blur
 const Blur = () => {
     // Déclaration d'un état local pour stocker l'opacité du scroll
     const [scrollOpacity, setScrollOpacity] = useState(1);
@@ -20,7 +24,7 @@ const Blur = () => {
         const bottomThreshold = bodyHeight - windowHeight - 25;
 
         // Si la position du scroll est supérieure ou égale au seuil, l'opacité est de 1, sinon elle est de 1
-        const opacity = scrollY >= bottomThreshold ? 1 : 1;
+        const opacity = scrollY >= bottomThreshold ? 0.5 : 1;
         // Mise à jour de l'opacité du scroll
         setScrollOpacity(opacity);
     };

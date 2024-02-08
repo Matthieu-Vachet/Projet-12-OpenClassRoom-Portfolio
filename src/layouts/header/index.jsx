@@ -1,7 +1,7 @@
 import './style.scss';
 import { motion } from 'framer-motion';
 import { HeaderVariants } from '../../utils/framerMotion/Variante';
-import info from '../../utils/data/constants';
+import { info } from '../../utils/data/constants';
 
 import Logo from '../../assets/images/LogoM.svg';
 import LightDarkToggle from '../../components/lightDarkToggle';

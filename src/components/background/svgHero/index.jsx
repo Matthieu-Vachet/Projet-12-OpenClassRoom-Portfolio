@@ -3,7 +3,7 @@
 }
 import './style.scss';
 
-const BackgroundHero = () => {
+const SvgHero = () => {
     return (
         <svg
             width='100%'
@@ -1312,4 +1312,4 @@ const BackgroundHero = () => {
     );
 };
 
-export default BackgroundHero;
+export default SvgHero;

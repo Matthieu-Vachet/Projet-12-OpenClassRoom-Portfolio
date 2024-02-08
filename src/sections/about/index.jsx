@@ -1,5 +1,3 @@
-// import Button from '../../components/button/Button';
-// import Marquee from '../../components/paralaxText';
 import AnimatedTitle from '../../components/animations/AnimatedTitle';
 import AnimatedText from '../../components/animations/AnimatedText';
 import Button from '../../components/button';
@@ -12,7 +10,11 @@ export default function About() {
     return (
         <section id='about'>
             <div className='about-container'>
-                <AnimatedTitle delay={0.1} text={'Get to Know Me'} className={'about-title'} />
+                <AnimatedTitle
+                    delay={0.1}
+                    text={'APPRENEZ À ME CONNAÎTRE'}
+                    className={'about-title'}
+                />
                 <div className='about-content'>
                     <div className='about-text'>
                         <AnimatedText
