@@ -24,7 +24,15 @@
             text-align: center;
 
             @include mobile {
-                margin-bottom: 150px;
+                margin-bottom: 100px;
+            }
+
+            @include desktop {
+                margin-top: 5em;
+            }
+
+            @include largeDesktop {
+                margin-top: 4em;
             }
 
             .hero_slogan {
@@ -32,7 +40,7 @@
                 margin-bottom: 0px;
 
                 @include mobile {
-                    display: none;
+                    @include Syne(30px, 700, 0.2em);
                 }
 
                 @include tablet {
@@ -41,26 +49,6 @@
 
                 @include xxlDesktop {
                     @include Syne(90px, 700, 0.03em);
-                }
-            }
-
-            .hero_slogan_mobile {
-                @include Syne(30px, 700, 0.2em);
-
-                @include tablet {
-                    display: none;
-                }
-
-                @include desktop {
-                    display: none;
-                }
-
-                @include largeDesktop {
-                    display: none;
-                }
-
-                @include xxlDesktop {
-                    display: none;
                 }
             }
 
@@ -99,6 +87,10 @@
             width: 30%;
 
             @include mobile {
+                display: none;
+            }
+
+            @include tablet {
                 display: none;
             }
         }

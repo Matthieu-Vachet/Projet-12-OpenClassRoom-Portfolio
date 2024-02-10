@@ -26,6 +26,10 @@ header {
             @include spaceGrotesk20Regular;
             color: var(--basicWhite);
             margin-top: 2em;
+
+            @include tablet {
+                display: none;
+            }
         }
     }
 
