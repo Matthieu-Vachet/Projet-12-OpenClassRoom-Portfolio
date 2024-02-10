@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
 // Importation des composants
-import Home from './sections/Home';
+import Home from './sections/home';
 import NavBar from './layouts/navbar';
 import Loader from './layouts/loader';
 import About from './sections/about';
