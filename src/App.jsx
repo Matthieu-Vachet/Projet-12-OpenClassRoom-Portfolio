@@ -14,7 +14,7 @@ function App() {
     // Etat pour gérer la largeur de l'écran
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
-    // Simule un temps de chargement de 5 secondes
+    // Simule un temps de chargement de 4 secondes
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(false);

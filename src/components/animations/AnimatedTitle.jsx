@@ -12,7 +12,7 @@ export default function AnimatedTitle({ text, className }) {
     const ctrls = useAnimation();
 
     const { ref, inView } = useInView({
-        threshold: 0.4, // L'élément est considéré comme dans le viewport quand il est entièrement visible
+        threshold: 0.1, // L'élément est considéré comme dans le viewport quand il est entièrement visible
         triggerOnce: true, // L'observation s'arrête après la première détection
     });
 
@@ -33,7 +33,7 @@ export default function AnimatedTitle({ text, className }) {
     const characterAnimation = {
         hidden: {
             opacity: 0, // Opacité initiale à 0 (invisible)
-            y: `0.25em`, // Position initiale décalée vers le bas
+            y: `1em`, // Position initiale décalée vers le bas
         },
         visible: {
             opacity: 1, // Opacité finale à 1 (visible)
