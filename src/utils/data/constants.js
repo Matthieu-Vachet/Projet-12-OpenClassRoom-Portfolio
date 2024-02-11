@@ -30,12 +30,8 @@ const navItems = [
     },
 ];
 
-const info = [
+const home = [
     {
-        firstname: 'Matthieu',
-        name: 'Vachet',
-        profession: 'Développeur Front-end',
-        number: '07.69.81.73.16',
         slogan: 'Plongez dans ma créativité codée.',
     },
 ];
@@ -52,4 +48,4 @@ const about = [
     },
 ];
 
-export { navItems, info, about };
+export { navItems, home, about };

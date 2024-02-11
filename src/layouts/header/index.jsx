@@ -1,12 +1,15 @@
 import './style.scss';
 import { motion } from 'framer-motion';
+import { useContext } from 'react';
 import { HeaderVariants } from '../../utils/framerMotion/Variante';
-import { info } from '../../utils/data/constants';
+import { UserContext } from '../../utils/dataProvider/DataProvider';
 
 import Logo from '../../assets/images/LogoM.svg';
 import LightDarkToggle from '../../components/lightDarkToggle';
 
 export default function Header() {
+    const data = useContext(UserContext);
+
     return (
         <header>
             {/* Logo */}
@@ -28,8 +31,8 @@ export default function Header() {
                     variants={HeaderVariants}
                     className='name_header'
                 >
-                    {info[0].firstname + ' '}
-                    {info[0].name}
+                    {data[0].name + ' '}
+                    {data[0].lastname}
                 </motion.h1>
             </div>
             {/* Buttons FR - EN - Toggle */}
