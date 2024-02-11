@@ -1,17 +1,21 @@
 @import '../../styles/variable.scss';
 
 .loader {
+    position: relative;
     width: 100vw;
     height: 100vh;
     background-color: var(--basicOnyx);
+    background-image: url('../../assets/images/Bg-Squares.svg');
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .svg-loader {
+    position: relative;
     width: 70%;
     height: 70%;
+    z-index: 1;
 
     @include mobile {
         width: 100%;
