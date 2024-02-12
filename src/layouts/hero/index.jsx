@@ -1,17 +1,24 @@
 // Importation des librairies
 import { motion } from 'framer-motion';
+import { useContext } from 'react';
 import FancyText from '@carefully-coded/react-text-gradient';
+
 // Importation des données
-import { info } from '../../utils/data/constants';
+import { home } from '../../utils/data/constants';
+import { UserContext } from '../../utils/dataProvider/DataProvider';
 import { TextHeroVariant } from '../../utils/framerMotion/Variante';
+
 // Importation des composants
 import ScrollMouse from '../../components/scrollMouse';
 import SvgHero from '../../components/background/svgHero';
+
 // Importation des styles
 import './style.scss';
 import '../../styles/variable.scss';
 
 export default function Hero() {
+    const data = useContext(UserContext);
+
     return (
         <div className='hero'>
             <div className='hero_content'>
@@ -28,7 +35,7 @@ export default function Hero() {
                             gradient={{ from: '#0ce39a', to: '#69007f', type: 'linear' }}
                             animateTo={{ from: '#69007f', to: '#fc0987' }}
                         >
-                            {info[0].slogan}
+                            {home[0].slogan}
                         </FancyText>
                     </motion.h1>
 
@@ -40,7 +47,7 @@ export default function Hero() {
                         variants={TextHeroVariant}
                         className='hero_profession'
                     >
-                        {info[0].profession}
+                        {data[0].profession.fr}
                     </motion.h3>
 
                     {/* Number Hero */}
@@ -51,7 +58,7 @@ export default function Hero() {
                         variants={TextHeroVariant}
                         className='hero_number'
                     >
-                        {info[0].number}
+                        {data[0].number}
                     </motion.h4>
                 </div>
 
