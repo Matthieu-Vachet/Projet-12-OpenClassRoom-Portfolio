@@ -39,7 +39,7 @@ export default function AnimatedTitle({ text, className }) {
             opacity: 1, // Opacité finale à 1 (visible)
             y: `0em`, // Position finale à l'origine
             transition: {
-                duration: 1, // Durée de l'animation
+                duration: 0.2, // Durée de l'animation
                 ease: [0.2, 0.65, 0.3, 0.9], // Courbe d'accélération de l'animation
             },
         },

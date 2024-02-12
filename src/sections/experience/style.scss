@@ -1,0 +1,59 @@
+@import '../../styles/variable.scss';
+
+#experience {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding-top: 4rem;
+    padding-bottom: 9rem;
+
+    .experience-container {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        width: 100%;
+        flex-direction: row-reverse;
+
+        .experience-title {
+            width: 70%;
+            margin-bottom: 2.5rem;
+            margin-right: 2rem;
+            text-align: right;
+            @include Syne(85px, 700, 0.2em);
+            color: var(--basicWhite);
+
+            @include largeDesktop {
+                width: 80%;
+                @include Syne(65px, 700, 0.2em);
+            }
+        }
+    }
+    .experience-cards-container {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        & > div {
+            width: 100%;
+            display: flex;
+
+            &:nth-child(odd) {
+                justify-content: flex-start;
+            }
+
+            &:nth-child(even) {
+                justify-content: flex-end;
+            }
+
+            & > div {
+                width: 50%;
+            }
+        }
+    }
+}

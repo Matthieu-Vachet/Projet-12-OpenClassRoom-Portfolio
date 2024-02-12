@@ -1,0 +1,80 @@
+@import '../../styles/variable.scss';
+
+.cards-container {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin: 2rem auto;
+    padding: 2rem;
+
+    .cards {
+        position: relative;
+        width: 400px;
+        height: 400px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-conic-gradient(from var(--a), #0ce39a, #69007f, #fc0987, #0ce39a);
+            border-radius: 20px;
+            animation: rotating 4s linear infinite;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-conic-gradient(from var(--a), #0ce39a, #69007f, #fc0987, #0ce39a);
+            border-radius: 20px;
+            animation: rotating 4s linear infinite;
+            filter: blur(40px);
+            opacity: 0.4;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:hover::after {
+            filter: blur(50px);
+            opacity: 0.6;
+        }
+
+        .cards-content-image {
+            position: absolute;
+            inset: 4px;
+            background: var(--basicOnyx);
+            background-image: url('../../assets/icons/OpLogo.png');
+            background-size: 90%;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 16px;
+            z-index: 1;
+
+            // .cards-image {
+            //     position: relative;
+            //     width: auto;
+            //     height: auto;
+            //     object-fit: cover;
+            //     opacity: 0.7;
+            //     border-radius: 16px;
+            // }
+        }
+    }
+}
+
+@property --a {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes rotating {
+    0% {
+        --a: 0deg;
+    }
+    100% {
+        --a: 360deg;
+    }
+}

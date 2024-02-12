@@ -5,10 +5,11 @@
     z-index: 1;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding-top: 4rem;
+    padding-top: 15rem;
     padding-bottom: 9rem;
 
     @include mobile {
@@ -23,37 +24,50 @@
 
     .about-container {
         position: relative;
-        margin-left: auto;
-        margin-right: auto;
         display: flex;
-        width: 95%;
+        width: 100%;
         flex-direction: column;
         justify-content: center;
 
         @include mobile {
             width: 100%;
+            margin-left: 1rem;
+            align-items: center;
+            text-align: center;
+        }
+
+        @include tablet {
+            width: 100%;
+            margin-left: 0;
             align-items: center;
             text-align: center;
         }
 
         .about-title {
+            width: 65%;
             margin-bottom: 2.5rem;
             text-align: left;
-            @include Syne(100px, 700, 0.2em);
+            @include Syne(60px, 700, 0.2em);
             color: var(--basicWhite);
 
             @include mobile {
                 @include Syne(35px, 700, 0.3em);
                 text-align: center;
+                width: 100%;
             }
 
             @include tablet {
-                @include Syne(70px, 700, 0.3em);
+                @include Syne(60px, 700, 0.3em);
                 text-align: center;
+                width: 100%;
+            }
+
+            @include largeDesktop {
+                @include Syne(65px, 700, 0.3em);
             }
 
             @include xxlDesktop {
-                @include Syne(130px, 700, 0.3em);
+                @include Syne(85px, 700, 0.3em);
             }
         }
 
@@ -77,10 +91,10 @@
                 color: var(--basicWhite);
                 text-align: left;
                 @include spaceGrotesk24Regular;
-                gap: 1rem;
+                gap: 2rem;
 
                 @include mobile {
-                    width: 100%;
+                    width: 95%;
                     text-align: center;
                     @include spaceGrotesk20Regular;
                 }
@@ -117,11 +131,100 @@
             }
         }
     }
-}
-.wordSpace {
-    margin-right: 14px;
-}
+    .experience-container {
+        position: relative;
+        display: flex;
+        width: 95%;
+        padding-top: 5rem;
+        flex-direction: row-reverse;
 
-.charSpace {
-    margin-right: 0.001em;
+        @include mobile {
+            flex-direction: column;
+        }
+
+        .experience-title {
+            width: 70%;
+            flex-direction: row-reverse;
+            text-align: right;
+            @include Syne(60px, 700, 0.3em);
+            color: var(--basicWhite);
+
+            @include mobile {
+                @include Syne(35px, 700, 0.3em);
+                margin-right: 0;
+                text-align: center;
+                width: 100%;
+            }
+
+            @include tablet {
+                @include Syne(60px, 700, 0.3 em);
+                margin-right: 0;
+                text-align: center;
+                width: 100%;
+            }
+
+            @include largeDesktop {
+                @include Syne(65px, 700, 0.2em);
+            }
+
+            @include xxlDesktop {
+                @include Syne(85px, 700, 0.3em);
+            }
+        }
+    }
+
+    .experience-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        @include mobile {
+            width: 100%;
+            flex-direction: column;
+        }
+
+        @include tablet {
+            width: 100%;
+            flex-direction: column;
+        }
+
+        .experience-cards {
+            width: 40%;
+
+            @include mobile {
+                display: none;
+            }
+
+            @include tablet {
+                width: 90%;
+            }
+        }
+
+        .experience-text {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            color: var(--basicWhite);
+            text-align: left;
+            @include spaceGrotesk24Regular;
+            gap: 2rem;
+
+            @include mobile {
+                width: 95%;
+                margin-right: 0;
+                text-align: center;
+                @include spaceGrotesk20Regular;
+            }
+
+            @include tablet {
+                margin-right: 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            @include xxlDesktop {
+                @include spaceGrotesk32Regular;
+            }
+        }
+    }
 }

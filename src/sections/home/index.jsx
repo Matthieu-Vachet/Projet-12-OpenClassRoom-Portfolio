@@ -1,4 +1,3 @@
-// import TopBackground from '../../components/topBackground';
 import Header from '../../layouts/header';
 import Hero from '../../layouts/hero';
 import SocialBar from '../../components/socialBar';
@@ -9,7 +8,6 @@ export default function Home() {
     return (
         <section id='home'>
             <Header />
-            {/* <TopBackground /> */}
             <div className='heroBanner'>
                 <SocialBar />
                 <div>
