@@ -4,9 +4,10 @@ import { useContext } from 'react';
 import FancyText from '@carefully-coded/react-text-gradient';
 
 // Importation des données
-import { home } from '../../utils/data/constants';
+// import { home } from '../../utils/data/constants';
 import { UserContext } from '../../utils/dataProvider/DataProvider';
 import { TextHeroVariant } from '../../utils/framerMotion/Variante';
+import { useTranslation } from 'react-i18next';
 
 // Importation des composants
 import ScrollMouse from '../../components/scrollMouse';
@@ -17,6 +18,7 @@ import './style.scss';
 import '../../styles/variable.scss';
 
 export default function Hero() {
+    const { t } = useTranslation();
     const data = useContext(UserContext);
 
     return (
@@ -35,7 +37,7 @@ export default function Hero() {
                             gradient={{ from: '#0ce39a', to: '#69007f', type: 'linear' }}
                             animateTo={{ from: '#69007f', to: '#fc0987' }}
                         >
-                            {home[0].slogan}
+                            {t('hero-slogan')}
                         </FancyText>
                     </motion.h1>
 
@@ -47,7 +49,7 @@ export default function Hero() {
                         variants={TextHeroVariant}
                         className='hero_profession'
                     >
-                        {data[0].profession.fr}
+                        {data[0].profession}
                     </motion.h3>
 
                     {/* Number Hero */}

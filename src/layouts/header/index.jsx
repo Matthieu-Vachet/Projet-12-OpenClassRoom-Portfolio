@@ -1,5 +1,6 @@
 import './style.scss';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { useContext } from 'react';
 import { HeaderVariants } from '../../utils/framerMotion/Variante';
 import { UserContext } from '../../utils/dataProvider/DataProvider';
@@ -8,7 +9,12 @@ import Logo from '../../assets/images/LogoM.svg';
 import LightDarkToggle from '../../components/lightDarkToggle';
 
 export default function Header() {
+    const { i18n } = useTranslation();
     const data = useContext(UserContext);
+
+    const changeLanguage = (language) => {
+        i18n.changeLanguage(language);
+    };
 
     return (
         <header>
@@ -43,10 +49,10 @@ export default function Header() {
                 variants={HeaderVariants}
                 className='button_header'
             >
-                <button className='button_fr'>
+                <button className='button_fr' onClick={() => changeLanguage('fr')}>
                     <span className='text_fr'>FR</span>
                 </button>
-                <button className='button_en'>
+                <button className='button_en' onClick={() => changeLanguage('en')}>
                     <span className='text_en'>EN</span>
                 </button>
                 <LightDarkToggle />

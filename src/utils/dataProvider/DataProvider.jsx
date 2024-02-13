@@ -1,5 +1,6 @@
 import { createContext, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
 
 // Context pour chaque API
 export const UserContext = createContext();
@@ -8,6 +9,7 @@ export const ExperienceContext = createContext();
 
 // Provider pour chaque API
 export const DataProvider = ({ children }) => {
+    const { i18n } = useTranslation();
     const [userData, setUserData] = useState(null);
     const [projetsData, setProjetsData] = useState(null);
     const [experiencesData, setExperiencesData] = useState(null);
@@ -25,11 +27,17 @@ export const DataProvider = ({ children }) => {
                     experienceResponse,
                 ]).then((responses) => Promise.all(responses.map((response) => response.json())));
 
-                console.log('UserData fetched:', userResult);
+                const userResultTranslated = userResult.map((user) => ({
+                    ...user,
+                    profession: user.profession[i18n.language],
+                    pays: user.pays[i18n.language],
+                }));
+
+                console.log('UserData fetched:', userResultTranslated);
                 console.log('ProjetData fetched:', projetResult);
                 console.log('ExperienceData fetched:', experienceResult);
 
-                setUserData(userResult);
+                setUserData(userResultTranslated);
                 setProjetsData(projetResult);
                 setExperiencesData(experienceResult);
             } catch (error) {
@@ -38,7 +46,7 @@ export const DataProvider = ({ children }) => {
         };
 
         fetchData();
-    }, []);
+    }, [i18n.language]);
 
     if (!userData || !projetsData || !experiencesData) {
         return null; // Ne rend rien tant que les données ne sont pas chargées
