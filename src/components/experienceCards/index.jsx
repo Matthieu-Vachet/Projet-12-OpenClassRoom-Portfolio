@@ -6,9 +6,7 @@ const ExperienceCards = () => {
     return (
         <div className='cards-container'>
             <div className='cards'>
-                <div className='cards-content-image'>
-                    {/* <img className='cards-image' src={src} alt={alt} /> */}
-                </div>
+                <div className='cards-content-image'></div>
             </div>
         </div>
     );
