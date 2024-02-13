@@ -28,12 +28,11 @@
         width: 100%;
         flex-direction: column;
         justify-content: center;
+        margin-left: 2rem;
 
         @include mobile {
-            width: 100%;
-            margin-left: 1rem;
-            align-items: center;
-            text-align: center;
+            width: 90%;
+            margin-left: 0;
         }
 
         @include tablet {
@@ -44,16 +43,15 @@
         }
 
         .about-title {
-            width: 65%;
+            width: 70%;
             margin-bottom: 2.5rem;
-            text-align: left;
             @include Syne(60px, 700, 0.2em);
             color: var(--basicWhite);
 
             @include mobile {
-                @include Syne(35px, 700, 0.3em);
-                text-align: center;
                 width: 100%;
+                text-align: center;
+                @include Syne(25px, 700, 0.3em);
             }
 
             @include tablet {
@@ -77,7 +75,6 @@
 
             @include mobile {
                 flex-direction: column;
-                margin: 0 0.5em;
             }
 
             @include tablet {
@@ -94,9 +91,9 @@
                 gap: 2rem;
 
                 @include mobile {
-                    width: 95%;
+                    width: 100%;
                     text-align: center;
-                    @include spaceGrotesk20Regular;
+                    @include spaceGrotesk18Regular;
                 }
 
                 @include tablet {
@@ -134,12 +131,15 @@
     .experience-container {
         position: relative;
         display: flex;
-        width: 95%;
-        padding-top: 5rem;
+        width: 100%;
+        padding-top: 10rem;
         flex-direction: row-reverse;
+        margin-right: 2rem;
 
         @include mobile {
             flex-direction: column;
+            width: 90%;
+            margin-right: 0;
         }
 
         .experience-title {
@@ -148,9 +148,10 @@
             text-align: right;
             @include Syne(60px, 700, 0.3em);
             color: var(--basicWhite);
+            margin-bottom: 2.5rem;
 
             @include mobile {
-                @include Syne(35px, 700, 0.3em);
+                @include Syne(25px, 700, 0.3em);
                 margin-right: 0;
                 text-align: center;
                 width: 100%;
@@ -177,10 +178,13 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        margin-right: 2rem;
+        text-align: right;
 
         @include mobile {
-            width: 100%;
+            width: 90%;
             flex-direction: column;
+            margin-right: 0;
         }
 
         @include tablet {
@@ -203,17 +207,16 @@
         .experience-text {
             display: flex;
             flex-direction: column;
-            width: 80%;
+            width: 70%;
             color: var(--basicWhite);
-            text-align: left;
             @include spaceGrotesk24Regular;
             gap: 2rem;
 
             @include mobile {
-                width: 95%;
+                width: 100%;
                 margin-right: 0;
                 text-align: center;
-                @include spaceGrotesk20Regular;
+                @include spaceGrotesk18Regular;
             }
 
             @include tablet {
