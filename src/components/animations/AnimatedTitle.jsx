@@ -13,7 +13,7 @@ export default function AnimatedTitle({ text, className }) {
 
     const { ref, inView } = useInView({
         threshold: 0.1, // L'élément est considéré comme dans le viewport quand il est entièrement visible
-        triggerOnce: true, // L'observation s'arrête après la première détection
+        triggerOnce: false, // L'observation s'arrête après la première détection
     });
 
     useEffect(() => {
