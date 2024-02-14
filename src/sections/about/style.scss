@@ -36,7 +36,7 @@
         }
 
         @include tablet {
-            width: 100%;
+            width: 95%;
             margin-left: 0;
             align-items: center;
             text-align: center;
@@ -45,7 +45,7 @@
         .about-title {
             width: 70%;
             margin-bottom: 2.5rem;
-            @include Syne(60px, 700, 0.2em);
+            @include Syne(50px, 700, 0.2em);
             color: var(--basicWhite);
 
             @include mobile {
@@ -87,7 +87,7 @@
                 width: 70%;
                 color: var(--basicWhite);
                 text-align: left;
-                @include spaceGrotesk24Regular;
+                @include spaceGrotesk20Regular;
                 gap: 2rem;
 
                 @include mobile {
@@ -138,7 +138,13 @@
 
         @include mobile {
             flex-direction: column;
-            width: 90%;
+            width: 95%;
+            margin-right: 0;
+        }
+
+        @include tablet {
+            flex-direction: column;
+            width: 95%;
             margin-right: 0;
         }
 
@@ -146,7 +152,7 @@
             width: 70%;
             flex-direction: row-reverse;
             text-align: right;
-            @include Syne(60px, 700, 0.3em);
+            @include Syne(50px, 700, 0.3em);
             color: var(--basicWhite);
             margin-bottom: 2.5rem;
 
@@ -188,8 +194,9 @@
         }
 
         @include tablet {
-            width: 100%;
+            width: 95%;
             flex-direction: column;
+            margin-right: 0;
         }
 
         .experience-cards {
@@ -209,7 +216,7 @@
             flex-direction: column;
             width: 70%;
             color: var(--basicWhite);
-            @include spaceGrotesk24Regular;
+            @include spaceGrotesk20Regular;
             gap: 2rem;
 
             @include mobile {
@@ -226,6 +233,7 @@
             }
 
             @include xxlDesktop {
+                width: 80%;
                 @include spaceGrotesk32Regular;
             }
         }
