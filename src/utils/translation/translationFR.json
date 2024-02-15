@@ -7,7 +7,12 @@
     "about-bottom-1": "Mon CV",
     "about-bottom-2": "Contact",
     "experience-title": "LES ÉTAPES CLÉS DE MON PARCOURS",
-    "experience-text-1": "Suite à une volonté profonde de reconversion, j'ai décidé d'embrasser une nouvelle voie et d'entreprendre une formation d'Intégrateur Web chez OpenClassRooms. Cette formation, d'une durée de neuf mois, s'est déroulée de 2023 à 2024. Avec détermination et volonté, j'ai réussi à décrocher le RNCP niveau 5. Fort de cette réussite, j'envisage maintenant de me lancer en freelance et de construire ma propre histoire.",
-    "experience-text-2": "Cette aventure a été une occasion inestimable de faire connaissance avec des mentors et des développeurs, tous merveilleux et extrêmement compétents dans leurs domaines respectifs.",
-    "experience-text-3": "Au cours de cette formation, j'ai découvert l'intégration de sites web dynamiques, l'optimisation, le débogage et la gestion de projets. Chaque jour était une nouvelle opportunité d'apprendre et de me perfectionner."
+    "experience-text-1": "Après avoir suivi avec succès ma formation d'Intégrateur Web chez OpenClassRooms, d'une durée de neuf mois de 2023 à 2024, où j'ai obtenu le RNCP niveau 5, je me lance désormais en freelance.",
+    "experience-text-2": "Cette expérience m'a permis d'explorer en profondeur l'intégration de sites web dynamiques, l'optimisation, le débogage et la gestion de projets.",
+    "experience-text-3": "Grâce au soutien de mentors et à la collaboration avec des développeurs chevronnés, je suis prêt à mettre en pratique mes compétences nouvellement acquises dans le monde professionnel.",
+    "skills-title": "Mon Répertoire de Compétences",
+    "skills-text-1": "Front-end",
+    "skills-text-2": "Back-end",
+    "skills-text-3": "Outils de développement",
+    "skills-text-4": "Conception et collaboration"
 }

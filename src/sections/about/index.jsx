@@ -15,6 +15,7 @@ export default function About() {
     return (
         <section id='about'>
             <div className='about-container'>
+                <h1 className='about-section-title'>About</h1>
                 <AnimatedTitle text={t('about-title')} className={'about-title'} />
                 <div className='about-content'>
                     <div className='about-text'>
@@ -35,6 +36,7 @@ export default function About() {
                 </div>
             </div>
             <div className='experience-container'>
+                <h1 className='experience-section-title'>Expérience</h1>
                 <AnimatedTitle text={t('experience-title')} className={'experience-title'} />
             </div>
             <div className='experience-content'>

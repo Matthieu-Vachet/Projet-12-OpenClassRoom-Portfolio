@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding-top: 15rem;
+    padding-top: 5rem;
     padding-bottom: 9rem;
 
     @include mobile {
@@ -42,30 +42,92 @@
             text-align: center;
         }
 
+        .about-section-title {
+            position: relative;
+            width: 100%;
+            text-align: right;
+            @include Syne(150px, 700, 0em);
+            color: var(--basicWhite);
+            opacity: 0.1;
+            padding-right: 4rem;
+
+            @include mobile {
+                text-align: center;
+                padding-right: 0;
+                @include Syne(60px, 700, 0em);
+            }
+
+            @include tablet {
+                text-align: center;
+                padding-right: 0;
+                @include Syne(100px, 700, 0em);
+            }
+
+            @include desktop {
+                @include Syne(120px, 700, 0em);
+            }
+
+            @include xxlDesktop {
+                @include Syne(200px, 700, 0em);
+            }
+
+            &::before {
+                content: 'About';
+                position: absolute;
+                width: calc(100% - 5rem); // réduire la largeur de 5rem
+                top: -40px;
+                left: 40px;
+                text-align: right;
+                @include Syne(150px, 700, 0em);
+                color: var(--basicWhite);
+                opacity: 0.2;
+
+                @include mobile {
+                    text-align: center;
+                    @include Syne(60px, 700, 0em);
+                    top: -15px;
+                    left: 60px;
+                }
+
+                @include tablet {
+                    text-align: center;
+                    @include Syne(100px, 700, 0em);
+                    top: -15px;
+                    left: 60px;
+                }
+
+                @include desktop {
+                    @include Syne(120px, 700, 0em);
+                }
+
+                @include xxlDesktop {
+                    @include Syne(200px, 700, 0em);
+                }
+            }
+        }
+
         .about-title {
-            width: 70%;
-            margin-bottom: 2.5rem;
-            @include Syne(50px, 700, 0.2em);
+            width: 100%;
+            text-align: center;
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+            @include Syne(40px, 700, 0.2em);
             color: var(--basicWhite);
 
             @include mobile {
                 width: 100%;
                 text-align: center;
-                @include Syne(25px, 700, 0.3em);
+                @include Syne(25px, 700, 0.2em);
             }
 
             @include tablet {
-                @include Syne(60px, 700, 0.3em);
+                @include Syne(40px, 700, 0.2em);
                 text-align: center;
                 width: 100%;
             }
 
-            @include largeDesktop {
-                @include Syne(65px, 700, 0.3em);
-            }
-
             @include xxlDesktop {
-                @include Syne(85px, 700, 0.3em);
+                @include Syne(70px, 700, 0.2em);
             }
         }
 
@@ -99,6 +161,11 @@
                 @include tablet {
                     width: 100%;
                     text-align: center;
+                    @include spaceGrotesk20Regular;
+                }
+
+                @include largeDesktop {
+                    @include spaceGrotesk25Regular;
                 }
 
                 @include xxlDesktop {
@@ -133,7 +200,7 @@
         display: flex;
         width: 100%;
         padding-top: 10rem;
-        flex-direction: row-reverse;
+        flex-direction: column;
         margin-right: 2rem;
 
         @include mobile {
@@ -148,34 +215,96 @@
             margin-right: 0;
         }
 
-        .experience-title {
-            width: 70%;
-            flex-direction: row-reverse;
-            text-align: right;
-            @include Syne(50px, 700, 0.3em);
+        .experience-section-title {
+            position: relative;
+            width: 100%;
+            margin-left: 2rem;
+            text-align: left;
+            @include Syne(150px, 700, 0em);
             color: var(--basicWhite);
-            margin-bottom: 2.5rem;
+            opacity: 0.1;
 
             @include mobile {
-                @include Syne(25px, 700, 0.3em);
+                text-align: center;
+                margin-left: 0;
+                @include Syne(40px, 700, 0em);
+            }
+
+            @include tablet {
+                text-align: center;
+                margin-left: 0;
+                @include Syne(90px, 700, 0em);
+            }
+
+            @include desktop {
+                @include Syne(120px, 700, 0em);
+            }
+
+            @include xxlDesktop {
+                @include Syne(200px, 700, 0em);
+            }
+
+            &::before {
+                content: 'Experience';
+                position: absolute;
+                width: calc(100% - 5rem); // réduire la largeur de 5rem
+                top: -40px;
+                left: 40px;
+                text-align: left;
+                @include Syne(150px, 700, 0em);
+                color: var(--basicWhite);
+                opacity: 0.15;
+
+                @include mobile {
+                    text-align: center;
+                    @include Syne(40px, 700, 0em);
+                    top: -15px;
+                    left: 60px;
+                }
+
+                @include tablet {
+                    text-align: center;
+                    @include Syne(90px, 700, 0em);
+                    top: -15px;
+                    left: 60px;
+                }
+
+                @include desktop {
+                    @include Syne(120px, 700, 0em);
+                }
+
+                @include xxlDesktop {
+                    @include Syne(200px, 700, 0em);
+                }
+            }
+        }
+
+        .experience-title {
+            width: 100%;
+            flex-direction: row-reverse;
+            text-align: center;
+            @include Syne(40px, 700, 0.2em);
+            color: var(--basicWhite);
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+
+            @include mobile {
+                @include Syne(25px, 700, 0.2em);
                 margin-right: 0;
                 text-align: center;
                 width: 100%;
             }
 
             @include tablet {
-                @include Syne(60px, 700, 0.3 em);
+                @include Syne(40px, 700, 0.2em);
                 margin-right: 0;
                 text-align: center;
                 width: 100%;
             }
 
-            @include largeDesktop {
-                @include Syne(65px, 700, 0.2em);
-            }
-
             @include xxlDesktop {
-                @include Syne(85px, 700, 0.3em);
+                justify-content: center;
+                @include Syne(70px, 700, 0.2em);
             }
         }
     }
@@ -214,7 +343,7 @@
         .experience-text {
             display: flex;
             flex-direction: column;
-            width: 70%;
+            width: 60%;
             color: var(--basicWhite);
             @include spaceGrotesk20Regular;
             gap: 2rem;
@@ -230,10 +359,14 @@
                 margin-right: 0;
                 width: 100%;
                 text-align: center;
+                @include spaceGrotesk20Regular;
+            }
+
+            @include largeDesktop {
+                @include spaceGrotesk25Regular;
             }
 
             @include xxlDesktop {
-                width: 80%;
                 @include spaceGrotesk32Regular;
             }
         }
