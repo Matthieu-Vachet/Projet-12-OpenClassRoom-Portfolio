@@ -1,88 +1,68 @@
-{
-    /* Importation des modules */
-}
+import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
-import { useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import PropTypes from 'prop-types';
 
 import './style.scss';
-
-export default function AnimatedTitle({ text, className }) {
+const AnimatedTitle = ({ title, className }) => {
     const ctrls = useAnimation();
 
     const { ref, inView } = useInView({
-        threshold: 0.1, // L'élément est considéré comme dans le viewport quand il est entièrement visible
-        triggerOnce: true, // L'observation s'arrête après la première détection
+        threshold: 0.5,
+        triggerOnce: false,
     });
 
     useEffect(() => {
         if (inView) {
-            ctrls.start('visible');
+            ctrls.start('animate');
         }
         if (!inView) {
-            ctrls.start('hidden');
+            ctrls.start('initial');
         }
     }, [ctrls, inView]);
 
-    const wordAnimation = {
-        hidden: {},
-        visible: {},
-    };
-
-    const characterAnimation = {
-        hidden: {
-            opacity: 0, // Opacité initiale à 0 (invisible)
-            y: `1em`, // Position initiale décalée vers le bas
+    const letterAnimation = {
+        initial: {
+            opacity: 0,
+            y: 150,
         },
-        visible: {
-            opacity: 1, // Opacité finale à 1 (visible)
-            y: `0em`, // Position finale à l'origine
+        animate: {
+            opacity: 1,
+            y: 0,
             transition: {
-                duration: 0.2, // Durée de l'animation
-                ease: [0.2, 0.65, 0.3, 0.9], // Courbe d'accélération de l'animation
+                ease: [0.2, 0.65, 0.3, 0.9],
+                duration: 0.8,
             },
         },
     };
 
     return (
-        <h1 aria-label={text} className={className}>
-            {text.split(/(\s+)/).map((word, index) => {
-                return word === ' ' ? (
-                    ' '
-                ) : (
-                    <motion.span
-                        ref={ref}
-                        aria-hidden='true'
+        <h1 aria-label={title}>
+            <motion.span className={className} ref={ref}>
+                {title.split(' ').map((word, index) => (
+                    <motion.div
                         key={index}
-                        initial='hidden'
+                        initial='initial'
                         animate={ctrls}
-                        variants={wordAnimation}
+                        className='animated-title'
                         transition={{
                             delayChildren: index * 0.25,
                             staggerChildren: 0.05,
                         }}
-                        className={`h1-animated`}
                     >
-                        {word.split('').map((character, index) => {
-                            return (
-                                <motion.span
-                                    aria-hidden='true'
-                                    key={index}
-                                    variants={characterAnimation}
-                                >
-                                    {character}
-                                </motion.span>
-                            );
-                        })}
-                    </motion.span>
-                );
-            })}
+                        <motion.span className='animated-title-span' variants={letterAnimation}>
+                            {word + '\u00A0'}
+                        </motion.span>
+                    </motion.div>
+                ))}
+            </motion.span>
         </h1>
     );
-}
+};
 
 AnimatedTitle.propTypes = {
-    text: PropTypes.string.isRequired,
-    className: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    className: PropTypes.string,
 };
+
+export default AnimatedTitle;

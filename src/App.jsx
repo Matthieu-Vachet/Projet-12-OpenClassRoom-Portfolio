@@ -7,6 +7,8 @@ import NavBar from './layouts/navbar';
 import Loader from './layouts/loader';
 import About from './sections/about';
 import Blur from './components/background/overlay/blur';
+import Skills from './sections/skills';
+import Projects from './sections/projects';
 
 function App() {
     // État pour gérer l'affichage du loader
@@ -55,6 +57,8 @@ function App() {
                     {screenWidth > 768 && <Blur />}
                     <Home />
                     <About />
+                    <Skills />
+                    <Projects />
                 </motion.div>
             )}
         </AnimatePresence>

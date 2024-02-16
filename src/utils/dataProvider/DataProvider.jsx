@@ -33,12 +33,19 @@ export const DataProvider = ({ children }) => {
                     pays: user.pays[i18n.language],
                 }));
 
+                const projetResultTranslated = projetResult.map((projet) => ({
+                    ...projet,
+                    name: projet.name[i18n.language],
+                    description: projet.description[i18n.language],
+                    category: projet.category[i18n.language],
+                }));
+
                 console.log('UserData fetched:', userResultTranslated);
-                console.log('ProjetData fetched:', projetResult);
+                console.log('ProjetData fetched:', projetResultTranslated);
                 console.log('ExperienceData fetched:', experienceResult);
 
                 setUserData(userResultTranslated);
-                setProjetsData(projetResult);
+                setProjetsData(projetResultTranslated);
                 setExperiencesData(experienceResult);
             } catch (error) {
                 console.error('Error fetching data:', error);

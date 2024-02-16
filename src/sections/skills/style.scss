@@ -1,0 +1,189 @@
+@import '../../styles/variable.scss';
+
+#skills {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    padding-top: 10rem;
+    padding-bottom: 15rem;
+
+    @include mobile {
+        padding-top: 10rem;
+    }
+
+    @include tablet {
+        padding-top: 10rem;
+    }
+
+    .skills-container {
+        position: relative;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+
+        .skills-section-title {
+            position: relative;
+            width: 100%;
+            text-align: right;
+            @include Syne(150px, 700, 0em);
+            color: var(--basicWhite);
+            opacity: 0.1;
+            padding-right: 4rem;
+
+            @include mobile {
+                text-align: center;
+                padding-right: 0;
+                @include Syne(40px, 700, 0em);
+            }
+
+            @include tablet {
+                text-align: center;
+                padding-right: 0;
+                @include Syne(100px, 700, 0em);
+            }
+
+            @include desktop {
+                @include Syne(120px, 700, 0em);
+            }
+
+            @include xxlDesktop {
+                @include Syne(200px, 700, 0em);
+            }
+
+            &::before {
+                content: 'Skills';
+                position: absolute;
+                width: calc(100% - 5rem); // réduire la largeur de 5rem
+                top: -40px;
+                left: 40px;
+                text-align: right;
+                @include Syne(150px, 700, 0em);
+                color: var(--basicWhite);
+                opacity: 0.2;
+
+                @include mobile {
+                    text-align: center;
+                    @include Syne(40px, 700, 0em);
+                    top: -15px;
+                    left: 60px;
+                }
+
+                @include tablet {
+                    text-align: center;
+                    @include Syne(100px, 700, 0em);
+                    top: -15px;
+                    left: 60px;
+                }
+
+                @include desktop {
+                    @include Syne(120px, 700, 0em);
+                }
+
+                @include xxlDesktop {
+                    @include Syne(200px, 700, 0em);
+                }
+            }
+        }
+
+        .skills-title {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 5rem;
+            margin-top: 5rem;
+            @include Syne(40px, 700, 0.2em);
+            color: var(--basicWhite);
+
+            @include mobile {
+                width: 100%;
+                text-align: center;
+                @include Syne(25px, 700, 0.2em);
+            }
+
+            @include tablet {
+                @include Syne(40px, 700, 0.2em);
+                text-align: center;
+                width: 100%;
+            }
+
+            @include xxlDesktop {
+                @include Syne(70px, 700, 0.2em);
+            }
+        }
+
+        .skills-section {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 95%;
+            margin-left: 2rem;
+            gap: 1rem;
+
+            @include mobile {
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-left: 0;
+            }
+
+            @include tablet {
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-left: 0;
+            }
+
+            .skills-texts {
+                @include Syne(20px, 700, 0.45em);
+                color: var(--basicWhite);
+                transform: scaleY(2);
+                gap: 4rem;
+                opacity: 0.5;
+
+                @include mobile {
+                    text-align: center;
+                    @include Syne(20px, 700, 0.45em);
+                    transform: scaleY(1);
+                }
+
+                @include tablet {
+                    text-align: center;
+                    @include Syne(20px, 700, 0.45em);
+                    transform: scaleY(1);
+                }
+
+                @include xxlDesktop {
+                    @include Syne(33px, 700, 0.45em);
+                    transform: scaleY(2);
+                }
+            }
+
+            .skill-icons-sections {
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+                margin-bottom: 4rem;
+
+                @include mobile {
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    margin-bottom: 3rem;
+                    gap: 1rem;
+                }
+
+                @include tablet {
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    margin-bottom: 3rem;
+                    gap: 1rem;
+                }
+            }
+        }
+    }
+}
