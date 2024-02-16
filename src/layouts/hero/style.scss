@@ -69,7 +69,7 @@
             }
 
             .hero_number {
-                @include copperplate20Bold;
+                @include Syne(35px, 500, 0.25em);
                 margin-top: 27px;
                 margin-bottom: 100px;
                 text-decoration: none;
@@ -79,7 +79,7 @@
                 padding: 10px 20px;
 
                 @include mobile {
-                    @include copperplate20Bold;
+                    @include Syne(20px, 500, 0.25em);
                 }
             }
         }

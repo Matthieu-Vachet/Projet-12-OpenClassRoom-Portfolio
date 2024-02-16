@@ -2,13 +2,6 @@
 IMPORT FONT COPPERPLATE
 */
 
-@font-face {
-    font-family: 'Copperplate';
-    src: url('../assets/fonts/Copperplate_Gothic_Bold_Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-
 /*
 VARIABLES COLORS
 */
@@ -409,92 +402,6 @@ MIXINS FONT SPACE GROTESK
     font-family: 'Space Grotesk';
     font-weight: 700;
     font-style: normal;
-    text-decoration: none;
-    text-transform: none;
-}
-
-/*
-MIXINS FONT COPPERPLATE
-*/
-
-@mixin copperplate250Bold() {
-    font-size: 250px;
-    font-family: 'Copperplate';
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 0.5em;
-    text-decoration: none;
-    text-transform: none;
-}
-@mixin copperplate200Bold() {
-    font-size: 200px;
-    font-family: 'Copperplate';
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 0.5em;
-    text-decoration: none;
-    text-transform: none;
-}
-@mixin copperplate170Bold() {
-    font-size: 170px;
-    font-family: 'Copperplate';
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 0.5em;
-    text-decoration: none;
-    text-transform: none;
-}
-@mixin copperplate140Bold() {
-    font-size: 140px;
-    font-family: 'Copperplate';
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 0.5em;
-    text-decoration: none;
-    text-transform: none;
-}
-@mixin copperplate100Bold() {
-    font-size: 100px;
-    font-family: 'Copperplate';
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 0.5em;
-    text-decoration: none;
-    text-transform: none;
-}
-@mixin copperplate40Bold() {
-    font-size: 40px;
-    font-family: 'Copperplate';
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 0.4em;
-    text-decoration: none;
-    text-transform: none;
-}
-@mixin copperplate60Bold() {
-    font-size: 60px;
-    font-family: 'Copperplate';
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 0.4em;
-    text-decoration: none;
-    text-transform: none;
-}
-@mixin copperplate80Bold() {
-    font-size: 80px;
-    font-family: 'Copperplate';
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 0.4em;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-@mixin copperplate20Bold() {
-    font-size: 20px;
-    font-family: 'Copperplate';
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 0.4em;
     text-decoration: none;
     text-transform: none;
 }
