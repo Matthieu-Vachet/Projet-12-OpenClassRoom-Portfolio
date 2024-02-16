@@ -50,6 +50,12 @@ export default function Navbar() {
                             key={item.id}
                             href={`#${item.id}`}
                             className={activeNav === `#${item.id}` ? 'active' : ''}
+                            onClick={(e) => {
+                                e.preventDefault();
+                                document
+                                    .querySelector(`#${item.id}`)
+                                    .scrollIntoView({ behavior: 'smooth' });
+                            }}
                         >
                             <Icon />
                         </a>

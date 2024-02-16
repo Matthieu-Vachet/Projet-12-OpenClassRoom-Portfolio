@@ -6,13 +6,13 @@ import FancyText from '@carefully-coded/react-text-gradient';
 // Importation des données
 // import { home } from '../../utils/data/constants';
 import { UserContext } from '../../utils/dataProvider/DataProvider';
-import { TextHeroVariant } from '../../utils/framerMotion/Variante';
+import { TextHeroVariant, SvgVariants } from '../../utils/framerMotion/Variante';
 import { useTranslation } from 'react-i18next';
 
 // Importation des composants
 import ScrollMouse from '../../components/scrollMouse';
-import SvgHero from '../../components/background/svgHero';
-
+// import SvgHero from '../../components/background/svgHero';
+import ImgIcons from '../../assets/images/VersionBalck.svg';
 // Importation des styles
 import './style.scss';
 import '../../styles/variable.scss';
@@ -63,10 +63,15 @@ export default function Hero() {
                         {data[0].number}
                     </motion.h4>
                 </div>
-
-                {/* SVG Hero */}
-                <div className='hero_svg'>
-                    <SvgHero />
+                <div className='img-icons-section'>
+                    <motion.img
+                        initial='hidden'
+                        animate='visible'
+                        variants={SvgVariants}
+                        className='img-icons'
+                        src={ImgIcons}
+                        alt='Image Icons technologies web'
+                    />
                 </div>
             </div>
 

@@ -1,6 +1,9 @@
 import { AiOutlineHome, AiOutlineUser } from 'react-icons/ai';
-import { BiBook, BiMessageSquareDetail } from 'react-icons/bi';
-import { RiServiceLine } from 'react-icons/ri';
+import { BiMessageSquareDetail } from 'react-icons/bi';
+import { LiaSuitcaseSolid } from 'react-icons/lia';
+import { GiGearHammer } from 'react-icons/gi';
+import { DiHtml5, DiCss3, DiSass, DiJavascript1, DiReact } from 'react-icons/di';
+import { SiVite, SiJest, SiTestinglibrary, SiRedux, SiSwagger } from 'react-icons/si';
 
 import HtmlIcon from '../../assets/icons/html.svg';
 import CssIcon from '../../assets/icons/css.svg';
@@ -37,12 +40,12 @@ const navItems = [
     {
         id: 'skills',
         title: 'Skills',
-        icon: BiBook,
+        icon: GiGearHammer,
     },
     {
-        id: 'portfolio',
-        title: 'Portfolio',
-        icon: RiServiceLine,
+        id: 'projects',
+        title: 'Projects',
+        icon: LiaSuitcaseSolid,
     },
     {
         id: 'contact',
@@ -203,4 +206,24 @@ const Conception_skill = [
     },
 ];
 
-export { navItems, Frontend_skill, Backend_skill, Developpement_skill, Conception_skill };
+const technologyIcons = {
+    Html: DiHtml5,
+    Css: DiCss3,
+    Sass: DiSass,
+    Javascript: DiJavascript1,
+    React: DiReact,
+    ViteJs: SiVite,
+    Jest: SiJest,
+    TestingLibrary: SiTestinglibrary,
+    Redux: SiRedux,
+    Swagger: SiSwagger,
+};
+
+export {
+    navItems,
+    Frontend_skill,
+    Backend_skill,
+    Developpement_skill,
+    Conception_skill,
+    technologyIcons,
+};

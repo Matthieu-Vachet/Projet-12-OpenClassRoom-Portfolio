@@ -23,3 +23,10 @@ export const ButtonVariant = {
     initial: { y: -50, opacity: 0 },
     animate: { y: 0, opacity: 1 },
 };
+
+// Variante Svg Hero
+
+export const SvgVariants = {
+    hidden: { opacity: 0, scale: 0 }, // Commence avec une taille minimale et une opacité minimale
+    visible: { opacity: 1, scale: 1, transition: { duration: 2 } }, // Grossit et atteint une opacité de 1
+};
