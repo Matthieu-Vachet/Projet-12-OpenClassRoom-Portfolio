@@ -83,7 +83,7 @@
                 }
             }
         }
-        .hero_svg {
+        .img-icons-section {
             width: 30%;
 
             @include mobile {
@@ -92,6 +92,10 @@
 
             @include tablet {
                 display: none;
+            }
+
+            .img-icons {
+                width: 100%;
             }
         }
     }

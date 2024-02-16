@@ -10,7 +10,7 @@
     justify-content: center;
     overflow: hidden;
     padding-top: 5rem;
-    padding-bottom: 9rem;
+    padding-bottom: 15rem;
 
     @include mobile {
         padding: 0;
@@ -109,8 +109,8 @@
         .about-title {
             width: 100%;
             text-align: center;
-            margin-bottom: 2rem;
-            margin-top: 2rem;
+            margin-bottom: 5rem;
+            margin-top: 5rem;
             @include Syne(40px, 700, 0.2em);
             color: var(--basicWhite);
 
@@ -150,7 +150,7 @@
                 color: var(--basicWhite);
                 text-align: left;
                 @include spaceGrotesk20Regular;
-                gap: 2rem;
+                gap: 4rem;
 
                 @include mobile {
                     width: 100%;
@@ -199,7 +199,7 @@
         position: relative;
         display: flex;
         width: 100%;
-        padding-top: 10rem;
+        padding-top: 20rem;
         flex-direction: column;
         margin-right: 2rem;
 
@@ -285,8 +285,8 @@
             text-align: center;
             @include Syne(40px, 700, 0.2em);
             color: var(--basicWhite);
-            margin-top: 2rem;
-            margin-bottom: 2rem;
+            margin-top: 5rem;
+            margin-bottom: 5rem;
 
             @include mobile {
                 @include Syne(25px, 700, 0.2em);
@@ -346,7 +346,7 @@
             width: 60%;
             color: var(--basicWhite);
             @include spaceGrotesk20Regular;
-            gap: 2rem;
+            gap: 4rem;
 
             @include mobile {
                 width: 100%;

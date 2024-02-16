@@ -1,0 +1,119 @@
+@import '../../styles/variable.scss';
+
+.projects-cards-container {
+    position: relative;
+    z-index: 0;
+    display: flex;
+
+    .projects-cards {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 350px;
+        height: 340px;
+        border-radius: 20px;
+        @include glassEffect;
+        transition: 0.5s;
+
+        &:hover {
+            height: 520px;
+        }
+
+        .projects-cards-image-container {
+            position: absolute;
+            top: 20px;
+            width: 300px;
+            height: 220px;
+            background: #333;
+            border: 2px solid var(--basicWhite);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: 0.5s;
+
+            .projects-cards-image {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &:hover .projects-cards-image-container {
+            top: -100px;
+            scale: 0.75;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+        }
+
+        .projects-cards-content {
+            position: absolute;
+            top: 300px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 0 10px;
+            height: 30px;
+            overflow: hidden;
+            text-align: center;
+            transition: 0.5s;
+
+            .projects-cards-title {
+                @include Syne(20px, 700, 0.1em);
+                color: var(--basicWhite);
+            }
+
+            .projects-categorie {
+                color: var(--basicWhite);
+                @include Syne(16px, 400, 0.1em);
+                border: 1px solid var(--basicWhite);
+                border-radius: 10px;
+                padding: 0.5rem 1rem;
+                width: fit-content;
+                margin: 1rem auto;
+            }
+
+            .projects-cards-technologies {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 40px;
+                color: var(--basicDarkGray);
+                border-radius: 10px;
+                gap: 1rem;
+                padding-bottom: 1rem;
+            }
+
+            .projects-cards-description {
+                @include spaceGrotesk18Regular;
+                color: var(--basicWhite);
+            }
+
+            .projects-cards-link-section {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                padding-top: 2rem;
+
+                .projects-cards-icons-link {
+                    font-size: 30px;
+                    text-decoration: none;
+                    color: var(--basicDarkGray);
+                    transition: 0.5s;
+
+                    &:hover {
+                        scale: 1.5;
+                        color: var(--basicWhite);
+                    }
+                }
+            }
+        }
+
+        &:hover .projects-cards-content {
+            top: 100px;
+            height: 410px;
+        }
+    }
+}
