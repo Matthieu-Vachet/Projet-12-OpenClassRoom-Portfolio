@@ -10,7 +10,8 @@
     padding-bottom: 15rem;
 
     @include mobile {
-        padding-top: 10rem;
+        padding-top: 5rem;
+        padding-bottom: 0rem;
     }
 
     @include tablet {
@@ -99,6 +100,8 @@
                 width: 100%;
                 text-align: center;
                 @include Syne(25px, 700, 0.2em);
+                margin-top: 3rem;
+                margin-bottom: 3rem;
             }
 
             @include tablet {
@@ -118,6 +121,10 @@
             flex-wrap: wrap;
             margin-top: 2rem;
             gap: 2rem;
+
+            @include mobile {
+                margin-top: 0;
+            }
         }
     }
 }
