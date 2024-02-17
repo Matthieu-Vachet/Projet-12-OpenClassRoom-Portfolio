@@ -9,6 +9,7 @@ import About from './sections/about';
 import Blur from './components/background/overlay/blur';
 import Skills from './sections/skills';
 import Projects from './sections/projects';
+import Experience from './sections/Experience/Experience';
 
 function App() {
     // État pour gérer l'affichage du loader
@@ -57,6 +58,7 @@ function App() {
                     {screenWidth > 768 && <Blur />}
                     <Home />
                     <About />
+                    <Experience />
                     <Skills />
                     <Projects />
                 </motion.div>

@@ -1,6 +1,6 @@
 @import '../../styles/variable.scss';
 
-.cards-container {
+.experience-logo-container {
     position: relative;
     display: flex;
     justify-content: space-around;
@@ -8,9 +8,8 @@
     height: auto;
     display: flex;
     margin: 2rem auto;
-    padding: 2rem;
 
-    .cards {
+    .experience-logo {
         position: relative;
         width: 400px;
         height: 400px;
@@ -41,16 +40,15 @@
             opacity: 0.6;
         }
 
-        .cards-content-image {
+        .experience-logo-content {
             position: absolute;
             inset: 4px;
             background: var(--basicOnyx);
-            background-image: url('../../assets/icons/OpLogo.png');
-            background-size: 90%;
-            background-repeat: no-repeat;
-            background-position: center;
             border-radius: 16px;
             z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             // .cards-image {
             //     position: relative;
@@ -60,6 +58,12 @@
             //     opacity: 0.7;
             //     border-radius: 16px;
             // }
+
+            img {
+                position: relative;
+                width: 100%;
+                object-fit: cover;
+            }
         }
     }
 }
