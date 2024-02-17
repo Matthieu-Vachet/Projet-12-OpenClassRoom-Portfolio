@@ -1,15 +1,15 @@
-{
-    /* Importation des modules */
-}
 import PropTypes from 'prop-types';
-{
-    /* Importation des styles */
-}
 import './style.scss';
 
-const Button = ({ text }) => {
+const Button = ({ text, type, onClick, disabled, className, height, width }) => {
     return (
-        <button className='btn-gradient' href='#'>
+        <button
+            className={`btn-gradient ${className}`}
+            type={type}
+            onClick={onClick}
+            disabled={disabled}
+            style={{ height: `${height}`, width: `${width}` }}
+        >
             <span className='btn-gradient-text'>{text}</span>
         </button>
     );
@@ -17,6 +17,21 @@ const Button = ({ text }) => {
 
 Button.propTypes = {
     text: PropTypes.string.isRequired,
+    type: PropTypes.string,
+    onClick: PropTypes.func,
+    disabled: PropTypes.bool,
+    className: PropTypes.string,
+    height: PropTypes.string,
+    width: PropTypes.string,
+};
+
+Button.defaultProps = {
+    type: 'button',
+    onClick: null,
+    disabled: false,
+    className: '',
+    height: '6em', // valeur par défaut
+    width: '20em', // valeur par défaut
 };
 
 export default Button;
