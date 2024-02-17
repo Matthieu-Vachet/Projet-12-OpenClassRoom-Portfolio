@@ -44,14 +44,13 @@ const AnimatedTitle = ({ title, className }) => {
                         key={index}
                         initial='initial'
                         animate={ctrls}
-                        className='animated-title'
                         transition={{
                             delayChildren: index * 0.25,
                             staggerChildren: 0.05,
                         }}
                     >
                         <motion.span className='animated-title-span' variants={letterAnimation}>
-                            {word + '\u00A0'}
+                            {word}
                         </motion.span>
                     </motion.div>
                 ))}
