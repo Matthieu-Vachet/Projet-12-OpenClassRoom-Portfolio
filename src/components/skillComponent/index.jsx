@@ -4,10 +4,10 @@ import Tilt from 'react-parallax-tilt';
 import { useInView } from 'react-intersection-observer';
 import './style.scss';
 
-const SkillComponent = ({ name, src, width, height, index, alt }) => {
+const SkillComponent = ({ name, Image, fontSize, index, alt, color }) => {
     const { ref, inView } = useInView({
         threshold: 0.3,
-        triggerOnce: false,
+        triggerOnce: true,
     });
 
     const imageVariants = {
@@ -29,7 +29,7 @@ const SkillComponent = ({ name, src, width, height, index, alt }) => {
         >
             <Tilt className='box-icons'>
                 <h1 className='skills-names'>{name}</h1>
-                <img className='skills-img' src={src} width={width} height={height} alt={alt} />
+                <Image className='skills-img' color={color} fontSize={fontSize} alt={alt} />
             </Tilt>
         </motion.div>
     );
@@ -37,11 +37,11 @@ const SkillComponent = ({ name, src, width, height, index, alt }) => {
 
 SkillComponent.propTypes = {
     name: PropTypes.string.isRequired,
-    src: PropTypes.string.isRequired,
-    width: PropTypes.number.isRequired,
-    height: PropTypes.number.isRequired,
+    Image: PropTypes.func.isRequired,
+    fontSize: PropTypes.number.isRequired,
+    color: PropTypes.string.isRequired,
     index: PropTypes.number.isRequired,
-    alt: PropTypes.string,
+    alt: PropTypes.string.isRequired,
 };
 
 export default SkillComponent;

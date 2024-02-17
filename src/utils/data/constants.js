@@ -2,29 +2,31 @@ import { AiOutlineHome, AiOutlineUser } from 'react-icons/ai';
 import { BiMessageSquareDetail } from 'react-icons/bi';
 import { LiaSuitcaseSolid } from 'react-icons/lia';
 import { GiGearHammer } from 'react-icons/gi';
-import { DiHtml5, DiCss3, DiSass, DiJavascript1, DiReact } from 'react-icons/di';
-import { SiVite, SiJest, SiTestinglibrary, SiRedux, SiSwagger } from 'react-icons/si';
-
-import HtmlIcon from '../../assets/icons/html.svg';
-import CssIcon from '../../assets/icons/css.svg';
-import SassIcon from '../../assets/icons/sass.svg';
-import JavascriptIcon from '../../assets/icons/javascript.svg';
-import ReactIcon from '../../assets/icons/react.svg';
-import ReduxIcon from '../../assets/icons/redux.svg';
-import FramerMotionIcon from '../../assets/icons/framer-motion.svg';
-import NodeJSIcon from '../../assets/icons/nodejs.svg';
-import ExpressJSIcon from '../../assets/icons/express.svg';
-import MongoDBIcon from '../../assets/icons/mongodb.svg';
-import VSCodeIcon from '../../assets/icons/vscode.svg';
-import NPMIcon from '../../assets/icons/npm.svg';
-import GithubIcon from '../../assets/icons/github.svg';
-import GitKrakenIcon from '../../assets/icons/gitkraken.svg';
-import FigmaIcon from '../../assets/icons/figma.svg';
-import InkscapeIcon from '../../assets/icons/inkscape.svg';
-import TrelloIcon from '../../assets/icons/trello.svg';
-import SlackIcon from '../../assets/icons/slack.svg';
-import PostmanIcon from '../../assets/icons/postman.svg';
-import SwaggerIcon from '../../assets/icons/swagger.svg';
+import {
+    DiHtml5,
+    DiCss3,
+    DiSass,
+    DiJavascript1,
+    DiReact,
+    DiNodejsSmall,
+    DiMongodb,
+    DiNpm,
+    DiGithubAlt,
+    DiTrello,
+} from 'react-icons/di';
+import {
+    SiVite,
+    SiJest,
+    SiTestinglibrary,
+    SiRedux,
+    SiSwagger,
+    SiExpress,
+    SiGitkraken,
+    SiInkscape,
+    SiSlack,
+    SiPostman,
+} from 'react-icons/si';
+import { TbBrandFramerMotion, TbBrandVscode, TbBrandFigma } from 'react-icons/tb';
 
 const navItems = [
     {
@@ -57,51 +59,44 @@ const navItems = [
 const Frontend_skill = [
     {
         skill_name: 'Html',
-        Image: HtmlIcon,
-        width: 80,
-        height: 80,
+        Image: DiHtml5,
+        size: 90,
         alt: 'Icône Html',
     },
     {
         skill_name: 'Css',
-        Image: CssIcon,
-        width: 80,
-        height: 80,
+        Image: DiCss3,
+        size: 90,
         alt: 'Icône Css',
     },
     {
         skill_name: 'Sass',
-        Image: SassIcon,
-        width: 80,
-        height: 80,
+        Image: DiSass,
+        size: 90,
         alt: 'Icône Sass',
     },
     {
         skill_name: 'Javascript',
-        Image: JavascriptIcon,
-        width: 80,
-        height: 80,
+        Image: DiJavascript1,
+        size: 90,
         alt: 'Icône Javascript',
     },
     {
         skill_name: 'React',
-        Image: ReactIcon,
-        width: 80,
-        height: 80,
+        Image: DiReact,
+        size: 90,
         alt: 'Icône React',
     },
     {
         skill_name: 'Redux',
-        Image: ReduxIcon,
-        width: 80,
-        height: 80,
+        Image: SiRedux,
+        size: 90,
         alt: 'Icône Redux',
     },
     {
         skill_name: 'Motion',
-        Image: FramerMotionIcon,
-        width: 80,
-        height: 80,
+        Image: TbBrandFramerMotion,
+        size: 90,
         alt: 'Icône Framer Motion',
     },
 ];
@@ -109,23 +104,20 @@ const Frontend_skill = [
 const Backend_skill = [
     {
         skill_name: 'Node.JS',
-        Image: NodeJSIcon,
-        width: 80,
-        height: 80,
+        Image: DiNodejsSmall,
+        size: 90,
         alt: 'Icône NodeJS',
     },
     {
         skill_name: 'Express.JS',
-        Image: ExpressJSIcon,
-        width: 80,
-        height: 80,
+        Image: SiExpress,
+        size: 90,
         alt: 'Icône ExpressJS',
     },
     {
         skill_name: 'MongoDB',
-        Image: MongoDBIcon,
-        width: 80,
-        height: 80,
+        Image: DiMongodb,
+        size: 90,
         alt: 'Icône MongoDB',
     },
 ];
@@ -133,30 +125,26 @@ const Backend_skill = [
 const Developpement_skill = [
     {
         skill_name: 'VS Code',
-        Image: VSCodeIcon,
-        width: 80,
-        height: 80,
+        Image: TbBrandVscode,
+        size: 90,
         alt: 'Icône VS Code',
     },
     {
         skill_name: 'NPM',
-        Image: NPMIcon,
-        width: 80,
-        height: 80,
+        Image: DiNpm,
+        size: 90,
         alt: 'Icône NPM',
     },
     {
         skill_name: 'Github',
-        Image: GithubIcon,
-        width: 80,
-        height: 80,
+        Image: DiGithubAlt,
+        size: 90,
         alt: 'Icône Github',
     },
     {
         skill_name: 'Git Kraken',
-        Image: GitKrakenIcon,
-        width: 80,
-        height: 80,
+        Image: SiGitkraken,
+        size: 90,
         alt: 'Icône Git Kraken',
     },
 ];
@@ -164,44 +152,38 @@ const Developpement_skill = [
 const Conception_skill = [
     {
         skill_name: 'Figma',
-        Image: FigmaIcon,
-        width: 80,
-        height: 80,
+        Image: TbBrandFigma,
+        size: 90,
         alt: 'Icône Figma',
     },
     {
         skill_name: 'Inkscape',
-        Image: InkscapeIcon,
-        width: 80,
-        height: 80,
+        Image: SiInkscape,
+        size: 90,
         alt: 'Icône Inkscape',
     },
     {
         skill_name: 'Trello',
-        Image: TrelloIcon,
-        width: 80,
-        height: 80,
+        Image: DiTrello,
+        size: 90,
         alt: 'Icône Trello',
     },
     {
         skill_name: 'Slack',
-        Image: SlackIcon,
-        width: 80,
-        height: 80,
+        Image: SiSlack,
+        size: 90,
         alt: 'Icône Slack',
     },
     {
         skill_name: 'Postman',
-        Image: PostmanIcon,
-        width: 80,
-        height: 80,
+        Image: SiPostman,
+        size: 90,
         alt: 'Icône Postman',
     },
     {
         skill_name: 'Swagger',
-        Image: SwaggerIcon,
-        width: 80,
-        height: 80,
+        Image: SiSwagger,
+        size: 90,
         alt: 'Icône Swagger',
     },
 ];

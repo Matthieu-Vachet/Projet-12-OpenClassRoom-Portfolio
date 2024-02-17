@@ -7,13 +7,14 @@
     "about-bottom-1": "My CV",
     "about-bottom-2": "Contact",
     "experience-title": "THE KEY STAGES OF MY JOURNEY",
-    "experience-text-1": "After successfully completing my nine-month Intégrateur Web training at OpenClassRooms from 2023 to 2024, where I achieved RNCP level 5, I am now venturing into freelance work",
-    "experience-text-2": "This experience has allowed me to delve deeply into dynamic website integration, optimization, debugging, and project management.",
-    "experience-text-3": "With the support of mentors and collaboration with experienced developers, I am ready to apply my newly acquired skills in the professional world.",
+    "experience-text-1": "Currently undergoing an intensive full-time web integrator training program at OpenClassrooms, from 2023 to March 2024, I am successfully pursuing the attainment of the RNCP level 5 diploma, equivalent to a bachelor's degree. This fully remote training has allowed me to delve deeply into the integration of dynamic websites with React, Redux, as well as optimization, SEO, and debugging.",
+    "experience-text-2": "Throughout this journey, I've had the opportunity to collaborate with expert mentors in their fields, enriching my experience and accelerating my learning. Through twelve professional projects, I've developed a strong expertise in web project management, from conception to deployment.",
+    "experience-text-3": "Driven by an unwavering passion for the web, I am committed to excellence in my field and constantly strive to push my boundaries to deliver outstanding web solutions to my future clients.",
     "skills-title": "My Repertoire of Skills",
     "skills-text-1": "Front-end",
     "skills-text-2": "Back-end",
     "skills-text-3": "Development Tools",
     "skills-text-4": "Design and Collaboration",
-    "projects-title": "Discover my web projects."
+    "projects-title": "Discover my web projects.",
+    "contact-title": "Do you have a question, proposal, or project in mind? I'm ready to collaborate with you on anything that interests you!"
 }

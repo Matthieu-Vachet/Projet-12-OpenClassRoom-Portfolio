@@ -26,14 +26,15 @@ const Skills = () => {
                         <AnimatedText text={t('skills-text-1')} />
                     </div>
                     <div className='skill-icons-sections'>
-                        {Frontend_skill.map((image, index) => (
+                        {Frontend_skill.map((skill, index) => (
                             <SkillComponent
                                 key={index}
-                                name={image.skill_name}
-                                src={image.Image}
-                                width={image.width}
-                                height={image.height}
+                                name={skill.skill_name}
+                                Image={skill.Image}
+                                fontSize={skill.size}
+                                color='white'
                                 index={index}
+                                alt={skill.alt}
                             />
                         ))}
                     </div>
@@ -43,14 +44,15 @@ const Skills = () => {
                         <AnimatedText text={t('skills-text-2')} />
                     </div>
                     <div className='skill-icons-sections'>
-                        {Backend_skill.map((image, index) => (
+                        {Backend_skill.map((skill, index) => (
                             <SkillComponent
                                 key={index}
-                                name={image.skill_name}
-                                src={image.Image}
-                                width={image.width}
-                                height={image.height}
+                                name={skill.skill_name}
+                                Image={skill.Image}
+                                fontSize={skill.size}
+                                color='white'
                                 index={index}
+                                alt={skill.alt}
                             />
                         ))}
                     </div>
@@ -60,14 +62,15 @@ const Skills = () => {
                         <AnimatedText text={t('skills-text-3')} />
                     </div>
                     <div className='skill-icons-sections'>
-                        {Developpement_skill.map((image, index) => (
+                        {Developpement_skill.map((skill, index) => (
                             <SkillComponent
                                 key={index}
-                                name={image.skill_name}
-                                src={image.Image}
-                                width={image.width}
-                                height={image.height}
+                                name={skill.skill_name}
+                                Image={skill.Image}
+                                fontSize={skill.size}
+                                color='white'
                                 index={index}
+                                alt={skill.alt}
                             />
                         ))}
                     </div>
@@ -77,14 +80,15 @@ const Skills = () => {
                         <AnimatedText text={t('skills-text-4')} />
                     </div>
                     <div className='skill-icons-sections'>
-                        {Conception_skill.map((image, index) => (
+                        {Conception_skill.map((skill, index) => (
                             <SkillComponent
                                 key={index}
-                                name={image.skill_name}
-                                src={image.Image}
-                                width={image.width}
-                                height={image.height}
+                                name={skill.skill_name}
+                                Image={skill.Image}
+                                fontSize={skill.size}
+                                color='white'
                                 index={index}
+                                alt={skill.alt}
                             />
                         ))}
                     </div>
