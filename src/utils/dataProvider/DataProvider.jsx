@@ -17,9 +17,15 @@ export const DataProvider = ({ children }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const userResponse = fetch('http://node6.adky.net:1048/Api/v1/users/');
-                const projetResponse = fetch('http://node6.adky.net:1048/Api/v1/projets/');
-                const experienceResponse = fetch('http://node6.adky.net:1048/Api/v1/experiences/');
+                const userResponse = fetch(
+                    'https://api-rest-portfolio-9sks1gigr-matthieu-vachets-projects.vercel.app//Api/v1/users/',
+                );
+                const projetResponse = fetch(
+                    'https://api-rest-portfolio-9sks1gigr-matthieu-vachets-projects.vercel.app//Api/v1/projets/',
+                );
+                const experienceResponse = fetch(
+                    'https://api-rest-portfolio-9sks1gigr-matthieu-vachets-projects.vercel.app//Api/v1/experiences/',
+                );
 
                 const [userResult, projetResult, experienceResult] = await Promise.all([
                     userResponse,
