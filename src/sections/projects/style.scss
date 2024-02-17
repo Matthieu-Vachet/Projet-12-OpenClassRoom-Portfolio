@@ -7,15 +7,23 @@
     display: flex;
     overflow: hidden;
     padding-top: 10rem;
-    padding-bottom: 15rem;
+    padding-bottom: 10rem;
 
     @include mobile {
-        padding-top: 5rem;
+        padding-top: 2rem;
         padding-bottom: 0rem;
     }
 
     @include tablet {
-        padding-top: 10rem;
+        padding-bottom: 0rem;
+    }
+
+    @include desktop {
+        padding-top: 0;
+    }
+
+    @include largeDesktop {
+        padding-top: 0;
     }
 
     .projects-container {
@@ -108,6 +116,8 @@
                 @include Syne(40px, 700, 0.2em);
                 text-align: center;
                 width: 100%;
+                margin-top: 3rem;
+                margin-bottom: 3rem;
             }
 
             @include xxlDesktop {
@@ -123,6 +133,10 @@
             gap: 2rem;
 
             @include mobile {
+                margin-top: 0;
+            }
+
+            @include tablet {
                 margin-top: 0;
             }
         }
