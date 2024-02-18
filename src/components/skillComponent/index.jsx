@@ -29,7 +29,14 @@ const SkillComponent = ({ name, Image, fontSize, index, alt, color }) => {
         >
             <Tilt className='box-icons'>
                 <h1 className='skills-names'>{name}</h1>
-                <Image className='skills-img' color={color} fontSize={fontSize} alt={alt} />
+                <Image
+                    className='skills-img'
+                    color={color}
+                    fontSize={fontSize}
+                    alt={alt}
+                    aria-label={`Skill: ${name}`}
+                    tabIndex='0'
+                />
             </Tilt>
         </motion.div>
     );

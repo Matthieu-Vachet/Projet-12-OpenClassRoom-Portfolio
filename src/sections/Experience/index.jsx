@@ -1,8 +1,8 @@
-import ExperienceLogo from '../../components/ExperienceLogo/ExperienceLogo';
+import ExperienceLogo from '../../components/ExperienceLogo';
 import AnimatedSubtitle from '../../components/animations/AnimatedSubtitle';
 import AnimatedText from '../../components/animations/AnimatedText';
 
-import './Experience.scss';
+import './style.scss';
 import OpLogo from '../../assets/icons/OpLogo.png';
 
 import { useTranslation } from 'react-i18next';
@@ -11,7 +11,7 @@ const Experience = () => {
     const { t } = useTranslation();
 
     return (
-        <section id='experience'>
+        <section id='experience' aria-label='Experience section'>
             <div className='experience-container'>
                 <h1 className='experience-section-title'>Expérience</h1>
                 <AnimatedSubtitle
@@ -23,7 +23,11 @@ const Experience = () => {
             <div className='experience-content'>
                 <div className='experience-cards'>
                     <h4 className='experience-cards-title'>OpenClassRooms</h4>
-                    <ExperienceLogo src={OpLogo} alt={'Logo OpenClassRooms'} />
+                    <ExperienceLogo
+                        src={OpLogo}
+                        alt={'Logo OpenClassRooms'}
+                        aria-label={'Logo OpenClassRooms'}
+                    />
                 </div>
                 <div className='experience-text'>
                     <AnimatedText text={t('experience-text-1')} />

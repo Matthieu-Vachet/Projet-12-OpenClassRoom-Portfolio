@@ -46,10 +46,6 @@ export const DataProvider = ({ children }) => {
                     category: projet.category[i18n.language],
                 }));
 
-                console.log('UserData fetched:', userResultTranslated);
-                console.log('ProjetData fetched:', projetResultTranslated);
-                console.log('ExperienceData fetched:', experienceResult);
-
                 setUserData(userResultTranslated);
                 setProjetsData(projetResultTranslated);
                 setExperiencesData(experienceResult);

@@ -46,11 +46,19 @@ const LightDarkToggle = () => {
     }, [islightMode]);
 
     return (
-        <button className='toggleMode' onClick={toggleMode}>
+        <button
+            className='toggleMode'
+            onClick={toggleMode}
+            aria-label={islightMode ? 'Switch to dark mode' : 'Switch to light mode'}
+        >
             {islightMode ? (
-                <CiLight className='toggleIcon' />
+                <>
+                    <CiLight className='toggleIcon' />
+                </>
             ) : (
-                <MdDarkMode className='toggleIcon' />
+                <>
+                    <MdDarkMode className='toggleIcon' />
+                </>
             )}
         </button>
     );

@@ -6,10 +6,10 @@ import './style.scss';
 
 export default function Home() {
     return (
-        <section id='home'>
+        <section id='home' aria-label='Home section'>
             <Header />
             <div className='heroBanner'>
-                <SocialBar />
+                <SocialBar aria-label='Social bar' />
                 <div>
                     <Hero />
                 </div>

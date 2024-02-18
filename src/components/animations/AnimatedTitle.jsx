@@ -3,13 +3,13 @@ import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import PropTypes from 'prop-types';
 
-import './style.scss';
+import './Animation.scss';
 const AnimatedTitle = ({ title, className }) => {
     const ctrls = useAnimation();
 
     const { ref, inView } = useInView({
         threshold: 0.5,
-        triggerOnce: false,
+        triggerOnce: true,
     });
 
     useEffect(() => {

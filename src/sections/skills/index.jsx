@@ -13,7 +13,7 @@ import './style.scss';
 const Skills = () => {
     const { t } = useTranslation();
     return (
-        <section id='skills'>
+        <section id='skills' aria-label='Skills section'>
             <div className='skills-container'>
                 <h1 className='skills-section-title'>Skills</h1>
                 <AnimatedSubtitle
@@ -25,7 +25,7 @@ const Skills = () => {
                     <div className='skills-texts'>
                         <AnimatedText text={t('skills-text-1')} />
                     </div>
-                    <div className='skill-icons-sections'>
+                    <div className='skill-icons-sections' aria-label='Frontend skills'>
                         {Frontend_skill.map((skill, index) => (
                             <SkillComponent
                                 key={index}
@@ -43,7 +43,7 @@ const Skills = () => {
                     <div className='skills-texts'>
                         <AnimatedText text={t('skills-text-2')} />
                     </div>
-                    <div className='skill-icons-sections'>
+                    <div className='skill-icons-sections' aria-label='Backend skills'>
                         {Backend_skill.map((skill, index) => (
                             <SkillComponent
                                 key={index}
@@ -61,7 +61,7 @@ const Skills = () => {
                     <div className='skills-texts'>
                         <AnimatedText text={t('skills-text-3')} />
                     </div>
-                    <div className='skill-icons-sections'>
+                    <div className='skill-icons-sections' aria-label='Developpement skills'>
                         {Developpement_skill.map((skill, index) => (
                             <SkillComponent
                                 key={index}
@@ -79,7 +79,7 @@ const Skills = () => {
                     <div className='skills-texts'>
                         <AnimatedText text={t('skills-text-4')} />
                     </div>
-                    <div className='skill-icons-sections'>
+                    <div className='skill-icons-sections' aria-label='Conception skills'>
                         {Conception_skill.map((skill, index) => (
                             <SkillComponent
                                 key={index}

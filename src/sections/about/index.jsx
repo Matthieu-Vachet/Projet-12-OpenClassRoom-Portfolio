@@ -11,7 +11,7 @@ export default function About() {
     const { t } = useTranslation();
 
     return (
-        <section id='about'>
+        <section id='about' aria-label='About section'>
             <div className='about-container'>
                 <h1 className='about-section-title'>About</h1>
                 <AnimatedSubtitle
@@ -31,6 +31,7 @@ export default function About() {
                         animate='animate'
                         transition={{ delay: 1.9, duration: 1, type: 'spring' }}
                         variants={ButtonVariant}
+                        aria-label='About section buttons'
                     >
                         <Button text={t('about-bottom-1')} />
                         <Button text={t('about-bottom-2')} />

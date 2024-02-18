@@ -6,17 +6,15 @@ import Home from './sections/home';
 import NavBar from './layouts/navbar';
 import Loader from './layouts/loader';
 import About from './sections/about';
-import Blur from './components/background/overlay/blur';
+import Blur from './components/background/overlay/Blur';
 import Skills from './sections/skills';
 import Projects from './sections/projects';
-import Experience from './sections/Experience/Experience';
-import Contact from './sections/Contact/Contact';
+import Experience from './sections/Experience';
+import Contact from './sections/Contact';
 
 function App() {
     // État pour gérer l'affichage du loader
     const [loading, setLoading] = useState(true);
-    // Etat pour gérer la largeur de l'écran
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
     // Simule un temps de chargement de 4 secondes
     useEffect(() => {
@@ -24,12 +22,8 @@ function App() {
             setLoading(false);
         }, 4000);
 
-        const handleResize = () => setScreenWidth(window.innerWidth);
-        window.addEventListener('resize', handleResize);
-
         return () => {
             clearTimeout(timer);
-            window.removeEventListener('resize', handleResize);
         };
     }, []);
 
@@ -55,8 +49,8 @@ function App() {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5, ease: 'easeInOut' }}
                 >
+                    <Blur />
                     <NavBar />
-                    {screenWidth > 768 && <Blur />}
                     <Home />
                     <About />
                     <Experience />

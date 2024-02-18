@@ -6,12 +6,12 @@ import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
-import './style.scss';
+import './Animation.scss';
 
 export default function AnimatedSubtitle({ text, className, wordSpace, charSpace }) {
     const { ref, inView } = useInView({
-        threshold: 0.4, // L'élément est considéré comme dans le viewport quand il est entièrement visible
-        triggerOnce: false, // L'observation s'arrête après la première détection
+        threshold: 0.5, // L'élément est considéré comme dans le viewport quand il est entièrement visible
+        triggerOnce: true, // L'observation s'arrête après la première détection
     });
 
     const ctrls = useAnimation();
@@ -33,7 +33,7 @@ export default function AnimatedSubtitle({ text, className, wordSpace, charSpace
     const characterAnimation = {
         hidden: {
             opacity: 0, // Opacité initiale à 0 (invisible)
-            y: `0.50em`, // Position initiale décalée vers le bas
+            y: `0.25em`, // Position initiale décalée vers le bas
         },
         visible: {
             opacity: 1, // Opacité finale à 1 (visible)

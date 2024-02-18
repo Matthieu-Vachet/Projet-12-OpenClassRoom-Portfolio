@@ -2,7 +2,7 @@ import AnimatedTitle from '../../components/animations/AnimatedTitle';
 import AnimatedText from '../../components/animations/AnimatedText';
 
 import { useTranslation } from 'react-i18next';
-import './Contact.scss';
+import './style.scss';
 
 const Contact = () => {
     const { t } = useTranslation();

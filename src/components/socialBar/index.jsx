@@ -13,7 +13,13 @@ export default function SocialBar() {
 
     return (
         <div className='socialIcons' style={styles.socialIcons}>
-            <a className='icon' href='#'>
+            <a
+                className='icon'
+                href='#'
+                target='_blank'
+                rel='noopener noreferrer'
+                title='Matthieu Vachet GitHub Profile'
+            >
                 {/* GitHub Icon */}
                 <motion.i
                     initial={{ y: 100, opacity: 0 }}
@@ -21,10 +27,15 @@ export default function SocialBar() {
                     transition={{ delay: 2, duration: 0.8, type: 'spring' }}
                     className='fa-brands fa-github'
                     aria-hidden='true'
-                    title='Matthieu Vachet GitHub Profile'
                 ></motion.i>
             </a>
-            <a className='icon' href='#'>
+            <a
+                className='icon'
+                href='#'
+                target='_blank'
+                rel='noopener noreferrer'
+                title='Matthieu Vachet LinkedIn Profile'
+            >
                 {/* LinkedIn Icon */}
                 <motion.i
                     initial={{ y1: 100, opacity: 0 }}
@@ -32,10 +43,15 @@ export default function SocialBar() {
                     transition={{ delay: 1.9, duration: 0.7, type: 'spring' }}
                     className='fa-brands fa-linkedin'
                     aria-hidden='true'
-                    title='Matthieu Vachet LinkedIn Profile'
                 ></motion.i>
             </a>
-            <a className='icon' href='#'>
+            <a
+                className='icon'
+                href='#'
+                target='_blank'
+                rel='noopener noreferrer'
+                title='Matthieu Vachet Instagram Profile'
+            >
                 {/* Instagram Icon */}
                 <motion.i
                     initial={{ y: 100, opacity: 0 }}
@@ -43,10 +59,15 @@ export default function SocialBar() {
                     transition={{ delay: 1.7, duration: 0.6, type: 'spring' }}
                     className='fa-brands fa-instagram'
                     aria-hidden='true'
-                    title='Matthieu Vachet Instagram Profile'
                 ></motion.i>
             </a>
-            <a className='icon' href='#'>
+            <a
+                className='icon'
+                href='#'
+                target='_blank'
+                rel='noopener noreferrer'
+                title='Matthieu Vachet Twitter Profile'
+            >
                 {/* Twitter Icon */}
                 <motion.i
                     initial={{ y: 100, opacity: 0 }}
@@ -54,7 +75,6 @@ export default function SocialBar() {
                     transition={{ delay: 1.5, duration: 0.5, type: 'spring' }}
                     className='fa-brands fa-twitter'
                     aria-hidden='true'
-                    title='Matthieu Vachet Twitter Profile'
                 ></motion.i>
             </a>
         </div>

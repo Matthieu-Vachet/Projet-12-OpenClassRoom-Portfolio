@@ -9,6 +9,8 @@ const Button = ({ text, type, onClick, disabled, className, height, width }) => 
             onClick={onClick}
             disabled={disabled}
             style={{ height: `${height}`, width: `${width}` }}
+            aria-label={text}
+            role='button'
         >
             <span className='btn-gradient-text'>{text}</span>
         </button>
@@ -30,8 +32,8 @@ Button.defaultProps = {
     onClick: null,
     disabled: false,
     className: '',
-    height: '6em', // valeur par défaut
-    width: '20em', // valeur par défaut
+    height: '6em',
+    width: '20em',
 };
 
 export default Button;

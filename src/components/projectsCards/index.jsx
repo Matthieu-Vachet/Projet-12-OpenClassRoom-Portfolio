@@ -17,7 +17,13 @@ const ProjectsCards = ({
         <div className='projects-cards-container'>
             <div className='projects-cards'>
                 <div className='projects-cards-image-container'>
-                    <img className='projects-cards-image' src={image} alt={alt} />
+                    <img
+                        className='projects-cards-image'
+                        src={image}
+                        alt={alt}
+                        aria-label={alt}
+                        tabIndex='0'
+                    />
                 </div>
                 <div className='projects-cards-content'>
                     <h2 className='projects-cards-title'>{name}</h2>
@@ -35,6 +41,7 @@ const ProjectsCards = ({
                             href={github}
                             target='_blank'
                             rel='noopener noreferrer'
+                            aria-label={`View ${name} on GitHub`}
                         >
                             <FaGithub />
                         </a>
@@ -43,6 +50,7 @@ const ProjectsCards = ({
                             href={live}
                             target='_blank'
                             rel='noopener noreferrer'
+                            aria-label={`View ${name} live`}
                         >
                             <FaGlobe />
                         </a>

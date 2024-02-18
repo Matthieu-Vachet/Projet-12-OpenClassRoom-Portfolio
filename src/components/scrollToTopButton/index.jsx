@@ -30,7 +30,7 @@ const ScrollToTopButton = () => {
     return (
         <div className='scroll-to-top'>
             {isVisible && (
-                <div onClick={scrollToTop}>
+                <div onClick={scrollToTop} aria-label='Scroll to top'>
                     <MdKeyboardDoubleArrowUp className='scroll-top-arrow' />
                 </div>
             )}

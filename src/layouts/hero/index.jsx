@@ -4,14 +4,12 @@ import { useContext } from 'react';
 import FancyText from '@carefully-coded/react-text-gradient';
 
 // Importation des données
-// import { home } from '../../utils/data/constants';
 import { UserContext } from '../../utils/dataProvider/DataProvider';
 import { TextHeroVariant, SvgVariants } from '../../utils/framerMotion/Variante';
 import { useTranslation } from 'react-i18next';
 
 // Importation des composants
 import ScrollMouse from '../../components/scrollMouse';
-// import SvgHero from '../../components/background/svgHero';
 import ImgIcons from '../../assets/images/VersionBalck.svg';
 // Importation des styles
 import './style.scss';

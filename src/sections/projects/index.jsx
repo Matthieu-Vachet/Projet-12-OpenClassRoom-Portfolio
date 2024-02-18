@@ -10,7 +10,7 @@ const Projects = () => {
     const { t } = useTranslation();
 
     return (
-        <section id='projects'>
+        <section id='projects' aria-label='Projects section'>
             <div className='projects-container'>
                 <h1 className='projects-section-title'>Projects</h1>
                 <AnimatedSubtitle
@@ -18,7 +18,7 @@ const Projects = () => {
                     className={'projects-title'}
                     charSpace='0.016px'
                 />
-                <div className='projects-cards-container'>
+                <div className='projects-cards-container' aria-label='Projects list'>
                     {projects.map((project, index) => (
                         <ProjectsCards
                             key={index}
