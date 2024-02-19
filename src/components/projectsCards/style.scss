@@ -86,7 +86,7 @@
             }
 
             .projects-cards-description {
-                @include spaceGrotesk18Regular;
+                @include Space(18px, 400);
                 color: var(--basicWhite);
             }
 

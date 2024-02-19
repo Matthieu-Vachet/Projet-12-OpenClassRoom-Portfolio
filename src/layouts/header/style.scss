@@ -23,7 +23,7 @@ header {
         }
 
         .name_header {
-            @include spaceGrotesk20Regular;
+            @include Space(20px, 400);
             color: var(--basicWhite);
             margin-top: 2em;
 
@@ -60,7 +60,7 @@ header {
             .text_fr,
             .text_en {
                 width: 100%;
-                @include spaceGrotesk16Regular;
+                @include Space(16px, 400);
                 color: var(--basicWhite);
                 transition: all 0.1s;
 

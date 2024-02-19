@@ -72,13 +72,13 @@
     .scroll-text {
         width: 100%;
         text-align: center;
-        @include spaceGrotesk16Regular;
+        @include Space(16px, 400);
         color: var(--basicWhite);
         margin-top: 20px;
         animation: blink 2s infinite;
 
         @include xxlDesktop {
-            @include spaceGrotesk20Regular;
+            @include Space(20px, 400);
             margin-top: 30px;
         }
     }

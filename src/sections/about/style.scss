@@ -153,29 +153,29 @@
                 width: 70%;
                 color: var(--basicWhite);
                 text-align: left;
-                @include spaceGrotesk20Regular;
+                @include Space(20px, 400);
                 gap: 4rem;
 
                 @include mobile {
                     width: 100%;
                     gap: 2rem;
                     text-align: center;
-                    @include spaceGrotesk18Regular;
+                    @include Space(18px, 400);
                 }
 
                 @include tablet {
                     width: 100%;
                     gap: 2rem;
                     text-align: center;
-                    @include spaceGrotesk20Regular;
+                    @include Space(20px, 400);
                 }
 
                 @include largeDesktop {
-                    @include spaceGrotesk25Regular;
+                    @include Space(25px, 400);
                 }
 
                 @include xxlDesktop {
-                    @include spaceGrotesk32Regular;
+                    @include Space(32px, 400);
                 }
             }
 

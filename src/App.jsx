@@ -6,7 +6,7 @@ import Home from './sections/home';
 import NavBar from './layouts/navbar';
 import Loader from './layouts/loader';
 import About from './sections/about';
-import Blur from './components/background/overlay/Blur';
+import Blur from './components/background/overlay/blur';
 import Skills from './sections/skills';
 import Projects from './sections/projects';
 import Experience from './sections/Experience';
@@ -33,7 +33,7 @@ function App() {
                 // Affiche le loader pendant le chargement
                 <motion.div
                     key='loader'
-                    initial={{ opacity: 0 }}
+                    initial={{ opacity: 1 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5, ease: 'easeInOut' }}
