@@ -46,9 +46,22 @@ export const DataProvider = ({ children }) => {
                     category: projet.category[i18n.language],
                 }));
 
+                const experienceResultTranslated = experienceResult.map((experience) => ({
+                    ...experience,
+                    title: experience.title[i18n.language],
+                    school: experience.school[i18n.language],
+                    location: experience.location[i18n.language],
+                    description: experience.description[i18n.language],
+                    diplome: experience.diplome[i18n.language],
+                }));
+
+                console.log(userResultTranslated);
+                console.log(projetResultTranslated);
+                console.log(experienceResultTranslated);
+
                 setUserData(userResultTranslated);
                 setProjetsData(projetResultTranslated);
-                setExperiencesData(experienceResult);
+                setExperiencesData(experienceResultTranslated);
             } catch (error) {
                 console.error('Error fetching data:', error);
             }

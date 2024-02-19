@@ -1,0 +1,231 @@
+@import '../../styles/variable.scss';
+
+.experience-content {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    @include glassEffect;
+
+    @include mobile {
+        width: 95%;
+        flex-direction: column;
+    }
+
+    @include tablet {
+        width: 95%;
+        flex-direction: column;
+    }
+
+    @include desktop {
+        width: 90%;
+    }
+
+    @include largeDesktop {
+        width: 95%;
+    }
+
+    .experience-cards {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include mobile {
+            width: 100%;
+        }
+
+        @include tablet {
+            width: 90%;
+        }
+
+        .experience-cards-title {
+            @include Syne(30px, 700, 0.2em);
+            color: var(--basicWhite);
+
+            @include mobile {
+                @include Syne(20px, 600, 0.2em);
+            }
+        }
+
+        .experience-logo-container {
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            height: auto;
+            display: flex;
+            margin: 2rem auto;
+
+            .experience-logo {
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    inset: 0;
+                    background: repeating-conic-gradient(
+                        from var(--a),
+                        #0ce39a,
+                        #69007f,
+                        #fc0987,
+                        #0ce39a
+                    );
+                    border-radius: 20px;
+                    animation: rotating 4s linear infinite;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    inset: 0;
+                    background: repeating-conic-gradient(
+                        from var(--a),
+                        #0ce39a,
+                        #69007f,
+                        #fc0987,
+                        #0ce39a
+                    );
+                    border-radius: 20px;
+                    animation: rotating 4s linear infinite;
+                    filter: blur(40px);
+                    opacity: 0.4;
+                    transition: all 0.3s ease-in-out;
+                }
+
+                &:hover::after {
+                    filter: blur(50px);
+                    opacity: 0.6;
+                }
+
+                .experience-logo-content {
+                    position: absolute;
+                    inset: 4px;
+                    background: var(--basicOnyx);
+                    border-radius: 16px;
+                    z-index: 1;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        position: relative;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+
+    .experience-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+        color: var(--basicWhite);
+        @include Space(20px, 400);
+        gap: 4rem;
+
+        @include mobile {
+            width: 100%;
+            gap: 2rem;
+            margin-right: 0;
+            text-align: center;
+            @include Space(18px, 400);
+        }
+
+        @include tablet {
+            margin-right: 0;
+            width: 100%;
+            gap: 2rem;
+            text-align: center;
+            @include Space(20px, 400);
+        }
+
+        @include largeDesktop {
+            @include Space(20px, 400);
+        }
+
+        @include xxlDesktop {
+            @include Space(25px, 400);
+        }
+
+        .experience-info-title {
+            @include Syne(30px, 500, 0.2em);
+            color: var(--basicWhite);
+
+            @include mobile {
+                @include Syne(20px, 600, 0.2em);
+            }
+        }
+
+        .experience-info-divers {
+            display: flex;
+            flex-direction: column;
+            gap: 5rem;
+
+            .experience-info-divers-header {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 4rem;
+
+                .experience-info-date {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    border-radius: 32px;
+                    border: 1px solid var(--basicWhite);
+                    padding: 10px 20px;
+                }
+
+                .experience-info-location {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    border-radius: 32px;
+                    border: 1px solid var(--basicWhite);
+                    padding: 10px 20px;
+                }
+
+                .experience-info-diplome {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    border-radius: 32px;
+                    border: 1px solid var(--basicWhite);
+                    padding: 10px 20px;
+                }
+            }
+
+            .experience-info-description {
+                @include Space(18px, 400);
+                border: 1px solid var(--basicWhite);
+                border-radius: 32px;
+                padding: 15px 20px;
+            }
+        }
+    }
+}
+
+@property --a {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes rotating {
+    0% {
+        --a: 0deg;
+    }
+    100% {
+        --a: 360deg;
+    }
+}

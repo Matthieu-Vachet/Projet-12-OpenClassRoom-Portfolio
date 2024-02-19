@@ -10,7 +10,7 @@ export default function Loader() {
                 x='0px'
                 y='0px'
                 viewBox='0 0 1190.6 841.9'
-                style={{ enableBackground: 'new 0 0 1190.6 841.9' }}
+                style={{ background: 'var(--basicOnyx)' }}
                 xmlSpace='preserve'
                 width='1190.5999755859375'
                 height='841.9000244140625'
