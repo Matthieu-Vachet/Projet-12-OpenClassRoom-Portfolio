@@ -40,13 +40,13 @@
             text-align: center;
             width: 100%;
             transform-style: preserve-3d;
-            @include spaceGrotesk18Bold;
+            @include Space(18px, 600);
             opacity: 0;
             z-index: 10;
             transition: 0.5s;
 
             @include xxlDesktop {
-                @include spaceGrotesk24Bold;
+                @include Space(24px, 400);
             }
         }
 
