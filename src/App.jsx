@@ -6,7 +6,7 @@ import Home from './sections/home';
 import NavBar from './layouts/navbar';
 import Loader from './layouts/loader';
 import About from './sections/about';
-import Blur from './components/background/overlay/blur';
+import Blur from './components/background/overlay/Blur';
 import Skills from './sections/skills';
 import Projects from './sections/projects';
 import Experience from './sections/Experience';
