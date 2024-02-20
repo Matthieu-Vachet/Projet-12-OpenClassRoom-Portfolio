@@ -15,5 +15,14 @@
     "skills-text-3": "Outils de développement",
     "skills-text-4": "Conception et collaboration",
     "projects-title": "Découvrez mes projets web",
-    "contact-title": "Avez-vous une question, une proposition ou un projet en tête ? Je suis prêt à collaborer avec vous sur tout ce qui vous intéresse !"
+    "contact-title": "Avez-vous une question, une proposition ou un projet en tête ? Je suis prêt à collaborer avec vous sur tout ce qui vous intéresse !",
+    "input-first-name": "Nom",
+    "input-last-name": "Prénom",
+    "button-submit": "Envoyer",
+    "button-delete": "Effacer",
+    "error-submit": "Veuillez remplir tous les champs correctement.",
+    "error-first-name": "Le prénom est obligatoire et doit comporter au moins 3 caractères.",
+    "error-last-name": "Le nom est obligatoire et doit comporter au moins 3 caractères.",
+    "error-email": "Veuillez saisir une adresse email valide.",
+    "error-message": "Le message est obligatoire et doit comporter au moins 3 caractères."
 }

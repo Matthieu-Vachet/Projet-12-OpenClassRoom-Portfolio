@@ -1,7 +1,9 @@
+/* Importation des composants */
 import Header from '../../layouts/header';
 import Hero from '../../layouts/hero';
 import SocialBar from '../../components/socialBar';
 
+/* Importation des styles */
 import './style.scss';
 
 export default function Home() {

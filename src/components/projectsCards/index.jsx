@@ -1,7 +1,12 @@
-import './style.scss';
-import { FaGithub, FaGlobe } from 'react-icons/fa';
+/* Importation des modules */
 import PropTypes from 'prop-types';
-import { technologyIcons } from '../../utils/data/constants';
+
+// Ressources
+import { technologyIcons } from '../../utils/constants/constants';
+import { FaGithub, FaGlobe } from 'react-icons/fa';
+
+// Style
+import './style.scss';
 
 const ProjectsCards = ({
     image,

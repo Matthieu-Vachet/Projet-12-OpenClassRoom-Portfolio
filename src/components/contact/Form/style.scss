@@ -1,0 +1,97 @@
+@import '../../../styles/variable.scss';
+
+.contact-form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    @include glassEffect;
+    padding: 2rem;
+
+    .contact-form-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        @include mobile {
+            gap: 1rem;
+        }
+
+        .contact-form-name-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 2rem;
+
+            @include mobile {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        .email-input-container {
+            position: relative;
+
+            .email-icon {
+                position: absolute;
+                font-size: 2rem;
+                right: 1rem; /* Ajuste cette valeur selon ton besoin */
+                top: 50%;
+                transform: translateY(-50%);
+
+                @include mobile {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .error-messages-container {
+            width: 100%;
+
+            .error-message {
+                color: red;
+                @include Space(18px, 400);
+
+                @include mobile {
+                    @include Space(14px, 400);
+                }
+            }
+        }
+
+        .contact-form-button-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+
+            @include mobile {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .contact-form-button {
+                @include mobile {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+input,
+textarea {
+    flex: 1;
+    width: 100%;
+    height: auto;
+    color: var(--basicWhite);
+    @include Space(20px, 400);
+    background-color: var(--basicOnyx);
+    border-radius: 0.6rem;
+    border: 1.5px solid var(--basicWhite);
+    padding: 1rem;
+    resize: none;
+
+    @include mobile {
+        @include Space(15px, 400);
+    }
+}

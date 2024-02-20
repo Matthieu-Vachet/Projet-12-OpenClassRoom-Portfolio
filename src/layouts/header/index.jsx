@@ -1,12 +1,20 @@
-import './style.scss';
+/* Importation des modules */
 import { motion } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
 import { useContext } from 'react';
-import { HeaderVariants } from '../../utils/framerMotion/Variante';
-import { UserContext } from '../../utils/dataProvider/DataProvider';
 
+// Importation des composants
+import { HeaderVariants } from '../../utils/framerMotion/Variante';
+
+// Importation des données
+import { UserContext } from '../../utils/dataProvider/DataProvider';
+import { useTranslation } from 'react-i18next';
+
+// Ressources
 import Logo from '../../assets/images/LogoM.svg';
 import LightDarkToggle from '../../components/lightDarkToggle';
+
+// Importation des styles
+import './style.scss';
 
 export default function Header() {
     const { i18n } = useTranslation();

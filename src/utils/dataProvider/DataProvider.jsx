@@ -55,10 +55,6 @@ export const DataProvider = ({ children }) => {
                     diplome: experience.diplome[i18n.language],
                 }));
 
-                console.log(userResultTranslated);
-                console.log(projetResultTranslated);
-                console.log(experienceResultTranslated);
-
                 setUserData(userResultTranslated);
                 setProjetsData(projetResultTranslated);
                 setExperiencesData(experienceResultTranslated);

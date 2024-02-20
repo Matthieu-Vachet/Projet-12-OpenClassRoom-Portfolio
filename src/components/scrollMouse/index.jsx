@@ -1,4 +1,7 @@
+/* Importation des modules */
 import { useEffect, useState } from 'react';
+
+// Style
 import './style.scss';
 
 export default function ScrollMouse() {

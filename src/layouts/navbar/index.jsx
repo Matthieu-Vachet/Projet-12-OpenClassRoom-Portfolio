@@ -1,8 +1,14 @@
+/* Importation des modules */
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { HeaderVariants } from '../../utils/framerMotion/Variante';
-import { navItems } from '../../utils/data/constants';
 
+// Importation des composants
+import { HeaderVariants } from '../../utils/framerMotion/Variante';
+
+// Importation des données
+import { navItems } from '../../utils/constants/constants';
+
+// Importation des styles
 import './style.scss';
 
 export default function Navbar() {

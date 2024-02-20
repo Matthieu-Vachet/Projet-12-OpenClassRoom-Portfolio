@@ -1,3 +1,4 @@
+// Importation du style
 import './style.scss';
 
 export default function Loader() {

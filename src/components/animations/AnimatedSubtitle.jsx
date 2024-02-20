@@ -1,11 +1,9 @@
-{
-    /* Importation des modules */
-}
+/* Importation des modules */
 import { motion, useAnimation } from 'framer-motion';
 import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-
+// Style
 import './Animation.scss';
 
 export default function AnimatedSubtitle({ text, className, wordSpace, charSpace }) {

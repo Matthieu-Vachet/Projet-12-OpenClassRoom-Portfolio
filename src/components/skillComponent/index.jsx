@@ -1,7 +1,10 @@
+/* Importation des modules */
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import Tilt from 'react-parallax-tilt';
 import { useInView } from 'react-intersection-observer';
+
+// Style
 import './style.scss';
 
 const SkillComponent = ({ name, Image, fontSize, index, alt, color }) => {

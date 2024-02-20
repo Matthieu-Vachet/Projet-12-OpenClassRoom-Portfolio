@@ -1,4 +1,7 @@
+/* Importation des modules */
 import PropTypes from 'prop-types';
+
+// Style
 import './style.scss';
 
 const Button = ({ text, type, onClick, disabled, className, height, width, href }) => {
