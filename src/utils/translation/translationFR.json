@@ -24,5 +24,9 @@
     "error-first-name": "Le prénom est obligatoire et doit comporter au moins 3 caractères.",
     "error-last-name": "Le nom est obligatoire et doit comporter au moins 3 caractères.",
     "error-email": "Veuillez saisir une adresse email valide.",
-    "error-message": "Le message est obligatoire et doit comporter au moins 3 caractères."
+    "error-message": "Le message est obligatoire et doit comporter au moins 3 caractères.",
+    "footer-title-contact": "Contact",
+    "footer-title-link": "Liens",
+    "footer-title-projects": "Projets",
+    "footer-title-social": "Suivez-moi"
 }
