@@ -1,1 +1,89 @@
 @import '../../styles/variable.scss';
+
+.footer {
+    @include glassEffect;
+    border: none;
+    border-top: 1px solid var(--darkWhite10);
+    padding: 50px 20px;
+
+    .footer-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+
+        .footer-container-row {
+            display: flex;
+            flex-wrap: wrap;
+
+            .footer-container-col {
+                width: 25%;
+                padding: 0 15px;
+
+                @include mobile {
+                    width: 100%;
+                    margin-bottom: 30px;
+                }
+
+                @include tablet {
+                    width: 50%;
+                    margin-bottom: 30px;
+                }
+
+                .footer-container-title {
+                    @include Syne(20px, 700, 0.2em);
+                    color: var(--basicWhite);
+                    margin-bottom: 35px;
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 20;
+                        bottom: -10px;
+                        background-color: var(--basicWhite);
+                        height: 2px;
+                        box-sizing: border-box;
+                        width: 80px;
+                    }
+                }
+
+                .footer-text {
+                    @include Space(16px, 400);
+                    text-transform: capitalize;
+                    color: var(--basicWhite);
+                    text-decoration: none;
+                    color: var(--basicWhite);
+                    display: block;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        color: var(--basicWhite);
+                        padding-left: 8px;
+                    }
+                }
+
+                .footer-link {
+                    display: inline-block;
+                    height: 40px;
+                    width: 40px;
+                    background-color: var(--basicDarkGray);
+                    margin: 0 10px 10px 0;
+                    text-align: center;
+                    line-height: 40px;
+                    border-radius: 50%;
+                    color: var(--basicWhite);
+                    transition: all 0.5s ease;
+
+                    &:hover {
+                        color: var(--basicOnyx);
+                        background-color: var(--basicWhite);
+                    }
+                }
+            }
+        }
+    }
+}
+li:not(:last-child) {
+    margin-bottom: 10px;
+}

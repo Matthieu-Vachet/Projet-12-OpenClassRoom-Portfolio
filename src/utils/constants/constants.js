@@ -201,6 +201,75 @@ const technologyIcons = {
     Swagger: SiSwagger,
 };
 
+const Footer_Link = [
+    {
+        name: 'Home',
+        link: '#home',
+    },
+    {
+        name: 'About',
+        link: '#about',
+    },
+    {
+        name: 'Skills',
+        link: '#skills',
+    },
+    {
+        name: 'Projects',
+        link: '#projects',
+    },
+    {
+        name: 'Contact',
+        link: '#contact',
+    },
+];
+
+const Footer_Projects = [
+    {
+        name: 'ArgentBank',
+        link: 'https://projet-11-openclassrooms-argent-bank.vercel.app/',
+    },
+    {
+        name: '724Events',
+        link: 'https://projet-10-openclassrooms-debuggez-une-application-react.vercel.app/',
+    },
+    {
+        name: 'Nina Carducci',
+        link: 'https://matthieu-vachet.github.io/Projet-9-Openclassrooms-Projet-Optimisation-Nina-Carducci/',
+    },
+    {
+        name: 'Kasa',
+        link: 'https://projet-8-openclassrooms-projet-kasa.vercel.app/',
+    },
+    {
+        name: 'Sophie Bluel',
+        link: 'https://matthieu-vachet.github.io/Projet-6-openclassrooms-Portfolio-Javascript/',
+    },
+];
+
+const Footer_Follow = [
+    {
+        icon: 'fab fa-facebook-f',
+        link: 'https://www.facebook.com/matthieu.vachet',
+    },
+    {
+        icon: 'fab fa-twitter',
+        link: 'https://twitter.com/ShinyHunting02',
+    },
+    {
+        icon: 'fab fa-instagram',
+        link: 'https://www.instagram.com/mathunting02/',
+    },
+    {
+        icon: 'fab fa-linkedin-in',
+        link: 'www.linkedin.com/in/matthieu-vachet-46b7231b0',
+    },
+    {
+        icon: 'fab fa-github',
+        link: 'https://github.com/Matthieu-Vachet',
+    },
+];
+
 export {
     navItems,
     Frontend_skill,
@@ -208,4 +277,7 @@ export {
     Developpement_skill,
     Conception_skill,
     technologyIcons,
+    Footer_Link,
+    Footer_Projects,
+    Footer_Follow,
 };

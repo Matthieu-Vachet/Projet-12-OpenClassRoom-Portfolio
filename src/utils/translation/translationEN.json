@@ -24,5 +24,9 @@
     "error-first-name": "The first name is required and must contain at least 3 characters.",
     "error-last-name": "The last name is required and must contain at least 3 characters.",
     "error-email": "Please enter a valid email address.",
-    "error-message": "The message is required and must contain at least 3 characters."
+    "error-message": "The message is required and must contain at least 3 characters.",
+    "footer-title-contact": "Contact",
+    "footer-title-link": "Links",
+    "footer-title-projects": "Projects",
+    "footer-title-social": "Follow me"
 }
