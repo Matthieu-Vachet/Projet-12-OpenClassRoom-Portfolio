@@ -43,6 +43,7 @@
             align-items: center;
             text-align: center;
             margin: auto;
+            margin-bottom: 3rem;
             @include Syne(20px, 700, 0.2em);
             color: var(--basicWhite);
 
@@ -85,25 +86,6 @@
                 margin-top: 0;
                 flex-direction: column-reverse;
                 gap: 2rem;
-            }
-
-            .contact-details {
-                width: 50%;
-
-                @include mobile {
-                    width: 100%;
-                }
-                @include tablet {
-                    width: 100%;
-                }
-                @include desktop {
-                    width: 100%;
-                }
-
-                @include largeDesktop {
-                    width: 70%;
-                    margin: auto;
-                }
             }
 
             .contact-form {
