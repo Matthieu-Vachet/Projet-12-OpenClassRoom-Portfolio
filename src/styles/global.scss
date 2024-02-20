@@ -1,4 +1,5 @@
 @import './keyframes.scss';
+@import './variable.scss';
 * {
     margin: 0;
     padding: 0;
@@ -11,8 +12,8 @@ body {
     height: 100vh;
     overflow-x: hidden;
     overflow-y: scroll;
-    scrollbar-width: none; /* Pour Firefox */
-    -ms-overflow-style: none; /* Pour Internet Explorer et Edge */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -20,6 +21,83 @@ body {
     background-image: url('../assets/images/Bg-Squares.svg');
 
     &::-webkit-scrollbar {
-        display: none; /* Pour Chrome, Safari et Opera */
+        display: none;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+.section {
+    position: relative;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+
+    @include mobile {
+        padding-top: 5rem;
+        padding-bottom: 0rem;
+    }
+
+    @include tablet {
+        padding-top: 5rem;
+        padding-bottom: 0rem;
+    }
+}
+
+.section-title {
+    position: relative;
+    width: 100%;
+    @include Syne(150px, 700, 0em);
+    color: var(--basicWhite);
+    opacity: 0.1;
+
+    @include mobile {
+        @include Syne(40px, 700, 0em);
+    }
+
+    @include tablet {
+        @include Syne(100px, 700, 0em);
+    }
+
+    @include desktop {
+        @include Syne(120px, 700, 0em);
+    }
+
+    @include xxlDesktop {
+        @include Syne(200px, 700, 0em);
+    }
+}
+
+.title {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    @include Syne(40px, 700, 0.2em);
+    color: var(--basicWhite);
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+    @include mobile {
+        width: 100%;
+        text-align: center;
+        @include Syne(25px, 700, 0.2em);
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    @include tablet {
+        @include Syne(40px, 700, 0.2em);
+        width: 100%;
+        align-items: center;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    @include xxlDesktop {
+        @include Syne(70px, 700, 0.2em);
     }
 }

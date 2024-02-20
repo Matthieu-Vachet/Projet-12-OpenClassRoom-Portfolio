@@ -1,5 +1,8 @@
-import './style.scss';
+/* Importation des modules */
 import { motion } from 'framer-motion';
+
+// Style
+import './style.scss';
 
 export default function SocialBar() {
     const styles = {
@@ -15,7 +18,7 @@ export default function SocialBar() {
         <div className='socialIcons' style={styles.socialIcons}>
             <a
                 className='icon'
-                href='#'
+                href='https://github.com/Matthieu-Vachet'
                 target='_blank'
                 rel='noopener noreferrer'
                 title='Matthieu Vachet GitHub Profile'
@@ -31,7 +34,7 @@ export default function SocialBar() {
             </a>
             <a
                 className='icon'
-                href='#'
+                href='www.linkedin.com/in/matthieu-vachet-46b7231b0'
                 target='_blank'
                 rel='noopener noreferrer'
                 title='Matthieu Vachet LinkedIn Profile'
@@ -47,7 +50,7 @@ export default function SocialBar() {
             </a>
             <a
                 className='icon'
-                href='#'
+                href='https://www.instagram.com/mathunting02/'
                 target='_blank'
                 rel='noopener noreferrer'
                 title='Matthieu Vachet Instagram Profile'
@@ -63,7 +66,7 @@ export default function SocialBar() {
             </a>
             <a
                 className='icon'
-                href='#'
+                href='https://twitter.com/ShinyHunting02'
                 target='_blank'
                 rel='noopener noreferrer'
                 title='Matthieu Vachet Twitter Profile'

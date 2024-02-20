@@ -15,5 +15,18 @@
     "skills-text-3": "Development Tools",
     "skills-text-4": "Design and Collaboration",
     "projects-title": "Discover my web projects.",
-    "contact-title": "Do you have a question, proposal, or project in mind? I'm ready to collaborate with you on anything that interests you!"
+    "contact-title": "Do you have a question, proposal, or project in mind? I'm ready to collaborate with you on anything that interests you!",
+    "input-first-name": "First Name",
+    "input-last-name": "Last Name",
+    "button-submit": "Submit",
+    "button-delete": "Delete",
+    "error-submit": "Please fill in all fields correctly.",
+    "error-first-name": "The first name is required and must contain at least 3 characters.",
+    "error-last-name": "The last name is required and must contain at least 3 characters.",
+    "error-email": "Please enter a valid email address.",
+    "error-message": "The message is required and must contain at least 3 characters.",
+    "footer-title-contact": "Contact",
+    "footer-title-link": "Links",
+    "footer-title-projects": "Projects",
+    "footer-title-social": "Follow me"
 }

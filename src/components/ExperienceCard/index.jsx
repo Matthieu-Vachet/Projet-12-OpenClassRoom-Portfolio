@@ -1,11 +1,17 @@
+/* Importation des modules */
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
+
+// Composants
 import Button from '../button';
+
+// Ressources
 import { IoCalendarNumberOutline } from 'react-icons/io5';
 import { IoIosArrowRoundForward } from 'react-icons/io';
 import { FaGlobeAfrica } from 'react-icons/fa';
 import { GiDiploma } from 'react-icons/gi';
 
+// Style
 import './style.scss';
 
 const ExperienceCard = ({

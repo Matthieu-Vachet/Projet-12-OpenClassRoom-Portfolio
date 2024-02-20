@@ -1,26 +1,35 @@
-// import ExperienceLogo from '../../components/ExperienceLogo';
+/* Importation des modules */
+import { useContext } from 'react';
+import Tilt from 'react-parallax-tilt';
+
+/* Importation des Animations */
 import AnimatedSubtitle from '../../components/animations/AnimatedSubtitle';
 import AnimatedText from '../../components/animations/AnimatedText';
-import { useContext } from 'react';
+
+/* Importation des Données */
+import { useTranslation } from 'react-i18next';
 import { ExperienceContext } from '../../utils/dataProvider/DataProvider';
-import './style.scss';
+
+/* Importation des composants */
+import ExperienceCard from '../../components/ExperienceCard';
+
+/* Importation des Ressources */
 import OpLogo from '../../assets/icons/OpLogo.png';
 
-import { useTranslation } from 'react-i18next';
-import ExperienceCard from '../../components/ExperienceCard';
-import Tilt from 'react-parallax-tilt';
+/* Importation des styles */
+import './style.scss';
 
 const Experience = () => {
     const { t } = useTranslation();
     const experiences = useContext(ExperienceContext);
 
     return (
-        <section id='experience' aria-label='Experience section'>
+        <section id='experience' className='section' aria-label='Experience section'>
             <div className='experience-container'>
-                <h1 className='experience-section-title'>Expérience</h1>
+                <h1 className='experience-section-title section-title'>Expérience</h1>
                 <AnimatedSubtitle
                     text={t('experience-title')}
-                    className={'experience-title'}
+                    className={'experience-title title'}
                     charSpace='0.016px'
                 />
             </div>

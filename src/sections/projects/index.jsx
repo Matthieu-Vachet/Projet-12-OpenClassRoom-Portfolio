@@ -1,8 +1,17 @@
+/* Importation des modules */
 import { useContext } from 'react';
-import { useTranslation } from 'react-i18next';
+
+/* Importation des Animations */
 import AnimatedSubtitle from '../../components/animations/AnimatedSubtitle';
+
+/* Importation des composants */
 import ProjectsCards from '../../components/projectsCards';
+
+/* Importation des Données */
+import { useTranslation } from 'react-i18next';
 import { ProjectContext } from '../../utils/dataProvider/DataProvider';
+
+/* Importation des styles */
 import './style.scss';
 
 const Projects = () => {
@@ -10,12 +19,12 @@ const Projects = () => {
     const { t } = useTranslation();
 
     return (
-        <section id='projects' aria-label='Projects section'>
+        <section id='projects' className='section' aria-label='Projects section'>
             <div className='projects-container'>
-                <h1 className='projects-section-title'>Projects</h1>
+                <h1 className='projects-section-title section-title'>Projects</h1>
                 <AnimatedSubtitle
                     text={t('projects-title')}
-                    className={'projects-title'}
+                    className={'projects-title title'}
                     charSpace='0.016px'
                 />
                 <div className='projects-cards-container' aria-label='Projects list'>

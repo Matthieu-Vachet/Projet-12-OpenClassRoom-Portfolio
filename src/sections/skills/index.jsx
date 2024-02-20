@@ -1,24 +1,31 @@
-import { useTranslation } from 'react-i18next';
+/* Importation des Animation */
 import AnimatedSubtitle from '../../components/animations/AnimatedSubtitle';
 import AnimatedText from '../../components/animations/AnimatedText';
+
+/* Importation des composants */
 import SkillComponent from '../../components/skillComponent';
+
+/* Importation des Données */
+import { useTranslation } from 'react-i18next';
 import {
     Backend_skill,
     Conception_skill,
     Developpement_skill,
     Frontend_skill,
-} from '../../utils/data/constants';
+} from '../../utils/constants/constants';
+
+/* Importation des styles */
 import './style.scss';
 
 const Skills = () => {
     const { t } = useTranslation();
     return (
-        <section id='skills' aria-label='Skills section'>
+        <section id='skills' className='section' aria-label='Skills section'>
             <div className='skills-container'>
-                <h1 className='skills-section-title'>Skills</h1>
+                <h1 className='skills-section-title section-title'>Skills</h1>
                 <AnimatedSubtitle
                     text={t('skills-title')}
-                    className={'skills-title'}
+                    className={'skills-title title'}
                     charSpace='0.016px'
                 />
                 <div className='skills-section'>
