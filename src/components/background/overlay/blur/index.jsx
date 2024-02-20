@@ -1,11 +1,7 @@
-{
-    /* Importation des modules React */
-}
+/* Importation des modules React */
 import { useState, useEffect } from 'react';
 
-{
-    /* Importation des styles */
-}
+// Style
 import './style.scss';
 
 const Blur = () => {

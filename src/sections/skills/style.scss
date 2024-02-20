@@ -1,28 +1,9 @@
 @import '../../styles/variable.scss';
 
 #skills {
-    position: relative;
-    z-index: 0;
-    width: 100%;
-    display: flex;
-    overflow: hidden;
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-
-    @include mobile {
-        padding-top: 5rem;
-        padding-bottom: 0;
-    }
-
-    @include tablet {
-        padding-top: 10rem;
-        padding-bottom: 0;
-    }
-
     @include desktop {
         padding-top: 0;
     }
-
     @include largeDesktop {
         padding-top: 0;
     }
@@ -34,32 +15,16 @@
         flex-direction: column;
 
         .skills-section-title {
-            position: relative;
-            width: 100%;
             text-align: right;
-            @include Syne(150px, 700, 0em);
-            color: var(--basicWhite);
-            opacity: 0.1;
             padding-right: 4rem;
 
             @include mobile {
                 text-align: center;
                 padding-right: 0;
-                @include Syne(40px, 700, 0em);
             }
-
             @include tablet {
                 text-align: center;
                 padding-right: 0;
-                @include Syne(100px, 700, 0em);
-            }
-
-            @include desktop {
-                @include Syne(120px, 700, 0em);
-            }
-
-            @include xxlDesktop {
-                @include Syne(200px, 700, 0em);
             }
 
             &::before {
@@ -97,35 +62,6 @@
             }
         }
 
-        .skills-title {
-            width: 100%;
-            text-align: center;
-            margin-bottom: 5rem;
-            margin-top: 5rem;
-            @include Syne(40px, 700, 0.2em);
-            color: var(--basicWhite);
-
-            @include mobile {
-                width: 100%;
-                text-align: center;
-                @include Syne(25px, 700, 0.2em);
-                margin-top: 3rem;
-                margin-bottom: 3rem;
-            }
-
-            @include tablet {
-                @include Syne(40px, 700, 0.2em);
-                text-align: center;
-                width: 100%;
-                margin-top: 3rem;
-                margin-bottom: 3rem;
-            }
-
-            @include xxlDesktop {
-                @include Syne(70px, 700, 0.2em);
-            }
-        }
-
         .skills-section {
             display: flex;
             flex-direction: row;
@@ -135,7 +71,6 @@
             width: 95%;
             margin-left: 2rem;
             gap: 1rem;
-
             margin-bottom: 4rem;
 
             @include mobile {
@@ -146,7 +81,6 @@
                 margin-left: 0;
                 margin-bottom: 2rem;
             }
-
             @include tablet {
                 width: 100%;
                 flex-direction: column;
@@ -168,7 +102,6 @@
                     @include Syne(20px, 700, 0.45em);
                     transform: scaleY(1);
                 }
-
                 @include tablet {
                     text-align: center;
                     @include Syne(20px, 700, 0.45em);
@@ -198,7 +131,6 @@
                     margin-bottom: 3rem;
                     gap: 1rem;
                 }
-
                 @include tablet {
                     justify-content: center;
                     align-items: center;

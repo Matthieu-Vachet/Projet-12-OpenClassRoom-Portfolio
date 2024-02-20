@@ -1,5 +1,8 @@
-import './style.scss';
+/* Importation des modules */
 import { motion } from 'framer-motion';
+
+// Style
+import './style.scss';
 
 export default function SocialBar() {
     const styles = {

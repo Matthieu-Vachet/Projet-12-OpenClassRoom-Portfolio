@@ -1,9 +1,12 @@
+/* Importation des modules */
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import PropTypes from 'prop-types';
 
+// Style
 import './Animation.scss';
+
 const AnimatedTitle = ({ title, className }) => {
     const ctrls = useAnimation();
 

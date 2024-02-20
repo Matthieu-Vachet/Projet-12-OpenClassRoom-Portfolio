@@ -1,6 +1,4 @@
-{
-    /* Importation des modules */
-}
+/* Importation des modules */
 import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import { useAnimation, motion } from 'framer-motion';

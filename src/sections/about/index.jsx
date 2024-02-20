@@ -1,22 +1,31 @@
+/* Importation des modules */
 import { motion } from 'framer-motion';
+
+// Importation des données
 import { useTranslation } from 'react-i18next';
+
+// Importation des Animations
 import AnimatedSubtitle from '../../components/animations/AnimatedSubtitle';
 import AnimatedText from '../../components/animations/AnimatedText';
+import { ButtonVariant } from '../../utils/framerMotion/Variante';
+
+// Importation des composants
 import Button from '../../components/button';
 import ScrollToTopButton from '../../components/scrollToTopButton';
-import { ButtonVariant } from '../../utils/framerMotion/Variante';
+
+// Importation des styles
 import './style.scss';
 
 export default function About() {
     const { t } = useTranslation();
 
     return (
-        <section id='about' aria-label='About section'>
+        <section id='about' className='section' aria-label='About section'>
             <div className='about-container'>
-                <h1 className='about-section-title'>About</h1>
+                <h1 className='about-section-title section-title'>About</h1>
                 <AnimatedSubtitle
                     text={t('about-title')}
-                    className={'about-title'}
+                    className={'about-title title'}
                     charSpace='0.016px'
                 />
                 <div className='about-content'>

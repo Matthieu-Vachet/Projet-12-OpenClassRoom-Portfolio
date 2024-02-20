@@ -1,25 +1,15 @@
 @import '../../styles/variable.scss';
 
 #about {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-    padding-top: 5rem;
-    padding-bottom: 10rem;
 
     @include mobile {
-        padding: 0 0 5rem 0;
-        margin: 0;
+        padding: 0 0 3rem 0;
     }
-
     @include tablet {
-        padding: 0 0 5rem 0;
-        margin: 0;
+        padding: 0 0 3rem 0;
     }
 
     .about-container {
@@ -43,12 +33,7 @@
         }
 
         .about-section-title {
-            position: relative;
-            width: 100%;
             text-align: right;
-            @include Syne(150px, 700, 0em);
-            color: var(--basicWhite);
-            opacity: 0.1;
             padding-right: 4rem;
 
             @include mobile {
@@ -60,15 +45,6 @@
             @include tablet {
                 text-align: center;
                 padding-right: 0;
-                @include Syne(100px, 700, 0em);
-            }
-
-            @include desktop {
-                @include Syne(120px, 700, 0em);
-            }
-
-            @include xxlDesktop {
-                @include Syne(200px, 700, 0em);
             }
 
             &::before {
@@ -106,35 +82,6 @@
             }
         }
 
-        .about-title {
-            width: 100%;
-            text-align: center;
-            margin-bottom: 5rem;
-            margin-top: 5rem;
-            @include Syne(40px, 700, 0.2em);
-            color: var(--basicWhite);
-
-            @include mobile {
-                width: 100%;
-                text-align: center;
-                margin-top: 3rem;
-                margin-bottom: 3rem;
-                @include Syne(25px, 700, 0.2em);
-            }
-
-            @include tablet {
-                @include Syne(40px, 700, 0.2em);
-                text-align: center;
-                margin-top: 3rem;
-                margin-bottom: 3rem;
-                width: 100%;
-            }
-
-            @include xxlDesktop {
-                @include Syne(70px, 700, 0.2em);
-            }
-        }
-
         .about-content {
             display: flex;
             flex-direction: row;
@@ -142,7 +89,6 @@
             @include mobile {
                 flex-direction: column;
             }
-
             @include tablet {
                 flex-direction: column;
             }

@@ -1,7 +1,11 @@
+/* Importation des modules */
 import { useState, useEffect } from 'react';
+
+// Ressources
 import { CiLight } from 'react-icons/ci';
 import { MdDarkMode } from 'react-icons/md';
 
+// Style
 import './style.scss';
 
 /**

@@ -11,6 +11,7 @@ import Skills from './sections/skills';
 import Projects from './sections/projects';
 import Experience from './sections/Experience';
 import Contact from './sections/Contact';
+import Footer from './layouts/footer';
 
 function App() {
     // État pour gérer l'affichage du loader
@@ -57,6 +58,7 @@ function App() {
                     <Skills />
                     <Projects />
                     <Contact />
+                    <Footer />
                 </motion.div>
             )}
         </AnimatePresence>
