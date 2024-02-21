@@ -1,4 +1,7 @@
 {
+    "header": {
+        "langue": "La langue Francaise est actuellement activée."
+    },
     "hero": {
         "slogan": "Plongez dans ma createStateurite codée."
     },
@@ -39,10 +42,21 @@
         "email": "Veuillez saisir une adresse email valide.",
         "message": "Le message est obligatoire et doit comporter au moins 3 caractères."
     },
+    "success": {
+        "firstname": "Votre prénom comporte 3 caractères ou plus.",
+        "lastname": "Votre nom comporte 3 caractères ou plus.",
+        "email": "L'addresse email saisie est valide.",
+        "message": "Votre message comporte 3 caractères ou plus.",
+        "reset": "Tout les champs ont été rénitilisés avec succès."
+    },
     "footer": {
         "title-contact": "Contact",
         "title-link": "Liens",
         "title-projects": "Projets",
         "title-social": "Suivez-moi"
+    },
+    "theme": {
+        "dark": "Mode sombre activé avec succès.",
+        "light": "Mode clair activé avec succès."
     }
 }

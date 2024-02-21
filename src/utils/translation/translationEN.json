@@ -1,4 +1,7 @@
 {
+    "header": {
+        "langue": "The language English is currently activated."
+    },
     "hero": {
         "slogan": "Dive into my coded creativity."
     },
@@ -39,10 +42,21 @@
         "email": "Please enter a valid email address.",
         "message": "The message is required and must contain at least 3 characters."
     },
+    "success": {
+        "firstname": "Your first name contains 3 or more characters.",
+        "lastname": "Your last name contains 3 or more characters.",
+        "email": "The email you entered is valid.",
+        "message": "Your message contains 3 or more characters.",
+        "reset": "All fields have been reset with success."
+    },
     "footer": {
         "title-contact": "Contact",
         "title-link": "Links",
         "title-projects": "Projects",
         "title-social": "Follow me"
+    },
+    "theme": {
+        "dark": "Dark mode activated successfully.",
+        "light": "Light mode activated successfully."
     }
 }
