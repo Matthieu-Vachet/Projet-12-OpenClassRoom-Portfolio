@@ -53,8 +53,7 @@ header {
             cursor: pointer;
 
             &:hover {
-                background-color: var(--basicWhite);
-                color: var(--basicBlack);
+                background-color: var(--strockGlass);
             }
 
             .text_fr,
@@ -63,10 +62,6 @@ header {
                 @include Space(16px, 400);
                 color: var(--basicWhite);
                 transition: all 0.1s;
-
-                &:hover {
-                    color: var(--basicBlack);
-                }
             }
         }
     }

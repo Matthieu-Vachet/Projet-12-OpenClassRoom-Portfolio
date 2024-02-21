@@ -1,32 +1,48 @@
 {
-    "hero-slogan": "Plongez dans ma créativité codée.",
-    "about-title": "APPRENEZ À ME CONNAÎTRE",
-    "about-text-1": "Fan d'informatique depuis ma jeunesse, j'ai exploré la programmation bien avant de devenir intégrateur web. Pour moi, chaque ligne de code est une œuvre d'art, une exploration infinie de création.",
-    "about-text-2": "Mon engagement dans ce domaine est bien plus qu'une carrière, c'est une passion sans limites, une aventure que je poursuivrai avec détermination jusqu'à ce que mes mains ne puissent plus glisser sur un clavier.",
-    "about-text-3": "Aujourd'hui, je suis prêt à mettre ces compétences au service de vos projets. Ensemble, nous pouvons créer des sites web dynamiques, optimisés et sans bugs. Je suis impatient de vous aider à concrétiser vos idées et à faire de vos projets une réalité.",
-    "about-bottom-1": "Mon CV",
-    "about-bottom-2": "Contact",
-    "experience-title": "LES ÉTAPES CLÉS DE MON PARCOURS",
-    "experience-button": "Diplôme",
-    "experience-text-3": "Déterminé à exceller dans mon domaine, je suis animé par une passion inébranlable pour le web et je m'efforce constamment de repousser mes limites pour offrir des solutions web de qualité exceptionnelle à mes futurs clients.",
-    "skills-title": "Mon Répertoire de Compétences",
-    "skills-text-1": "Front-end",
-    "skills-text-2": "Back-end",
-    "skills-text-3": "Outils de développement",
-    "skills-text-4": "Conception et collaboration",
-    "projects-title": "Découvrez mes projets web",
-    "contact-title": "Avez-vous une question, une proposition ou un projet en tête ? Je suis prêt à collaborer avec vous sur tout ce qui vous intéresse !",
-    "input-first-name": "Nom",
-    "input-last-name": "Prénom",
-    "button-submit": "Envoyer",
-    "button-delete": "Effacer",
-    "error-submit": "Veuillez remplir tous les champs correctement.",
-    "error-first-name": "Le prénom est obligatoire et doit comporter au moins 3 caractères.",
-    "error-last-name": "Le nom est obligatoire et doit comporter au moins 3 caractères.",
-    "error-email": "Veuillez saisir une adresse email valide.",
-    "error-message": "Le message est obligatoire et doit comporter au moins 3 caractères.",
-    "footer-title-contact": "Contact",
-    "footer-title-link": "Liens",
-    "footer-title-projects": "Projets",
-    "footer-title-social": "Suivez-moi"
+    "hero": {
+        "slogan": "Plongez dans ma createStateurite codée."
+    },
+    "about": {
+        "title": "APPRENEZ À ME CONNAÎTRE",
+        "text-1": "Fan d'informatique depuis ma jeunesse, j'ai exploré la programmation bien avant de devenir intégrateur web. Pour moi, chaque ligne de code est une œuvre d'art, une exploration infinie de création.",
+        "text-2": "Mon engagement dans ce domaine est bien plus qu'une carrière, c'est une passion sans limites, une aventure que je poursuivrai avec détermination jusqu'à ce que mes mains ne puissent plus glisser sur un clavier.",
+        "text-3": "Aujourd'hui, je suis prêt à mettre ces compétences au service de vos projets. Ensemble, nous pouvons créer des sites web dynamiques, optimisés et sans bugs. Je suis impatient de vous aider à concrétiser vos idées et à faire de vos projets une réalité.",
+        "button-1": "Mon CV",
+        "button-2": "Contact"
+    },
+    "experience": {
+        "title": "LES ÉTAPES CLÉS DE MON PARCOURS",
+        "button": "Diplôme",
+        "text": "Déterminé à exceller dans mon domaine, je suis animé par une passion inébranlable pour le web et je m'efforce constamment de repousser mes limites pour offrir des solutions web de qualité exceptionnelle à mes futurs clients."
+    },
+    "skills": {
+        "title": "Mon Répertoire de Compétences",
+        "text-1": "Front-end",
+        "text-2": "Back-end",
+        "text-3": "Outils de développement",
+        "text-4": "Conception et collaboration"
+    },
+    "projets": {
+        "title": "Découvrez mes projets web"
+    },
+    "contact": {
+        "title": "Avez-vous une question, une proposition ou un projet en tête ? Je suis prêt à collaborer avec vous sur tout ce qui vous intéresse !",
+        "input-firstname": "Nom",
+        "input-lastname": "Prénom",
+        "button-submit": "Envoyer",
+        "button-delete": "Effacer"
+    },
+    "error": {
+        "submit": "Veuillez remplir tous les champs correctement.",
+        "firstname": "Le prénom est obligatoire et doit comporter au moins 3 caractères.",
+        "lastname": "Le nom est obligatoire et doit comporter au moins 3 caractères.",
+        "email": "Veuillez saisir une adresse email valide.",
+        "message": "Le message est obligatoire et doit comporter au moins 3 caractères."
+    },
+    "footer": {
+        "title-contact": "Contact",
+        "title-link": "Liens",
+        "title-projects": "Projets",
+        "title-social": "Suivez-moi"
+    }
 }

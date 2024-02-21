@@ -21,6 +21,11 @@ const LightDarkToggle = () => {
     // Function to toggle between light and dark mode
     const toggleMode = () => {
         setLightMode(!islightMode);
+        if (!islightMode) {
+            document.body.classList.add('white-mode');
+        } else {
+            document.body.classList.remove('white-mode');
+        }
     };
 
     // Apply the selected mode's colors using CSS custom properties
@@ -30,17 +35,29 @@ const LightDarkToggle = () => {
                   // Black Colors
                   '--basicOnyx': 'rgba(24, 24, 24, 1)',
                   '--basicWhite': 'rgba(255, 255, 255, 1)',
-                  '--topBackgroundBlue': 'rgba(63, 100, 233, 0.55)',
-                  '--topBackgroundRed': 'rgba(233, 63, 63, 0.55)',
-                  '--topBackgroundYellow': 'rgba(255, 184, 0, 0.55)',
+                  '--glassGlassDark30': 'rgba(24, 24, 29, 0.3)',
+                  '--glassGlassDark60': 'rgba(24, 24, 29, 0.6)',
+                  '--strockGlass': 'rgba(182, 181, 187, 0.4)',
+                  '--borderGlass': 'rgba(255, 255, 255, 0.5)',
+                  '--darkWhite10': 'rgba(255, 255, 255, 0.1)',
+                  '--button-1': '#0ce39a',
+                  '--button-2': '#69007f',
+                  '--button-3': '#fc0987',
+                  '--basicDarkGray': 'rgba(128, 128, 128, 1)',
               }
             : {
                   // Light Colors
-                  '--basicOnyx': 'rgba(255, 255, 255, 1)',
+                  '--basicOnyx': '#feffff',
                   '--basicWhite': 'rgba(24, 24, 24, 1)',
-                  '--topBackgroundBlue': 'rgba(63, 100, 233, 1)',
-                  '--topBackgroundRed': 'rgba(233, 63, 63, 1)',
-                  '--topBackgroundYellow': 'rgba(255, 184, 0, 1)',
+                  '--glassGlassDark30': 'rgba(24, 24, 29, 0.05)',
+                  '--glassGlassDark60': 'rgba(24, 24, 29, 0.1)',
+                  '--strockGlass': 'rgba(182, 181, 187, 1)',
+                  '--borderGlass': 'rgba(128, 128, 128, 1)',
+                  '--darkWhite10': 'rgba(128, 128, 128, 0.2)',
+                  '--button-1': 'transparent',
+                  '--button-2': 'transparent',
+                  '--button-3': 'transparent',
+                  '--basicDarkGray': 'rgba(128, 128, 128, 0.2)',
               };
 
         for (const property in colors) {
