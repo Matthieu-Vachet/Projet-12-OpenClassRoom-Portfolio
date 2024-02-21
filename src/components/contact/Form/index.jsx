@@ -35,7 +35,7 @@ const ContactForm = () => {
             case 'firstname':
                 setFirstName(value);
                 if (value.length < 3) {
-                    setFirstNameError(t('error-first-name'));
+                    setFirstNameError(t('error.firstname'));
                 } else {
                     setFirstNameError('');
                 }
@@ -43,7 +43,7 @@ const ContactForm = () => {
             case 'lastname':
                 setLastName(value);
                 if (value.length < 3) {
-                    setLastNameError(t('error-last-name'));
+                    setLastNameError(t('error.lastname'));
                 } else {
                     setLastNameError('');
                 }
@@ -52,7 +52,7 @@ const ContactForm = () => {
                 setEmail(value);
                 setEmailValid(validateEmail(value));
                 if (!validateEmail(value)) {
-                    setEmailError(t('error-email'));
+                    setEmailError(t('error.email'));
                 } else {
                     setEmailError('');
                 }
@@ -60,7 +60,7 @@ const ContactForm = () => {
             case 'message':
                 setMessage(value);
                 if (value.length < 3) {
-                    setMessageError(t('error-message'));
+                    setMessageError(t('error.message'));
                 } else {
                     setMessageError('');
                 }
@@ -112,14 +112,14 @@ const ContactForm = () => {
                     <input
                         type='text'
                         name='firstname'
-                        placeholder={t('input-first-name')}
+                        placeholder={t('contact.input-firstname')}
                         value={firstName}
                         onChange={handleChange}
                     />
                     <input
                         type='text'
                         name='lastname'
-                        placeholder={t('input-last-name')}
+                        placeholder={t('contact.input-lastname')}
                         value={lastName}
                         onChange={handleChange}
                     />
@@ -157,12 +157,12 @@ const ContactForm = () => {
                 <div className='contact-form-button-container'>
                     <Button
                         className={'contact-form-button'}
-                        text={t('button-submit')}
+                        text={t('contact.button-submit')}
                         type='submit'
                     />
                     <Button
                         className={'contact-form-button'}
-                        text={t('button-delete')}
+                        text={t('contact.button-delete')}
                         type='button'
                         onClick={handleReset}
                     />

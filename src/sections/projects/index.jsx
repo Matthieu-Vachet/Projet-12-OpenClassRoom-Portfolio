@@ -23,7 +23,7 @@ const Projects = () => {
             <div className='projects-container'>
                 <h1 className='projects-section-title section-title'>Projects</h1>
                 <AnimatedSubtitle
-                    text={t('projects-title')}
+                    text={t('projets.title')}
                     className={'projects-title title'}
                     charSpace='0.016px'
                 />

@@ -38,7 +38,7 @@ export default function Hero() {
                             gradient={{ from: '#0ce39a', to: '#69007f', type: 'linear' }}
                             animateTo={{ from: '#69007f', to: '#fc0987' }}
                         >
-                            {t('hero-slogan')}
+                            {t('about.title')}
                         </FancyText>
                     </motion.h1>
 
