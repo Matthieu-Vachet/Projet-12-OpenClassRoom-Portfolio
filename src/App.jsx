@@ -10,7 +10,7 @@ const Blur = React.lazy(() => import('./components/background/overlay/blur'));
 const Skills = React.lazy(() => import('./sections/skills'));
 const Projects = React.lazy(() => import('./sections/projects'));
 const Experience = React.lazy(() => import('./sections/Experience'));
-const Contact = React.lazy(() => import('./sections/contact'));
+const Contact = React.lazy(() => import('./sections/Contact'));
 const Footer = React.lazy(() => import('./layouts/footer'));
 
 function App() {
