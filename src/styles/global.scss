@@ -105,3 +105,8 @@ ul {
 .white-mode {
     background-image: url('../assets/images/test.svg') !important;
 }
+
+.my-toast {
+    @include Syne(50px, 700, 0);
+    text-transform: none !important;
+}

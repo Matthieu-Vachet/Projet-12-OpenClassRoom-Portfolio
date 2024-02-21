@@ -15,13 +15,16 @@ import LightDarkToggle from '../../components/lightDarkToggle';
 
 // Importation des styles
 import './style.scss';
+import { toast } from 'sonner';
 
 export default function Header() {
     const { i18n } = useTranslation();
+    const { t } = useTranslation();
     const data = useContext(UserContext);
 
     const changeLanguage = (language) => {
         i18n.changeLanguage(language);
+        toast.success(t('header.langue'));
     };
 
     return (

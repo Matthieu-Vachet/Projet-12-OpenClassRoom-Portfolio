@@ -1,5 +1,6 @@
 /* Importation des modules */
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 // Ressources
 import { CiLight } from 'react-icons/ci';
@@ -7,6 +8,7 @@ import { MdDarkMode } from 'react-icons/md';
 
 // Style
 import './style.scss';
+import { toast } from 'sonner';
 
 /**
  * Represents a light/dark mode toggle button component.
@@ -15,6 +17,7 @@ import './style.scss';
  */
 
 const LightDarkToggle = () => {
+    const { t } = useTranslation();
     // State to track the current mode (light or dark)
     const [islightMode, setLightMode] = useState(false);
 
@@ -23,8 +26,10 @@ const LightDarkToggle = () => {
         setLightMode(!islightMode);
         if (!islightMode) {
             document.body.classList.add('white-mode');
+            toast.success(t('theme.light'));
         } else {
             document.body.classList.remove('white-mode');
+            toast.success(t('theme.dark'));
         }
     };
 
