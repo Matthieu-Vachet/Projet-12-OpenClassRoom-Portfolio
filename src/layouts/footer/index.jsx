@@ -18,7 +18,7 @@ const Footer = () => {
             <div className='footer-container'>
                 <div className='footer-container-row'>
                     <div className='footer-container-col'>
-                        <h4 className='footer-container-title'>{t('footer-title-contact')}</h4>
+                        <h4 className='footer-container-title'>{t('footer.title-contact')}</h4>
                         <ul className='footer-list'>
                             <li>
                                 <a className='footer-text' href='#'>
@@ -48,7 +48,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className='footer-container-col'>
-                        <h4 className='footer-container-title'>{t('footer-title-link')}</h4>
+                        <h4 className='footer-container-title'>{t('footer.title-link')}</h4>
                         <ul className='foofter-list'>
                             {Footer_Link.map((link, index) => (
                                 <li key={index}>
@@ -60,7 +60,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className='footer-container-col'>
-                        <h4 className='footer-container-title'>{t('footer-title-projects')}</h4>
+                        <h4 className='footer-container-title'>{t('footer.title-projects')}</h4>
                         <ul className='footer-list'>
                             {Footer_Projects.map((project, index) => (
                                 <li key={index}>
@@ -72,7 +72,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className='footer-container-col'>
-                        <h4 className='footer-container-title'>{t('footer-title-social')}</h4>
+                        <h4 className='footer-container-title'>{t('footer.title-social')}</h4>
                         <div className='social-links'>
                             {Footer_Follow.map((item, index) => (
                                 <a

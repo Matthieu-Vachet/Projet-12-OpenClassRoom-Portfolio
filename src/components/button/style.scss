@@ -7,7 +7,7 @@
     justify-content: center;
     text-decoration: none;
     color: var(--basicWhite);
-    background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+    background: linear-gradient(45deg, var(--button-1), var(--button-2), var(--button-3));
     padding: 10px 20px;
     border-radius: 20px;
     transition: transform 0.5s ease-in-out;
@@ -33,7 +33,7 @@
         content: '';
         position: absolute;
         inset: 0px;
-        background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+        background: linear-gradient(45deg, var(--button-1), var(--button-2), var(--button-3));
         border-radius: 20px;
         transition: 0.5s;
         opacity: 0;
