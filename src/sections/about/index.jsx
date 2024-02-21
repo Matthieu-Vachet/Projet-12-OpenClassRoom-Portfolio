@@ -24,15 +24,15 @@ export default function About() {
             <div className='about-container'>
                 <h1 className='about-section-title section-title'>About</h1>
                 <AnimatedSubtitle
-                    text={t('about-title')}
+                    text={t('about.title')}
                     className={'about-title title'}
                     charSpace='0.016px'
                 />
                 <div className='about-content'>
                     <div className='about-text'>
-                        <AnimatedText text={t('about-text-1')} />
-                        <AnimatedText delay={0.1} text={t('about-text-2')} />
-                        <AnimatedText delay={0.2} text={t('about-text-3')} />
+                        <AnimatedText text={t('about.text-1')} />
+                        <AnimatedText delay={0.1} text={t('about.text-2')} />
+                        <AnimatedText delay={0.2} text={t('about.text-3')} />
                     </div>
                     <motion.div
                         className='about-button'
@@ -42,8 +42,8 @@ export default function About() {
                         variants={ButtonVariant}
                         aria-label='About section buttons'
                     >
-                        <Button text={t('about-bottom-1')} href='#' />
-                        <Button text={t('about-bottom-2')} href='#contact' />
+                        <Button text={t('about.button-1')} href='#' />
+                        <Button text={t('about.button-2')} href='#contact' />
                     </motion.div>
                 </div>
             </div>

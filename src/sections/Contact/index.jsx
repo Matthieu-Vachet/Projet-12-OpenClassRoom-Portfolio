@@ -18,7 +18,7 @@ const Contact = () => {
         <section id='contact' className='section'>
             <div className='contact-container'>
                 <AnimatedTitle title='Contact' className='contact-section-title section-title' />
-                <AnimatedText text={t('contact-title')} className='contact-title title' />
+                <AnimatedText text={t('contact.title')} className='contact-title title' />
 
                 <div className='contact-content'>
                     <div className='contact-form'>

@@ -24,13 +24,13 @@ const Skills = () => {
             <div className='skills-container'>
                 <h1 className='skills-section-title section-title'>Skills</h1>
                 <AnimatedSubtitle
-                    text={t('skills-title')}
+                    text={t('skills.title')}
                     className={'skills-title title'}
                     charSpace='0.016px'
                 />
                 <div className='skills-section'>
                     <div className='skills-texts'>
-                        <AnimatedText text={t('skills-text-1')} />
+                        <AnimatedText text={t('skills.text-1')} />
                     </div>
                     <div className='skill-icons-sections' aria-label='Frontend skills'>
                         {Frontend_skill.map((skill, index) => (
@@ -48,7 +48,7 @@ const Skills = () => {
                 </div>
                 <div className='skills-section'>
                     <div className='skills-texts'>
-                        <AnimatedText text={t('skills-text-2')} />
+                        <AnimatedText text={t('skills.text-2')} />
                     </div>
                     <div className='skill-icons-sections' aria-label='Backend skills'>
                         {Backend_skill.map((skill, index) => (
@@ -66,7 +66,7 @@ const Skills = () => {
                 </div>
                 <div className='skills-section'>
                     <div className='skills-texts'>
-                        <AnimatedText text={t('skills-text-3')} />
+                        <AnimatedText text={t('skills.text-3')} />
                     </div>
                     <div className='skill-icons-sections' aria-label='Developpement skills'>
                         {Developpement_skill.map((skill, index) => (
@@ -84,7 +84,7 @@ const Skills = () => {
                 </div>
                 <div className='skills-section'>
                     <div className='skills-texts'>
-                        <AnimatedText text={t('skills-text-4')} />
+                        <AnimatedText text={t('skills.text-4')} />
                     </div>
                     <div className='skill-icons-sections' aria-label='Conception skills'>
                         {Conception_skill.map((skill, index) => (
