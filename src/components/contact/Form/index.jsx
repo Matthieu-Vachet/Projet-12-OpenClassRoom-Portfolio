@@ -1,14 +1,8 @@
-/* Importation des modules */
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-
-// Composants
 import Button from '../../button';
-
-// Ressources
+import { toast } from 'sonner';
 import { GrValidate } from 'react-icons/gr';
-
-// Style
 import './style.scss';
 
 const ContactForm = () => {
@@ -16,12 +10,19 @@ const ContactForm = () => {
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
-    const [emailValid, setEmailValid] = useState(true); // State pour gérer la validité de l'email
+    const [emailValid, setEmailValid] = useState(true);
     const [firstNameError, setFirstNameError] = useState('');
     const [lastNameError, setLastNameError] = useState('');
     const [emailError, setEmailError] = useState('');
     const [messageError, setMessageError] = useState('');
-
+    const [isFirstNameValid, setIsFirstNameValid] = useState(false);
+    const [isLastNameValid, setIsLastNameValid] = useState(false);
+    const [isEmailValid, setIsEmailValid] = useState(false);
+    const [isMessageValid, setIsMessageValid] = useState(false);
+    const [firstNameSuccessShown, setFirstNameSuccessShown] = useState(false);
+    const [lastNameSuccessShown, setLastNameSuccessShown] = useState(false);
+    const [emailSuccessShown, setEmailSuccessShown] = useState(false);
+    const [messageSuccessShown, setMessageSuccessShown] = useState(false);
     const { t } = useTranslation();
 
     const validateEmail = (email) => {
@@ -35,34 +36,62 @@ const ContactForm = () => {
             case 'firstname':
                 setFirstName(value);
                 if (value.length < 3) {
-                    setFirstNameError(t('error.firstname'));
+                    toast.warning(t('error.firstname'));
+                    setIsFirstNameValid(false);
+                    setFirstNameSuccessShown(false);
                 } else {
                     setFirstNameError('');
+                    setIsFirstNameValid(true);
+                    if (!firstNameSuccessShown) {
+                        toast.success(t('success.firstname'));
+                        setFirstNameSuccessShown(true);
+                    }
                 }
                 break;
             case 'lastname':
                 setLastName(value);
                 if (value.length < 3) {
-                    setLastNameError(t('error.lastname'));
+                    toast.warning(t('error.lastname'));
+                    setIsLastNameValid(false);
+                    setLastNameSuccessShown(false);
                 } else {
                     setLastNameError('');
+                    setIsLastNameValid(true);
+                    if (!lastNameSuccessShown) {
+                        toast.success(t('success.lastname'));
+                        setLastNameSuccessShown(true);
+                    }
                 }
                 break;
             case 'email':
                 setEmail(value);
                 setEmailValid(validateEmail(value));
                 if (!validateEmail(value)) {
-                    setEmailError(t('error.email'));
+                    toast.warning(t('error.email'));
+                    setIsEmailValid(false);
+                    setEmailSuccessShown(false);
                 } else {
                     setEmailError('');
+                    setIsEmailValid(true);
+                    if (!emailSuccessShown) {
+                        toast.success(t('success.email'));
+                        setEmailSuccessShown(true);
+                    }
                 }
                 break;
             case 'message':
                 setMessage(value);
                 if (value.length < 3) {
-                    setMessageError(t('error.message'));
+                    toast.warning(t('error.message'));
+                    setIsMessageValid(false);
+                    setMessageSuccessShown(false);
                 } else {
                     setMessageError('');
+                    setIsMessageValid(true);
+                    if (!messageSuccessShown) {
+                        toast.success(t('success.message'));
+                        setMessageSuccessShown(true);
+                    }
                 }
                 break;
             default:
@@ -71,7 +100,6 @@ const ContactForm = () => {
     };
 
     const handleReset = () => {
-        // Réinitialiser les champs et les messages d'erreur
         setFirstName('');
         setLastName('');
         setEmail('');
@@ -80,28 +108,29 @@ const ContactForm = () => {
         setLastNameError('');
         setEmailError('');
         setMessageError('');
+        setIsFirstNameValid(false);
+        setIsLastNameValid(false);
+        setIsEmailValid(false);
+        setIsMessageValid(false);
+        setFirstNameSuccessShown(false);
+        setLastNameSuccessShown(false);
+        setEmailSuccessShown(false);
+        setMessageSuccessShown(false);
+        toast.success(t('success.reset'));
     };
 
     const handleSendEmail = () => {
-        const subject = `Demande de contat / rensignements de ${firstName} ${lastName}`;
+        const subject = `Demande de contact / renseignements de ${firstName} ${lastName}`;
         const body = `Email: ${email}%0D%0A%0D%0A${message}`;
         window.location.href = `mailto:vachet.matthieu@icloud.com?subject=${subject}&body=${body}`;
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Vérifier si tous les champs sont valides avant de soumettre le formulaire
-        if (
-            firstName.length < 3 ||
-            lastName.length < 3 ||
-            !validateEmail(email) ||
-            message.length < 3
-        ) {
-            // Afficher un message d'erreur global ou prendre une autre action selon tes besoins
-            alert(t('error-submit'));
+        if (!isFirstNameValid || !isLastNameValid || !isEmailValid || !isMessageValid) {
+            toast.error(t('error.submit'));
             return;
         }
-        // Ouvrir l'application de messagerie de l'utilisateur avec les informations du formulaire
         handleSendEmail();
     };
 
