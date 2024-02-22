@@ -16,6 +16,7 @@
         "@fortawesome/fontawesome-svg-core": "^6.5.1",
         "@fortawesome/free-solid-svg-icons": "^6.5.1",
         "@rollup/plugin-node-resolve": "^15.2.3",
+        "axios": "^1.6.7",
         "framer-motion": "^10.18.0",
         "i18next": "^23.8.2",
         "localforage": "^1.10.0",

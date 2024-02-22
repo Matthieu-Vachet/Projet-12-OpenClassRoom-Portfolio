@@ -1,6 +1,6 @@
 /* Importation des modules */
 import { motion } from 'framer-motion';
-import { useContext, useState } from 'react';
+import { useContext, useState, useEffect } from 'react';
 
 // Importation des composants
 import { Login } from '../../components/modal/login';
@@ -8,13 +8,13 @@ import { HeaderVariants } from '../../utils/framerMotion/Variante';
 
 // Importation des données
 import { useTranslation } from 'react-i18next';
-import { UserContext } from '../../utils/dataProvider/DataProvider';
+import { UserContext, AuthContext } from '../../utils/dataProvider/DataProvider';
 
 // Ressources
-import { IoPersonCircleOutline } from 'react-icons/io5'; //logout
 import Logo from '../../assets/images/LogoM.svg';
 import LightDarkToggle from '../../components/lightDarkToggle';
-// import { IoPersonCircleSharp } from 'react-icons/io5'; // login
+import { IoPersonCircleSharp } from 'react-icons/io5';
+import { IoPersonCircleOutline } from 'react-icons/io5';
 
 // Importation des styles
 import { toast } from 'sonner';
@@ -24,7 +24,8 @@ export default function Header() {
     const { i18n } = useTranslation();
     const { t } = useTranslation();
     const data = useContext(UserContext);
-    const [showLoginModal, setShowLoginModal] = useState(false); // État pour contrôler l'affichage de la modal de connexion
+    const [showLoginModal, setShowLoginModal] = useState(false);
+    const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext);
 
     const changeLanguage = (language) => {
         i18n.changeLanguage(language);
@@ -33,8 +34,12 @@ export default function Header() {
 
     const handleOpenLoginModal = () => {
         setShowLoginModal(true);
-        console.log('showLoginModal:', showLoginModal);
     };
+
+    useEffect(() => {
+        const token = localStorage.getItem('token');
+        setIsLoggedIn(!!token);
+    }, [setIsLoggedIn]);
 
     return (
         <header>
@@ -75,13 +80,29 @@ export default function Header() {
                 <button className='button_en' onClick={() => changeLanguage('en')}>
                     <span className='text_en'>EN</span>
                 </button>
-                <IoPersonCircleOutline
-                    className='button_login'
-                    type='button'
-                    aria-label='Login'
-                    tabIndex='0'
-                    onClick={handleOpenLoginModal}
-                />
+
+                {isLoggedIn ? (
+                    <IoPersonCircleSharp
+                        className='button_login'
+                        type='button'
+                        aria-label='Logout'
+                        tabIndex='0'
+                        onClick={() => {
+                            // Logique de déconnexion
+                            setIsLoggedIn(false);
+                            toast.success(t('login.success-logout'));
+                            localStorage.removeItem('token');
+                        }}
+                    />
+                ) : (
+                    <IoPersonCircleOutline
+                        className='button_login'
+                        type='button'
+                        aria-label='Login'
+                        tabIndex='0'
+                        onClick={handleOpenLoginModal}
+                    />
+                )}
                 <LightDarkToggle />
                 {showLoginModal && <Login onClose={() => setShowLoginModal(false)} />}
             </motion.div>
