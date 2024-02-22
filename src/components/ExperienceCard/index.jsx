@@ -1,15 +1,20 @@
 /* Importation des modules */
 import PropTypes from 'prop-types';
+import { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 
 // Composants
 import Button from '../button';
 
+/* Importation des données */
+import { AuthContext } from '../../utils/dataProvider/DataProvider';
+
 // Ressources
 import { IoCalendarNumberOutline } from 'react-icons/io5';
-import { IoIosArrowRoundForward } from 'react-icons/io';
-import { FaGlobeAfrica } from 'react-icons/fa';
+import { IoIosArrowRoundForward, IoMdAdd } from 'react-icons/io';
+import { FaGlobeAfrica, FaPencilAlt } from 'react-icons/fa';
 import { GiDiploma } from 'react-icons/gi';
+import { MdDeleteForever } from 'react-icons/md';
 
 // Style
 import './style.scss';
@@ -27,6 +32,7 @@ const ExperienceCard = ({
     diplome,
 }) => {
     const { t } = useTranslation();
+    const { isLoggedIn } = useContext(AuthContext);
 
     return (
         <div className='experience-content'>
@@ -47,6 +53,13 @@ const ExperienceCard = ({
                 <Button text={t('experience.button')} height='3rem' width='15rem' />
             </div>
             <div className='experience-info'>
+                {isLoggedIn && (
+                    <div className='experience-cards-edit-icons'>
+                        <FaPencilAlt className='edit-icons' />
+                        <IoMdAdd className='edit-icons' />
+                        <MdDeleteForever className='edit-icons' />
+                    </div>
+                )}
                 <h3 className='experience-info-title'>{title}</h3>
                 <div className='experience-info-divers'>
                     <div className='experience-info-divers-header'>
