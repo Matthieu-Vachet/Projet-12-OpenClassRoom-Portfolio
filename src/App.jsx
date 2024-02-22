@@ -4,7 +4,7 @@ import { Toaster } from 'sonner';
 // Importation des composants
 import NavBar from './layouts/navbar';
 import Loader from './layouts/loader';
-const Home = React.lazy(() => import('./sections/home'));
+import Home from './sections/home';
 const About = React.lazy(() => import('./sections/about'));
 const Blur = React.lazy(() => import('./components/background/overlay/blur'));
 const Skills = React.lazy(() => import('./sections/skills'));
