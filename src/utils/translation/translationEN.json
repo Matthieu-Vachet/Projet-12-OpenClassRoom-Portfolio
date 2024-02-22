@@ -58,5 +58,10 @@
     "theme": {
         "dark": "Dark mode activated successfully.",
         "light": "Light mode activated successfully."
+    },
+    "login": {
+        "error-login": "Incorrect email or password, please try again",
+        "success-login": "Login successful!",
+        "success-logout": "Logout successful!"
     }
 }

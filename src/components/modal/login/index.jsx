@@ -1,19 +1,49 @@
-import { useState } from 'react';
-import Button from '../../button';
-import { IoCloseCircle } from 'react-icons/io5';
+/* Importation des modules */
+import { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
+import axios from 'axios';
 
+/* Importation des ressources */
+import { IoCloseCircle } from 'react-icons/io5';
+
+/* Importation des données */
+import { useTranslation } from 'react-i18next';
+import { AuthContext } from '../../../utils/dataProvider/DataProvider';
+
+/* Importation des composants */
+import Button from '../../button';
+import { toast } from 'sonner';
+
+/* Importation des styles */
 import './style.scss';
 
 export const Login = ({ onClose }) => {
-    const [email, setEmail] = useState('');
-    const [pass, setPass] = useState('');
+    const { t } = useTranslation();
+    const [email, setEmail] = useState('vachet.matthieu@icloud.com');
+    const [password, setPassword] = useState('Matthieuvachet061290');
+    const { setIsLoggedIn, setToken } = useContext(AuthContext);
+
+    const handleLogin = async () => {
+        try {
+            const response = await axios.post(
+                'https://api-rest-portfolio-mauve.vercel.app/Api/v1/auth/login',
+                { email, password },
+            );
+            const { token } = response.data;
+            console.log('Token:', token);
+            setToken(token);
+            setIsLoggedIn(true);
+            onClose(); // Fermez la modal après une connexion réussie
+            toast.success(t('login.success-login'));
+        } catch (error) {
+            toast.error(t('login.error-login'));
+            // Gérer les erreurs de connexion
+        }
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(email);
-
-        onClose();
+        handleLogin();
     };
 
     return (
@@ -30,7 +60,7 @@ export const Login = ({ onClose }) => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     type='email'
-                    placeholder='youremail@gmail.com'
+                    placeholder='vachet.matthieu@icloud.com'
                     id='email'
                     name='email'
                     className='input-form'
@@ -39,10 +69,10 @@ export const Login = ({ onClose }) => {
                     password
                 </label>
                 <input
-                    value={pass}
-                    onChange={(e) => setPass(e.target.value)}
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                     type='password'
-                    placeholder='********'
+                    placeholder='Matthieuvachet061290'
                     id='password'
                     name='password'
                     className='input-form'
@@ -51,8 +81,6 @@ export const Login = ({ onClose }) => {
                     type='submit'
                     text='Login'
                     className='link-btn'
-                    href='/'
-                    onClick={handleSubmit}
                     width={'20rem'}
                     height={'4rem'}
                 />

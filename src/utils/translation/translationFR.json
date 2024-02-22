@@ -58,5 +58,10 @@
     "theme": {
         "dark": "Mode sombre activé avec succès.",
         "light": "Mode clair activé avec succès."
+    },
+    "login": {
+        "error-login": "Email ou mot de passe incorrect, veuillez reessayer",
+        "success-login": "Connexion reussie !",
+        "success-logout": "Deconnexion reussie !"
     }
 }

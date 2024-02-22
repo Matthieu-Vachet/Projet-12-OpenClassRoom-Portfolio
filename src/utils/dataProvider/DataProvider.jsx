@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 export const UserContext = createContext();
 export const ProjectContext = createContext();
 export const ExperienceContext = createContext();
+export const AuthContext = createContext();
 
 // Provider pour chaque API
 export const DataProvider = ({ children }) => {
@@ -13,6 +14,8 @@ export const DataProvider = ({ children }) => {
     const [userData, setUserData] = useState(null);
     const [projetsData, setProjetsData] = useState(null);
     const [experiencesData, setExperiencesData] = useState(null);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [token, setToken] = useState(null);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -70,11 +73,18 @@ export const DataProvider = ({ children }) => {
         return null; // Ne rend rien tant que les données ne sont pas chargées
     }
 
+    const authContextValue = {
+        isLoggedIn,
+        setIsLoggedIn,
+        token,
+        setToken,
+    };
+
     return (
         <UserContext.Provider value={userData}>
             <ProjectContext.Provider value={projetsData}>
                 <ExperienceContext.Provider value={experiencesData}>
-                    {children}
+                    <AuthContext.Provider value={authContextValue}>{children}</AuthContext.Provider>
                 </ExperienceContext.Provider>
             </ProjectContext.Provider>
         </UserContext.Provider>
