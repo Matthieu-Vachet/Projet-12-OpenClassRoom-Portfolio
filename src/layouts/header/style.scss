@@ -68,6 +68,7 @@ header {
             font-size: 2rem;
             color: var(--basicWhite);
             transition: all 0.3s;
+            outline: none;
             cursor: pointer;
 
             &:hover {
