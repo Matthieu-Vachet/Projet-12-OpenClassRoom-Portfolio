@@ -1,0 +1,73 @@
+@import '../../../styles/variable.scss';
+
+.auth-form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, 10%);
+    padding: 5rem;
+    border: 1px solid white;
+    border-radius: 10px;
+    @include glassEffectModal;
+    width: 500px;
+    gap: 2rem;
+
+    .close-icon {
+        position: absolute;
+        display: flex;
+        justify-content: end;
+        top: 0;
+        right: 0;
+        align-items: center;
+        margin: 0.25rem;
+        font-size: 2rem;
+        color: var(--basicWhite);
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            color: var(--basicDarkGray);
+        }
+    }
+
+    .login-title {
+        @include Syne(40px, 700, 0.2em);
+        color: var(--basicWhite);
+    }
+
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+
+        .label-form {
+            width: 100%;
+            text-align: left;
+            @include Space(20px, 400);
+            text-transform: capitalize;
+            color: var(--basicWhite);
+            padding: 0 0;
+        }
+
+        .input-form {
+            width: 100%;
+            @include Space(15px, 400);
+            color: var(--basicWhite);
+            @include glassEffect;
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        .link-btn {
+            margin-top: 1rem;
+        }
+    }
+}

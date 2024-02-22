@@ -64,5 +64,15 @@ header {
                 transition: all 0.1s;
             }
         }
+        .button_login {
+            font-size: 2rem;
+            color: var(--basicWhite);
+            transition: all 0.3s;
+            cursor: pointer;
+
+            &:hover {
+                scale: 1.2;
+            }
+        }
     }
 }
