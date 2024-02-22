@@ -1,6 +1,5 @@
 /* Importation des modules */
 import { useContext } from 'react';
-import Tilt from 'react-parallax-tilt';
 
 /* Importation des Animations */
 import AnimatedSubtitle from '../../components/animations/AnimatedSubtitle';
@@ -35,19 +34,18 @@ const Experience = () => {
             </div>
             <div className='experience-cards-map'>
                 {experiences.map((experience, index) => (
-                    <Tilt key={index}>
-                        <ExperienceCard
-                            school={experience.school}
-                            src={OpLogo}
-                            alt={experience.school}
-                            title={experience.title}
-                            startDate={experience.startDate}
-                            endDate={experience.endDate}
-                            location={experience.location}
-                            description={experience.description}
-                            diplome={experience.diplome}
-                        />
-                    </Tilt>
+                    <ExperienceCard
+                        key={index}
+                        school={experience.school}
+                        src={OpLogo}
+                        alt={experience.school}
+                        title={experience.title}
+                        startDate={experience.startDate}
+                        endDate={experience.endDate}
+                        location={experience.location}
+                        description={experience.description}
+                        diplome={experience.diplome}
+                    />
                 ))}
             </div>
             <AnimatedText className={'experience-text-3'} delay={0.2} text={t('experience.text')} />
