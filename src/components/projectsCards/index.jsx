@@ -1,9 +1,16 @@
 /* Importation des modules */
 import PropTypes from 'prop-types';
+import { useContext } from 'react';
+
+/* Importation des données */
+import { AuthContext } from '../../utils/dataProvider/DataProvider';
 
 // Ressources
 import { technologyIcons } from '../../utils/constants/constants';
 import { FaGithub, FaGlobe } from 'react-icons/fa';
+import { FaPencilAlt } from 'react-icons/fa';
+import { IoMdAdd } from 'react-icons/io';
+import { MdDeleteForever } from 'react-icons/md';
 
 // Style
 import './style.scss';
@@ -18,6 +25,8 @@ const ProjectsCards = ({
     technologies,
     categorie,
 }) => {
+    const { isLoggedIn } = useContext(AuthContext);
+
     return (
         <div className='projects-cards-container'>
             <div className='projects-cards'>
@@ -32,6 +41,13 @@ const ProjectsCards = ({
                 </div>
                 <div className='projects-cards-content'>
                     <h2 className='projects-cards-title'>{name}</h2>
+                    {isLoggedIn && (
+                        <div className='projects-cards-edit-icons'>
+                            <FaPencilAlt className='edit-icons' />
+                            <IoMdAdd className='edit-icons' />
+                            <MdDeleteForever className='edit-icons' />
+                        </div>
+                    )}
                     <p className='projects-categorie'>{categorie}</p>
                     <div className='projects-cards-technologies'>
                         {technologies.map((tech, index) => {

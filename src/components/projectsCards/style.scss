@@ -17,7 +17,7 @@
         transition: 0.5s;
 
         &:hover {
-            height: 520px;
+            height: 530px;
         }
 
         .projects-cards-image-container {
@@ -62,6 +62,26 @@
             .projects-cards-title {
                 @include Syne(20px, 700, 0.1em);
                 color: var(--basicWhite);
+            }
+
+            .projects-cards-edit-icons {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+
+                .edit-icons {
+                    font-size: 20px;
+                    color: var(--basicWhite);
+                    margin-top: 1rem;
+                    cursor: pointer;
+                    transition: 0.3s;
+
+                    &:hover {
+                        color: var(--basicDarkGray);
+                        scale: 1.3;
+                    }
+                }
             }
 
             .projects-categorie {
@@ -113,7 +133,7 @@
 
         &:hover .projects-cards-content {
             top: 100px;
-            height: 410px;
+            height: 430px;
         }
     }
 }
