@@ -33,11 +33,11 @@ export const Login = ({ onClose }) => {
             console.log('Token:', token);
             setToken(token);
             setIsLoggedIn(true);
-            onClose(); // Fermez la modal après une connexion réussie
+            onClose();
             toast.success(t('login.success-login'));
         } catch (error) {
             toast.error(t('login.error-login'));
-            // Gérer les erreurs de connexion
+            console.error('Error:', error);
         }
     };
 
@@ -47,11 +47,13 @@ export const Login = ({ onClose }) => {
     };
 
     return (
-        <div className='auth-form-container'>
+        <div className='auth-form-container' role='dialog' aria-labelledby='login-title'>
             <div className='close-icon'>
                 <IoCloseCircle className='close-icon' onClick={onClose} />
             </div>
-            <h2 className='login-title'>Login</h2>
+            <h2 id='login-title' className='login-title'>
+                Login
+            </h2>
             <form className='login-form' onSubmit={handleSubmit}>
                 <label className='label-form' htmlFor='email'>
                     email
@@ -64,6 +66,8 @@ export const Login = ({ onClose }) => {
                     id='email'
                     name='email'
                     className='input-form'
+                    aria-label='Email'
+                    aria-describedby='email-description'
                 />
                 <label className='label-form' htmlFor='password'>
                     password
@@ -76,6 +80,8 @@ export const Login = ({ onClose }) => {
                     id='password'
                     name='password'
                     className='input-form'
+                    aria-label='Password'
+                    aria-describedby='password-description'
                 />
                 <Button
                     type='submit'
@@ -83,6 +89,7 @@ export const Login = ({ onClose }) => {
                     className='link-btn'
                     width={'20rem'}
                     height={'4rem'}
+                    aria-label='Login Button'
                 />
             </form>
         </div>

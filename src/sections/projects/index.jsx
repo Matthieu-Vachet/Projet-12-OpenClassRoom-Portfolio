@@ -7,7 +7,7 @@ import AnimatedSubtitle from '../../components/animations/AnimatedSubtitle';
 /* Importation des composants */
 import ProjectsCards from '../../components/projectsCards';
 import ModalCreateProjets from '../../components/modal/projets/create';
-import ModalDeleteProjets from '../../components/modal/projets/delete'; // Importez votre modale de suppression ici
+import ModalDeleteProjets from '../../components/modal/projets/delete';
 
 /* Importation des Données */
 import { useTranslation } from 'react-i18next';
@@ -21,7 +21,7 @@ const Projects = () => {
     const { t } = useTranslation();
 
     const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
-    const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false); // Ajoutez cet état pour la modale de suppression
+    const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
     const [selectedProjectId, setSelectedProjectId] = useState(null);
 
     const handleOpenCreateModal = () => {
@@ -38,7 +38,6 @@ const Projects = () => {
     };
 
     const handleCloseDeleteModal = () => {
-        // Ajoutez cette fonction pour fermer la modale de suppression
         setIsDeleteModalOpen(false);
     };
 
@@ -78,7 +77,7 @@ const Projects = () => {
                             live={project.demoLink}
                             categorie={project.category}
                             onAddClick={handleOpenCreateModal}
-                            onDeleteClick={() => handleOpenDeleteModal(project._id)} // Passez la fonction ici
+                            onDeleteClick={() => handleOpenDeleteModal(project._id)}
                         />
                     ))}
                 </div>

@@ -109,7 +109,7 @@
                 }
 
                 @include desktop {
-                    @include Syne(16 px, 700, 0.45em);
+                    @include Syne(16px, 700, 0.3em);
                     transform: scaleY(2);
                 }
 
