@@ -4,7 +4,7 @@ import { Toaster } from 'sonner';
 // Importation des composants
 import NavBar from './layouts/navbar';
 import Loader from './layouts/loader';
-const Home = React.lazy(() => import('./sections/home'));
+import Home from './sections/home';
 const About = React.lazy(() => import('./sections/about'));
 const Blur = React.lazy(() => import('./components/background/overlay/blur'));
 const Skills = React.lazy(() => import('./sections/skills'));
@@ -30,30 +30,31 @@ function App() {
 
     return (
         <AnimatePresence>
-            <Suspense fallback={<Loader />}>
-                {loading ? (
-                    // Affiche le loader pendant le chargement
-                    <motion.div
-                        key='loader'
-                        initial={{ opacity: 1 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.5, ease: 'easeInOut' }}
-                    >
-                        <Loader />
-                    </motion.div>
-                ) : (
-                    // Une fois le chargement terminé, affiche l'application
-                    <motion.div
-                        key='app'
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.5, ease: 'easeInOut' }}
-                    >
-                        <Blur />
-                        <NavBar />
-                        <Home />
+            {loading ? (
+                // Affiche le loader pendant le chargement
+                <motion.div
+                    key='loader'
+                    initial={{ opacity: 1 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.5, ease: 'easeInOut' }}
+                >
+                    <Loader />
+                </motion.div>
+            ) : (
+                // Une fois le chargement terminé, affiche l'application
+                <motion.div
+                    key='app'
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.5, ease: 'easeInOut' }}
+                >
+                    <Blur />
+                    <NavBar />
+
+                    <Home />
+                    <Suspense fallback={<Loader />}>
                         <About />
                         <Experience />
                         <Skills />
@@ -68,9 +69,9 @@ function App() {
                                 className: 'my-toast',
                             }}
                         />
-                    </motion.div>
-                )}
-            </Suspense>
+                    </Suspense>
+                </motion.div>
+            )}
         </AnimatePresence>
     );
 }

@@ -1,5 +1,8 @@
-import { createContext, useState, useEffect } from 'react';
+/* Importation des modules */
 import PropTypes from 'prop-types';
+import { createContext, useEffect, useState } from 'react';
+
+/* Importation des Données */
 import { useTranslation } from 'react-i18next';
 
 // Context pour chaque API
@@ -16,6 +19,33 @@ export const DataProvider = ({ children }) => {
     const [experiencesData, setExperiencesData] = useState(null);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [token, setToken] = useState(null);
+
+    const deleteProjets = (id) => {
+        setProjetsData(projetsData.filter((projet) => projet._id !== id));
+    };
+
+    const refreshProjects = async () => {
+        try {
+            const response = await fetch(
+                'https://api-rest-portfolio-mauve.vercel.app/Api/v1/projets/',
+            );
+            if (!response.ok) {
+                throw new Error('Erreur lors de la récupération des projets');
+            }
+            const projetResult = await response.json();
+
+            const projetResultTranslated = projetResult.map((projet) => ({
+                ...projet,
+                name: projet.name[i18n.language],
+                description: projet.description[i18n.language],
+                category: projet.category[i18n.language],
+            }));
+
+            setProjetsData(projetResultTranslated);
+        } catch (error) {
+            console.error('Error refreshing projects:', error);
+        }
+    };
 
     useEffect(() => {
         const fetchData = async () => {
@@ -82,7 +112,13 @@ export const DataProvider = ({ children }) => {
 
     return (
         <UserContext.Provider value={userData}>
-            <ProjectContext.Provider value={projetsData}>
+            <ProjectContext.Provider
+                value={{
+                    projets: projetsData,
+                    deleteProjets,
+                    refreshProjects, // Ajoutez la fonction refreshProjects ici
+                }}
+            >
                 <ExperienceContext.Provider value={experiencesData}>
                     <AuthContext.Provider value={authContextValue}>{children}</AuthContext.Provider>
                 </ExperienceContext.Provider>

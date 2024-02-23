@@ -63,5 +63,19 @@
         "error-login": "Incorrect email or password, please try again",
         "success-login": "Login successful!",
         "success-logout": "Logout successful!"
+    },
+    "modal": {
+        "delete": {
+            "title": "Deletion",
+            "text": "Are you sure you want to delete this project?",
+            "success": "The project has been deleted successfully.",
+            "btn-1": "Delete",
+            "btn-2": "Cancel"
+        },
+        "create": {
+            "title": "Adding project",
+            "success": "The project has been added successfully.",
+            "error": "An error occurred while adding the project, please try again."
+        }
     }
 }

@@ -77,7 +77,9 @@ export default function Hero() {
             </div>
 
             {/* Scroll Mouse composant */}
-            <ScrollMouse />
+            <div className='ScrollMouse'>
+                <ScrollMouse />
+            </div>
         </div>
     );
 }
