@@ -15,6 +15,10 @@
     width: 500px;
     gap: 2rem;
 
+    @include desktop {
+        height: 70%;
+    }
+
     .close-icon {
         position: absolute;
         display: flex;

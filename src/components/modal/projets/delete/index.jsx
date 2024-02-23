@@ -24,11 +24,13 @@ const ModalDeleteProjets = ({ onClose, onDelete, id }) => {
     };
 
     return (
-        <div className='modal-delete-container'>
+        <div className='modal-delete-container' role='dialog' aria-labelledby='delete-title'>
             <div className='close-icon'>
                 <IoCloseCircle className='close-icon' onClick={onClose} />
             </div>
-            <h2 className='delete-title'>{t('modal.delete.title')}</h2>
+            <h2 id='delete-title' className='delete-title'>
+                {t('modal.delete.title')}
+            </h2>
             <p className='delete-text'>{t('modal.delete.text')}</p>
             <div className='delete-btn'>
                 <Button
@@ -38,6 +40,7 @@ const ModalDeleteProjets = ({ onClose, onDelete, id }) => {
                     width={'15rem'}
                     height={'4rem'}
                     onClick={handleDeleteClick}
+                    aria-label={t('modal.delete.btn-1')}
                 />
                 <Button
                     type='submit'
@@ -46,6 +49,7 @@ const ModalDeleteProjets = ({ onClose, onDelete, id }) => {
                     width={'15rem'}
                     height={'4rem'}
                     onClick={onClose}
+                    aria-label={t('modal.delete.btn-2')}
                 />
             </div>
         </div>

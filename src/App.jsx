@@ -1,17 +1,17 @@
-import React, { useEffect, useState, Suspense } from 'react';
+import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Toaster } from 'sonner';
 // Importation des composants
 import NavBar from './layouts/navbar';
 import Loader from './layouts/loader';
 import Home from './sections/home';
-const About = React.lazy(() => import('./sections/about'));
-const Blur = React.lazy(() => import('./components/background/overlay/blur'));
-const Skills = React.lazy(() => import('./sections/skills'));
-const Projects = React.lazy(() => import('./sections/projects'));
-const Experience = React.lazy(() => import('./sections/Experience'));
-const Contact = React.lazy(() => import('./sections/Contact'));
-const Footer = React.lazy(() => import('./layouts/footer'));
+import About from './sections/about';
+import Blur from './components/background/overlay/blur';
+import Skills from './sections/skills';
+import Projects from './sections/projects';
+import Experience from './sections/Experience';
+import Contact from './sections/Contact';
+import Footer from './layouts/footer';
 
 function App() {
     // État pour gérer l'affichage du loader
@@ -52,24 +52,21 @@ function App() {
                 >
                     <Blur />
                     <NavBar />
-
                     <Home />
-                    <Suspense fallback={<Loader />}>
-                        <About />
-                        <Experience />
-                        <Skills />
-                        <Projects />
-                        <Contact />
-                        <Footer />
-                        <Toaster
-                            richColors
-                            position='top-right'
-                            toastOptions={{
-                                closeButton: true,
-                                className: 'my-toast',
-                            }}
-                        />
-                    </Suspense>
+                    <About />
+                    <Experience />
+                    <Skills />
+                    <Projects />
+                    <Contact />
+                    <Footer />
+                    <Toaster
+                        richColors
+                        position='top-right'
+                        toastOptions={{
+                            closeButton: true,
+                            className: 'my-toast',
+                        }}
+                    />
                 </motion.div>
             )}
         </AnimatePresence>

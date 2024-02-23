@@ -34,10 +34,7 @@ export default function Hero() {
                         variants={TextHeroVariant}
                         className='hero_slogan'
                     >
-                        <FancyText
-                            gradient={{ from: '#0ce39a', to: '#69007f', type: 'linear' }}
-                            animateTo={{ from: '#69007f', to: '#fc0987' }}
-                        >
+                        <FancyText gradient={{ from: '#0ce39a', to: '#69007f', type: 'linear' }}>
                             {t('about.title')}
                         </FancyText>
                     </motion.h1>
