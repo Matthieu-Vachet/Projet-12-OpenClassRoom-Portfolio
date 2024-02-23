@@ -7,13 +7,13 @@ import { IoCloseCircle } from 'react-icons/io5';
 
 /* Importation des composants */
 import Button from '../../../button';
+import { toast } from 'sonner';
 
 /* Importation des données */
 import { useTranslation } from 'react-i18next';
 import { ProjectContext } from '../../../../utils/dataProvider/DataProvider';
 
 import './style.scss';
-import { toast } from 'sonner';
 
 const ModalCreateProjets = ({ onClose }) => {
     const { t } = useTranslation();
@@ -76,8 +76,8 @@ const ModalCreateProjets = ({ onClose }) => {
             toast.success(t('modal.create.success'));
             refreshProjects();
         } catch (error) {
-            console.error(error);
             toast.error(t('modal.create.error'));
+            console.error(error);
         }
     };
 

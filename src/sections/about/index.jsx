@@ -42,8 +42,13 @@ export default function About() {
                         variants={ButtonVariant}
                         aria-label='About section buttons'
                     >
-                        <Button text={t('about.button-1')} href='#' />
-                        <Button text={t('about.button-2')} href='#contact' />
+                        <Button text={t('about.button-1')} href='#' height='3rem' width='15rem' />
+                        <Button
+                            text={t('about.button-2')}
+                            href='#contact'
+                            height='3rem'
+                            width='15rem'
+                        />
                     </motion.div>
                 </div>
             </div>

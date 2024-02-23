@@ -5,14 +5,13 @@ import { useContext } from 'react';
 /* Importation des données */
 import { AuthContext } from '../../utils/dataProvider/DataProvider';
 
-// Ressources
+/* Importation des ressources */
 import { technologyIcons } from '../../utils/constants/constants';
 import { FaGithub, FaGlobe } from 'react-icons/fa';
-import { FaPencilAlt } from 'react-icons/fa';
 import { IoMdAdd } from 'react-icons/io';
 import { MdDeleteForever } from 'react-icons/md';
 
-// Style
+/* Importation des styles */
 import './style.scss';
 
 const ProjectsCards = ({
@@ -46,7 +45,6 @@ const ProjectsCards = ({
                     <h2 className='projects-cards-title'>{name}</h2>
                     {isLoggedIn && (
                         <div className='projects-cards-edit-icons'>
-                            <FaPencilAlt className='edit-icons' />
                             <IoMdAdd className='edit-icons' onClick={onAddClick} />
                             <MdDeleteForever
                                 className='edit-icons'

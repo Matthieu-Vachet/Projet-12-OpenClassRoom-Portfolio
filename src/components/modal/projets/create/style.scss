@@ -15,6 +15,18 @@
     gap: 2rem;
     z-index: 100;
 
+    @include desktop {
+        width: 80vw;
+        height: 88vh;
+        transform: translate(50%, 0%);
+    }
+
+    @include largeDesktop {
+        width: 70vw;
+        height: 85vh;
+        transform: translate(50%, 0%);
+    }
+
     .close-icon {
         position: absolute;
         top: 0;
@@ -33,6 +45,10 @@
     .modal-create-title {
         @include Syne(30px, 700, 0.2em);
         color: var(--basicWhite);
+
+        @include largeDesktop {
+            @include Syne(25px, 700, 0.2em);
+        }
     }
 
     .modal-container {
@@ -51,6 +67,10 @@
                 width: 100%;
                 gap: 1rem;
 
+                @include largeDesktop {
+                    gap: 0.5rem;
+                }
+
                 .create-section {
                     display: flex;
                     align-items: center;
@@ -58,6 +78,10 @@
                     text-align: center;
                     width: 100%;
                     gap: 2rem;
+
+                    @include largeDesktop {
+                        gap: 0.5rem;
+                    }
                 }
             }
         }
@@ -75,6 +99,11 @@
     @include Syne(20px, 400, 0.2em);
     text-transform: capitalize;
     color: var(--basicWhite);
+
+    @include largeDesktop {
+        @include Syne(15px, 400, 0.2em);
+        text-transform: capitalize;
+    }
 }
 
 .create-input {
