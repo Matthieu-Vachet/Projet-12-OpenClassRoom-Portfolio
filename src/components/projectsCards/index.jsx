@@ -16,6 +16,7 @@ import { MdDeleteForever } from 'react-icons/md';
 import './style.scss';
 
 const ProjectsCards = ({
+    id,
     image,
     alt,
     name,
@@ -24,6 +25,8 @@ const ProjectsCards = ({
     live,
     technologies,
     categorie,
+    onAddClick,
+    onDeleteClick,
 }) => {
     const { isLoggedIn } = useContext(AuthContext);
 
@@ -44,16 +47,20 @@ const ProjectsCards = ({
                     {isLoggedIn && (
                         <div className='projects-cards-edit-icons'>
                             <FaPencilAlt className='edit-icons' />
-                            <IoMdAdd className='edit-icons' />
-                            <MdDeleteForever className='edit-icons' />
+                            <IoMdAdd className='edit-icons' onClick={onAddClick} />
+                            <MdDeleteForever
+                                className='edit-icons'
+                                onClick={() => onDeleteClick(id)}
+                            />
                         </div>
                     )}
                     <p className='projects-categorie'>{categorie}</p>
                     <div className='projects-cards-technologies'>
-                        {technologies.map((tech, index) => {
-                            const Icon = technologyIcons[tech];
-                            return <Icon key={index} />;
-                        })}
+                        {technologies &&
+                            technologies.map((tech, index) => {
+                                const Icon = technologyIcons[tech];
+                                return <Icon key={index} />;
+                            })}
                     </div>
                     <p className='projects-cards-description'>{description}</p>
                     <div className='projects-cards-link-section'>
@@ -83,6 +90,7 @@ const ProjectsCards = ({
 };
 
 ProjectsCards.propTypes = {
+    id: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
     alt: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
@@ -91,6 +99,8 @@ ProjectsCards.propTypes = {
     live: PropTypes.string.isRequired,
     technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
     categorie: PropTypes.string.isRequired,
+    onAddClick: PropTypes.func,
+    onDeleteClick: PropTypes.func,
 };
 
 export default ProjectsCards;

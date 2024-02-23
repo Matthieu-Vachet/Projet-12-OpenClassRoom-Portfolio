@@ -6,13 +6,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 50%;
+    position: fixed;
+    bottom: 50%;
     right: 50%;
-    transform: translate(50%, 10%);
+    transform: translate(50%, 50%);
     padding: 5rem;
-    border: 1px solid white;
-    border-radius: 10px;
     @include glassEffectModal;
     width: 500px;
     gap: 2rem;
@@ -25,13 +23,13 @@
         right: 0;
         align-items: center;
         margin: 0.25rem;
-        font-size: 2rem;
-        color: var(--basicWhite);
+        font-size: 2.5rem;
+        color: var(--basicDarkGray);
         cursor: pointer;
         transition: all 0.3s ease-in-out;
 
         &:hover {
-            color: var(--basicDarkGray);
+            color: var(--basicWhite);
         }
     }
 
@@ -64,6 +62,36 @@
             @include glassEffect;
             padding: 1rem;
             border-radius: 10px;
+            margin-top: 0.5rem;
+            line-height: 28px;
+            border: 1px solid transparent;
+            border-bottom-color: #777;
+            outline: none;
+            background-color: transparent;
+            transition: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+            &:focus {
+                outline: none;
+                padding: 1rem;
+                border-radius: 1rem;
+                border-color: var(--basicWhite);
+            }
+
+            &:hover {
+                outline: none;
+                padding: 1rem;
+                border-radius: 1rem;
+                border-color: var(--basicWhite);
+            }
+
+            &::placeholder {
+                color: #777;
+            }
+
+            &:focus::placeholder {
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
         }
 
         .link-btn {

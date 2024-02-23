@@ -1,0 +1,57 @@
+@import '../../../../styles/variable.scss';
+
+.modal-delete-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, 40%);
+    padding: 5rem;
+    @include glassEffectModal;
+    width: auto;
+    gap: 2rem;
+
+    .close-icon {
+        position: absolute;
+        display: flex;
+        justify-content: end;
+        top: 0;
+        right: 0;
+        align-items: center;
+        margin: 0.25rem;
+        font-size: 2.5rem;
+        color: var(--basicDarkGray);
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            color: var(--basicWhite);
+        }
+    }
+
+    .delete-title {
+        @include Syne(40px, 700, 0.2em);
+        color: var(--basicWhite);
+    }
+
+    .delete-text {
+        text-align: center;
+        @include Syne(20px, 400, 0.2em);
+        color: var(--basicWhite);
+    }
+
+    .delete-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .link-btn {
+        margin-top: 1rem;
+    }
+}
