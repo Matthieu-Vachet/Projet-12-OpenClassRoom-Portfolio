@@ -63,5 +63,19 @@
         "error-login": "Email ou mot de passe incorrect, veuillez reessayer",
         "success-login": "Connexion reussie !",
         "success-logout": "Deconnexion reussie !"
+    },
+    "modal": {
+        "delete": {
+            "title": "Suppression",
+            "text": "Etes-vous sûr de vouloir supprimer ce projet ?",
+            "success": "Projet supprimé avec succès !",
+            "btn-1": "Supprimer",
+            "btn-2": "Annuler"
+        },
+        "create": {
+            "title": "Ajout de projet",
+            "success": "Projet ajouté avec succès !",
+            "error": "Erreur lors de la création du projet, veuillez reessayer."
+        }
     }
 }

@@ -30,30 +30,31 @@ function App() {
 
     return (
         <AnimatePresence>
-            <Suspense fallback={<Loader />}>
-                {loading ? (
-                    // Affiche le loader pendant le chargement
-                    <motion.div
-                        key='loader'
-                        initial={{ opacity: 1 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.5, ease: 'easeInOut' }}
-                    >
-                        <Loader />
-                    </motion.div>
-                ) : (
-                    // Une fois le chargement terminé, affiche l'application
-                    <motion.div
-                        key='app'
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.5, ease: 'easeInOut' }}
-                    >
-                        <Blur />
-                        <NavBar />
-                        <Home />
+            {loading ? (
+                // Affiche le loader pendant le chargement
+                <motion.div
+                    key='loader'
+                    initial={{ opacity: 1 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.5, ease: 'easeInOut' }}
+                >
+                    <Loader />
+                </motion.div>
+            ) : (
+                // Une fois le chargement terminé, affiche l'application
+                <motion.div
+                    key='app'
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.5, ease: 'easeInOut' }}
+                >
+                    <Blur />
+                    <NavBar />
+
+                    <Home />
+                    <Suspense fallback={<Loader />}>
                         <About />
                         <Experience />
                         <Skills />
@@ -68,9 +69,9 @@ function App() {
                                 className: 'my-toast',
                             }}
                         />
-                    </motion.div>
-                )}
-            </Suspense>
+                    </Suspense>
+                </motion.div>
+            )}
         </AnimatePresence>
     );
 }
