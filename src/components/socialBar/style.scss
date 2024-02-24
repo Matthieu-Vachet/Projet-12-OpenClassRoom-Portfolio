@@ -23,6 +23,10 @@
         gap: 2em;
     }
 
+    @include tablet {
+        bottom: 4em;
+    }
+
     .icon {
         color: var(--basicWhite);
         text-decoration: none;

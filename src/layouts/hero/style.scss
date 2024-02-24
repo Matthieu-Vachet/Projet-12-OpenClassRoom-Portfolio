@@ -24,7 +24,11 @@
             text-align: center;
 
             @include mobile {
-                margin-bottom: 100px;
+                width: 90%;
+            }
+
+            @include tablet {
+                width: 90%;
             }
 
             @include desktop {
@@ -99,12 +103,6 @@
             .img-icons {
                 width: 100%;
             }
-        }
-    }
-
-    .ScrollMouse {
-        @include mobile {
-            display: none;
         }
     }
 }

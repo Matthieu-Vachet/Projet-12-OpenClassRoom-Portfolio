@@ -5,6 +5,7 @@ import FancyText from '@carefully-coded/react-text-gradient';
 
 // Importation des données
 import { UserContext } from '../../utils/dataProvider/DataProvider';
+import { ThemeContext } from '../../utils/dataProvider/DataProvider';
 import { useTranslation } from 'react-i18next';
 
 // Importation des composants
@@ -13,7 +14,8 @@ import { TextHeroVariant, SvgVariants } from '../../utils/framerMotion/Variante'
 import Tilt from 'react-parallax-tilt';
 
 // Importation des Ressources
-import ImgIcons from '../../assets/images/VersionBalck.svg';
+import IconsVersionBlack from '../../assets/images/IconsVersionBlack.svg';
+import IconsVersionWhite from '../../assets/images/IconsVersionWhite.svg';
 
 // Importation des styles
 import './style.scss';
@@ -22,6 +24,9 @@ import '../../styles/variable.scss';
 export default function Hero() {
     const { t } = useTranslation();
     const data = useContext(UserContext);
+    const { theme } = useContext(ThemeContext);
+
+    const islightMode = theme === 'dark';
 
     return (
         <div className='hero'>
@@ -69,7 +74,7 @@ export default function Hero() {
                             animate='visible'
                             variants={SvgVariants}
                             className='img-icons'
-                            src={ImgIcons}
+                            src={islightMode ? IconsVersionWhite : IconsVersionBlack}
                             alt='Image Icons technologies web'
                         />
                     </Tilt>

@@ -10,6 +10,7 @@ export const UserContext = createContext();
 export const ProjectContext = createContext();
 export const ExperienceContext = createContext();
 export const AuthContext = createContext();
+export const ThemeContext = createContext();
 
 // Provider pour chaque API
 export const DataProvider = ({ children }) => {
@@ -19,6 +20,7 @@ export const DataProvider = ({ children }) => {
     const [experiencesData, setExperiencesData] = useState(null);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [token, setToken] = useState(null);
+    const [theme, setTheme] = useState('light');
 
     const deleteProjets = (id) => {
         setProjetsData(projetsData.filter((projet) => projet._id !== id));
@@ -45,6 +47,10 @@ export const DataProvider = ({ children }) => {
         } catch (error) {
             console.error('Error refreshing projects:', error);
         }
+    };
+
+    const toggleTheme = () => {
+        setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
     };
 
     useEffect(() => {
@@ -120,7 +126,11 @@ export const DataProvider = ({ children }) => {
                 }}
             >
                 <ExperienceContext.Provider value={experiencesData}>
-                    <AuthContext.Provider value={authContextValue}>{children}</AuthContext.Provider>
+                    <AuthContext.Provider value={authContextValue}>
+                        <ThemeContext.Provider value={{ theme, toggleTheme }}>
+                            {children}
+                        </ThemeContext.Provider>
+                    </AuthContext.Provider>
                 </ExperienceContext.Provider>
             </ProjectContext.Provider>
         </UserContext.Provider>

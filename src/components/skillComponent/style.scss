@@ -8,8 +8,8 @@
 
     .box-icons {
         position: relative;
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
         border-radius: 15px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(5px);
@@ -17,6 +17,16 @@
         border: 2px solid rgba(255, 255, 255, 0.082);
         transform-style: preserve-3d;
         transition: all 0.5s;
+
+        @include mobile {
+            width: 85px;
+            height: 85px;
+        }
+
+        @include largeDesktop {
+            width: 100px;
+            height: 100px;
+        }
 
         @include xxlDesktop {
             width: 150px;
@@ -48,6 +58,10 @@
             opacity: 0;
             z-index: 10;
             transition: 0.5s;
+
+            @include mobile {
+                @include Space(15px, 400);
+            }
 
             @include xxlDesktop {
                 @include Space(24px, 400);

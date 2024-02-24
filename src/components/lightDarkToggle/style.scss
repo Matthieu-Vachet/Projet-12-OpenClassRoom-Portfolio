@@ -9,6 +9,14 @@
     color: var(--basicWhite);
     cursor: pointer;
 
+    @include mobile {
+        font-size: 2em;
+    }
+
+    @include tablet {
+        font-size: 1.5em;
+    }
+
     .toggleIcon {
         transition: all 0.1s ease-in-out;
 

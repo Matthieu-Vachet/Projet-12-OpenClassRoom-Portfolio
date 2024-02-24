@@ -63,7 +63,7 @@ export default function Navbar() {
                                     .scrollIntoView({ behavior: 'smooth' });
                             }}
                         >
-                            <Icon />
+                            <Icon title={item.title} />
                         </a>
                     );
                 })}

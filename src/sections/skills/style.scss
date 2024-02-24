@@ -1,6 +1,8 @@
 @import '../../styles/variable.scss';
 
 #skills {
+    width: 100%;
+
     @include desktop {
         padding-top: 0;
     }
@@ -13,6 +15,16 @@
         display: flex;
         width: 100%;
         flex-direction: column;
+
+        @include mobile {
+            width: 95%;
+            margin: auto;
+        }
+
+        @include tablet {
+            width: 95%;
+            margin: auto;
+        }
 
         .skills-section-title {
             text-align: right;

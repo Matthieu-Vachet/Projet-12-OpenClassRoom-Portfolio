@@ -10,9 +10,14 @@
     background: linear-gradient(45deg, var(--button-1), var(--button-2), var(--button-3));
     padding: 10px 20px;
     border-radius: 20px;
+    z-index: 0;
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.2s;
+
+    @include mobile {
+        border: 1px solid var(--borderGlass);
+    }
 
     &:hover {
         transform: scale(1.1);
