@@ -96,6 +96,7 @@
 .create-label {
     width: 100%;
     text-align: left;
+    @include Syne(15px, 700, 0.2em);
     text-transform: capitalize;
     color: var(--basicWhite);
 
