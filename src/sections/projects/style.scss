@@ -72,6 +72,30 @@
             @include tablet {
                 margin-top: 0;
             }
+
+            .projects-cards-add-news {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include glassEffect;
+                width: 350px;
+                height: 340px;
+                margin-top: 2rem;
+
+                .edit-icons {
+                    width: 30%;
+                    height: 30%;
+                    font-size: 10px;
+                    color: var(--basicWhite);
+                    cursor: pointer;
+                    transition: 0.3s;
+
+                    &:hover {
+                        color: var(--basicDarkGray);
+                        scale: 1.3;
+                    }
+                }
+            }
         }
     }
     .modale-create {

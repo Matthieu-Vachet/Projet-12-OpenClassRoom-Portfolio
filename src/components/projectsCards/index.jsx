@@ -8,7 +8,6 @@ import { AuthContext } from '../../utils/dataProvider/DataProvider';
 /* Importation des ressources */
 import { technologyIcons } from '../../utils/constants/constants';
 import { FaGithub, FaGlobe } from 'react-icons/fa';
-import { IoMdAdd } from 'react-icons/io';
 import { MdDeleteForever } from 'react-icons/md';
 
 /* Importation des styles */
@@ -24,7 +23,6 @@ const ProjectsCards = ({
     live,
     technologies,
     categorie,
-    onAddClick,
     onDeleteClick,
 }) => {
     const { isLoggedIn } = useContext(AuthContext);
@@ -45,7 +43,6 @@ const ProjectsCards = ({
                     <h2 className='projects-cards-title'>{name}</h2>
                     {isLoggedIn && (
                         <div className='projects-cards-edit-icons'>
-                            <IoMdAdd className='edit-icons' onClick={onAddClick} />
                             <MdDeleteForever
                                 className='edit-icons'
                                 onClick={() => onDeleteClick(id)}
@@ -97,7 +94,7 @@ ProjectsCards.propTypes = {
     live: PropTypes.string.isRequired,
     technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
     categorie: PropTypes.string.isRequired,
-    onAddClick: PropTypes.func,
+    // onAddClick: PropTypes.func,
     onDeleteClick: PropTypes.func,
 };
 

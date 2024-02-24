@@ -11,13 +11,17 @@ import ModalDeleteProjets from '../../components/modal/projets/delete';
 
 /* Importation des Données */
 import { useTranslation } from 'react-i18next';
-import { ProjectContext } from '../../utils/dataProvider/DataProvider';
+import { ProjectContext, AuthContext } from '../../utils/dataProvider/DataProvider';
+
+/* Importation des ressources */
+import { IoMdAdd } from 'react-icons/io';
 
 /* Importation des styles */
 import './style.scss';
 
 const Projects = () => {
     const { projets, deleteProjets } = useContext(ProjectContext);
+    const { isLoggedIn } = useContext(AuthContext);
     const { t } = useTranslation();
 
     const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
@@ -76,10 +80,14 @@ const Projects = () => {
                             github={project.githubLink}
                             live={project.demoLink}
                             categorie={project.category}
-                            onAddClick={handleOpenCreateModal}
                             onDeleteClick={() => handleOpenDeleteModal(project._id)}
                         />
                     ))}
+                    {isLoggedIn && (
+                        <div className='projects-cards-add-news'>
+                            <IoMdAdd className='edit-icons' onClick={handleOpenCreateModal} />
+                        </div>
+                    )}
                 </div>
             </div>
             <div className='modale-create'>
