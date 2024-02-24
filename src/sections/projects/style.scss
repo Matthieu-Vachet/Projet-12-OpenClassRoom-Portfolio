@@ -1,6 +1,7 @@
 @import '../../styles/variable.scss';
 
 #projects {
+    width: 100%;
     @include largeDesktop {
         padding-top: 0;
     }
@@ -10,6 +11,16 @@
         display: flex;
         width: 100%;
         flex-direction: column;
+
+        @include mobile {
+            width: 95%;
+            margin: auto;
+        }
+
+        @include tablet {
+            width: 95%;
+            margin: auto;
+        }
 
         .projects-section-title {
             text-align: left;
@@ -107,6 +118,6 @@
         justify-content: center;
         align-items: center;
         transform: translate(-61%, -50%);
-        box-sizing: border-box; // Ajoutez ceci
+        box-sizing: border-box;
     }
 }

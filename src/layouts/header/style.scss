@@ -8,13 +8,17 @@ header {
     justify-content: space-between;
     box-sizing: border-box;
 
-    @include mobile {
-        display: none;
-    }
+    // @include mobile {
+    //     display: none;
+    // }
 
     .logo_content {
         display: flex;
         justify-content: center;
+
+        @include mobile {
+            display: none;
+        }
 
         .logo_header {
             width: 7rem;
@@ -27,6 +31,10 @@ header {
             color: var(--basicWhite);
             margin-top: 2em;
 
+            @include mobile {
+                display: none;
+            }
+
             @include tablet {
                 display: none;
             }
@@ -37,9 +45,20 @@ header {
         z-index: 1;
         display: flex;
         justify-content: center;
+        align-items: center;
+        text-align: center;
         gap: 0.5em;
         margin-right: 2%;
-        margin-top: 2em;
+
+        @include mobile {
+            width: 100%;
+            flex-direction: column;
+            align-items: end;
+            text-align: center;
+            margin-top: 6rem;
+            margin-right: 0.5rem;
+            z-index: 2;
+        }
 
         .button_fr,
         .button_en {
@@ -51,6 +70,16 @@ header {
             backdrop-filter: blur(2px);
             transition: all 0.1s;
             cursor: pointer;
+
+            @include mobile {
+                width: 32px;
+                height: 25px;
+            }
+
+            @include tablet {
+                width: 32px;
+                height: 25px;
+            }
 
             &:hover {
                 background-color: var(--strockGlass);
@@ -70,6 +99,14 @@ header {
             transition: all 0.3s;
             outline: none;
             cursor: pointer;
+
+            @include mobile {
+                display: none;
+            }
+
+            @include tablet {
+                font-size: 1.5rem;
+            }
 
             &:hover {
                 scale: 1.2;

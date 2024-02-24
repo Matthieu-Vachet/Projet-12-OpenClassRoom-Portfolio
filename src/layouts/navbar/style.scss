@@ -28,6 +28,10 @@
             justify-content: center;
             padding: 8px 10px;
 
+            @include mobile {
+                width: 3rem;
+            }
+
             &:hover {
                 background: var(--darkWhite10);
             }

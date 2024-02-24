@@ -37,11 +37,6 @@ const Footer = () => {
                             </li>
                             <li>
                                 <a className='footer-text' href='#'>
-                                    {userData[0].number}
-                                </a>
-                            </li>
-                            <li>
-                                <a className='footer-text' href='#'>
                                     {userData[0].email}
                                 </a>
                             </li>

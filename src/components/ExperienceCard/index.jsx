@@ -46,7 +46,7 @@ const ExperienceCard = ({
                         </div>
                     </div>
                 </div>
-                <Button text={t('experience.button')} height='3rem' width='15rem' />
+                <Button text={t('experience.button')} />
             </div>
             <div className='experience-info'>
                 <h3 className='experience-info-title'>{title}</h3>

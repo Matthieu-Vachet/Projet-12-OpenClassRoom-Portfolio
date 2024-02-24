@@ -2,6 +2,7 @@ import { AiOutlineHome, AiOutlineUser } from 'react-icons/ai';
 import { BiMessageSquareDetail } from 'react-icons/bi';
 import { LiaSuitcaseSolid } from 'react-icons/lia';
 import { GiGearHammer } from 'react-icons/gi';
+import { IoGitNetworkSharp } from 'react-icons/io5';
 import {
     DiHtml5,
     DiCss3,
@@ -40,6 +41,11 @@ const navItems = [
         icon: AiOutlineUser,
     },
     {
+        id: 'experience',
+        title: 'Experience',
+        icon: IoGitNetworkSharp,
+    },
+    {
         id: 'skills',
         title: 'Skills',
         icon: GiGearHammer,
@@ -60,43 +66,43 @@ const Frontend_skill = [
     {
         skill_name: 'Html',
         Image: DiHtml5,
-        size: 90,
+        size: 70,
         alt: 'Icône Html',
     },
     {
         skill_name: 'Css',
         Image: DiCss3,
-        size: 90,
+        size: 70,
         alt: 'Icône Css',
     },
     {
         skill_name: 'Sass',
         Image: DiSass,
-        size: 90,
+        size: 70,
         alt: 'Icône Sass',
     },
     {
         skill_name: 'Javascript',
         Image: DiJavascript1,
-        size: 90,
+        size: 70,
         alt: 'Icône Javascript',
     },
     {
         skill_name: 'React',
         Image: DiReact,
-        size: 90,
+        size: 70,
         alt: 'Icône React',
     },
     {
         skill_name: 'Redux',
         Image: SiRedux,
-        size: 90,
+        size: 70,
         alt: 'Icône Redux',
     },
     {
         skill_name: 'Motion',
         Image: TbBrandFramerMotion,
-        size: 90,
+        size: 70,
         alt: 'Icône Framer Motion',
     },
 ];
@@ -105,19 +111,19 @@ const Backend_skill = [
     {
         skill_name: 'Node.JS',
         Image: DiNodejsSmall,
-        size: 90,
+        size: 70,
         alt: 'Icône NodeJS',
     },
     {
         skill_name: 'Express.JS',
         Image: SiExpress,
-        size: 90,
+        size: 70,
         alt: 'Icône ExpressJS',
     },
     {
         skill_name: 'MongoDB',
         Image: DiMongodb,
-        size: 90,
+        size: 70,
         alt: 'Icône MongoDB',
     },
 ];
@@ -126,25 +132,25 @@ const Developpement_skill = [
     {
         skill_name: 'VS Code',
         Image: TbBrandVscode,
-        size: 90,
+        size: 70,
         alt: 'Icône VS Code',
     },
     {
         skill_name: 'NPM',
         Image: DiNpm,
-        size: 90,
+        size: 70,
         alt: 'Icône NPM',
     },
     {
         skill_name: 'Github',
         Image: DiGithubAlt,
-        size: 90,
+        size: 70,
         alt: 'Icône Github',
     },
     {
         skill_name: 'Git Kraken',
         Image: SiGitkraken,
-        size: 90,
+        size: 70,
         alt: 'Icône Git Kraken',
     },
 ];
@@ -153,37 +159,37 @@ const Conception_skill = [
     {
         skill_name: 'Figma',
         Image: TbBrandFigma,
-        size: 90,
+        size: 70,
         alt: 'Icône Figma',
     },
     {
         skill_name: 'Inkscape',
         Image: SiInkscape,
-        size: 90,
+        size: 70,
         alt: 'Icône Inkscape',
     },
     {
         skill_name: 'Trello',
         Image: DiTrello,
-        size: 90,
+        size: 70,
         alt: 'Icône Trello',
     },
     {
         skill_name: 'Slack',
         Image: SiSlack,
-        size: 90,
+        size: 70,
         alt: 'Icône Slack',
     },
     {
         skill_name: 'Postman',
         Image: SiPostman,
-        size: 90,
+        size: 70,
         alt: 'Icône Postman',
     },
     {
         skill_name: 'Swagger',
         Image: SiSwagger,
-        size: 90,
+        size: 70,
         alt: 'Icône Swagger',
     },
 ];

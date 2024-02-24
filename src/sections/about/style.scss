@@ -1,6 +1,8 @@
 @import '../../styles/variable.scss';
 
 #about {
+    width: 100%;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -21,7 +23,7 @@
         margin-left: 2rem;
 
         @include mobile {
-            width: 90%;
+            width: 95%;
             margin-left: 0;
         }
 
@@ -50,7 +52,7 @@
             &::before {
                 content: 'About';
                 position: absolute;
-                width: calc(100% - 5rem); // réduire la largeur de 5rem
+                width: calc(100% - 5rem);
                 top: -40px;
                 left: 40px;
                 text-align: right;
