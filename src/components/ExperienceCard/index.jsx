@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 // Composants
 import Button from '../button';
+import Tilt from 'react-parallax-tilt';
 // Ressources
 import { IoCalendarNumberOutline } from 'react-icons/io5';
 import { IoIosArrowRoundForward } from 'react-icons/io';
@@ -34,12 +35,14 @@ const ExperienceCard = ({
                 <div className='experience-logo-container'>
                     <div className='experience-logo' style={{ width, height }}>
                         <div className='experience-logo-content'>
-                            <img
-                                src={src}
-                                alt={`Logo de ${school}`}
-                                role='img'
-                                aria-label={`Logo de ${school}`}
-                            />
+                            <Tilt>
+                                <img
+                                    src={src}
+                                    alt={`Logo de ${school}`}
+                                    role='img'
+                                    aria-label={`Logo de ${school}`}
+                                />
+                            </Tilt>
                         </div>
                     </div>
                 </div>

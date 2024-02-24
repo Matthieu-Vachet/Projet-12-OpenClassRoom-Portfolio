@@ -10,6 +10,7 @@ import { useTranslation } from 'react-i18next';
 // Importation des composants
 import ScrollMouse from '../../components/scrollMouse';
 import { TextHeroVariant, SvgVariants } from '../../utils/framerMotion/Variante';
+import Tilt from 'react-parallax-tilt';
 
 // Importation des Ressources
 import ImgIcons from '../../assets/images/VersionBalck.svg';
@@ -62,14 +63,16 @@ export default function Hero() {
                     </motion.h4>
                 </div>
                 <div className='img-icons-section'>
-                    <motion.img
-                        initial='hidden'
-                        animate='visible'
-                        variants={SvgVariants}
-                        className='img-icons'
-                        src={ImgIcons}
-                        alt='Image Icons technologies web'
-                    />
+                    <Tilt>
+                        <motion.img
+                            initial='hidden'
+                            animate='visible'
+                            variants={SvgVariants}
+                            className='img-icons'
+                            src={ImgIcons}
+                            alt='Image Icons technologies web'
+                        />
+                    </Tilt>
                 </div>
             </div>
 

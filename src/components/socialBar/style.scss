@@ -32,7 +32,7 @@
 
         &:hover {
             scale: 1.2;
-            color: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+            color: var(--basicDarkGray);
         }
 
         @include xxlDesktop {
