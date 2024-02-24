@@ -96,19 +96,18 @@
 .create-label {
     width: 100%;
     text-align: left;
-    @include Syne(20px, 400, 0.2em);
     text-transform: capitalize;
     color: var(--basicWhite);
 
     @include largeDesktop {
-        @include Syne(15px, 400, 0.2em);
+        @include Syne(15px, 700, 0.2em);
         text-transform: capitalize;
     }
 }
 
 .create-input {
     width: 100%;
-    @include Space(15px, 400);
+    @include Space(15px, 500);
     color: var(--basicWhite);
     padding: 1rem;
     margin-top: 0.5rem;

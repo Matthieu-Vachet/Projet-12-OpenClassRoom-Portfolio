@@ -9,7 +9,7 @@ import './Animation.scss';
 export default function AnimatedSubtitle({ text, className, wordSpace, charSpace }) {
     const { ref, inView } = useInView({
         threshold: 0.5, // L'élément est considéré comme dans le viewport quand il est entièrement visible
-        triggerOnce: true, // L'observation s'arrête après la première détection
+        triggerOnce: false, // L'observation s'arrête après la première détection
     });
 
     const ctrls = useAnimation();
@@ -37,10 +37,10 @@ export default function AnimatedSubtitle({ text, className, wordSpace, charSpace
             opacity: 1, // Opacité finale à 1 (visible)
             y: `0em`, // Position finale à l'origine
             transition: {
-                duration: 0.3, // Durée de l'animation
+                duration: 0.2, // Durée de l'animation
                 ease: [0.2, 0.65, 0.3, 0.9], // Courbe d'accélération de l'animation
                 delayChildren: 0.5, // Délai avant le démarrage de l'animation des enfants
-                staggerChildren: 0.05, // Délai entre le démarrage de l'animation des enfants
+                staggerChildren: 0.5, // Délai entre le démarrage de l'animation des enfants
             },
         },
     };
