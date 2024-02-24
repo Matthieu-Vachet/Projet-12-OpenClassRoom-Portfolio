@@ -1,6 +1,7 @@
 @import '../../styles/variable.scss';
 
 #projects {
+    width: 100%;
     @include largeDesktop {
         padding-top: 0;
     }
@@ -10,6 +11,16 @@
         display: flex;
         width: 100%;
         flex-direction: column;
+
+        @include mobile {
+            width: 95%;
+            margin: auto;
+        }
+
+        @include tablet {
+            width: 95%;
+            margin: auto;
+        }
 
         .projects-section-title {
             text-align: left;
@@ -72,6 +83,30 @@
             @include tablet {
                 margin-top: 0;
             }
+
+            .projects-cards-add-news {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include glassEffect;
+                width: 350px;
+                height: 340px;
+                margin-top: 2rem;
+
+                .edit-icons {
+                    width: 30%;
+                    height: 30%;
+                    font-size: 10px;
+                    color: var(--basicWhite);
+                    cursor: pointer;
+                    transition: 0.3s;
+
+                    &:hover {
+                        color: var(--basicDarkGray);
+                        scale: 1.3;
+                    }
+                }
+            }
         }
     }
     .modale-create {
@@ -83,6 +118,6 @@
         justify-content: center;
         align-items: center;
         transform: translate(-61%, -50%);
-        box-sizing: border-box; // Ajoutez ceci
+        box-sizing: border-box;
     }
 }

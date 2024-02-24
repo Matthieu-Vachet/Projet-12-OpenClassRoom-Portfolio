@@ -5,6 +5,15 @@
     border: none;
     border-top: 1px solid var(--darkWhite10);
     padding: 50px 20px;
+    z-index: -1;
+
+    @include mobile {
+        margin-top: 6 rem;
+    }
+
+    @include tablet {
+        margin-top: 6rem;
+    }
 
     .footer-container {
         width: 100%;

@@ -1,6 +1,7 @@
 /* Importation des modules */
-import { useState, useEffect } from 'react';
+import { useEffect, useContext } from 'react';
 import { useTranslation } from 'react-i18next';
+import { ThemeContext } from '../../utils/dataProvider/DataProvider';
 
 // Ressources
 import { CiLight } from 'react-icons/ci';
@@ -10,24 +11,22 @@ import { MdDarkMode } from 'react-icons/md';
 import './style.scss';
 import { toast } from 'sonner';
 
-/**
- * Represents a light/dark mode toggle button component.
- *
- * @component
- */
-
 const LightDarkToggle = () => {
     const { t } = useTranslation();
-    // State to track the current mode (light or dark)
-    const [islightMode, setLightMode] = useState(false);
+    const { theme, toggleTheme } = useContext(ThemeContext);
 
-    // Function to toggle between light and dark mode
+    const islightMode = theme === 'dark';
+
     const toggleMode = () => {
-        setLightMode(!islightMode);
-        if (!islightMode) {
+        toggleTheme();
+        const newMode = theme === 'light' ? 'dark' : 'light'; // Obtenir le nouveau mode après le basculement
+
+        if (newMode === 'dark') {
             document.body.classList.add('white-mode');
+            document.body.classList.remove('dark-mode');
             toast.success(t('theme.light'));
         } else {
+            document.body.classList.add('dark-mode');
             document.body.classList.remove('white-mode');
             toast.success(t('theme.dark'));
         }

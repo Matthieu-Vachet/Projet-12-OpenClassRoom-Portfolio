@@ -18,7 +18,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-color: var(--basicOnyx);
-    background-image: url('../assets/images/Bg-Squares.svg');
+    background-image: url('../assets/images/Bg-Squares-Black.svg');
 
     &::-webkit-scrollbar {
         display: none;
@@ -103,10 +103,10 @@ ul {
 }
 
 .white-mode {
-    background-image: url('../assets/images/test.svg') !important;
+    background-image: url('../assets/images/Bg-Squares-white.svg') !important;
 }
 
 .my-toast {
-    @include Syne(50px, 700, 0);
+    @include Syne(10rem, 700, 0);
     text-transform: none !important;
 }

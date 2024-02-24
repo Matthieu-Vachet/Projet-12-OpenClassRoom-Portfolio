@@ -6,6 +6,7 @@
     flex-direction: column;
     @include glassEffect;
     padding: 2rem;
+    z-index: -1;
 
     .contact-form-content {
         display: flex;

@@ -13,7 +13,7 @@
     padding: 2rem;
     @include glassEffectModal;
     gap: 2rem;
-    z-index: 100;
+    z-index: 10;
 
     @include desktop {
         width: 80vw;
@@ -96,6 +96,7 @@
 .create-label {
     width: 100%;
     text-align: left;
+    @include Syne(15px, 700, 0.2em);
     text-transform: capitalize;
     color: var(--basicWhite);
 
