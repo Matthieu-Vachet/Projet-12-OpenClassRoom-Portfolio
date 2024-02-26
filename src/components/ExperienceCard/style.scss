@@ -249,6 +249,12 @@
             }
         }
     }
+    .grain {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.1;
+    }
 }
 
 @property --a {

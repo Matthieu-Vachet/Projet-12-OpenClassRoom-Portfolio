@@ -6,6 +6,9 @@ import { useTranslation } from 'react-i18next';
 import { UserContext } from '../../utils/dataProvider/DataProvider';
 import { Footer_Link, Footer_Projects, Footer_Follow } from '../../utils/constants/constants';
 
+/* Importation des icônes */
+import { MdCopyright } from 'react-icons/md';
+
 /* Importation des styles */
 import './style.scss';
 
@@ -81,6 +84,18 @@ const Footer = () => {
                                 </a>
                             ))}
                         </div>
+                    </div>
+                </div>
+                <div className='footer-container-copyright'>
+                    <div className='copyright'>
+                        <MdCopyright />
+                        <p>VACHET MATTHIEU 2024</p>
+                    </div>
+                    <div>
+                        <p>
+                            DESIGN & DEPLOYED BY{' '}
+                            <a href='https://github.com/Matthieu-Vachet'>VACHET MATTHIEU</a>
+                        </p>
                     </div>
                 </div>
             </div>
