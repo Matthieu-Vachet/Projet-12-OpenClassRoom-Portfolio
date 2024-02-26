@@ -91,6 +91,38 @@
                 }
             }
         }
+
+        .footer-container-copyright {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            @include Syne(16px, 700, 0.01em);
+            color: var(--basicWhite);
+            text-align: center;
+            margin-top: 5rem;
+
+            @include mobile {
+                flex-direction: column;
+                @include Syne(12px, 700, 0.01em);
+                gap: 1rem;
+                margin-top: 1rem;
+            }
+
+            @include tablet {
+                @include Syne(14px, 700, 0.01em);
+                margin-top: 1rem;
+            }
+
+            a:visited {
+                color: var(--basicWhite);
+            }
+
+            .copyright {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+        }
     }
 }
 li:not(:last-child) {
