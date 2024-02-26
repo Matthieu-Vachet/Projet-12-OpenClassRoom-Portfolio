@@ -12,9 +12,6 @@ import { ExperienceContext } from '../../utils/dataProvider/DataProvider';
 /* Importation des composants */
 import ExperienceCard from '../../components/ExperienceCard';
 
-/* Importation des Ressources */
-import OpLogo from '../../assets/icons/OpLogo.png';
-
 /* Importation des styles */
 import './style.scss';
 
@@ -37,7 +34,7 @@ const Experience = () => {
                     <ExperienceCard
                         key={index}
                         school={experience.school}
-                        src={OpLogo}
+                        src={experience.img}
                         alt={experience.school}
                         title={experience.title}
                         startDate={experience.startDate}
@@ -45,6 +42,7 @@ const Experience = () => {
                         location={experience.location}
                         description={experience.description}
                         diplome={experience.diplome}
+                        reverse={index === 1}
                     />
                 ))}
             </div>
