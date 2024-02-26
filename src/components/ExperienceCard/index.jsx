@@ -1,9 +1,7 @@
 /* Importation des modules */
 import PropTypes from 'prop-types';
-import { useTranslation } from 'react-i18next';
 
 // Composants
-import Button from '../button';
 import Tilt from 'react-parallax-tilt';
 import Grain from '../background/grain';
 
@@ -27,11 +25,10 @@ const ExperienceCard = ({
     location,
     description,
     diplome,
+    reverse,
 }) => {
-    const { t } = useTranslation();
-
     return (
-        <div className='experience-content'>
+        <div className={`experience-content ${reverse ? 'reverse' : ''}`}>
             <div className='experience-cards'>
                 <h4 className='experience-cards-title'>{school}</h4>
                 <div className='experience-logo-container'>
@@ -48,7 +45,6 @@ const ExperienceCard = ({
                         </div>
                     </div>
                 </div>
-                <Button text={t('experience.button')} />
             </div>
             <div className='experience-info'>
                 <h3 className='experience-info-title'>{title}</h3>
@@ -86,6 +82,7 @@ ExperienceCard.propTypes = {
     location: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     diplome: PropTypes.string.isRequired,
+    reverse: PropTypes.bool,
 };
 
 ExperienceCard.defaultProps = {
