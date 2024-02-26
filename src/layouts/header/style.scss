@@ -51,13 +51,7 @@ header {
         margin-right: 2%;
 
         @include mobile {
-            width: 100%;
-            flex-direction: column;
-            align-items: end;
-            text-align: center;
-            margin-top: 6rem;
-            margin-right: 0.5rem;
-            z-index: 2;
+            display: none;
         }
 
         .button_fr,
@@ -70,11 +64,6 @@ header {
             backdrop-filter: blur(2px);
             transition: all 0.1s;
             cursor: pointer;
-
-            @include mobile {
-                width: 32px;
-                height: 25px;
-            }
 
             @include tablet {
                 width: 32px;
@@ -113,4 +102,33 @@ header {
             }
         }
     }
+    .button_header_mobile {
+        display: none;
+
+        @include mobile {
+            display: flex;
+            position: relative;
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: center;
+            gap: 1em;
+            margin-top: 1rem;
+            margin-left: 0.25rem;
+            z-index: 2;
+        }
+
+        .vertical-text {
+            @include Syne(12px, 400, 0.15em);
+            color: var(--basicWhite);
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            width: 10px; // Ajoutez cette ligne
+            text-align: center; // Ajoutez cette ligne
+        }
+    }
+}
+
+.filled .check-lang {
+    background: var(--basicWhite);
+    border-radius: 10px;
 }

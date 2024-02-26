@@ -1,6 +1,8 @@
 {
     "header": {
-        "langue": "The language English is currently activated."
+        "langue": "The language English is currently activated.",
+        "btn-mobile-theme-white": "Light",
+        "btn-mobile-theme-black": "Dark"
     },
     "hero": {
         "slogan": "Dive into my coded creativity."
