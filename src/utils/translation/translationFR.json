@@ -1,6 +1,8 @@
 {
     "header": {
-        "langue": "La langue Francaise est actuellement activée."
+        "langue": "La langue Francaise est actuellement activée.",
+        "btn-mobile-theme-white": "Clair",
+        "btn-mobile-theme-black": "Sombre"
     },
     "hero": {
         "slogan": "Plongez dans ma createStateurite codée."
