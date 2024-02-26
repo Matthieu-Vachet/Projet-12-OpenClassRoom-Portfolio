@@ -1,0 +1,31 @@
+@import '../../../styles/variable.scss';
+
+.button_header_mobile {
+    display: none;
+
+    @include mobile {
+        display: flex;
+        position: relative;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        margin-top: 1.5rem;
+        margin-left: 0.25rem;
+        z-index: 2;
+    }
+
+    .vertical-text {
+        @include Syne(12px, 400, 0.15em);
+        color: var(--basicWhite);
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        width: 10px;
+        text-align: center;
+    }
+}
+
+.filled .check-lang {
+    background: var(--basicWhite);
+    border-radius: 2px;
+}
