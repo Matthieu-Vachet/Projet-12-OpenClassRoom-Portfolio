@@ -8,13 +8,13 @@ import { HeaderVariants } from '../../utils/framerMotion/Variante';
 
 // Importation des données
 import { useTranslation } from 'react-i18next';
-import { UserContext, AuthContext, ThemeContext } from '../../utils/dataProvider/DataProvider';
+import { AuthContext, UserContext } from '../../utils/dataProvider/DataProvider';
 
 // Ressources
+import { IoPersonCircleOutline, IoPersonCircleSharp } from 'react-icons/io5';
 import Logo from '../../assets/images/LogoM.svg';
 import LightDarkToggle from '../../components/lightDarkToggle';
-import { IoPersonCircleSharp, IoPersonCircleOutline } from 'react-icons/io5';
-import { FaRegSquare } from 'react-icons/fa6';
+import ToggleMobile from '../../components/toggle/mobile';
 
 // Importation des styles
 import { toast } from 'sonner';
@@ -24,14 +24,11 @@ export default function Header() {
     const { i18n } = useTranslation();
     const { t } = useTranslation();
     const data = useContext(UserContext);
-    const { theme, toggleTheme } = useContext(ThemeContext);
     const [showLoginModal, setShowLoginModal] = useState(false);
-    const [currentLanguage, setCurrentLanguage] = useState('fr');
     const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext);
 
     const changeLanguage = (language) => {
         i18n.changeLanguage(language);
-        setCurrentLanguage(language);
         toast.success(t('header.langue'));
     };
 
@@ -109,28 +106,7 @@ export default function Header() {
                 <LightDarkToggle />
                 {showLoginModal && <Login onClose={() => setShowLoginModal(false)} />}
             </motion.div>
-            <div className='button_header_mobile'>
-                <a
-                    href='#'
-                    className={`vertical-text ${currentLanguage === 'fr' ? 'filled' : ''}`}
-                    onClick={() => changeLanguage('fr')}
-                >
-                    <FaRegSquare className='check-lang' /> FR
-                </a>
-                <a
-                    href='#'
-                    className={`vertical-text ${currentLanguage === 'en' ? 'filled' : ''}`}
-                    onClick={() => changeLanguage('en')}
-                >
-                    <FaRegSquare className='check-lang' /> EN
-                </a>
-
-                <a href='#' className='vertical-text' onClick={toggleTheme}>
-                    {theme === 'light'
-                        ? t('header.btn-mobile-theme-white')
-                        : t('header.btn-mobile-theme-black')}
-                </a>
-            </div>
+            <ToggleMobile />
         </header>
     );
 }

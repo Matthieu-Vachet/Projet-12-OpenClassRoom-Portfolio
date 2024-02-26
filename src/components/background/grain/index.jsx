@@ -26,7 +26,7 @@ const Grain = ({ baseFrequency = '9', numOctaves = 5, w = '100%', h = '100%' }) 
 
 Grain.propTypes = {
     baseFrequency: PropTypes.string,
-    numOctaves: PropTypes.number,
+    numOctaves: PropTypes.string,
     w: PropTypes.string,
     h: PropTypes.string,
 };
