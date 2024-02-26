@@ -5,6 +5,8 @@ import { useTranslation } from 'react-i18next';
 // Composants
 import Button from '../button';
 import Tilt from 'react-parallax-tilt';
+import Grain from '../background/grain';
+
 // Ressources
 import { IoCalendarNumberOutline } from 'react-icons/io5';
 import { IoIosArrowRoundForward } from 'react-icons/io';
@@ -65,6 +67,9 @@ const ExperienceCard = ({
                     </div>
                     <p className='experience-info-description'>{description}</p>
                 </div>
+            </div>
+            <div className='grain'>
+                <Grain baseFrequency='7' numOctaves='3' />
             </div>
         </div>
     );
