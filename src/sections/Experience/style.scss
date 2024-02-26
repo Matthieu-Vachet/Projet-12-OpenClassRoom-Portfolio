@@ -142,11 +142,8 @@
 
 .reverse {
     flex-direction: row-reverse;
-<<<<<<< HEAD
-=======
 
     @include mobile {
         flex-direction: column;
     }
->>>>>>> Experience-mobile
 }
