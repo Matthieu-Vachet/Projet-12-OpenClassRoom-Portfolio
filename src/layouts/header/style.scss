@@ -8,10 +8,6 @@ header {
     justify-content: space-between;
     box-sizing: border-box;
 
-    // @include mobile {
-    //     display: none;
-    // }
-
     .logo_content {
         display: flex;
         justify-content: center;
@@ -27,9 +23,10 @@ header {
         }
 
         .name_header {
+            width: 100%;
             @include Space(20px, 400);
             color: var(--basicWhite);
-            margin-top: 2em;
+            margin-top: 2.5rem;
 
             @include mobile {
                 display: none;
@@ -44,7 +41,7 @@ header {
     .button_header {
         z-index: 1;
         display: flex;
-        justify-content: center;
+        justify-content: end;
         align-items: center;
         text-align: center;
         gap: 0.5em;
@@ -102,33 +99,4 @@ header {
             }
         }
     }
-    .button_header_mobile {
-        display: none;
-
-        @include mobile {
-            display: flex;
-            position: relative;
-            flex-direction: column-reverse;
-            align-items: center;
-            justify-content: center;
-            gap: 1em;
-            margin-top: 1rem;
-            margin-left: 0.25rem;
-            z-index: 2;
-        }
-
-        .vertical-text {
-            @include Syne(12px, 400, 0.15em);
-            color: var(--basicWhite);
-            writing-mode: vertical-rl;
-            transform: rotate(180deg);
-            width: 10px; // Ajoutez cette ligne
-            text-align: center; // Ajoutez cette ligne
-        }
-    }
-}
-
-.filled .check-lang {
-    background: var(--basicWhite);
-    border-radius: 10px;
 }
