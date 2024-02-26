@@ -139,3 +139,11 @@
         }
     }
 }
+
+.reverse {
+    flex-direction: row-reverse;
+
+    @include mobile {
+        flex-direction: column;
+    }
+}
