@@ -11,6 +11,7 @@ import { ExperienceContext } from '../../utils/dataProvider/DataProvider';
 
 /* Importation des composants */
 import ExperienceCard from '../../components/ExperienceCard';
+import Certificates from '../../components/certificates';
 
 /* Importation des styles */
 import './style.scss';
@@ -34,6 +35,7 @@ export default function Experience() {
                     className={'experience-title title'}
                     charSpace='0.016px'
                 />
+                <Certificates className='certificates' />
             </div>
             <div className='experience-cards-map'>
                 {experiences.map((experience, index) => (
