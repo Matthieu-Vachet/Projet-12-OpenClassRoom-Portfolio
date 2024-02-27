@@ -35,7 +35,7 @@
         "input-firstname": "First Name",
         "input-lastname": "Last Name",
         "button-submit": "Submit",
-        "button-delete": "Delete"
+        "button-delete": "Reset"
     },
     "error": {
         "submit": "Please fill in all fields correctly.",
