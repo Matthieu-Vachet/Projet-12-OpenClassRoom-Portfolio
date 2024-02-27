@@ -86,7 +86,9 @@
 
         .about-content {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
 
             @include mobile {
                 flex-direction: column;
@@ -98,11 +100,11 @@
             .about-text {
                 display: flex;
                 flex-direction: column;
-                width: 70%;
+                text-align: center;
+                width: 90%;
                 color: var(--basicWhite);
-                text-align: left;
                 @include Space(20px, 400);
-                gap: 4rem;
+                gap: 5rem;
 
                 @include mobile {
                     width: 100%;
@@ -132,13 +134,13 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                width: 30%;
-                gap: 5rem;
+                margin-top: 4rem;
+                width: 100%;
 
                 @include mobile {
-                    width: 100%;
-                    gap: 2rem;
+                    width: auto;
                     margin-top: 2rem;
+                    height: 3rem !important;
                 }
 
                 @include tablet {

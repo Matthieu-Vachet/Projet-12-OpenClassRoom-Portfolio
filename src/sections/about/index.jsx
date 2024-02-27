@@ -54,7 +54,6 @@ export default function About() {
                             rel='noopener noreferrer'
                             href='https://drive.google.com/file/d/1PZ4cBkNtBoQmF9JZ9phbViVUNnlJDaGI/view?usp=drive_link'
                         />
-                        <Button text={t('about.button-2')} href='#contact' />
                     </motion.div>
                 </div>
             </div>
