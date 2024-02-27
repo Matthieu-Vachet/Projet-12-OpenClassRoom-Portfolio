@@ -1,0 +1,45 @@
+@import '../../styles/variable.scss';
+
+.dropdown-certificates-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    margin-bottom: 2rem;
+
+    @include mobile {
+        display: none;
+    }
+
+    .dropdown-certificates-title {
+        display: flex;
+        color: var(--basicWhite);
+        @include Syne(35px, 500, 0.1em);
+        opacity: 0.5;
+    }
+
+    select {
+        display: flex;
+        justify-content: center;
+        color: var(--basicWhite);
+        @include Space(20px, 400);
+        background-color: var(--basicOnyx);
+        border: 1px solid var(--borderGlass);
+        border-radius: 10px;
+        padding: 0.5rem 1rem;
+        padding-right: 30px;
+        width: 500px;
+        cursor: pointer;
+
+        transition: all 0.1s ease-in-out;
+
+        &:hover {
+            background-color: var(--borderGlass);
+        }
+
+        option {
+            background-color: var(--basicOnyx);
+        }
+    }
+}
