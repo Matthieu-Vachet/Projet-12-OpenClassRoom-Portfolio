@@ -72,7 +72,8 @@
 
             .contact-form-button {
                 @include mobile {
-                    width: 100%;
+                    width: 15rem !important;
+                    height: 3rem !important;
                 }
             }
         }

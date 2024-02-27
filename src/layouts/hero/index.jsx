@@ -10,6 +10,7 @@ import { useTranslation } from 'react-i18next';
 
 /* Importation des composants */
 import ScrollMouse from '../../components/scrollMouse';
+import Button from '../../components/button';
 import { TextHeroVariant, SvgVariants } from '../../utils/framerMotion/Variante';
 import Tilt from 'react-parallax-tilt';
 
@@ -68,9 +69,14 @@ export default function Hero() {
                         animate='animate'
                         transition={{ delay: 1, duration: 0.5, type: 'spring' }}
                         variants={TextHeroVariant}
-                        className='hero_number'
                     >
-                        {data[0].number}
+                        <Button
+                            text={t('about.button-2')}
+                            href='#contact'
+                            height={'4rem'}
+                            width={'15rem'}
+                            className='hero_btn'
+                        />
                     </motion.h4>
                 </div>
                 <div className='img-icons-section'>
