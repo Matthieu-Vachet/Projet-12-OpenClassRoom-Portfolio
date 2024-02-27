@@ -5,7 +5,18 @@ import { createContext, useEffect, useState } from 'react';
 /* Importation des Données */
 import { useTranslation } from 'react-i18next';
 
-// Context pour chaque API
+/*
+ * Contexte de l'application
+ * @param {object} children - Composant enfant
+ * @returns {JSX.Element}
+ * @exports DataProvider
+ * @exports UserContext
+ * @exports ProjectContext
+ * @exports ExperienceContext
+ * @exports AuthContext
+ * @exports ThemeContext
+ */
+
 export const UserContext = createContext();
 export const ProjectContext = createContext();
 export const ExperienceContext = createContext();

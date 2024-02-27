@@ -4,10 +4,22 @@ import { motion } from 'framer-motion';
 import Tilt from 'react-parallax-tilt';
 import { useInView } from 'react-intersection-observer';
 
-// Style
+/* Importation du style */
 import './style.scss';
 
-const SkillComponent = ({ name, Image, fontSize, index, alt, color }) => {
+/*
+ * Composant SkillCards
+ * Affiche une carte de compétence
+ * @param {string} name - Nom de la compétence
+ * @param {function} Image - Image de la compétence
+ * @param {number} fontSize - Taille de la police
+ * @param {number} index - Index de la compétence
+ * @param {string} alt - Texte alternatif
+ * @param {string} color - Couleur de la compétence
+ * @returns {JSX.Element}
+ */
+
+export default function SkillCards({ name, Image, fontSize, index, alt, color }) {
     const { ref, inView } = useInView({
         threshold: 0.3,
         triggerOnce: true,
@@ -43,9 +55,9 @@ const SkillComponent = ({ name, Image, fontSize, index, alt, color }) => {
             </Tilt>
         </motion.div>
     );
-};
+}
 
-SkillComponent.propTypes = {
+SkillCards.propTypes = {
     name: PropTypes.string.isRequired,
     Image: PropTypes.func.isRequired,
     fontSize: PropTypes.number.isRequired,
@@ -53,5 +65,3 @@ SkillComponent.propTypes = {
     index: PropTypes.number.isRequired,
     alt: PropTypes.string.isRequired,
 };
-
-export default SkillComponent;

@@ -6,6 +6,15 @@ import { useInView } from 'react-intersection-observer';
 // Style
 import './Animation.scss';
 
+/*
+ * Composant AnimatedSubtitle
+ * Affiche un titre animé lettre par lettre
+ * @param {string} text - Texte à afficher
+ * @param {string} className - Classe CSS à appliquer
+ * @param {string} wordSpace - Espace entre les mots
+ * @param {string} charSpace - Espace entre les lettres
+ * @returns {JSX.Element}
+ */
 export default function AnimatedSubtitle({ text, className, wordSpace, charSpace }) {
     const { ref, inView } = useInView({
         threshold: 0.5, // L'élément est considéré comme dans le viewport quand il est entièrement visible

@@ -14,7 +14,13 @@ import { FaRegSquare } from 'react-icons/fa6';
 /* Importation du style */
 import './style.scss';
 
-const ToggleMobile = () => {
+/*
+ * Composant ToggleMobile
+ * Affiche des boutons pour basculer entre les thèmes et les langues
+ * @returns {JSX.Element}
+ */
+
+export default function ToggleMobile() {
     const { i18n } = useTranslation();
     const { t } = useTranslation();
     const { theme, toggleTheme } = useContext(ThemeContext);
@@ -24,6 +30,23 @@ const ToggleMobile = () => {
         i18n.changeLanguage(language);
         setCurrentLanguage(language);
         toast.success(t('header.langue'));
+    };
+
+    // const islightMode = theme === 'dark';
+
+    const toggleMode = () => {
+        toggleTheme();
+        const newMode = theme === 'light' ? 'dark' : 'light'; // Obtenir le nouveau mode après le basculement
+
+        if (newMode === 'dark') {
+            document.body.classList.add('white-mode');
+            document.body.classList.remove('dark-mode');
+            toast.success(t('theme.light'));
+        } else {
+            document.body.classList.add('dark-mode');
+            document.body.classList.remove('white-mode');
+            toast.success(t('theme.dark'));
+        }
     };
 
     return (
@@ -43,13 +66,11 @@ const ToggleMobile = () => {
                 <FaRegSquare className='check-lang' /> EN
             </a>
 
-            <a href='#' className='vertical-text' onClick={toggleTheme}>
+            <a href='#' className='vertical-text' onClick={toggleMode}>
                 {theme === 'light'
                     ? t('header.btn-mobile-theme-white')
                     : t('header.btn-mobile-theme-black')}
             </a>
         </div>
     );
-};
-
-export default ToggleMobile;
+}

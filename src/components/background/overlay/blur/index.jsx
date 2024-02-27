@@ -1,10 +1,16 @@
-/* Importation des modules React */
+/* Importation des modules */
 import { useState, useEffect } from 'react';
 
-// Style
+/* Importation des styles */
 import './style.scss';
 
-const Blur = () => {
+/*
+ * Composant Blur
+ * Affiche un filtre de flou en fonction du scroll
+ * @returns {JSX.Element}
+ */
+
+export default function Blur() {
     const [scrollOpacity, setScrollOpacity] = useState(1);
 
     const handleScroll = () => {
@@ -30,6 +36,4 @@ const Blur = () => {
     }, []);
 
     return <div className={`blur-component overlay-mask`} style={{ opacity: scrollOpacity }} />;
-};
-
-export default Blur;
+}

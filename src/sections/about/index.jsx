@@ -11,10 +11,16 @@ import { ButtonVariant } from '../../utils/framerMotion/Variante';
 
 // Importation des composants
 import Button from '../../components/button';
-import ScrollToTopButton from '../../components/scrollToTopButton';
+import TopScroll from '../../components/topScroll';
 
 // Importation des styles
 import './style.scss';
+
+/*
+ * Composant About
+ * Affiche la section About
+ * @returns {JSX.Element}
+ */
 
 export default function About() {
     const { t } = useTranslation();
@@ -47,7 +53,7 @@ export default function About() {
                     </motion.div>
                 </div>
             </div>
-            <ScrollToTopButton />
+            <TopScroll />
         </section>
     );
 }

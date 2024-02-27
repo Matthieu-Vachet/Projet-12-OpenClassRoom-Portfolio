@@ -1,25 +1,31 @@
-// Importation des librairies
+/* Importation des librairies */
 import { motion } from 'framer-motion';
 import { useContext } from 'react';
 import FancyText from '@carefully-coded/react-text-gradient';
 
-// Importation des données
+/* Importation des données */
 import { UserContext } from '../../utils/dataProvider/DataProvider';
 import { ThemeContext } from '../../utils/dataProvider/DataProvider';
 import { useTranslation } from 'react-i18next';
 
-// Importation des composants
+/* Importation des composants */
 import ScrollMouse from '../../components/scrollMouse';
 import { TextHeroVariant, SvgVariants } from '../../utils/framerMotion/Variante';
 import Tilt from 'react-parallax-tilt';
 
-// Importation des Ressources
+/* Importation des Ressources */
 import IconsVersionBlack from '../../assets/images/IconsVersionBlack.svg';
 import IconsVersionWhite from '../../assets/images/IconsVersionWhite.svg';
 
-// Importation des styles
+/* Importation des styles */
 import './style.scss';
 import '../../styles/variable.scss';
+
+/*
+ * Composant Hero
+ * Affiche la section Hero
+ * @returns {JSX.Element}
+ */
 
 export default function Hero() {
     const { t } = useTranslation();
@@ -41,7 +47,7 @@ export default function Hero() {
                         className='hero_slogan'
                     >
                         <FancyText gradient={{ from: '#0ce39a', to: '#69007f', type: 'linear' }}>
-                            {t('about.title')}
+                            {t('hero.slogan')}
                         </FancyText>
                     </motion.h1>
 
@@ -80,7 +86,6 @@ export default function Hero() {
                     </Tilt>
                 </div>
             </div>
-
             {/* Scroll Mouse composant */}
             <div className='ScrollMouse'>
                 <ScrollMouse />
