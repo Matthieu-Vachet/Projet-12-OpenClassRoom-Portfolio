@@ -205,6 +205,10 @@ const technologyIcons = {
     TestingLibrary: SiTestinglibrary,
     Redux: SiRedux,
     Swagger: SiSwagger,
+    MongoDb: DiNodejsSmall,
+    ExpressJs: SiExpress,
+    NodeJS: DiNodejsSmall,
+    FramerMotion: TbBrandFramerMotion,
 };
 
 const Footer_Link = [
@@ -276,6 +280,85 @@ const Footer_Follow = [
     },
 ];
 
+const certificates = [
+    {
+        name: 'Créez votre site web avec HTML5 et CSS3',
+        url: 'https://drive.google.com/file/d/16yNEtIREhe_f6DrSnQqU0cmgZO0feYW6/view?usp=drive_link',
+    },
+    {
+        name: 'Apprenez à programmer avec JavaScript',
+        url: 'https://drive.google.com/file/d/1LKkhSYTE5VV10y4QXLhYibpM9S8unKwy/view?usp=drive_link',
+    },
+    {
+        name: 'Augmentez votre trafic (SEO)',
+        url: 'https://drive.google.com/file/d/1KJGyWmSCDlexhkheppa8Nle-w_qZh9yU/view?usp=drive_link',
+    },
+    {
+        name: 'Comprendre le Web',
+        url: 'https://drive.google.com/file/d/172QTcblHx-ck2t557BV65qg9rOgPHeq8/view?usp=drive_link',
+    },
+    {
+        name: 'Concevez un contenu web accessible',
+        url: 'https://drive.google.com/file/d/1or-c4DU-WvXbAcg9GLq0zrtKH_W9FmfJ/view?usp=drive_link',
+    },
+    {
+        name: 'Créez des pages web dynamique avec JavaScript',
+        url: 'https://drive.google.com/file/d/1ta8pRa8yIjXvmTrAd6i8dO9JgQ766hYr/view?usp=drive_link',
+    },
+    {
+        name: 'Créez une maquette web avec Figma',
+        url: 'https://drive.google.com/file/d/17rIGZbMvFaMrGfwBF4FgQJZE78z7u7wc/view?usp=drive_link',
+    },
+    {
+        name: `Déboguez l'interface de votre site internet`,
+        url: 'https://drive.google.com/file/d/1Sk7WZo5svjVQo5Y8UezGWC83pE623zQE/view?usp=drive_link',
+    },
+    {
+        name: 'Débutez avec React',
+        url: 'https://drive.google.com/file/d/1dYrXN972q-axbUpnfY5VDMrtQzwgEi4z/view?usp=drive_link',
+    },
+    {
+        name: 'Découvrez le fonctionnement des algorithmes',
+        url: 'https://drive.google.com/file/d/1j-nsPkCekv8d5YiqUrQVLwvXhFjBC3p-/view?usp=drive_link',
+    },
+    {
+        name: 'Découvrez les métiers de développeur',
+        url: 'https://drive.google.com/file/d/17AlGvCrt336tOW65cPs7sTxhln7hxxFN/view?usp=drive_link',
+    },
+    {
+        name: 'Gérez votre code avec Git et GitHub',
+        url: 'https://drive.google.com/file/d/16tVck4c1pv3gUXlAC0q74Lr8LPvb397V/view?usp=drive_link',
+    },
+    {
+        name: 'Gérez votre projet informatique facilement',
+        url: 'https://drive.google.com/file/d/1SwTHDZUblrGDTkkPu4NjJb5eOsC0Bdwy/view?usp=drive_link',
+    },
+    {
+        name: 'Initiez-vous à la gestion de projet agile',
+        url: 'https://drive.google.com/file/d/1HaaCHUeuvXSMn9PlTbn7kbhnJaNlVG18/view?usp=drive_link',
+    },
+    {
+        name: 'Intégrez une maquette Figma en HTML et CSS',
+        url: 'https://drive.google.com/file/d/1aaSEDLFeth8DOQufFmQx6bIfanlf6gTh/view?usp=drive_link',
+    },
+    {
+        name: 'Mettez en place un système de veille',
+        url: 'https://drive.google.com/file/d/12SEU35L7h77U2-TSOCrU_Z5-I90PAEek/view?usp=drive_link',
+    },
+    {
+        name: 'Optimisez le référencement de votre site (SEO)',
+        url: 'https://drive.google.com/file/d/1RkpIXSUrdyyd3g-gJrP9M4JaT-9UfczX/view?usp=drive_link',
+    },
+    {
+        name: 'Simplifiez-vous le CSS avec Sass',
+        url: 'https://drive.google.com/file/d/1quM5FsvCVspuF3Q-2ONB9NyuEl_yHKCn/view?usp=drive_link',
+    },
+    {
+        name: `Testez l'interface de votre site web`,
+        url: 'https://drive.google.com/file/d/10sdFySr8v0-1o0HTLq-yK7QM7R00vXst/view?usp=drive_link',
+    },
+];
+
 export {
     navItems,
     Frontend_skill,
@@ -286,4 +369,5 @@ export {
     Footer_Link,
     Footer_Projects,
     Footer_Follow,
+    certificates,
 };

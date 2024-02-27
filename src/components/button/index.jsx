@@ -15,32 +15,59 @@ import './style.scss';
  * @param {string} height - Hauteur du bouton
  * @param {string} width - Largeur du bouton
  * @param {string} href - Lien de redirection
+ * @param {string} target - Cible de la redirection
  * @returns {JSX.Element}
  */
 
-export default function Button({ text, type, onClick, disabled, className, height, width, href }) {
-    const handleClick = () => {
-        if (href) {
-            window.location.href = href;
-        } else if (onClick) {
+export default function Button({
+    text,
+    type,
+    onClick,
+    disabled,
+    className,
+    height,
+    width,
+    href,
+    target,
+}) {
+    const handleClick = (event) => {
+        if (onClick) {
+            event.preventDefault();
             onClick();
         }
     };
 
-    return (
-        <button
-            className={`btn-gradient ${className}`}
-            type={type}
-            onClick={handleClick}
-            disabled={disabled}
-            style={{ height: `${height}`, width: `${width}` }}
-            aria-label={text}
-            role='button'
-            tabIndex='0'
-        >
-            <span className='btn-gradient-text'>{text}</span>
-        </button>
-    );
+    if (href) {
+        return (
+            <a
+                href={href}
+                target={target}
+                className={`btn-gradient ${className}`}
+                style={{ height: `${height}`, width: `${width}` }}
+                aria-label={text}
+                role='button'
+                tabIndex='0'
+                onClick={handleClick}
+            >
+                <span className='btn-gradient-text'>{text}</span>
+            </a>
+        );
+    } else {
+        return (
+            <button
+                className={`btn-gradient ${className}`}
+                type={type}
+                onClick={handleClick}
+                disabled={disabled}
+                style={{ height: `${height}`, width: `${width}` }}
+                aria-label={text}
+                role='button'
+                tabIndex='0'
+            >
+                <span className='btn-gradient-text'>{text}</span>
+            </button>
+        );
+    }
 }
 
 Button.propTypes = {
@@ -52,6 +79,7 @@ Button.propTypes = {
     height: PropTypes.string,
     width: PropTypes.string,
     href: PropTypes.string,
+    target: PropTypes.string,
 };
 
 Button.defaultProps = {
