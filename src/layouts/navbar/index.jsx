@@ -2,14 +2,20 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-// Importation des composants
+/* Importation des composants */
 import { HeaderVariants } from '../../utils/framerMotion/Variante';
 
-// Importation des données
+/* Importation des données */
 import { navItems } from '../../utils/constants/constants';
 
-// Importation des styles
+/* Importation des styles */
 import './style.scss';
+
+/*
+ * Composant Navbar
+ * Affiche la barre de navigation
+ * @returns {JSX.Element}
+ */
 
 export default function Navbar() {
     const [activeNav, setActiveNav] = useState('#home');

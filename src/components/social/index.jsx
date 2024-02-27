@@ -1,10 +1,16 @@
 /* Importation des modules */
 import { motion } from 'framer-motion';
 
-// Style
+/* Importation du style */
 import './style.scss';
 
-export default function SocialBar() {
+/*
+ * Composant Socials
+ * Affiche les icônes des réseaux sociaux
+ * @returns {JSX.Element}
+ */
+
+export default function Socials() {
     const styles = {
         icon: {
             textDecoration: 'none',

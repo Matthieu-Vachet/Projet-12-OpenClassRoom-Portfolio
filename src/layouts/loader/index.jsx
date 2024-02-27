@@ -1,5 +1,11 @@
-// Importation du style
+/* Importation du style */
 import './style.scss';
+
+/*
+ * Composant Loader
+ * Affiche un loader
+ * @returns {JSX.Element}
+ */
 
 export default function Loader() {
     return (

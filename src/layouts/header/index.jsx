@@ -3,22 +3,28 @@ import { motion } from 'framer-motion';
 import { useContext, useState, useEffect } from 'react';
 
 // Importation des composants
-import { Login } from '../../components/modal/login';
+import Login from '../../components/modal/login';
 import { HeaderVariants } from '../../utils/framerMotion/Variante';
+import { toast } from 'sonner';
 
-// Importation des données
+/* Importation des données */
 import { useTranslation } from 'react-i18next';
 import { AuthContext, UserContext } from '../../utils/dataProvider/DataProvider';
 
-// Ressources
+/*Importation des ressources*/
 import { IoPersonCircleOutline, IoPersonCircleSharp } from 'react-icons/io5';
 import Logo from '../../assets/images/LogoM.svg';
-import LightDarkToggle from '../../components/lightDarkToggle';
-import ToggleMobile from '../../components/toggle/mobile';
+import ToggleOther from '../../components/toggle/toggleOther';
+import ToggleMobile from '../../components/toggle/toggleMobile';
 
 // Importation des styles
-import { toast } from 'sonner';
 import './style.scss';
+
+/*
+ * Composant Header
+ * Affiche l'en-tête du site
+ * @returns {JSX.Element}
+ */
 
 export default function Header() {
     const { i18n } = useTranslation();
@@ -103,7 +109,7 @@ export default function Header() {
                         onClick={handleOpenLoginModal}
                     />
                 )}
-                <LightDarkToggle />
+                <ToggleOther />
                 {showLoginModal && <Login onClose={() => setShowLoginModal(false)} />}
             </motion.div>
             <ToggleMobile />

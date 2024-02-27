@@ -11,7 +11,13 @@ import ContactForm from '../../components/contact/Form';
 // Importation des styles
 import './style.scss';
 
-const Contact = () => {
+/*
+ * Composant Contact
+ * Affiche la section Contact
+ * @returns {JSX.Element}
+ */
+
+export default function Contact() {
     const { t } = useTranslation();
 
     return (
@@ -28,6 +34,4 @@ const Contact = () => {
             </div>
         </section>
     );
-};
-
-export default Contact;
+}

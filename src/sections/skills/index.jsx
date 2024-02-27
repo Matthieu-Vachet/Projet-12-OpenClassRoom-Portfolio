@@ -3,7 +3,7 @@ import AnimatedSubtitle from '../../components/animations/AnimatedSubtitle';
 import AnimatedText from '../../components/animations/AnimatedText';
 
 /* Importation des composants */
-import SkillComponent from '../../components/skillComponent';
+import SkillCards from '../../components/skillCards';
 
 /* Importation des Données */
 import { useTranslation } from 'react-i18next';
@@ -17,7 +17,13 @@ import {
 /* Importation des styles */
 import './style.scss';
 
-const Skills = () => {
+/*
+ * Composant Skills
+ * Affiche la section Skills
+ * @returns {JSX.Element}
+ */
+
+export default function Skills() {
     const { t } = useTranslation();
     return (
         <section id='skills' className='section' aria-label='Skills section'>
@@ -34,7 +40,7 @@ const Skills = () => {
                     </div>
                     <div className='skill-icons-sections' aria-label='Frontend skills'>
                         {Frontend_skill.map((skill, index) => (
-                            <SkillComponent
+                            <SkillCards
                                 key={index}
                                 name={skill.skill_name}
                                 Image={skill.Image}
@@ -52,7 +58,7 @@ const Skills = () => {
                     </div>
                     <div className='skill-icons-sections' aria-label='Backend skills'>
                         {Backend_skill.map((skill, index) => (
-                            <SkillComponent
+                            <SkillCards
                                 key={index}
                                 name={skill.skill_name}
                                 Image={skill.Image}
@@ -70,7 +76,7 @@ const Skills = () => {
                     </div>
                     <div className='skill-icons-sections' aria-label='Developpement skills'>
                         {Developpement_skill.map((skill, index) => (
-                            <SkillComponent
+                            <SkillCards
                                 key={index}
                                 name={skill.skill_name}
                                 Image={skill.Image}
@@ -88,7 +94,7 @@ const Skills = () => {
                     </div>
                     <div className='skill-icons-sections' aria-label='Conception skills'>
                         {Conception_skill.map((skill, index) => (
-                            <SkillComponent
+                            <SkillCards
                                 key={index}
                                 name={skill.skill_name}
                                 Image={skill.Image}
@@ -103,6 +109,4 @@ const Skills = () => {
             </div>
         </section>
     );
-};
-
-export default Skills;
+}

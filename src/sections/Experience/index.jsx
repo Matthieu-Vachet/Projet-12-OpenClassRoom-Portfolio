@@ -10,12 +10,18 @@ import { useTranslation } from 'react-i18next';
 import { ExperienceContext } from '../../utils/dataProvider/DataProvider';
 
 /* Importation des composants */
-import ExperienceCard from '../../components/ExperienceCard';
+import ExperienceCard from '../../components/experienceCard';
 
 /* Importation des styles */
 import './style.scss';
 
-const Experience = () => {
+/*
+ * Composant Experience
+ * Affiche la section Experience
+ * @returns {JSX.Element}
+ */
+
+export default function Experience() {
     const { t } = useTranslation();
     const experiences = useContext(ExperienceContext);
 
@@ -49,6 +55,4 @@ const Experience = () => {
             <AnimatedText className={'experience-text-3'} delay={0.2} text={t('experience.text')} />
         </section>
     );
-};
-
-export default Experience;
+}

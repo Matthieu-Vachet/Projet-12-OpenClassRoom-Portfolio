@@ -1,11 +1,26 @@
+/* Importation des modules */
 import { useState } from 'react';
+
+/* Importation des données */
 import { useTranslation } from 'react-i18next';
+
+/* Importation des composants */
 import Button from '../../button';
 import { toast } from 'sonner';
+
+/* Importation des assets */
 import { GrValidate } from 'react-icons/gr';
+
+/* Importation du style */
 import './style.scss';
 
-const ContactForm = () => {
+/*
+ * Composant ContactForm
+ * Affiche un formulaire de contact
+ * @returns {JSX.Element}
+ */
+
+export default function ContactForm() {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
@@ -162,11 +177,9 @@ const ContactForm = () => {
                         onChange={handleChange}
                     />
                     {!emailValid && <GrValidate className='email-icon' style={{ color: 'red' }} />}{' '}
-                    {/* Affiche l'icône en rouge si l'email n'est pas valide */}
                     {emailValid && email && (
                         <GrValidate className='email-icon' style={{ color: 'green' }} />
-                    )}{' '}
-                    {/* Affiche l'icône en vert si l'email est valide */}
+                    )}
                 </div>
                 <textarea
                     type='text'
@@ -199,6 +212,4 @@ const ContactForm = () => {
             </form>
         </div>
     );
-};
-
-export default ContactForm;
+}
