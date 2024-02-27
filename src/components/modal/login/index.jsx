@@ -17,11 +17,23 @@ import { toast } from 'sonner';
 /* Importation des styles */
 import './style.scss';
 
-export const Login = ({ onClose }) => {
+/*
+ * Composant Login
+ * Affiche un formulaire de connexion
+ * @param {function} onClose - Fonction pour fermer la modale
+ * @returns {JSX.Element}
+ */
+
+export default function Login({ onClose }) {
     const { t } = useTranslation();
     const [email, setEmail] = useState('vachet.matthieu@icloud.com');
     const [password, setPassword] = useState('Matthieuvachet061290');
     const { setIsLoggedIn, setToken } = useContext(AuthContext);
+
+    /*
+     * Gère la connexion de l'utilisateur
+     * @returns {void}
+     */
 
     const handleLogin = async () => {
         try {
@@ -30,7 +42,6 @@ export const Login = ({ onClose }) => {
                 { email, password },
             );
             const { token } = response.data;
-            console.log('Token:', token);
             setToken(token);
             setIsLoggedIn(true);
             onClose();
@@ -94,7 +105,7 @@ export const Login = ({ onClose }) => {
             </form>
         </div>
     );
-};
+}
 
 Login.propTypes = {
     onClose: PropTypes.func.isRequired,

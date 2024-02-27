@@ -12,7 +12,13 @@ import { MdCopyright } from 'react-icons/md';
 /* Importation des styles */
 import './style.scss';
 
-const Footer = () => {
+/*
+ * Composant Footer
+ * Affiche le pied de page
+ * @returns {JSX.Element}
+ */
+
+export default function Footer() {
     const userData = useContext(UserContext);
     const { t } = useTranslation();
 
@@ -101,6 +107,4 @@ const Footer = () => {
             </div>
         </footer>
     );
-};
-
-export default Footer;
+}

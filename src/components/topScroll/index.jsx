@@ -1,13 +1,19 @@
 /* Importation des modules */
 import { useEffect, useState } from 'react';
 
-// Ressources
+/* Importation des ressources */
 import { MdKeyboardDoubleArrowUp } from 'react-icons/md';
 
-// Style
+/* Importation des styles */
 import './style.scss';
 
-const ScrollToTopButton = () => {
+/*
+ * Composant TopScroll
+ * Affiche un bouton pour faire défiler vers le haut
+ * @returns {JSX.Element}
+ */
+
+export default function TopScroll() {
     const [isVisible, setIsVisible] = useState(false);
 
     // Afficher le bouton lorsque l'utilisateur fait défiler vers le bas
@@ -41,6 +47,4 @@ const ScrollToTopButton = () => {
             )}
         </div>
     );
-};
-
-export default ScrollToTopButton;
+}

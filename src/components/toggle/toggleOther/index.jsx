@@ -1,17 +1,25 @@
 /* Importation des modules */
-import { useEffect, useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ThemeContext } from '../../utils/dataProvider/DataProvider';
+import { ThemeContext } from '../../../utils/dataProvider/DataProvider';
 
-// Ressources
+/* Importation des ressources */
 import { CiLight } from 'react-icons/ci';
 import { MdDarkMode } from 'react-icons/md';
 
-// Style
-import './style.scss';
+/* Importation des composants */
 import { toast } from 'sonner';
 
-const LightDarkToggle = () => {
+/* Importation du style */
+import './style.scss';
+
+/*
+ * Composant ToggleOther
+ * Affiche un bouton pour basculer entre les thèmes
+ * @returns {JSX.Element}
+ */
+
+export default function ToggleOther() {
     const { t } = useTranslation();
     const { theme, toggleTheme } = useContext(ThemeContext);
 
@@ -87,6 +95,4 @@ const LightDarkToggle = () => {
             )}
         </button>
     );
-};
-
-export default LightDarkToggle;
+}

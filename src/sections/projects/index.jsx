@@ -19,7 +19,13 @@ import { IoMdAdd } from 'react-icons/io';
 /* Importation des styles */
 import './style.scss';
 
-const Projects = () => {
+/*
+ * Composant Projects
+ * Affiche la section Projects
+ * @returns {JSX.Element}
+ */
+
+export default function Projects() {
     const { projets, deleteProjets } = useContext(ProjectContext);
     const { isLoggedIn } = useContext(AuthContext);
     const { t } = useTranslation();
@@ -102,6 +108,4 @@ const Projects = () => {
             </div>
         </section>
     );
-};
-
-export default Projects;
+}

@@ -13,7 +13,23 @@ import { MdDeleteForever } from 'react-icons/md';
 /* Importation des styles */
 import './style.scss';
 
-const ProjectsCards = ({
+/*
+ * Composant ProjectsCards
+ * Affiche une carte de projet
+ * @param {string} id - Identifiant du projet
+ * @param {string} image - Image du projet
+ * @param {string} alt - Texte alternatif de l'image
+ * @param {string} name - Nom du projet
+ * @param {string} description - Description du projet
+ * @param {string} github - Lien vers le dépôt GitHub
+ * @param {string} live - Lien vers le projet en ligne
+ * @param {array} technologies - Tableau des technologies utilisées
+ * @param {string} categorie - Catégorie du projet
+ * @param {function} onDeleteClick - Fonction pour supprimer un projet
+ * @returns {JSX.Element}
+ */
+
+export default function ProjectsCards({
     id,
     image,
     alt,
@@ -24,7 +40,7 @@ const ProjectsCards = ({
     technologies,
     categorie,
     onDeleteClick,
-}) => {
+}) {
     const { isLoggedIn } = useContext(AuthContext);
 
     return (
@@ -82,7 +98,7 @@ const ProjectsCards = ({
             </div>
         </div>
     );
-};
+}
 
 ProjectsCards.propTypes = {
     id: PropTypes.string.isRequired,
@@ -94,8 +110,5 @@ ProjectsCards.propTypes = {
     live: PropTypes.string.isRequired,
     technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
     categorie: PropTypes.string.isRequired,
-    // onAddClick: PropTypes.func,
     onDeleteClick: PropTypes.func,
 };
-
-export default ProjectsCards;

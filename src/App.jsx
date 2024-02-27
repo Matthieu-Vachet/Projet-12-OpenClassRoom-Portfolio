@@ -9,8 +9,8 @@ import About from './sections/about';
 import Blur from './components/background/overlay/blur';
 import Skills from './sections/skills';
 import Projects from './sections/projects';
-import Experience from './sections/Experience';
-import Contact from './sections/Contact';
+import Experience from './sections/experience';
+import Contact from './sections/contact';
 import Footer from './layouts/footer';
 
 function App() {

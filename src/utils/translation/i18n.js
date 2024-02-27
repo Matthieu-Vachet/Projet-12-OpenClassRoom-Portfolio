@@ -4,6 +4,11 @@ import { initReactI18next } from 'react-i18next';
 import translationEN from './translationEN.json';
 import translationFR from './translationFR.json';
 
+/*
+ * Configuration de la traduction
+ * @exports i18n
+ */
+
 const resources = {
     en: {
         translation: translationEN,

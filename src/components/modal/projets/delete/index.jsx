@@ -14,7 +14,16 @@ import { toast } from 'sonner';
 /* Importation des styles */
 import './style.scss';
 
-const ModalDeleteProjets = ({ onClose, onDelete, id }) => {
+/*
+ * Composant ModalDeleteProjets
+ * Affiche une modale de suppression de projet
+ * @param {function} onClose - Fonction pour fermer la modale
+ * @param {function} onDelete - Fonction pour supprimer un projet
+ * @param {string} id - Identifiant du projet
+ * @returns {JSX.Element}
+ */
+
+export default function ModalDeleteProjets({ onClose, onDelete, id }) {
     const { t } = useTranslation();
 
     const handleDeleteClick = () => {
@@ -54,12 +63,10 @@ const ModalDeleteProjets = ({ onClose, onDelete, id }) => {
             </div>
         </div>
     );
-};
+}
 
 ModalDeleteProjets.propTypes = {
     onClose: PropTypes.func.isRequired,
     onDelete: PropTypes.func.isRequired,
     id: PropTypes.string.isRequired,
 };
-
-export default ModalDeleteProjets;

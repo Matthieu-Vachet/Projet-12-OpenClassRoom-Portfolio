@@ -13,9 +13,17 @@ import { toast } from 'sonner';
 import { useTranslation } from 'react-i18next';
 import { ProjectContext } from '../../../../utils/dataProvider/DataProvider';
 
+/* Importation des styles */
 import './style.scss';
 
-const ModalCreateProjets = ({ onClose }) => {
+/*
+ * Composant ModalCreateProjets
+ * Affiche un formulaire pour créer un projet
+ * @param {function} onClose - Fonction pour fermer la modale
+ * @returns {JSX.Element}
+ */
+
+export default function ModalCreateProjets({ onClose }) {
     const { t } = useTranslation();
     const { refreshProjects } = useContext(ProjectContext);
     const [projectData, setProjectData] = useState({
@@ -229,10 +237,8 @@ const ModalCreateProjets = ({ onClose }) => {
             </div>
         </div>
     );
-};
+}
 
 ModalCreateProjets.propTypes = {
     onClose: PropTypes.func.isRequired,
 };
-
-export default ModalCreateProjets;

@@ -1,20 +1,37 @@
 /* Importation des modules */
 import PropTypes from 'prop-types';
 
-// Composants
+/* Importation des composants */
 import Tilt from 'react-parallax-tilt';
 import Grain from '../background/grain';
 
-// Ressources
+/* Importation des icônes */
 import { IoCalendarNumberOutline } from 'react-icons/io5';
 import { IoIosArrowRoundForward } from 'react-icons/io';
 import { FaGlobeAfrica } from 'react-icons/fa';
 import { GiDiploma } from 'react-icons/gi';
 
-// Style
+/* Importation du style */
 import './style.scss';
 
-const ExperienceCard = ({
+/*
+ * Composant ExperienceCard
+ * Affiche une carte d'expérience
+ * @param {string} school - Nom de l'école
+ * @param {string} src - Source de l'image
+ * @param {string} width - Largeur de l'image
+ * @param {string} height - Hauteur de l'image
+ * @param {string} title - Titre de la formation
+ * @param {string} startDate - Date de début
+ * @param {string} endDate - Date de fin
+ * @param {string} location - Lieu
+ * @param {string} description - Description
+ * @param {string} diplome - Diplôme obtenu
+ * @param {boolean} reverse - Inverse l'ordre des éléments
+ * @returns {JSX.Element}
+ */
+
+export default function ExperienceCard({
     school,
     src,
     width,
@@ -26,7 +43,7 @@ const ExperienceCard = ({
     description,
     diplome,
     reverse,
-}) => {
+}) {
     return (
         <div className={`experience-content ${reverse ? 'reverse' : ''}`}>
             <div className='experience-cards'>
@@ -69,7 +86,7 @@ const ExperienceCard = ({
             </div>
         </div>
     );
-};
+}
 
 ExperienceCard.propTypes = {
     school: PropTypes.string.isRequired,
@@ -89,5 +106,3 @@ ExperienceCard.defaultProps = {
     width: '250px',
     height: '250px',
 };
-
-export default ExperienceCard;

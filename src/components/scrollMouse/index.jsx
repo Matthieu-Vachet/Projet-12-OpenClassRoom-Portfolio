@@ -1,8 +1,14 @@
 /* Importation des modules */
 import { useEffect, useState } from 'react';
 
-// Style
+/* Importation des styles */
 import './style.scss';
+
+/*
+ * Composant ScrollMouse
+ * Affiche une flèche de défilement
+ * @returns {JSX.Element}
+ */
 
 export default function ScrollMouse() {
     const [isVisible, setIsVisible] = useState(true);

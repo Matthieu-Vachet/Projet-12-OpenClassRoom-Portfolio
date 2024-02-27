@@ -4,10 +4,18 @@ import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import PropTypes from 'prop-types';
 
-// Style
+/* Importation des styles */
 import './Animation.scss';
 
-const AnimatedTitle = ({ title, className }) => {
+/*
+ * Composant AnimatedTitle
+ * Affiche un titre animé lettre par lettre
+ * @param {string} title - Titre à afficher
+ * @param {string} className - Classe CSS à appliquer
+ * @returns {JSX.Element}
+ */
+
+export default function AnimatedTitle({ title, className }) {
     const ctrls = useAnimation();
 
     const { ref, inView } = useInView({
@@ -60,11 +68,9 @@ const AnimatedTitle = ({ title, className }) => {
             </motion.span>
         </h1>
     );
-};
+}
 
 AnimatedTitle.propTypes = {
     title: PropTypes.string.isRequired,
     className: PropTypes.string,
 };
-
-export default AnimatedTitle;

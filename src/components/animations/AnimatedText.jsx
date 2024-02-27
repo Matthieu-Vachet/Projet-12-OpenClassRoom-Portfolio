@@ -4,6 +4,15 @@ import { useEffect } from 'react';
 import { useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
+/*
+ * Composant AnimatedBody
+ * Animation de texte
+ * @param {string} text - Texte à animer
+ * @param {string} className - Classe CSS à appliquer
+ * @param {number} delay - Délai avant l'animation
+ * @return {JSX.Element} - Élément JSX
+ */
+
 export default function AnimatedBody(props) {
     const { text, className, delay } = props;
     const ctrls = useAnimation();
