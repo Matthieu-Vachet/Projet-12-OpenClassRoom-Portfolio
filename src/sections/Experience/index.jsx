@@ -10,7 +10,7 @@ import { useTranslation } from 'react-i18next';
 import { ExperienceContext } from '../../utils/dataProvider/DataProvider';
 
 /* Importation des composants */
-import ExperienceCard from '../../components/experienceCard';
+import ExperienceCard from '../../components/ExperienceCard';
 
 /* Importation des styles */
 import './style.scss';

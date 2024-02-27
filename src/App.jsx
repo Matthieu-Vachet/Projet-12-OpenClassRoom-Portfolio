@@ -1,7 +1,8 @@
+/* Importation des modules */
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { Toaster } from 'sonner';
-// Importation des composants
+
+/* Importation des composants */
 import NavBar from './layouts/navbar';
 import Loader from './layouts/loader';
 import Home from './sections/home';
@@ -9,15 +10,22 @@ import About from './sections/about';
 import Blur from './components/background/overlay/blur';
 import Skills from './sections/skills';
 import Projects from './sections/projects';
-import Experience from './sections/experience';
-import Contact from './sections/contact';
+import Experience from './sections/Experience';
+import Contact from './sections/Contact';
 import Footer from './layouts/footer';
+import { Toaster } from 'sonner';
+
+/*
+    * Composant App
+    * Description :
+        - Gère l'affichage de l'application
+        - Affiche un loader pendant le chargement
+        - Affiche l'application une fois le chargement terminé
+*/
 
 function App() {
-    // État pour gérer l'affichage du loader
     const [loading, setLoading] = useState(true);
 
-    // Simule un temps de chargement de 4 secondes
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(false);
@@ -31,7 +39,6 @@ function App() {
     return (
         <AnimatePresence>
             {loading ? (
-                // Affiche le loader pendant le chargement
                 <motion.div
                     key='loader'
                     initial={{ opacity: 1 }}
@@ -42,7 +49,6 @@ function App() {
                     <Loader />
                 </motion.div>
             ) : (
-                // Une fois le chargement terminé, affiche l'application
                 <motion.div
                     key='app'
                     initial={{ opacity: 0 }}
