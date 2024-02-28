@@ -1,0 +1,20 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://matthieu-vachet-portfolio.vercel.app/#home</loc>
+    </url>
+    <url>
+        <loc>https://matthieu-vachet-portfolio.vercel.app/#about</loc>
+    </url>
+    <url>
+        <loc>https://matthieu-vachet-portfolio.vercel.app/#experience</loc>
+    </url>
+    <url>
+        <loc>https://matthieu-vachet-portfolio.vercel.app/#skills</loc>
+    </url>
+    <url>
+        <loc>https://matthieu-vachet-portfolio.vercel.app/#projects</loc>
+    </url>
+    <url>
+        <loc>https://matthieu-vachet-portfolio.vercel.app/#contact</loc>
+    </url>
+</urlset>
