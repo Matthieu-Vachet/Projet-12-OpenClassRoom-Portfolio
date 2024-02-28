@@ -21,7 +21,7 @@ import './style.scss';
 
 export default function SkillCards({ name, Image, fontSize, index, alt, color }) {
     const { ref, inView } = useInView({
-        threshold: 0.3,
+        threshold: 0.6,
         triggerOnce: true,
     });
 
@@ -30,7 +30,7 @@ export default function SkillCards({ name, Image, fontSize, index, alt, color })
         visible: { opacity: 1 },
     };
 
-    const animationDelay = 0.1;
+    const animationDelay = 0.15;
 
     return (
         <motion.div

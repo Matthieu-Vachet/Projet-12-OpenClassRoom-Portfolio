@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 /* Importation des composants */
-import { HeaderVariants } from '../../utils/framerMotion/Variante';
+import { HeaderVariante } from '../../utils/framerMotion/Variante';
 
 /* Importation des données */
 import { navItems } from '../../utils/constants/constants';
@@ -50,8 +50,7 @@ export default function Navbar() {
         <motion.div
             initial='initial'
             animate='animate'
-            transition={{ delay: 1.9, duration: 1, type: 'spring' }}
-            variants={HeaderVariants}
+            variants={HeaderVariante}
             className='navbar'
         >
             <nav>

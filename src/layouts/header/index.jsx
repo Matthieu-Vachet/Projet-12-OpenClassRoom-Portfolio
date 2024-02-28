@@ -4,7 +4,7 @@ import { useContext, useState, useEffect } from 'react';
 
 // Importation des composants
 import Login from '../../components/modal/login';
-import { HeaderVariants } from '../../utils/framerMotion/Variante';
+import { HeaderVariante } from '../../utils/framerMotion/Variante';
 import { toast } from 'sonner';
 
 /* Importation des données */
@@ -48,38 +48,18 @@ export default function Header() {
     }, [setIsLoggedIn]);
 
     return (
-        <header>
+        <motion.header initial='initial' animate='animate' variants={HeaderVariante}>
             {/* Logo */}
             <div className='logo_content'>
-                <motion.img
-                    className='logo_header'
-                    initial='initial'
-                    animate='animate'
-                    transition={{ delay: 1.9, duration: 1, type: 'spring' }}
-                    variants={HeaderVariants}
-                    src={Logo}
-                    alt='Matthieu Vachet Logo portfolio'
-                />
+                <img className='logo_header' src={Logo} alt='Matthieu Vachet Logo portfolio' />
                 {/* Name */}
-                <motion.h1
-                    initial='initial'
-                    animate='animate'
-                    transition={{ delay: 1.9, duration: 1, type: 'spring' }}
-                    variants={HeaderVariants}
-                    className='name_header'
-                >
+                <h1 className='name_header'>
                     {data[0].name + ' '}
                     {data[0].lastname}
-                </motion.h1>
+                </h1>
             </div>
             {/* Buttons FR - EN - Toggle */}
-            <motion.div
-                initial='initial'
-                animate='animate'
-                transition={{ delay: 1.9, duration: 1, type: 'spring' }}
-                variants={HeaderVariants}
-                className='button_header'
-            >
+            <div className='button_header'>
                 <button className='button_fr' onClick={() => changeLanguage('fr')}>
                     <span className='text_fr'>FR</span>
                 </button>
@@ -111,8 +91,8 @@ export default function Header() {
                 )}
                 <ToggleOther />
                 {showLoginModal && <Login onClose={() => setShowLoginModal(false)} />}
-            </motion.div>
+            </div>
             <ToggleMobile />
-        </header>
+        </motion.header>
     );
 }

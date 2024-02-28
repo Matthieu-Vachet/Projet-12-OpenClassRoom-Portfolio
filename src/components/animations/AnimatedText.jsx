@@ -13,8 +13,7 @@ import { useInView } from 'react-intersection-observer';
  * @return {JSX.Element} - Élément JSX
  */
 
-export default function AnimatedBody(props) {
-    const { text, className, delay } = props;
+export default function AnimatedBody({ text, className, delay }) {
     const ctrls = useAnimation();
 
     const { ref, inView } = useInView({
