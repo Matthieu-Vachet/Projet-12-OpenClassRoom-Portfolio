@@ -46,8 +46,8 @@ export default function AnimatedSubtitle({ text, className, wordSpace, charSpace
             opacity: 1, // Opacité finale à 1 (visible)
             y: `0em`, // Position finale à l'origine
             transition: {
-                duration: 0.2, // Durée de l'animation
-                ease: [0.2, 0.65, 0.3, 0.9], // Courbe d'accélération de l'animation
+                duration: 0.1, // Durée de l'animation
+                ease: [0.1, 0.1, 0.1, 0.1], // Courbe d'accélération de l'animation
                 delayChildren: 0.5, // Délai avant le démarrage de l'animation des enfants
                 staggerChildren: 0.5, // Délai entre le démarrage de l'animation des enfants
             },

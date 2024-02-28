@@ -86,8 +86,7 @@ Button.defaultProps = {
     type: 'button',
     onClick: null,
     disabled: false,
-    className: '',
     height: '6em',
     width: '20em',
-    href: '', // Modifie la valeur par défaut de href à une chaîne vide
+    href: '',
 };

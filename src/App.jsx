@@ -15,6 +15,8 @@ import Contact from './sections/Contact';
 import Footer from './layouts/footer';
 import { Toaster } from 'sonner';
 
+import { LoaderVariants, AppVariants } from './utils/framerMotion/Variante';
+import backgroundImage from './assets/images/Bg-Squares-Black.svg';
 /*
     * Composant App
     * Description :
@@ -27,6 +29,7 @@ function App() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        setLoading(true);
         const timer = setTimeout(() => {
             setLoading(false);
         }, 4000);
@@ -41,20 +44,23 @@ function App() {
             {loading ? (
                 <motion.div
                     key='loader'
-                    initial={{ opacity: 1 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.5, ease: 'easeInOut' }}
+                    initial='initial'
+                    animate='animate'
+                    exit='exit'
+                    variants={LoaderVariants}
                 >
                     <Loader />
                 </motion.div>
             ) : (
                 <motion.div
                     key='app'
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.5, ease: 'easeInOut' }}
+                    initial='initial'
+                    animate='animate'
+                    exit='exit'
+                    variants={AppVariants}
+                    style={{
+                        backgroundImage: `url(${backgroundImage})`,
+                    }}
                 >
                     <Blur />
                     <NavBar />

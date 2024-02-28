@@ -3,6 +3,7 @@ import { useContext, useState } from 'react';
 
 /* Importation des Animations */
 import AnimatedSubtitle from '../../components/animations/AnimatedSubtitle';
+import AnimatedElement from '../../components/animations/AnimatedElement';
 
 /* Importation des composants */
 import ProjectsCards from '../../components/projectsCards';
@@ -75,19 +76,20 @@ export default function Projects() {
                 />
                 <div className='projects-cards-container' aria-label='Projects list'>
                     {projets.map((project) => (
-                        <ProjectsCards
-                            key={project._id}
-                            id={project._id}
-                            name={project.name}
-                            description={project.description}
-                            image={project.imageUrl}
-                            alt={project.name}
-                            technologies={project.technologies}
-                            github={project.githubLink}
-                            live={project.demoLink}
-                            categorie={project.category}
-                            onDeleteClick={() => handleOpenDeleteModal(project._id)}
-                        />
+                        <AnimatedElement key={project._id}>
+                            <ProjectsCards
+                                id={project._id}
+                                name={project.name}
+                                description={project.description}
+                                image={project.imageUrl}
+                                alt={project.name}
+                                technologies={project.technologies}
+                                github={project.githubLink}
+                                live={project.demoLink}
+                                categorie={project.category}
+                                onDeleteClick={() => handleOpenDeleteModal(project._id)}
+                            />
+                        </AnimatedElement>
                     ))}
                     {isLoggedIn && (
                         <div className='projects-cards-add-news'>
