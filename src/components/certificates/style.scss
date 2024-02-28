@@ -12,6 +12,10 @@
         display: none;
     }
 
+    @include tablet {
+        display: none;
+    }
+
     .dropdown-certificates-title {
         display: flex;
         color: var(--basicWhite);
