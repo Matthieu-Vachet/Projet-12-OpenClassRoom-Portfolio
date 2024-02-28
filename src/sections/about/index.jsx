@@ -1,13 +1,10 @@
-/* Importation des modules */
-import { motion } from 'framer-motion';
-
 // Importation des données
 import { useTranslation } from 'react-i18next';
 
 // Importation des Animations
 import AnimatedSubtitle from '../../components/animations/AnimatedSubtitle';
 import AnimatedText from '../../components/animations/AnimatedText';
-import { ButtonVariant } from '../../utils/framerMotion/Variante';
+import AnimatedElement from '../../components/animations/AnimatedElement';
 
 // Importation des composants
 import Button from '../../components/button';
@@ -40,12 +37,9 @@ export default function About() {
                         <AnimatedText delay={0.1} text={t('about.text-2')} />
                         <AnimatedText delay={0.2} text={t('about.text-3')} />
                     </div>
-                    <motion.div
+                    <AnimatedElement
+                        delay={0.3}
                         className='about-button'
-                        initial='initial'
-                        animate='animate'
-                        transition={{ delay: 1.9, duration: 1, type: 'spring' }}
-                        variants={ButtonVariant}
                         aria-label='About section buttons'
                     >
                         <Button
@@ -54,7 +48,7 @@ export default function About() {
                             rel='noopener noreferrer'
                             href='https://drive.google.com/file/d/1PZ4cBkNtBoQmF9JZ9phbViVUNnlJDaGI/view?usp=drive_link'
                         />
-                    </motion.div>
+                    </AnimatedElement>
                 </div>
             </div>
             <TopScroll />

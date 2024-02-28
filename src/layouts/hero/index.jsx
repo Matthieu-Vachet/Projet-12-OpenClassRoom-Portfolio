@@ -11,7 +11,7 @@ import { useTranslation } from 'react-i18next';
 /* Importation des composants */
 import ScrollMouse from '../../components/scrollMouse';
 import Button from '../../components/button';
-import { TextHeroVariant, SvgVariants } from '../../utils/framerMotion/Variante';
+import { HeroVariante, SvgVariante } from '../../utils/framerMotion/Variante';
 import Tilt from 'react-parallax-tilt';
 
 /* Importation des Ressources */
@@ -38,38 +38,24 @@ export default function Hero() {
     return (
         <div className='hero'>
             <div className='hero_content'>
-                <div className='hero_text'>
+                <motion.div
+                    initial='initial'
+                    animate='animate'
+                    variants={HeroVariante}
+                    className='hero_text'
+                >
                     {/* Slogan Hero */}
-                    <motion.h1
-                        initial='initial'
-                        animate='animate'
-                        transition={{ delay: 0.6, duration: 0.8, type: 'spring' }}
-                        variants={TextHeroVariant}
-                        className='hero_slogan'
-                    >
+                    <h1 className='hero_slogan'>
                         <FancyText gradient={{ from: '#0ce39a', to: '#69007f', type: 'linear' }}>
                             {t('hero.slogan')}
                         </FancyText>
-                    </motion.h1>
+                    </h1>
 
                     {/* Profession Hero */}
-                    <motion.h3
-                        initial='initial'
-                        animate='animate'
-                        transition={{ delay: 0.9, duration: 0.5, type: 'spring' }}
-                        variants={TextHeroVariant}
-                        className='hero_profession'
-                    >
-                        {data[0].profession}
-                    </motion.h3>
+                    <h3 className='hero_profession'>{data[0].profession}</h3>
 
                     {/* Number Hero */}
-                    <motion.h4
-                        initial='initial'
-                        animate='animate'
-                        transition={{ delay: 1, duration: 0.5, type: 'spring' }}
-                        variants={TextHeroVariant}
-                    >
+                    <h4>
                         <Button
                             text={t('about.button-2')}
                             href='#contact'
@@ -77,14 +63,14 @@ export default function Hero() {
                             width={'15rem'}
                             className='hero_btn'
                         />
-                    </motion.h4>
-                </div>
+                    </h4>
+                </motion.div>
                 <div className='img-icons-section'>
                     <Tilt>
                         <motion.img
                             initial='hidden'
                             animate='visible'
-                            variants={SvgVariants}
+                            variants={SvgVariante}
                             className='img-icons'
                             src={islightMode ? IconsVersionWhite : IconsVersionBlack}
                             alt='Image Icons technologies web'
@@ -93,9 +79,14 @@ export default function Hero() {
                 </div>
             </div>
             {/* Scroll Mouse composant */}
-            <div className='ScrollMouse'>
+            <motion.div
+                initial='initial'
+                animate='animate'
+                variants={HeroVariante}
+                className='ScrollMouse'
+            >
                 <ScrollMouse />
-            </div>
+            </motion.div>
         </div>
     );
 }

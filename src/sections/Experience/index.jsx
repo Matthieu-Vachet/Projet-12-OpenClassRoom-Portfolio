@@ -4,6 +4,7 @@ import { useContext } from 'react';
 /* Importation des Animations */
 import AnimatedSubtitle from '../../components/animations/AnimatedSubtitle';
 import AnimatedText from '../../components/animations/AnimatedText';
+import AnimatedElement from '../../components/animations/AnimatedElement';
 
 /* Importation des Données */
 import { useTranslation } from 'react-i18next';
@@ -39,22 +40,23 @@ export default function Experience() {
             </div>
             <div className='experience-cards-map'>
                 {experiences.map((experience, index) => (
-                    <ExperienceCard
-                        key={index}
-                        school={experience.school}
-                        src={experience.img}
-                        alt={experience.school}
-                        title={experience.title}
-                        startDate={experience.startDate}
-                        endDate={experience.endDate}
-                        location={experience.location}
-                        description={experience.description}
-                        diplome={experience.diplome}
-                        reverse={index === 1}
-                    />
+                    <AnimatedElement delay={0.1} key={index}>
+                        <ExperienceCard
+                            school={experience.school}
+                            src={experience.img}
+                            alt={experience.school}
+                            title={experience.title}
+                            startDate={experience.startDate}
+                            endDate={experience.endDate}
+                            location={experience.location}
+                            description={experience.description}
+                            diplome={experience.diplome}
+                            reverse={index === 1}
+                        />
+                    </AnimatedElement>
                 ))}
             </div>
-            <AnimatedText className={'experience-text-3'} delay={0.2} text={t('experience.text')} />
+            <AnimatedText className={'experience-text-3'} delay={0.1} text={t('experience.text')} />
         </section>
     );
 }

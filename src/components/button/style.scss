@@ -13,7 +13,7 @@
     z-index: 0;
     overflow: hidden;
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: transform 0.3s;
 
     @include mobile {
         border: 1px solid var(--borderGlass);
