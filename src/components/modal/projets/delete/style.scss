@@ -36,12 +36,20 @@
     .delete-title {
         @include Syne(40px, 700, 0.2em);
         color: var(--basicWhite);
+
+        @include largeDesktop {
+            @include Syne(30px, 700, 0.2em);
+        }
     }
 
     .delete-text {
         text-align: center;
         @include Syne(20px, 400, 0.2em);
         color: var(--basicWhite);
+
+        @include largeDesktop {
+            @include Syne(18px, 400, 0.2em);
+        }
     }
 
     .delete-btn {
