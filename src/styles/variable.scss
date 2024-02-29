@@ -12,6 +12,7 @@ VARIABLES COLORS
     --glassGlassDark60: rgba(24, 24, 29, 0.6);
     --glassGlassDark30: rgba(24, 24, 29, 0.3);
     --borderGlass: rgba(255, 255, 255, 0.5);
+    --borderGlassBtn: rgba(128, 128, 128, 0.1);
 
     --button-1: #0ce39a;
     --button-2: #69007f;
@@ -113,8 +114,8 @@ MIXINS MEDIA QUERIES
     }
 }
 
-@mixin mobilePortrait {
-    @media screen and (max-width: 640px) and (min-width: 320px) and (orientation: portrait) {
+@mixin mobileLandscape {
+    @media screen and (max-width: 640px) and (min-width: 320px) and (orientation: landscape) {
         @content;
     }
 }

@@ -8,6 +8,7 @@
     text-decoration: none;
     color: var(--basicWhite);
     background: linear-gradient(45deg, var(--button-1), var(--button-2), var(--button-3));
+    border: 1px solid var(--borderGlass);
     padding: 10px 20px;
     border-radius: 20px;
     z-index: 0;
@@ -16,7 +17,7 @@
     transition: transform 0.3s;
 
     @include mobile {
-        border: 1px solid var(--borderGlass);
+        border: 1px solid var(--borderGlassBtn) !important;
     }
 
     &:hover {

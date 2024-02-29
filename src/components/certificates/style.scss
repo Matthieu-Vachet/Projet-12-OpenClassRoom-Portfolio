@@ -16,11 +16,19 @@
         display: none;
     }
 
+    @include desktop {
+        gap: 2rem;
+    }
+
     .dropdown-certificates-title {
         display: flex;
         color: var(--basicWhite);
         @include Syne(35px, 500, 0.1em);
         opacity: 0.5;
+
+        @include desktop {
+            @include Syne(25px, 500, 0.1em);
+        }
     }
 
     select {

@@ -82,8 +82,8 @@
             justify-content: space-between;
             width: 95%;
             margin-left: 2rem;
-            gap: 1rem;
-            margin-bottom: 4rem;
+            gap: 5rem;
+            margin-bottom: 5rem;
 
             @include mobile {
                 width: 100%;
@@ -121,7 +121,7 @@
                 }
 
                 @include desktop {
-                    @include Syne(16px, 700, 0.3em);
+                    @include Syne(15px, 700, 0.2em);
                     transform: scaleY(2);
                 }
 

@@ -14,6 +14,7 @@
     @include glassEffectModal;
     width: 500px;
     gap: 2rem;
+    z-index: 99;
 
     @include desktop {
         height: 70%;

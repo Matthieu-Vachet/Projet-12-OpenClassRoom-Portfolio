@@ -27,6 +27,10 @@
         bottom: 4em;
     }
 
+    @include desktop {
+        bottom: 4.5em;
+    }
+
     .icon {
         color: var(--basicWhite);
         text-decoration: none;
