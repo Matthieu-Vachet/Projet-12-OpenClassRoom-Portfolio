@@ -1,3 +1,26 @@
+/**
+ * Composant de carte d'expérience.
+ *
+ * Ce composant affiche une carte avec des informations sur une expérience, comme l'école, le titre, les dates, le lieu, la description et le diplôme.
+ * Il utilise le composant `Tilt` pour ajouter un effet de parallaxe à l'image de l'école et le composant `Grain` pour ajouter un effet de grain à l'arrière-plan.
+ * Il utilise également plusieurs icônes pour illustrer les différentes informations.
+ *
+ * @component
+ * @param {Object} props - Les propriétés du composant.
+ * @param {string} props.school - Le nom de l'école.
+ * @param {string} props.src - L'URL de l'image de l'école.
+ * @param {string} [props.width='250px'] - La largeur de l'image de l'école.
+ * @param {string} [props.height='250px'] - La hauteur de l'image de l'école.
+ * @param {string} props.title - Le titre de l'expérience.
+ * @param {string} props.startDate - La date de début de l'expérience.
+ * @param {string} props.endDate - La date de fin de l'expérience.
+ * @param {string} props.location - Le lieu de l'expérience.
+ * @param {string} props.description - La description de l'expérience.
+ * @param {string} props.diplome - Le diplôme obtenu lors de l'expérience.
+ * @param {boolean} [props.reverse=false] - Si `true`, inverse l'ordre des éléments dans la carte.
+ * @returns {JSX.Element} Le JSX du composant.
+ */
+
 /* Importation des modules */
 import PropTypes from 'prop-types';
 
@@ -13,23 +36,6 @@ import { GiDiploma } from 'react-icons/gi';
 
 /* Importation du style */
 import './style.scss';
-
-/*
- * Composant ExperienceCard
- * Affiche une carte d'expérience
- * @param {string} school - Nom de l'école
- * @param {string} src - Source de l'image
- * @param {string} width - Largeur de l'image
- * @param {string} height - Hauteur de l'image
- * @param {string} title - Titre de la formation
- * @param {string} startDate - Date de début
- * @param {string} endDate - Date de fin
- * @param {string} location - Lieu
- * @param {string} description - Description
- * @param {string} diplome - Diplôme obtenu
- * @param {boolean} reverse - Inverse l'ordre des éléments
- * @returns {JSX.Element}
- */
 
 export default function ExperienceCard({
     school,

@@ -1,8 +1,16 @@
+/**
+ * Composant Header qui affiche l'en-tête du site.
+ * Il utilise le contexte UserContext pour obtenir les données de l'utilisateur et le contexte AuthContext pour gérer l'état de connexion.
+ * Il permet également de changer la langue du site et d'ouvrir une fenêtre modale de connexion.
+ *
+ * @returns {JSX.Element} L'en-tête du site avec le logo, le nom de l'utilisateur, les boutons pour changer la langue, le bouton pour se connecter ou se déconnecter et les composants ToggleOther et ToggleMobile.
+ */
+
 /* Importation des modules */
 import { motion } from 'framer-motion';
 import { useContext, useState, useEffect } from 'react';
 
-// Importation des composants
+/* Importation des composants */
 import Login from '../../components/modal/login';
 import { HeaderVariante } from '../../utils/framerMotion/Variante';
 import { toast } from 'sonner';
@@ -17,14 +25,8 @@ import Logo from '../../assets/images/LogoM.svg';
 import ToggleOther from '../../components/toggle/toggleOther';
 import ToggleMobile from '../../components/toggle/toggleMobile';
 
-// Importation des styles
+/* Importation du style */
 import './style.scss';
-
-/*
- * Composant Header
- * Affiche l'en-tête du site
- * @returns {JSX.Element}
- */
 
 export default function Header() {
     const { i18n } = useTranslation();
@@ -49,16 +51,13 @@ export default function Header() {
 
     return (
         <motion.header initial='initial' animate='animate' variants={HeaderVariante}>
-            {/* Logo */}
             <div className='logo_content'>
                 <img className='logo_header' src={Logo} alt='Matthieu Vachet Logo portfolio' />
-                {/* Name */}
                 <h1 className='name_header'>
                     {data[0].name + ' '}
                     {data[0].lastname}
                 </h1>
             </div>
-            {/* Buttons FR - EN - Toggle */}
             <div className='button_header'>
                 <button className='button_fr' onClick={() => changeLanguage('fr')}>
                     <span className='text_fr'>FR</span>
@@ -74,7 +73,6 @@ export default function Header() {
                         aria-label='Logout'
                         tabIndex='0'
                         onClick={() => {
-                            // Logique de déconnexion
                             setIsLoggedIn(false);
                             toast.success(t('login.success-logout'));
                             localStorage.removeItem('token');

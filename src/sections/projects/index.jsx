@@ -1,3 +1,8 @@
+/**
+ * Composant Projects qui affiche la section "Projets" du site.
+ * @returns {JSX.Element} La section "Projets" avec un sous-titre animé, une liste de cartes de projets et des modales pour créer et supprimer des projets.
+ */
+
 /* Importation des modules */
 import { useContext, useState } from 'react';
 
@@ -19,12 +24,6 @@ import { IoMdAdd } from 'react-icons/io';
 
 /* Importation des styles */
 import './style.scss';
-
-/*
- * Composant Projects
- * Affiche la section Projects
- * @returns {JSX.Element}
- */
 
 export default function Projects() {
     const { projets, deleteProjets } = useContext(ProjectContext);
@@ -51,6 +50,11 @@ export default function Projects() {
     const handleCloseDeleteModal = () => {
         setIsDeleteModalOpen(false);
     };
+
+    /**
+     * Supprime un projet.
+     * @param {string} id - L'ID du projet à supprimer.
+     */
 
     const handleDeleteClick = async (id) => {
         const response = await fetch(

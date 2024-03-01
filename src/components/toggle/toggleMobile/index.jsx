@@ -1,3 +1,13 @@
+/**
+ * ToggleMobile est un composant React qui affiche un bouton pour changer la langue et le thème de l'application sur mobile.
+ * @component
+ *
+ * @example
+ * <ToggleMobile />
+ *
+ * @returns {React.Element} - Le composant ToggleMobile.
+ */
+
 /* Importation des modules */
 import { useContext, useState } from 'react';
 
@@ -13,12 +23,6 @@ import { FaRegSquare } from 'react-icons/fa6';
 
 /* Importation du style */
 import './style.scss';
-
-/*
- * Composant ToggleMobile
- * Affiche des boutons pour basculer entre les thèmes et les langues
- * @returns {JSX.Element}
- */
 
 export default function ToggleMobile() {
     const { i18n } = useTranslation();

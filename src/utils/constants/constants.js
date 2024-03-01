@@ -29,6 +29,7 @@ import {
 } from 'react-icons/si';
 import { TbBrandFramerMotion, TbBrandVscode, TbBrandFigma } from 'react-icons/tb';
 
+/* Navigation items */
 const navItems = [
     {
         id: 'home',
@@ -62,6 +63,7 @@ const navItems = [
     },
 ];
 
+/* Frontend skills */
 const Frontend_skill = [
     {
         skill_name: 'Html',
@@ -107,6 +109,7 @@ const Frontend_skill = [
     },
 ];
 
+/* Backend skills */
 const Backend_skill = [
     {
         skill_name: 'Node.JS',
@@ -128,6 +131,7 @@ const Backend_skill = [
     },
 ];
 
+/* Developpement skills */
 const Developpement_skill = [
     {
         skill_name: 'VS Code',
@@ -155,6 +159,7 @@ const Developpement_skill = [
     },
 ];
 
+/* Conception skills */
 const Conception_skill = [
     {
         skill_name: 'Figma',
@@ -194,6 +199,7 @@ const Conception_skill = [
     },
 ];
 
+/* Icone des technologies pour l'import de projet via API */
 const technologyIcons = {
     Html: DiHtml5,
     Css: DiCss3,
@@ -211,6 +217,7 @@ const technologyIcons = {
     FramerMotion: TbBrandFramerMotion,
 };
 
+/* Footer (liens) */
 const Footer_Link = [
     {
         name: 'Home',
@@ -234,6 +241,7 @@ const Footer_Link = [
     },
 ];
 
+/* Footer (projets) */
 const Footer_Projects = [
     {
         name: 'ArgentBank',
@@ -257,6 +265,7 @@ const Footer_Projects = [
     },
 ];
 
+/* Footer (réseaux sociaux) */
 const Footer_Follow = [
     {
         icon: 'fab fa-facebook-f',
@@ -280,6 +289,7 @@ const Footer_Follow = [
     },
 ];
 
+/* Certificats section Expérience */
 const certificates = [
     {
         name: 'Créez votre site web avec HTML5 et CSS3',

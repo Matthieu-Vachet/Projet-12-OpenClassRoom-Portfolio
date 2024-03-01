@@ -1,19 +1,16 @@
+/**
+ * Composant Certificates qui affiche une liste déroulante de certificats.
+ * Lorsqu'un certificat est sélectionné, il ouvre le lien du certificat dans un nouvel onglet.
+ *
+ * @returns {JSX.Element} Une liste déroulante de certificats.
+ */
+
 /* Importation des données */
 import { certificates } from '../../utils/constants/constants';
 import { useTranslation } from 'react-i18next';
 
 /* Importation des styles */
 import './style.scss';
-
-/* 
-    * Composant Certificates
-    * Description :
-        Ce composant permet d'afficher les certificats de formation
-        Il affiche un dropdown avec la liste des certificats
-    * Data :
-        - certificates : liste des certificats de formation
-    * @returns {JSX.Element}
-*/
 
 export default function Certificates() {
     const { t } = useTranslation();

@@ -1,15 +1,18 @@
+/**
+ * Composant Grain qui génère un bruit de grain SVG.
+ *
+ * @param {object} props - Les propriétés passées au composant.
+ * @param {string} props.baseFrequency - La fréquence de base pour le bruit fractal.
+ * @param {number} props.numOctaves - Le nombre d'octaves pour le bruit fractal.
+ * @param {string} props.w - La largeur du SVG.
+ * @param {string} props.h - La hauteur du SVG.
+ *
+ * @returns {JSX.Element} Un SVG qui génère un bruit de grain.
+ */
+
 /* Importation des modules */
 import PropTypes from 'prop-types';
 
-/*
- * Composant Grain
- * Affiche un filtre SVG pour simuler du bruit
- * @param {string} baseFrequency - Fréquence de base du bruit
- * @param {string} numOctaves - Nombre d'octaves
- * @param {string} w - Largeur
- * @param {string} h - Hauteur
- * @returns {JSX.Element}
- */
 export default function Grain({ baseFrequency = '9', numOctaves = 5, w = '100%', h = '100%' }) {
     const viewBox = '0 0 300 300';
 

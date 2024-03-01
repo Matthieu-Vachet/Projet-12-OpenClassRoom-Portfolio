@@ -1,3 +1,18 @@
+/**
+ * Composant de formulaire de connexion.
+ *
+ * Ce composant affiche un formulaire de connexion avec des champs pour l'email et le mot de passe.
+ * Il utilise le contexte `AuthContext` pour gérer l'état de connexion et le token de l'utilisateur.
+ * Il utilise également la bibliothèque `axios` pour faire une requête POST à l'API de connexion.
+ * En cas de succès, il ferme le formulaire et affiche un toast de succès.
+ * En cas d'échec, il affiche un toast d'erreur.
+ *
+ * @component
+ * @param {Object} props - Les propriétés du composant.
+ * @param {Function} props.onClose - La fonction à appeler lorsque le formulaire est fermé.
+ * @returns {JSX.Element} Le JSX du composant.
+ */
+
 /* Importation des modules */
 import { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
@@ -17,23 +32,11 @@ import { toast } from 'sonner';
 /* Importation des styles */
 import './style.scss';
 
-/*
- * Composant Login
- * Affiche un formulaire de connexion
- * @param {function} onClose - Fonction pour fermer la modale
- * @returns {JSX.Element}
- */
-
 export default function Login({ onClose }) {
     const { t } = useTranslation();
     const [email, setEmail] = useState('vachet.matthieu@icloud.com');
     const [password, setPassword] = useState('Matthieuvachet061290');
     const { setIsLoggedIn, setToken } = useContext(AuthContext);
-
-    /*
-     * Gère la connexion de l'utilisateur
-     * @returns {void}
-     */
 
     const handleLogin = async () => {
         try {

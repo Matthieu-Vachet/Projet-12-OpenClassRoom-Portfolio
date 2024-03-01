@@ -1,3 +1,17 @@
+/**
+ * ModalDeleteProjets est un composant React qui affiche une boîte de dialogue de confirmation pour la suppression d'un projet.
+ * @component
+ * @param {Object} props - Les propriétés passées au composant.
+ * @param {Function} props.onClose - La fonction à exécuter lorsque la boîte de dialogue doit être fermée.
+ * @param {Function} props.onDelete - La fonction à exécuter pour supprimer le projet.
+ * @param {string} props.id - L'identifiant du projet à supprimer.
+ *
+ * @example
+ * <ModalDeleteProjets onClose={handleClose} onDelete={handleDelete} id="123" />
+ *
+ * @returns {React.Element} - Le composant ModalDeleteProjets.
+ */
+
 /* Importation des modules */
 import PropTypes from 'prop-types';
 
@@ -13,15 +27,6 @@ import { toast } from 'sonner';
 
 /* Importation des styles */
 import './style.scss';
-
-/*
- * Composant ModalDeleteProjets
- * Affiche une modale de suppression de projet
- * @param {function} onClose - Fonction pour fermer la modale
- * @param {function} onDelete - Fonction pour supprimer un projet
- * @param {string} id - Identifiant du projet
- * @returns {JSX.Element}
- */
 
 export default function ModalDeleteProjets({ onClose, onDelete, id }) {
     const { t } = useTranslation();
