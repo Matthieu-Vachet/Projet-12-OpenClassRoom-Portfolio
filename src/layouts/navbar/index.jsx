@@ -1,3 +1,11 @@
+/**
+ * Composant Navbar qui affiche la barre de navigation du site.
+ * Il utilise un état pour suivre l'élément de navigation actif et un effet pour mettre à jour cet état lors du défilement.
+ * Il affiche une liste d'éléments de navigation basée sur les données de navItems.
+ *
+ * @returns {JSX.Element} Une barre de navigation avec une liste d'éléments de navigation. L'élément de navigation actif est mis en évidence.
+ */
+
 /* Importation des modules */
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
@@ -10,12 +18,6 @@ import { navItems } from '../../utils/constants/constants';
 
 /* Importation des styles */
 import './style.scss';
-
-/*
- * Composant Navbar
- * Affiche la barre de navigation
- * @returns {JSX.Element}
- */
 
 export default function Navbar() {
     const [activeNav, setActiveNav] = useState('#home');

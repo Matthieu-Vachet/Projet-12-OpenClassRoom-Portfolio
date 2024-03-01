@@ -1,3 +1,14 @@
+/**
+ * Composant AnimatedTitle qui anime un titre lettre par lettre lorsqu'il entre dans le viewport.
+ * Il utilise la bibliothèque framer-motion pour l'animation et react-intersection-observer pour détecter quand l'élément est dans le viewport.
+ *
+ * @param {object} props - Les propriétés passées au composant.
+ * @param {string} props.title - Le titre à animer.
+ * @param {string} props.className - La classe CSS à appliquer au titre animé.
+ *
+ * @returns {JSX.Element} Un titre animé lettre par lettre qui devient visible lorsqu'il entre dans le viewport.
+ */
+
 /* Importation des modules */
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
@@ -6,14 +17,6 @@ import PropTypes from 'prop-types';
 
 /* Importation des styles */
 import './Animation.scss';
-
-/*
- * Composant AnimatedTitle
- * Affiche un titre animé lettre par lettre
- * @param {string} title - Titre à afficher
- * @param {string} className - Classe CSS à appliquer
- * @returns {JSX.Element}
- */
 
 export default function AnimatedTitle({ title, className }) {
     const ctrls = useAnimation();

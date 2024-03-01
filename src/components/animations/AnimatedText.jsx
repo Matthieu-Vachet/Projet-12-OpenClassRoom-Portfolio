@@ -1,17 +1,20 @@
+/**
+ * Composant AnimatedBody qui anime un texte de corps lorsqu'il entre dans le viewport.
+ * Il utilise la bibliothèque framer-motion pour l'animation et react-intersection-observer pour détecter quand l'élément est dans le viewport.
+ *
+ * @param {object} props - Les propriétés passées au composant.
+ * @param {string} props.text - Le texte du corps à animer.
+ * @param {string} props.className - La classe CSS à appliquer au texte animé.
+ * @param {number} props.delay - Le délai avant le début de l'animation.
+ *
+ * @returns {JSX.Element} Un texte de corps animé qui devient visible lorsqu'il entre dans le viewport.
+ */
+
 /* Importation des modules */
 import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import { useAnimation, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-
-/*
- * Composant AnimatedBody
- * Animation de texte
- * @param {string} text - Texte à animer
- * @param {string} className - Classe CSS à appliquer
- * @param {number} delay - Délai avant l'animation
- * @return {JSX.Element} - Élément JSX
- */
 
 export default function AnimatedBody({ text, className, delay }) {
     const ctrls = useAnimation();

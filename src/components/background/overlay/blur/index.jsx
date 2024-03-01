@@ -1,14 +1,14 @@
+/**
+ * Composant Blur qui modifie l'opacité d'un élément en fonction du défilement de la page.
+ *
+ * @returns {JSX.Element} Un élément div dont l'opacité change en fonction du défilement de la page.
+ */
+
 /* Importation des modules */
 import { useState, useEffect } from 'react';
 
 /* Importation des styles */
 import './style.scss';
-
-/*
- * Composant Blur
- * Affiche un filtre de flou en fonction du scroll
- * @returns {JSX.Element}
- */
 
 export default function Blur() {
     const [scrollOpacity, setScrollOpacity] = useState(1);

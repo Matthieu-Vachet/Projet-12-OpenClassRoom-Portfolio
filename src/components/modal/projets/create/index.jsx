@@ -1,3 +1,15 @@
+/**
+ * ModalCreateProjets est un composant React qui permet de créer un nouveau projet.
+ * @component
+ * @param {Object} props - Les propriétés passées au composant.
+ * @param {Function} props.onClose - La fonction à exécuter lorsque la modale doit être fermée.
+ *
+ * @example
+ * <ModalCreateProjets onClose={handleClose} />
+ *
+ * @returns {React.Element} - Le composant ModalCreateProjets.
+ */
+
 /* Importation des modules */
 import { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
@@ -15,13 +27,6 @@ import { ProjectContext } from '../../../../utils/dataProvider/DataProvider';
 
 /* Importation des styles */
 import './style.scss';
-
-/*
- * Composant ModalCreateProjets
- * Affiche un formulaire pour créer un projet
- * @param {function} onClose - Fonction pour fermer la modale
- * @returns {JSX.Element}
- */
 
 export default function ModalCreateProjets({ onClose }) {
     const { t } = useTranslation();

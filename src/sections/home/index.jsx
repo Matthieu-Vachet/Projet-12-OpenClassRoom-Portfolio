@@ -1,3 +1,8 @@
+/**
+ * Composant Home qui affiche la section "Accueil" du site.
+ * @returns {JSX.Element} La section "Accueil" avec un en-tête, une barre sociale et un héros.
+ */
+
 /* Importation des composants */
 import Header from '../../layouts/header';
 import Hero from '../../layouts/hero';
@@ -5,12 +10,6 @@ import Social from '../../components/social';
 
 /* Importation des styles */
 import './style.scss';
-
-/*
- * Composant Home
- * Affiche la section Home
- * @returns {JSX.Element}
- */
 
 export default function Home() {
     return (

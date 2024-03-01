@@ -1,3 +1,11 @@
+/**
+ * Composant Hero qui affiche la section Hero du site.
+ * Il utilise le contexte UserContext pour obtenir les données de l'utilisateur et le contexte ThemeContext pour gérer le thème du site.
+ * Il affiche également un slogan, la profession de l'utilisateur, un bouton et une image avec des icônes de technologies web.
+ *
+ * @returns {JSX.Element} La section hero du site avec un slogan, la profession de l'utilisateur, un bouton, une image avec des icônes de technologies web et un composant ScrollMouse.
+ */
+
 /* Importation des librairies */
 import { motion } from 'framer-motion';
 import { useContext } from 'react';
@@ -22,12 +30,6 @@ import IconsVersionWhite from '../../assets/images/IconsVersionWhite.svg';
 import './style.scss';
 import '../../styles/variable.scss';
 
-/*
- * Composant Hero
- * Affiche la section Hero
- * @returns {JSX.Element}
- */
-
 export default function Hero() {
     const { t } = useTranslation();
     const data = useContext(UserContext);
@@ -44,17 +46,12 @@ export default function Hero() {
                     variants={HeroVariante}
                     className='hero_text'
                 >
-                    {/* Slogan Hero */}
                     <h1 className='hero_slogan'>
                         <FancyText gradient={{ from: '#0ce39a', to: '#69007f', type: 'linear' }}>
                             {t('hero.slogan')}
                         </FancyText>
                     </h1>
-
-                    {/* Profession Hero */}
                     <h3 className='hero_profession'>{data[0].profession}</h3>
-
-                    {/* Number Hero */}
                     <h4>
                         <Button
                             text={t('about.button-2')}
@@ -78,7 +75,6 @@ export default function Hero() {
                     </Tilt>
                 </div>
             </div>
-            {/* Scroll Mouse composant */}
             <motion.div
                 initial='initial'
                 animate='animate'

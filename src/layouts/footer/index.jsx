@@ -1,3 +1,10 @@
+/**
+ * Composant Footer qui affiche le pied de page du site.
+ * Il utilise les données de l'utilisateur à partir du contexte UserContext et les constantes Footer_Link, Footer_Projects et Footer_Follow pour afficher les informations de contact, les liens, les projets et les réseaux sociaux.
+ *
+ * @returns {JSX.Element} Le pied de page du site avec les informations de contact de l'utilisateur, une liste de liens, une liste de projets et une liste de réseaux sociaux.
+ */
+
 /* Importation des modules */
 import { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -11,12 +18,6 @@ import { MdCopyright } from 'react-icons/md';
 
 /* Importation des styles */
 import './style.scss';
-
-/*
- * Composant Footer
- * Affiche le pied de page
- * @returns {JSX.Element}
- */
 
 export default function Footer() {
     const userData = useContext(UserContext);

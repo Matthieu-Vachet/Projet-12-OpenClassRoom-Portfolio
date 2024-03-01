@@ -1,3 +1,13 @@
+/**
+ * Composant de formulaire de contact.
+ *
+ * Ce composant gère un formulaire de contact avec des champs pour le prénom, le nom, l'email et le message.
+ * Il utilise des hooks d'état pour gérer les valeurs des champs et leurs états de validation.
+ * Il utilise également le hook useTranslation de la bibliothèque react-i18next pour la traduction des messages d'erreur et de succès.
+ *
+ * @component
+ */
+
 /* Importation des modules */
 import { useState } from 'react';
 
@@ -13,12 +23,6 @@ import { GrValidate } from 'react-icons/gr';
 
 /* Importation du style */
 import './style.scss';
-
-/*
- * Composant ContactForm
- * Affiche un formulaire de contact
- * @returns {JSX.Element}
- */
 
 export default function ContactForm() {
     const [firstName, setFirstName] = useState('');
@@ -40,10 +44,25 @@ export default function ContactForm() {
     const [messageSuccessShown, setMessageSuccessShown] = useState(false);
     const { t } = useTranslation();
 
+    /**
+     * Valide une adresse email.
+     *
+     * Cette fonction utilise une expression régulière pour vérifier si l'adresse email est valide.
+     *
+     * @param {string} email - L'adresse email à valider.
+     * @returns {boolean} `true` si l'adresse email est valide, `false` sinon.
+     */
+
     const validateEmail = (email) => {
         const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
         return pattern.test(email);
     };
+
+    /**
+     * Gère les changements de valeur des champs du formulaire.
+     *
+     * @param {Object} e - L'événement de changement.
+     */
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -114,6 +133,10 @@ export default function ContactForm() {
         }
     };
 
+    /**
+     * Réinitialise tous les champs du formulaire et leurs états de validation.
+     */
+
     const handleReset = () => {
         setFirstName('');
         setLastName('');
@@ -134,11 +157,22 @@ export default function ContactForm() {
         toast.success(t('success.reset'));
     };
 
+    /**
+     * Prépare un lien mailto avec le sujet et le corps du message remplis avec les valeurs des champs du formulaire, puis redirige le navigateur vers ce lien.
+     */
+
     const handleSendEmail = () => {
         const subject = `Demande de contact / renseignements de ${firstName} ${lastName}`;
         const body = `Email: ${email}%0D%0A%0D%0A${message}`;
         window.location.href = `mailto:vachet.matthieu@icloud.com?subject=${subject}&body=${body}`;
     };
+
+    /**
+     * Est appelée lorsque le formulaire est soumis.
+     * Elle vérifie si tous les champs sont valides et, si c'est le cas, appelle la fonction handleSendEmail.
+     *
+     * @param {Object} e - L'événement de soumission.
+     */
 
     const handleSubmit = (e) => {
         e.preventDefault();

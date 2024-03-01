@@ -1,23 +1,22 @@
-// Importation des données
+/**
+ * Composant About qui affiche la section "À propos" du site.
+ * @returns {JSX.Element} La section "À propos" avec du texte animé et un bouton.
+ */
+
+/* Importation des modules React */
 import { useTranslation } from 'react-i18next';
 
-// Importation des Animations
+/* Importation des composants d'animation */
 import AnimatedSubtitle from '../../components/animations/AnimatedSubtitle';
 import AnimatedText from '../../components/animations/AnimatedText';
 import AnimatedElement from '../../components/animations/AnimatedElement';
 
-// Importation des composants
+/* Importation des composants */
 import Button from '../../components/button';
 import TopScroll from '../../components/topScroll';
 
-// Importation des styles
+/* Importation du style */
 import './style.scss';
-
-/*
- * Composant About
- * Affiche la section About
- * @returns {JSX.Element}
- */
 
 export default function About() {
     const { t } = useTranslation();

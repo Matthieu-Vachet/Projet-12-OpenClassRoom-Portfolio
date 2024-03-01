@@ -1,3 +1,8 @@
+/**
+ * Composant Skills qui affiche la section "Compétences" du site.
+ * @returns {JSX.Element} La section "Compétences" avec un sous-titre animé et une liste de cartes de compétences pour chaque catégorie de compétences.
+ */
+
 /* Importation des Animation */
 import AnimatedSubtitle from '../../components/animations/AnimatedSubtitle';
 import AnimatedText from '../../components/animations/AnimatedText';
@@ -16,12 +21,6 @@ import {
 
 /* Importation des styles */
 import './style.scss';
-
-/*
- * Composant Skills
- * Affiche la section Skills
- * @returns {JSX.Element}
- */
 
 export default function Skills() {
     const { t } = useTranslation();

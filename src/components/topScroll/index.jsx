@@ -1,3 +1,13 @@
+/**
+ * TopScroll est un composant React qui affiche un bouton pour faire défiler la page vers le haut lorsque l'utilisateur fait défiler vers le bas.
+ * @component
+ *
+ * @example
+ * <TopScroll />
+ *
+ * @returns {React.Element} - Le composant TopScroll.
+ */
+
 /* Importation des modules */
 import { useEffect, useState } from 'react';
 
@@ -7,16 +17,9 @@ import { MdKeyboardDoubleArrowUp } from 'react-icons/md';
 /* Importation des styles */
 import './style.scss';
 
-/*
- * Composant TopScroll
- * Affiche un bouton pour faire défiler vers le haut
- * @returns {JSX.Element}
- */
-
 export default function TopScroll() {
     const [isVisible, setIsVisible] = useState(false);
 
-    // Afficher le bouton lorsque l'utilisateur fait défiler vers le bas
     const toggleVisibility = () => {
         if (window.scrollY > 100) {
             setIsVisible(true);
@@ -25,7 +28,6 @@ export default function TopScroll() {
         }
     };
 
-    // Faire défiler jusqu'en haut lorsque l'utilisateur clique sur le bouton
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,

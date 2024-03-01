@@ -1,3 +1,13 @@
+/**
+ * ToggleOther est un composant React qui affiche un bouton pour changer le thème de l'application.
+ * @component
+ *
+ * @example
+ * <ToggleOther />
+ *
+ * @returns {React.Element} - Le composant ToggleOther.
+ */
+
 /* Importation des modules */
 import { useContext, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -13,12 +23,6 @@ import { toast } from 'sonner';
 /* Importation du style */
 import './style.scss';
 
-/*
- * Composant ToggleOther
- * Affiche un bouton pour basculer entre les thèmes
- * @returns {JSX.Element}
- */
-
 export default function ToggleOther() {
     const { t } = useTranslation();
     const { theme, toggleTheme } = useContext(ThemeContext);
@@ -27,7 +31,7 @@ export default function ToggleOther() {
 
     const toggleMode = () => {
         toggleTheme();
-        const newMode = theme === 'light' ? 'dark' : 'light'; // Obtenir le nouveau mode après le basculement
+        const newMode = theme === 'light' ? 'dark' : 'light';
 
         if (newMode === 'dark') {
             document.body.classList.add('white-mode');
@@ -40,7 +44,6 @@ export default function ToggleOther() {
         }
     };
 
-    // Apply the selected mode's colors using CSS custom properties
     useEffect(() => {
         const colors = !islightMode
             ? {

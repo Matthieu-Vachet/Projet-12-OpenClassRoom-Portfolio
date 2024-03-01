@@ -1,3 +1,8 @@
+/**
+ * Composant Experience qui affiche la section "Expérience" du site.
+ * @returns {JSX.Element} La section "Expérience" avec un sous-titre animé, des certificats et des cartes d'expérience.
+ */
+
 /* Importation des modules */
 import { useContext } from 'react';
 
@@ -16,12 +21,6 @@ import Certificates from '../../components/certificates';
 
 /* Importation des styles */
 import './style.scss';
-
-/*
- * Composant Experience
- * Affiche la section Experience
- * @returns {JSX.Element}
- */
 
 export default function Experience() {
     const { t } = useTranslation();
