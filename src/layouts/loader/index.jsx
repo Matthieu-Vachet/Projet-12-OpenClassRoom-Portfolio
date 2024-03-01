@@ -1,11 +1,11 @@
+/**
+ * Composant Loader qui affiche un loader SVG.
+ *
+ * @returns {JSX.Element} Un loader SVG dans une div avec la classe 'loader'.
+ */
+
 /* Importation du style */
 import './style.scss';
-
-/*
- * Composant Loader
- * Affiche un loader
- * @returns {JSX.Element}
- */
 
 export default function Loader() {
     return (

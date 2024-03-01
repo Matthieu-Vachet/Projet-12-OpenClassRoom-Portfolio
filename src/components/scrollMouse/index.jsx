@@ -1,14 +1,18 @@
+/**
+ * ScrollMouse est un composant React qui affiche une icône de souris de défilement qui disparaît lorsque l'utilisateur fait défiler la page.
+ * @component
+ *
+ * @example
+ * <ScrollMouse />
+ *
+ * @returns {React.Element} - Le composant ScrollMouse.
+ */
+
 /* Importation des modules */
 import { useEffect, useState } from 'react';
 
 /* Importation des styles */
 import './style.scss';
-
-/*
- * Composant ScrollMouse
- * Affiche une flèche de défilement
- * @returns {JSX.Element}
- */
 
 export default function ScrollMouse() {
     const [isVisible, setIsVisible] = useState(true);

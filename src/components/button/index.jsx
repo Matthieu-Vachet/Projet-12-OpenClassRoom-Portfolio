@@ -1,23 +1,25 @@
+/**
+ * Composant Button qui crée un bouton ou un lien avec un style de gradient.
+ *
+ * @param {object} props - Les propriétés passées au composant.
+ * @param {string} props.text - Le texte du bouton.
+ * @param {string} props.type - Le type du bouton.
+ * @param {function} props.onClick - La fonction à exécuter lors du clic sur le bouton.
+ * @param {boolean} props.disabled - Si le bouton est désactivé ou non.
+ * @param {string} props.className - La classe CSS à appliquer au bouton.
+ * @param {string} props.height - La hauteur du bouton.
+ * @param {string} props.width - La largeur du bouton.
+ * @param {string} props.href - L'URL du lien si le bouton est un lien.
+ * @param {string} props.target - La cible du lien si le bouton est un lien.
+ *
+ * @returns {JSX.Element} Un bouton ou un lien avec un style de gradient.
+ */
+
 /* Importation des modules */
 import PropTypes from 'prop-types';
 
 /* Importation des styles */
 import './style.scss';
-
-/*
- * Composant Button
- * Affiche un bouton avec un dégradé
- * @param {string} text - Texte du bouton
- * @param {string} type - Type du bouton
- * @param {function} onClick - Fonction à exécuter au clic
- * @param {boolean} disabled - Désactive le bouton
- * @param {string} className - Classe CSS à appliquer
- * @param {string} height - Hauteur du bouton
- * @param {string} width - Largeur du bouton
- * @param {string} href - Lien de redirection
- * @param {string} target - Cible de la redirection
- * @returns {JSX.Element}
- */
 
 export default function Button({
     text,

@@ -1,3 +1,24 @@
+/**
+ * ProjectsCards est un composant React qui affiche une carte de projet.
+ * @component
+ * @param {Object} props - Les propriétés passées au composant.
+ * @param {string} props.id - L'identifiant du projet.
+ * @param {string} props.image - L'URL de l'image du projet.
+ * @param {string} props.alt - Le texte alternatif pour l'image du projet.
+ * @param {string} props.name - Le nom du projet.
+ * @param {string} props.description - La description du projet.
+ * @param {string} props.github - L'URL du dépôt GitHub du projet.
+ * @param {string} props.live - L'URL du site en direct du projet.
+ * @param {Array<string>} props.technologies - Les technologies utilisées dans le projet.
+ * @param {string} props.categorie - La catégorie du projet.
+ * @param {Function} props.onDeleteClick - La fonction à exécuter lorsque l'icône de suppression est cliquée.
+ *
+ * @example
+ * <ProjectsCards id="1" image="image.jpg" alt="Project" name="Project 1" description="This is a project" github="https://github.com" live="https://project.com" technologies={["React", "JavaScript"]} categorie="Web" onDeleteClick={handleDeleteClick} />
+ *
+ * @returns {React.Element} - Le composant ProjectsCards.
+ */
+
 /* Importation des modules */
 import PropTypes from 'prop-types';
 import { useContext } from 'react';
@@ -12,22 +33,6 @@ import { MdDeleteForever } from 'react-icons/md';
 
 /* Importation des styles */
 import './style.scss';
-
-/*
- * Composant ProjectsCards
- * Affiche une carte de projet
- * @param {string} id - Identifiant du projet
- * @param {string} image - Image du projet
- * @param {string} alt - Texte alternatif de l'image
- * @param {string} name - Nom du projet
- * @param {string} description - Description du projet
- * @param {string} github - Lien vers le dépôt GitHub
- * @param {string} live - Lien vers le projet en ligne
- * @param {array} technologies - Tableau des technologies utilisées
- * @param {string} categorie - Catégorie du projet
- * @param {function} onDeleteClick - Fonction pour supprimer un projet
- * @returns {JSX.Element}
- */
 
 export default function ProjectsCards({
     id,

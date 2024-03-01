@@ -1,3 +1,25 @@
+/**
+ * @file App.jsx
+ * @module App
+ * @description Ce module est le composant principal de l'application. Il gère l'affichage de l'application et affiche un loader pendant le chargement.
+ * Une fois le chargement terminé, il affiche l'application.
+ * @requires react
+ * @requires framer-motion
+ * @requires ./layouts/navbar
+ * @requires ./layouts/loader
+ * @requires ./sections/home
+ * @requires ./sections/about
+ * @requires ./components/background/overlay/blur
+ * @requires ./sections/skills
+ * @requires ./sections/projects
+ * @requires ./sections/Experience
+ * @requires ./sections/Contact
+ * @requires ./layouts/footer
+ * @requires sonner
+ * @requires ./utils/framerMotion/Variante
+ * @requires ./assets/images/Bg-Squares-Black.svg
+ */
+
 /* Importation des modules */
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -15,14 +37,19 @@ import Contact from './sections/Contact';
 import Footer from './layouts/footer';
 import { Toaster } from 'sonner';
 
+/* Importation des animations */
 import { LoaderVariants, AppVariants } from './utils/framerMotion/Variante';
+
+/* Importation des assets */
 import backgroundImage from './assets/images/Bg-Squares-Black.svg';
-/*
+
+/**
     * Composant App
     * Description :
         - Gère l'affichage de l'application
         - Affiche un loader pendant le chargement
         - Affiche l'application une fois le chargement terminé
+    * @return {JSX.Element} Le composant App
 */
 
 function App() {

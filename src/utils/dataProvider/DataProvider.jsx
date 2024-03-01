@@ -1,3 +1,10 @@
+/**
+ * Fournit des données pour chaque contexte.
+ * @param {object} props - Les propriétés du composant.
+ * @param {React.ReactNode} props.children - Les composants enfants.
+ * @returns {React.ReactNode} Les composants enfants enveloppés dans les fournisseurs de contexte.
+ */
+
 /* Importation des modules */
 import PropTypes from 'prop-types';
 import { createContext, useEffect, useState } from 'react';
@@ -5,25 +12,12 @@ import { createContext, useEffect, useState } from 'react';
 /* Importation des Données */
 import { useTranslation } from 'react-i18next';
 
-/*
- * Contexte de l'application
- * @param {object} children - Composant enfant
- * @returns {JSX.Element}
- * @exports DataProvider
- * @exports UserContext
- * @exports ProjectContext
- * @exports ExperienceContext
- * @exports AuthContext
- * @exports ThemeContext
- */
+export const UserContext = createContext(); /* Contexte pour les données utilisateur */
+export const ProjectContext = createContext(); /* Contexte pour les données de projet */
+export const ExperienceContext = createContext(); /* Contexte pour les données d'expérience */
+export const AuthContext = createContext(); /* Contexte pour les données d'authentification */
+export const ThemeContext = createContext(); /* Contexte pour les données de thème */
 
-export const UserContext = createContext();
-export const ProjectContext = createContext();
-export const ExperienceContext = createContext();
-export const AuthContext = createContext();
-export const ThemeContext = createContext();
-
-// Provider pour chaque API
 export const DataProvider = ({ children }) => {
     const { i18n } = useTranslation();
     const [userData, setUserData] = useState(null);
@@ -33,9 +27,18 @@ export const DataProvider = ({ children }) => {
     const [token, setToken] = useState(null);
     const [theme, setTheme] = useState('light');
 
+    /**
+     * Supprime un projet de la liste des projets.
+     * @param {string} id - L'identifiant du projet à supprimer.
+     */
+
     const deleteProjets = (id) => {
         setProjetsData(projetsData.filter((projet) => projet._id !== id));
     };
+
+    /**
+     * Utilise l'API Fetch pour rafraîchir les données de projet.
+     */
 
     const refreshProjects = async () => {
         try {
@@ -46,6 +49,10 @@ export const DataProvider = ({ children }) => {
                 throw new Error('Erreur lors de la récupération des projets');
             }
             const projetResult = await response.json();
+
+            /**
+             * Traduction des données de projet.
+             */
 
             const projetResultTranslated = projetResult.map((projet) => ({
                 ...projet,
@@ -60,9 +67,17 @@ export const DataProvider = ({ children }) => {
         }
     };
 
+    /**
+     * Bascule entre les thèmes clair et sombre.
+     */
+
     const toggleTheme = () => {
         setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
     };
+
+    /**
+     * Utilise l'API Fetch pour récupérer les données utilisateur, de projet et d'expérience.
+     */
 
     useEffect(() => {
         const fetchData = async () => {
@@ -83,12 +98,18 @@ export const DataProvider = ({ children }) => {
                     experienceResponse,
                 ]).then((responses) => Promise.all(responses.map((response) => response.json())));
 
+                /**
+                 * Traduction des données utilisateur.
+                 */
                 const userResultTranslated = userResult.map((user) => ({
                     ...user,
                     profession: user.profession[i18n.language],
                     pays: user.pays[i18n.language],
                 }));
 
+                /**
+                 * Traduction des données de projet.
+                 */
                 const projetResultTranslated = projetResult.map((projet) => ({
                     ...projet,
                     name: projet.name[i18n.language],
@@ -96,6 +117,9 @@ export const DataProvider = ({ children }) => {
                     category: projet.category[i18n.language],
                 }));
 
+                /**
+                 * Traduction des données d'expérience.
+                 */
                 const experienceResultTranslated = experienceResult.map((experience) => ({
                     ...experience,
                     title: experience.title[i18n.language],
@@ -120,6 +144,9 @@ export const DataProvider = ({ children }) => {
         return null; // Ne rend rien tant que les données ne sont pas chargées
     }
 
+    /**
+     * Les valeurs de contexte pour le contexte d'authentification.
+     */
     const authContextValue = {
         isLoggedIn,
         setIsLoggedIn,
@@ -133,7 +160,7 @@ export const DataProvider = ({ children }) => {
                 value={{
                     projets: projetsData,
                     deleteProjets,
-                    refreshProjects, // Ajoutez la fonction refreshProjects ici
+                    refreshProjects,
                 }}
             >
                 <ExperienceContext.Provider value={experiencesData}>

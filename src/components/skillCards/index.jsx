@@ -1,3 +1,20 @@
+/**
+ * SkillCards est un composant React qui affiche une carte de compétence avec une animation.
+ * @component
+ * @param {Object} props - Les propriétés passées au composant.
+ * @param {string} props.name - Le nom de la compétence.
+ * @param {Function} props.Image - Le composant d'image de la compétence.
+ * @param {number} props.fontSize - La taille de la police pour le nom de la compétence.
+ * @param {number} props.index - L'index de la carte de compétence (utilisé pour l'animation).
+ * @param {string} props.alt - Le texte alternatif pour l'image de la compétence.
+ * @param {string} props.color - La couleur pour l'image de la compétence.
+ *
+ * @example
+ * <SkillCards name="React" Image={ReactIcon} fontSize={24} index={0} alt="React logo" color="#61DAFB" />
+ *
+ * @returns {React.Element} - Le composant SkillCards.
+ */
+
 /* Importation des modules */
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
@@ -6,18 +23,6 @@ import { useInView } from 'react-intersection-observer';
 
 /* Importation du style */
 import './style.scss';
-
-/*
- * Composant SkillCards
- * Affiche une carte de compétence
- * @param {string} name - Nom de la compétence
- * @param {function} Image - Image de la compétence
- * @param {number} fontSize - Taille de la police
- * @param {number} index - Index de la compétence
- * @param {string} alt - Texte alternatif
- * @param {string} color - Couleur de la compétence
- * @returns {JSX.Element}
- */
 
 export default function SkillCards({ name, Image, fontSize, index, alt, color }) {
     const { ref, inView } = useInView({

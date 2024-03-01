@@ -1,14 +1,18 @@
+/**
+ * Socials est un composant React qui affiche une liste d'icônes de médias sociaux avec des animations.
+ * @component
+ *
+ * @example
+ * <Socials />
+ *
+ * @returns {React.Element} - Le composant Socials.
+ */
+
 /* Importation des modules */
 import { motion } from 'framer-motion';
 
 /* Importation du style */
 import './style.scss';
-
-/*
- * Composant Socials
- * Affiche les icônes des réseaux sociaux
- * @returns {JSX.Element}
- */
 
 export default function Socials() {
     const styles = {

@@ -1,20 +1,25 @@
+/**
+ * Composant AnimatedSubtitle qui anime un sous-titre lettre par lettre lorsqu'il entre dans le viewport.
+ * Il utilise la bibliothèque framer-motion pour l'animation et react-intersection-observer pour détecter quand l'élément est dans le viewport.
+ *
+ * @param {object} props - Les propriétés passées au composant.
+ * @param {string} props.text - Le texte du sous-titre à animer.
+ * @param {string} props.className - La classe CSS à appliquer au sous-titre animé.
+ * @param {string} props.wordSpace - L'espace entre les mots du sous-titre.
+ * @param {string} props.charSpace - L'espace entre les lettres du sous-titre.
+ *
+ * @returns {JSX.Element} Un sous-titre animé lettre par lettre qui devient visible lorsqu'il entre dans le viewport.
+ */
+
 /* Importation des modules */
 import { motion, useAnimation } from 'framer-motion';
 import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-// Style
+
+/* Importation du style */
 import './Animation.scss';
 
-/*
- * Composant AnimatedSubtitle
- * Affiche un titre animé lettre par lettre
- * @param {string} text - Texte à afficher
- * @param {string} className - Classe CSS à appliquer
- * @param {string} wordSpace - Espace entre les mots
- * @param {string} charSpace - Espace entre les lettres
- * @returns {JSX.Element}
- */
 export default function AnimatedSubtitle({ text, className, wordSpace, charSpace }) {
     const { ref, inView } = useInView({
         threshold: 0.5, // L'élément est considéré comme dans le viewport quand il est entièrement visible
@@ -39,17 +44,17 @@ export default function AnimatedSubtitle({ text, className, wordSpace, charSpace
 
     const characterAnimation = {
         hidden: {
-            opacity: 0, // Opacité initiale à 0 (invisible)
-            y: `0.25em`, // Position initiale décalée vers le bas
+            opacity: 0,
+            y: `0.25em`,
         },
         visible: {
-            opacity: 1, // Opacité finale à 1 (visible)
-            y: `0em`, // Position finale à l'origine
+            opacity: 1,
+            y: `0em`,
             transition: {
-                duration: 0.1, // Durée de l'animation
-                ease: [0.1, 0.1, 0.1, 0.1], // Courbe d'accélération de l'animation
-                delayChildren: 0.5, // Délai avant le démarrage de l'animation des enfants
-                staggerChildren: 0.5, // Délai entre le démarrage de l'animation des enfants
+                duration: 0.1,
+                ease: [0.1, 0.1, 0.1, 0.1],
+                delayChildren: 0.5,
+                staggerChildren: 0.5,
             },
         },
     };
