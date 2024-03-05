@@ -1,83 +1,83 @@
 {
     "header": {
-        "langue": "The language English is currently activated.",
+        "langue": "French language is currently enabled.",
         "btn-mobile-theme-white": "Light",
         "btn-mobile-theme-black": "Dark"
     },
     "hero": {
-        "slogan": "Dive into my coded creativity."
+        "slogan": "Dive into my code creativity."
     },
     "about": {
-        "title": "GET TO KNOW ME",
-        "text-1": "A computer enthusiast since my youth, I explored programming long before becoming a web integrator. For me, each line of code is a work of art, an endless exploration of creation.",
-        "text-2": "My commitment in this field is much more than a career, it's a limitless passion, an adventure that I will pursue with determination until my hands can no longer slide on a keyboard.",
-        "text-3": "Today, I am ready to put these skills at the service of your projects. Together, we can create dynamic, optimized, and bug-free websites. I look forward to helping you realize your ideas and make your projects a reality.",
-        "button-1": "My CV",
+        "title": "Learn more about me",
+        "text-1": "A computer enthusiast since my youth, I explored programming long before becoming a web developer. For me, each line of code is a work of art, an endless exploration of creation.",
+        "text-2": "My commitment to this field is more than a career; it's a boundless passion, an adventure I will pursue with determination until my hands can no longer glide over a keyboard.",
+        "text-3": "Today, I am ready to put these skills to work on your projects. Together, we can create dynamic, optimized, and bug-free websites. I'm eager to help you bring your ideas to life and make your projects a reality.",
+        "button-1": "My Resume",
         "button-2": "Contact"
     },
     "experience": {
-        "title": "THE KEY STAGES OF MY JOURNEY",
-        "button": "Diploma",
-        "text": "Driven by an unwavering passion for the web, I am committed to excellence in my field and constantly strive to push my boundaries to deliver outstanding web solutions to my future clients.",
+        "title": "KEY MILESTONES OF MY JOURNEY",
+        "button": "Degree",
+        "text": "Driven to excel in my field, I am fueled by an unwavering passion for the web and constantly strive to push my limits to offer exceptional web solutions to my future clients.",
         "certificats": "MY COURSE CERTIFICATES"
     },
     "skills": {
-        "title": "My Repertoire of Skills",
+        "title": "My Skill Set",
         "text-1": "Front-end",
         "text-2": "Back-end",
-        "text-3": "Development Tools",
-        "text-4": "Design and Collaboration"
+        "text-3": "Development tools",
+        "text-4": "Design and collaboration"
     },
     "projets": {
-        "title": "Discover my web projects."
+        "title": "Discover my web projects"
     },
     "contact": {
-        "title": "Do you have a question, proposal, or project in mind? I'm ready to collaborate with you on anything that interests you!",
+        "title": "Do you have a question, a proposal, or a project in mind? I'm ready to collaborate with you on anything that interests you!",
         "input-firstname": "First Name",
         "input-lastname": "Last Name",
-        "button-submit": "Submit",
-        "button-delete": "Reset"
+        "button-submit": "Send",
+        "button-delete": "Clear"
     },
     "error": {
         "submit": "Please fill in all fields correctly.",
-        "firstname": "The first name is required and must contain at least 3 characters.",
-        "lastname": "The last name is required and must contain at least 3 characters.",
+        "firstname": "First name is required and must be at least 3 characters.",
+        "lastname": "Last name is required and must be at least 3 characters.",
         "email": "Please enter a valid email address.",
-        "message": "The message is required and must contain at least 3 characters."
+        "message": "The message is required and must be at least 3 characters."
     },
     "success": {
-        "firstname": "Your first name contains 3 or more characters.",
-        "lastname": "Your last name contains 3 or more characters.",
-        "email": "The email you entered is valid.",
-        "message": "Your message contains 3 or more characters.",
-        "reset": "All fields have been reset with success."
+        "firstname": "Your first name is 3 characters or more.",
+        "lastname": "Your last name is 3 characters or more.",
+        "email": "The entered email address is valid.",
+        "message": "Your message is 3 characters or more.",
+        "reset": "All fields have been successfully reset."
     },
     "footer": {
         "title-contact": "Contact",
         "title-link": "Links",
         "title-projects": "Projects",
-        "title-social": "Follow me"
+        "title-social": "Follow Me"
     },
     "theme": {
-        "dark": "Dark mode activated successfully.",
-        "light": "Light mode activated successfully."
+        "dark": "Dark mode successfully enabled.",
+        "light": "Light mode successfully enabled."
     },
     "login": {
         "error-login": "Incorrect email or password, please try again",
-        "success-login": "Login successful!",
-        "success-logout": "Logout successful!"
+        "success-login": "Successful login!",
+        "success-logout": "Successful logout!"
     },
     "modal": {
         "delete": {
             "title": "Deletion",
             "text": "Are you sure you want to delete this project?",
-            "success": "The project has been deleted successfully.",
+            "success": "Project successfully deleted!",
             "btn-1": "Delete",
             "btn-2": "Cancel"
         },
         "create": {
-            "title": "Adding project",
-            "success": "The project has been added successfully.",
+            "title": "Add project",
+            "success": "Project added successfully!",
             "error": "An error occurred while adding the project, please try again."
         }
     }
