@@ -1,9 +1,22 @@
-{
-    /* Importation des modules */
-}
+/**
+ * Composant ParticlesCircle.
+ *
+ * Ce composant utilise le contexte du thème pour déterminer les couleurs et le nombre de particules à afficher.
+ * Il utilise également l'API tsparticles pour générer un effet de particules.
+ *
+ * @component
+ * @example
+ * return (
+ *   <ParticlesCircle />
+ * )
+ */
+
+/* Importation des modules */
 import { useEffect, useMemo, useState, useContext } from 'react';
-import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
+import Particles, { initParticlesEngine } from '@tsparticles/react';
+
+/* Importation des données */
 import { ThemeContext } from '../../../utils/dataProvider/DataProvider';
 
 const ParticlesCircle = () => {
@@ -18,16 +31,32 @@ const ParticlesCircle = () => {
         });
     }, []);
 
+    /**
+     * Fonction exécutée lorsque les particules sont chargées.
+     *
+     * Cette fonction affiche dans la console le conteneur des particules et le thème actuel.
+     *
+     * @param {Object} container - Le conteneur des particules.
+     */
+
     const particlesLoaded = (container) => {
         console.log(container);
         console.log(theme);
     };
 
+    /**
+     * Options pour la configuration des particules.
+     *
+     * Ces options déterminent le comportement et l'apparence des particules, y compris leur couleur, leur nombre, leur forme, leur taille, et plus encore.
+     * Les options sont recalculées chaque fois que le thème change.
+     *
+     * @type {Object}
+     */
     const options = useMemo(
         () => ({
             fullScreen: {
                 enable: true,
-                // zIndex: -99,
+                zIndex: -50,
             },
             background: {
                 color: {
@@ -58,7 +87,7 @@ const ParticlesCircle = () => {
             },
             particles: {
                 color: {
-                    value: theme === 'dark' ? ['#fff'] : ['#a9a9a9'],
+                    value: theme === 'dark' ? ['#fff'] : ['#707070'],
                 },
                 links: {
                     enable: false,
@@ -79,7 +108,7 @@ const ParticlesCircle = () => {
                     value: theme === 'dark' ? ['150'] : ['300'],
                 },
                 opacity: {
-                    value: { min: 0.5, max: 1 },
+                    value: { min: 0.1, max: 1 },
                     random: true,
                     anim: {
                         enable: true,
