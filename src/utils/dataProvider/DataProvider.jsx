@@ -25,7 +25,7 @@ export const DataProvider = ({ children }) => {
     const [experiencesData, setExperiencesData] = useState(null);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [token, setToken] = useState(null);
-    const [theme, setTheme] = useState('light');
+    const [theme, setTheme] = useState('dark');
 
     /**
      * Supprime un projet de la liste des projets.

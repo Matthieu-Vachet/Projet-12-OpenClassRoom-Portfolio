@@ -69,7 +69,7 @@ export default function Hero() {
                             animate='visible'
                             variants={SvgVariante}
                             className='img-icons'
-                            src={islightMode ? IconsVersionWhite : IconsVersionBlack}
+                            src={islightMode ? IconsVersionBlack : IconsVersionWhite}
                             alt='Image Icons technologies web'
                         />
                     </Tilt>
