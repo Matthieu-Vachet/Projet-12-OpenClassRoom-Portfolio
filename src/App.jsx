@@ -66,6 +66,7 @@ function App() {
 
     return (
         <AnimatePresence>
+            <ParticlesCircle />
             {loading ? (
                 <motion.div
                     key='loader'
@@ -84,7 +85,6 @@ function App() {
                     exit='exit'
                     variants={AppVariants}
                 >
-                    <ParticlesCircle />
                     <Blur />
                     <NavBar />
                     <Home />
