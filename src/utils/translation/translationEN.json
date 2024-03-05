@@ -1,6 +1,6 @@
 {
     "header": {
-        "langue": "French language is currently enabled.",
+        "langue": "English language is currently enabled.",
         "btn-mobile-theme-white": "Light",
         "btn-mobile-theme-black": "Dark"
     },
@@ -16,7 +16,7 @@
         "button-2": "Contact"
     },
     "experience": {
-        "title": "KEY MILESTONES OF MY JOURNEY",
+        "title": "The key stages of my journey",
         "button": "Degree",
         "text": "Driven to excel in my field, I am fueled by an unwavering passion for the web and constantly strive to push my limits to offer exceptional web solutions to my future clients.",
         "certificats": "MY COURSE CERTIFICATES"

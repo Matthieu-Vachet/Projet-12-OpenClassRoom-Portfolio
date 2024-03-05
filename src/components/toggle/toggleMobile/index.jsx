@@ -36,20 +36,14 @@ export default function ToggleMobile() {
         toast.success(t('header.langue'));
     };
 
-    // const islightMode = theme === 'dark';
-
     const toggleMode = () => {
         toggleTheme();
-        const newMode = theme === 'light' ? 'dark' : 'light'; // Obtenir le nouveau mode après le basculement
+        const newMode = theme === 'light' ? 'dark' : 'light';
 
         if (newMode === 'dark') {
-            document.body.classList.add('white-mode');
-            document.body.classList.remove('dark-mode');
-            toast.success(t('theme.light'));
-        } else {
-            document.body.classList.add('dark-mode');
-            document.body.classList.remove('white-mode');
             toast.success(t('theme.dark'));
+        } else {
+            toast.success(t('theme.light'));
         }
     };
 

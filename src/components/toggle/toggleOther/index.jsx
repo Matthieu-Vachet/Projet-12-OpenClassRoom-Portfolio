@@ -27,20 +27,17 @@ export default function ToggleOther() {
     const { t } = useTranslation();
     const { theme, toggleTheme } = useContext(ThemeContext);
 
-    const islightMode = theme === 'dark';
+    const islightMode = theme === 'light';
 
     const toggleMode = () => {
+        const newMode = theme === 'dark' ? 'light' : 'dark';
         toggleTheme();
-        const newMode = theme === 'light' ? 'dark' : 'light';
+        console.log(newMode);
 
         if (newMode === 'dark') {
-            document.body.classList.add('white-mode');
-            document.body.classList.remove('dark-mode');
-            toast.success(t('theme.light'));
-        } else {
-            document.body.classList.add('dark-mode');
-            document.body.classList.remove('white-mode');
             toast.success(t('theme.dark'));
+        } else {
+            toast.success(t('theme.light'));
         }
     };
 
