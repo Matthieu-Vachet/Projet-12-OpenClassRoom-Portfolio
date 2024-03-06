@@ -51,7 +51,7 @@ export default function ToggleOther() {
                   '--glassGlassDark60': 'rgba(24, 24, 29, 0.6)',
                   '--strockGlass': 'rgba(182, 181, 187, 0.4)',
                   '--borderGlass': 'rgba(255, 255, 255, 0.5)',
-                  '--borderGlassBtn': 'rgba(128, 128, 128, 0.1)',
+                  //   '--borderGlassBtn': 'rgba(128, 128, 128, 0.1)',
                   '--darkWhite10': 'rgba(255, 255, 255, 0.1)',
                   '--button-1': '#0ce39a',
                   '--button-2': '#69007f',
@@ -60,18 +60,18 @@ export default function ToggleOther() {
               }
             : {
                   // Light Colors
-                  '--basicOnyx': '#feffff',
+                  '--basicOnyx': 'rgba(245, 245, 245, 1)',
                   '--basicWhite': 'rgba(24, 24, 24, 1)',
-                  '--glassGlassDark30': 'rgba(24, 24, 29, 0.05)',
+                  '--glassGlassDark30': 'rgba(24, 24, 29, 0.1)',
                   '--glassGlassDark60': 'rgba(24, 24, 29, 0.1)',
                   '--strockGlass': 'rgba(182, 181, 187, 1)',
                   '--borderGlass': 'rgba(128, 128, 128, 1)',
-                  '--borderGlassBtn': 'rgba(24, 24, 24, 1)',
+                  //   '--borderGlassBtn': 'rgba(24, 24, 24, 1)',
                   '--darkWhite10': 'rgba(128, 128, 128, 0.2)',
-                  '--button-1': 'transparent',
-                  '--button-2': 'transparent',
-                  '--button-3': 'transparent',
-                  '--basicDarkGray': 'rgba(128, 128, 128, 0.2)',
+                  '--button-1': '#0ce39a',
+                  '--button-2': '#c495e5',
+                  '--button-3': '#69007f',
+                  '--basicDarkGray': 'rgba(128, 128, 128, 1)',
               };
 
         for (const property in colors) {
