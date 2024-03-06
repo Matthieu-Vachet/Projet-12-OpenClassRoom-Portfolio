@@ -8,17 +8,14 @@
     text-decoration: none;
     color: var(--basicWhite);
     background: linear-gradient(45deg, var(--button-1), var(--button-2), var(--button-3));
-    border: 1px solid var(--borderGlass);
+    // border: 1px solid var(--borderGlass);
+    border: none;
     padding: 10px 20px;
     border-radius: 20px;
     z-index: 0;
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s;
-
-    @include mobile {
-        border: 1px solid var(--borderGlassBtn) !important;
-    }
 
     &:hover {
         transform: scale(1.1);
@@ -27,14 +24,14 @@
     &::before {
         content: '';
         position: absolute;
-        inset: 1px;
+        inset: 3px;
         background: var(--basicOnyx);
         border-radius: 19px;
         transition: 0.5s;
     }
 
     &:hover::before {
-        opacity: 0.7;
+        opacity: 0.5;
     }
 
     &::after {
@@ -43,9 +40,9 @@
         inset: 0px;
         background: linear-gradient(45deg, var(--button-1), var(--button-2), var(--button-3));
         border-radius: 20px;
-        transition: 0.5s;
         opacity: 0;
         filter: blur(20px);
+        transition: 0.5s;
     }
 
     &:hover::after {
@@ -54,7 +51,7 @@
 
     .btn-gradient-text {
         position: relative;
-        @include Syne(20px, 500, 0.3em);
+        @include Syne(20px, 600, 0.3em);
         z-index: 1;
     }
 }
