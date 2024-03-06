@@ -111,22 +111,30 @@
 
                 @include mobile {
                     text-align: center;
-                    @include Syne(20px, 700, 0.45em);
+                    @include Syne(20px, 700, 0.2em);
                     transform: scaleY(1);
                 }
                 @include tablet {
                     text-align: center;
-                    @include Syne(20px, 700, 0.45em);
+                    @include Syne(20px, 700, 0.2em);
                     transform: scaleY(1);
                 }
 
                 @include desktop {
-                    @include Syne(15px, 700, 0.2em);
+                    text-align: start;
+                    @include Syne(20px, 700, 0.2em);
+                    transform: scaleY(2);
+                }
+
+                @include largeDesktop {
+                    text-align: start;
+                    @include Syne(25px, 700, 0.2em);
                     transform: scaleY(2);
                 }
 
                 @include xxlDesktop {
-                    @include Syne(33px, 700, 0.45em);
+                    text-align: start;
+                    @include Syne(30px, 700, 0.2em);
                     transform: scaleY(2);
                 }
             }

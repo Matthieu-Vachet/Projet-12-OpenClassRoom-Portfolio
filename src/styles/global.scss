@@ -52,7 +52,7 @@ ul {
     width: 100%;
     @include Syne(150px, 700, 0em);
     color: var(--basicWhite);
-    opacity: 0.2;
+    opacity: 0.45;
 
     @include mobile {
         @include Syne(40px, 700, 0em);
@@ -99,10 +99,6 @@ ul {
     @include xxlDesktop {
         @include Syne(70px, 700, 0.2em);
     }
-}
-
-.white-mode {
-    background-image: url('../assets/images/Bg-Squares-white.svg') !important;
 }
 
 .my-toast {

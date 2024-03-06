@@ -85,7 +85,7 @@
                 color: var(--basicWhite);
                 border-radius: 20px;
                 padding: 5px 15px;
-                z-index: 0;
+                z-index: 1;
 
                 @include mobile {
                     margin-top: 2rem;
@@ -96,6 +96,7 @@
         }
         .img-icons-section {
             width: 30%;
+            backdrop-filter: blur(10px);
 
             @include mobile {
                 display: none;

@@ -3,7 +3,7 @@ VARIABLES COLORS
 */
 :root {
     --basicOnyx: rgba(24, 24, 24, 1);
-    --basicWhite: rgba(255, 255, 255, 1);
+    --basicWhite: rgba(255, 255, 240, 1);
 
     --strockGlass: rgba(182, 181, 187, 0.4);
     --basicBlack: rgba(13, 13, 13, 1);
@@ -110,18 +110,6 @@ MIXINS MEDIA QUERIES
 
 @mixin xxlDesktop {
     @media screen and (min-width: 1600px) {
-        @content;
-    }
-}
-
-@mixin mobileLandscape {
-    @media screen and (max-width: 640px) and (min-width: 320px) and (orientation: landscape) {
-        @content;
-    }
-}
-
-@mixin tabletPortrait {
-    @media screen and (min-width: 641px) and (max-width: 1023px) and (orientation: portrait) {
         @content;
     }
 }

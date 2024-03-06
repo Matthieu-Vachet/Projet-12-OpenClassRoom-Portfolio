@@ -36,12 +36,10 @@ import Experience from './sections/Experience';
 import Contact from './sections/Contact';
 import Footer from './layouts/footer';
 import { Toaster } from 'sonner';
+import ParticlesCircle from './components/background/particle';
 
 /* Importation des animations */
 import { LoaderVariants, AppVariants } from './utils/framerMotion/Variante';
-
-/* Importation des assets */
-import backgroundImage from './assets/images/Bg-Squares-Black.svg';
 
 /**
     * Composant App
@@ -68,6 +66,7 @@ function App() {
 
     return (
         <AnimatePresence>
+            <ParticlesCircle />
             {loading ? (
                 <motion.div
                     key='loader'
@@ -85,9 +84,6 @@ function App() {
                     animate='animate'
                     exit='exit'
                     variants={AppVariants}
-                    style={{
-                        backgroundImage: `url(${backgroundImage})`,
-                    }}
                 >
                     <Blur />
                     <NavBar />
