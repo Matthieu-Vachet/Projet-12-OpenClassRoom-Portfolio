@@ -105,7 +105,7 @@ const ParticlesCircle = () => {
                         enable: true,
                         value_area: 800,
                     },
-                    value: theme === 'dark' ? ['150'] : ['300'],
+                    value: theme === 'dark' ? ['150'] : ['200'],
                 },
                 opacity: {
                     value: { min: 0.1, max: 1 },
