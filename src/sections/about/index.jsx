@@ -45,7 +45,7 @@ export default function About() {
                             text={t('about.button-1')}
                             target={'_blank'}
                             rel='noopener noreferrer'
-                            href='https://drive.google.com/file/d/1PZ4cBkNtBoQmF9JZ9phbViVUNnlJDaGI/view?usp=drive_link'
+                            href='https://drive.google.com/file/d/1zMZp_Z-gkrRHBZe1b1m1yXhWOR7HDjG4/view?usp=drive_link'
                         />
                     </AnimatedElement>
                 </div>
