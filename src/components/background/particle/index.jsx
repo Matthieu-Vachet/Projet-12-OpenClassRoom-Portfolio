@@ -12,16 +12,12 @@
  */
 
 /* Importation des modules */
-import { useEffect, useMemo, useState, useContext } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { loadSlim } from '@tsparticles/slim';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 
-/* Importation des données */
-import { ThemeContext } from '../../../utils/dataProvider/DataProvider';
-
 const ParticlesCircle = () => {
     const [init, setInit] = useState(false);
-    const { theme } = useContext(ThemeContext);
 
     useEffect(() => {
         initParticlesEngine(async (engine) => {
@@ -41,7 +37,6 @@ const ParticlesCircle = () => {
 
     const particlesLoaded = (container) => {
         console.log(container);
-        console.log(theme);
     };
 
     /**
@@ -63,7 +58,7 @@ const ParticlesCircle = () => {
                     value: 'none',
                 },
             },
-            fpsLimit: 60,
+            fpsLimit: 120,
             interactivity: {
                 events: {
                     onClick: {
@@ -87,7 +82,7 @@ const ParticlesCircle = () => {
             },
             particles: {
                 color: {
-                    value: theme === 'dark' ? ['#fff'] : ['#707070'],
+                    value: ['rgba(255, 255, 240, 1)'],
                 },
                 links: {
                     enable: false,
@@ -97,7 +92,7 @@ const ParticlesCircle = () => {
                     enable: true,
                     outModes: 'bounce',
                     random: true,
-                    speed: 1,
+                    speed: 0.4,
                     straight: false,
                 },
                 number: {
@@ -105,7 +100,7 @@ const ParticlesCircle = () => {
                         enable: true,
                         value_area: 800,
                     },
-                    value: theme === 'dark' ? ['150'] : ['200'],
+                    value: '150',
                 },
                 opacity: {
                     value: { min: 0.1, max: 1 },
@@ -125,7 +120,7 @@ const ParticlesCircle = () => {
                     random: true,
                     anim: {
                         enable: true,
-                        speed: 2,
+                        speed: 1,
                         size_min: 0.1,
                         sync: false,
                     },
@@ -133,7 +128,7 @@ const ParticlesCircle = () => {
             },
             detectRetina: true,
         }),
-        [theme],
+        [],
     );
     if (init) {
         return (
