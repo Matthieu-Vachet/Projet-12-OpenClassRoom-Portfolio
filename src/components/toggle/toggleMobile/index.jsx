@@ -41,8 +41,10 @@ export default function ToggleMobile() {
         const newMode = theme === 'light' ? 'dark' : 'light';
 
         if (newMode === 'dark') {
+            document.body.classList.remove('white-mode');
             toast.success(t('theme.dark'));
         } else {
+            document.body.classList.add('white-mode');
             toast.success(t('theme.light'));
         }
     };
