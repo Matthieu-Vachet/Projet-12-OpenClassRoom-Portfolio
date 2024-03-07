@@ -8,7 +8,7 @@
         "slogan": "Plongez dans ma créativité codée."
     },
     "about": {
-        "title": "APPRENEZ À ME CONNAÎTRE",
+        "title": "Apprenez à me connaître",
         "text-1": "Fan d'informatique depuis ma jeunesse, j'ai exploré la programmation bien avant de devenir intégrateur web. Pour moi, chaque ligne de code est une œuvre d'art, une exploration infinie de création.",
         "text-2": "Mon engagement dans ce domaine est bien plus qu'une carrière, c'est une passion sans limites, une aventure que je poursuivrai avec détermination jusqu'à ce que mes mains ne puissent plus glisser sur un clavier.",
         "text-3": "Aujourd'hui, je suis prêt à mettre ces compétences au service de vos projets. Ensemble, nous pouvons créer des sites web dynamiques, optimisés et sans bugs. Je suis impatient de vous aider à concrétiser vos idées et à faire de vos projets une réalité.",
@@ -16,10 +16,10 @@
         "button-2": "Contact"
     },
     "experience": {
-        "title": "LES ÉTAPES CLÉS DE MON PARCOURS",
+        "title": "Les étapes clés de mon parcours",
         "button": "Diplôme",
         "text": "Déterminé à exceller dans mon domaine, je suis animé par une passion inébranlable pour le web et je m'efforce constamment de repousser mes limites pour offrir des solutions web de qualité exceptionnelle à mes futurs clients.",
-        "certificats": "MES CERTIFICATS DE COURS"
+        "certificats": "Mes certificats de cours"
     },
     "skills": {
         "title": "Mon Répertoire de Compétences",
@@ -56,7 +56,8 @@
         "title-contact": "Contact",
         "title-link": "Liens",
         "title-projects": "Projets",
-        "title-social": "Suivez-moi"
+        "title-social": "Suivez-moi",
+        "licence": "Ce site est distribué sous la licence MIT"
     },
     "theme": {
         "dark": "Mode sombre activé avec succès.",

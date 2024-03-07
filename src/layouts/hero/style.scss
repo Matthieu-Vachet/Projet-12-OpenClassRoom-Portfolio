@@ -85,12 +85,13 @@
                 color: var(--basicWhite);
                 border-radius: 20px;
                 padding: 5px 15px;
-                z-index: 1;
+                z-index: 0;
 
                 @include mobile {
                     margin-top: 2rem;
                     width: 15rem !important;
                     height: 3rem !important;
+                    z-index: 1;
                 }
             }
         }

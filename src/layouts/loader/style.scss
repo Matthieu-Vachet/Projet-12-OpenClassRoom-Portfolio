@@ -8,11 +8,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 999;
+    z-index: 50;
 }
 
 .svg-loader {
-    position: relative;
+    position: absolute;
     width: 70%;
     height: 70%;
     z-index: 99;

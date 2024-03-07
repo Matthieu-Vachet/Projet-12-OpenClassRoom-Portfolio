@@ -268,10 +268,6 @@ const Footer_Projects = [
 /* Footer (réseaux sociaux) */
 const Footer_Follow = [
     {
-        icon: 'fab fa-facebook-f',
-        link: 'https://www.facebook.com/matthieu.vachet',
-    },
-    {
         icon: 'fab fa-twitter',
         link: 'https://twitter.com/ShinyHunting02',
     },
