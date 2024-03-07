@@ -58,7 +58,7 @@ const ParticlesCircle = () => {
                     value: 'none',
                 },
             },
-            fpsLimit: 120,
+            fpsLimit: 60,
             interactivity: {
                 events: {
                     onClick: {
