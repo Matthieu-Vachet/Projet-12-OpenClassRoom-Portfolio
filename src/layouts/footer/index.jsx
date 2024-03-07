@@ -31,24 +31,20 @@ export default function Footer() {
                         <h4 className='footer-container-title'>{t('footer.title-contact')}</h4>
                         <ul className='footer-list'>
                             <li>
-                                <a className='footer-text' href='#'>
+                                <span className='footer-text'>
                                     {userData[0].name} {userData[0].lastname}
-                                </a>
+                                </span>
                             </li>
                             <li>
-                                <a className='footer-text' href='#'>
-                                    {userData[0].adress}
-                                </a>
+                                <span className='footer-text'>{userData[0].adress}</span>
                             </li>
                             <li>
-                                <a className='footer-text' href='#'>
+                                <span className='footer-text'>
                                     {userData[0].cp} {userData[0].city}
-                                </a>
+                                </span>
                             </li>
                             <li>
-                                <a className='footer-text' href='#'>
-                                    {userData[0].email}
-                                </a>
+                                <span className='footer-text'>{userData[0].email}</span>
                             </li>
                         </ul>
                     </div>
@@ -113,6 +109,7 @@ export default function Footer() {
                                 target={'_blank'}
                                 rel='noopener noreferrer'
                                 href='https://github.com/Matthieu-Vachet/Projet-12-OpenClassRoom-Portfolio/blob/main/LICENSE.txt'
+                                className='licence'
                             >
                                 {t('footer.licence')}
                             </a>
