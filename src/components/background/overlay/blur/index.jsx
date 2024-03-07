@@ -19,7 +19,7 @@ export default function Blur() {
         const bodyHeight = document.body.clientHeight;
         const bottomThreshold = bodyHeight - windowHeight - 25;
 
-        const opacity = scrollY >= bottomThreshold ? 0.5 : 1;
+        const opacity = scrollY >= bottomThreshold ? 0.7 : 1;
         setScrollOpacity(opacity);
     };
 
