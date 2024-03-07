@@ -19,10 +19,10 @@
         "title": "The key stages of my journey",
         "button": "Degree",
         "text": "Driven to excel in my field, I am fueled by an unwavering passion for the web and constantly strive to push my limits to offer exceptional web solutions to my future clients.",
-        "certificats": "MY COURSE CERTIFICATES"
+        "certificats": "My course certificates"
     },
     "skills": {
-        "title": "My Skill Set",
+        "title": "My Repertoire of Skills",
         "text-1": "Front-end",
         "text-2": "Back-end",
         "text-3": "Development tools",
@@ -56,7 +56,8 @@
         "title-contact": "Contact",
         "title-link": "Links",
         "title-projects": "Projects",
-        "title-social": "Follow Me"
+        "title-social": "Follow Me",
+        "licence": "This site is distributed under the MIT license"
     },
     "theme": {
         "dark": "Dark mode successfully enabled.",

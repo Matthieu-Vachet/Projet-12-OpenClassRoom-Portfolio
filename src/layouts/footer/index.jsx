@@ -101,7 +101,21 @@ export default function Footer() {
                     <div>
                         <p>
                             DESIGN & DEPLOYED BY{' '}
-                            <a href='https://github.com/Matthieu-Vachet'>VACHET MATTHIEU</a>
+                            <a
+                                target={'_blank'}
+                                rel='noopener noreferrer'
+                                href='https://github.com/Matthieu-Vachet'
+                            >
+                                VACHET MATTHIEU
+                            </a>
+                            <br />
+                            <a
+                                target={'_blank'}
+                                rel='noopener noreferrer'
+                                href='https://github.com/Matthieu-Vachet/Projet-12-OpenClassRoom-Portfolio/blob/main/LICENSE.txt'
+                            >
+                                {t('footer.licence')}
+                            </a>
                         </p>
                     </div>
                 </div>
