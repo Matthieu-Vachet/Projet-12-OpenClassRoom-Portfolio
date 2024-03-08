@@ -38,7 +38,7 @@
         }
 
         &:hover {
-            scale: 1.1;
+            transform: scale(1.1);
             border: 1px solid var(--basicWhite);
 
             .skills-img {
@@ -74,7 +74,7 @@
             left: 50%;
             transform-style: preserve-3d;
             transform: translate3d(-50%, -50%, 0);
-            transition: 0.1 s;
+            transition: 0.1s;
         }
     }
 

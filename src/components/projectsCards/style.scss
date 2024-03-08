@@ -43,7 +43,7 @@
 
         &:hover .projects-cards-image-container {
             top: -100px;
-            scale: 0.75;
+            transform: scale(0.75);
             box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
         }
 
@@ -79,7 +79,7 @@
 
                     &:hover {
                         color: var(--basicDarkGray);
-                        scale: 1.3;
+                        transform: scale(1.3);
                     }
                 }
             }
@@ -124,7 +124,7 @@
                     transition: 0.5s;
 
                     &:hover {
-                        scale: 1.5;
+                        transform: scale(1.5);
                         color: var(--basicWhite);
                     }
                 }
