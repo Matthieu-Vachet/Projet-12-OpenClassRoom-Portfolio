@@ -21,7 +21,7 @@ import { AuthContext, UserContext } from '../../utils/dataProvider/DataProvider'
 
 /*Importation des ressources*/
 import { IoPersonCircleOutline, IoPersonCircleSharp } from 'react-icons/io5';
-import Logo from '../../assets/images/LogoM.svg';
+import Logo from '../../assets/images/LogoM.webp';
 import ToggleOther from '../../components/toggle/toggleOther';
 import ToggleMobile from '../../components/toggle/toggleMobile';
 
