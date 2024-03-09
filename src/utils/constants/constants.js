@@ -274,14 +274,17 @@ const Footer_Follow = [
     {
         icon: 'fab fa-instagram',
         link: 'https://www.instagram.com/mathunting02/',
+        label: 'Lien vers mon profil Instagram',
     },
     {
         icon: 'fab fa-linkedin-in',
         link: 'www.linkedin.com/in/matthieu-vachet-46b7231b0',
+        label: 'Lien vers mon profil LinkedIn',
     },
     {
         icon: 'fab fa-github',
         link: 'https://github.com/Matthieu-Vachet',
+        label: 'Lien vers mon profil GitHub',
     },
 ];
 
