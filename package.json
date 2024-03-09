@@ -3,6 +3,11 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
+    "homepage": "",
+    "description": "Portfolio de Vachet Matthieu, développeur web et mobile",
+    "repository": "https://github.com/Matthieu-Vachet/Projet-12-OpenClassRoom-Portfolio",
+    "author": "Matthieu vachet <carpspirit02@gmail.com>",
+    "license": "MIT",
     "scripts": {
         "build": "vite build",
         "start": "rm -rf node_modules/.vite && vite --host",
