@@ -85,7 +85,7 @@ export default function Projects() {
                                 id={project._id}
                                 name={project.name}
                                 description={project.description}
-                                image={project.imageUrl}
+                                image={'/projets/' + project.imageUrl}
                                 alt={project.name}
                                 technologies={project.technologies}
                                 github={project.githubLink}
