@@ -25,23 +25,29 @@ import { GrValidate } from 'react-icons/gr';
 import './style.scss';
 
 export default function ContactForm() {
+    /* Etats des champs du formulaire */
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+    /* Etats de validation pour le mail */
     const [emailValid, setEmailValid] = useState(true);
+    /* Etats des messages d'erreur */
     const [firstNameError, setFirstNameError] = useState('');
     const [lastNameError, setLastNameError] = useState('');
     const [emailError, setEmailError] = useState('');
     const [messageError, setMessageError] = useState('');
+    /* Etats de validation pour les champs */
     const [isFirstNameValid, setIsFirstNameValid] = useState(false);
     const [isLastNameValid, setIsLastNameValid] = useState(false);
     const [isEmailValid, setIsEmailValid] = useState(false);
     const [isMessageValid, setIsMessageValid] = useState(false);
+    /* Etats de succès pour les messages */
     const [firstNameSuccessShown, setFirstNameSuccessShown] = useState(false);
     const [lastNameSuccessShown, setLastNameSuccessShown] = useState(false);
     const [emailSuccessShown, setEmailSuccessShown] = useState(false);
     const [messageSuccessShown, setMessageSuccessShown] = useState(false);
+
     const { t } = useTranslation();
 
     /**

@@ -61,7 +61,7 @@
                     position: absolute;
                     inset: 0;
                     background: repeating-conic-gradient(
-                        from var(--a),
+                        from var(--a) at 50% 50%,
                         #0ce39a,
                         #69007f,
                         #fc0987,
@@ -76,7 +76,7 @@
                     position: absolute;
                     inset: 0;
                     background: repeating-conic-gradient(
-                        from var(--a),
+                        from var(--a) at 50% 50%,
                         #0ce39a,
                         #69007f,
                         #fc0987,
@@ -106,7 +106,7 @@
 
                     img {
                         position: relative;
-                        width: 100%;
+                        width: 90%;
                         object-fit: cover;
                     }
                 }
@@ -165,7 +165,7 @@
 
                 &:hover {
                     color: var(--basicDarkGray);
-                    scale: 1.3;
+                    transform: scale(1.3);
                 }
             }
         }
@@ -255,12 +255,6 @@
         pointer-events: none;
         opacity: 0.1;
     }
-}
-
-@property --a {
-    syntax: '<angle>';
-    initial-value: 0deg;
-    inherits: false;
 }
 
 @keyframes rotating {
