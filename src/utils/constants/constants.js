@@ -270,6 +270,7 @@ const Footer_Follow = [
     {
         icon: 'fab fa-twitter',
         link: 'https://twitter.com/ShinyHunting02',
+        label: 'Lien vers mon profil Twitter',
     },
     {
         icon: 'fab fa-instagram',
