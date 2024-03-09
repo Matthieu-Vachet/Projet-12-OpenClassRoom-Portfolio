@@ -19,8 +19,6 @@ export default function Loader() {
                 viewBox='0 0 1190.6 841.9'
                 style={{ background: 'var(--basicOnyx)' }}
                 xmlSpace='preserve'
-                width='1190.5999755859375'
-                height='841.9000244140625'
             >
                 <line className='st0 svg-elem-1' x1='846.5' y1='452' x2='846.4' y2='451.5'></line>
                 <polygon
