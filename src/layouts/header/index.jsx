@@ -7,12 +7,10 @@
  */
 
 /* Importation des modules */
-import { motion } from 'framer-motion';
-import { useContext, useState, useEffect } from 'react';
+import { useContext, useState } from 'react';
 
 /* Importation des composants */
 import Login from '../../components/modal/login';
-import { HeaderVariante } from '../../utils/framerMotion/Variante';
 import { toast } from 'sonner';
 
 /* Importation des données */
@@ -33,7 +31,7 @@ export default function Header() {
     const { t } = useTranslation();
     const data = useContext(UserContext);
     const [showLoginModal, setShowLoginModal] = useState(false);
-    const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext);
+    const { isLoggedIn, setIsLoggedIn, token, setToken } = useContext(AuthContext);
 
     const changeLanguage = (language) => {
         i18n.changeLanguage(language);
@@ -44,13 +42,8 @@ export default function Header() {
         setShowLoginModal(true);
     };
 
-    useEffect(() => {
-        const token = localStorage.getItem('token');
-        setIsLoggedIn(!!token);
-    }, [setIsLoggedIn]);
-
     return (
-        <motion.header initial='initial' animate='animate' variants={HeaderVariante}>
+        <header>
             <div className='logo_content'>
                 <img className='logo_header' src={Logo} alt='Matthieu Vachet Logo portfolio' />
                 <h1 className='name_header'>
@@ -74,8 +67,9 @@ export default function Header() {
                         tabIndex='0'
                         onClick={() => {
                             setIsLoggedIn(false);
+                            setToken(null);
                             toast.success(t('login.success-logout'));
-                            localStorage.removeItem('token');
+                            console.log(token);
                         }}
                     />
                 ) : (
@@ -91,6 +85,6 @@ export default function Header() {
                 {showLoginModal && <Login onClose={() => setShowLoginModal(false)} />}
             </div>
             <ToggleMobile />
-        </motion.header>
+        </header>
     );
 }

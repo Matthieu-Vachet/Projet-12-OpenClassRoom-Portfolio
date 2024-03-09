@@ -1,7 +1,7 @@
 {
     "headers": [
         {
-            "source": "src/assets/icons/(.*)",
+            "source": "/experiences/(.*)",
             "headers": [
                 {
                     "key": "Cache-Control",
@@ -10,7 +10,7 @@
             ]
         },
         {
-            "source": "ser/assets/images/(.*)",
+            "source": "/projets/(.*)",
             "headers": [
                 {
                     "key": "Cache-Control",
