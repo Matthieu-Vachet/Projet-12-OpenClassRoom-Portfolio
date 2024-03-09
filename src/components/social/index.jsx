@@ -11,6 +11,8 @@
 /* Importation des modules */
 import { motion } from 'framer-motion';
 
+import { FaGithub, FaLinkedin, FaInstagram, FaTwitterSquare } from 'react-icons/fa';
+
 /* Importation du style */
 import './style.scss';
 
@@ -38,9 +40,10 @@ export default function Socials() {
                     initial={{ y: 100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 2, duration: 0.8, type: 'spring' }}
-                    className='fa-brands fa-github'
                     aria-hidden='true'
-                ></motion.i>
+                >
+                    <FaGithub />
+                </motion.i>
             </a>
             <a
                 className='icon'
@@ -54,9 +57,10 @@ export default function Socials() {
                     initial={{ y1: 100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 1.9, duration: 0.7, type: 'spring' }}
-                    className='fa-brands fa-linkedin'
                     aria-hidden='true'
-                ></motion.i>
+                >
+                    <FaLinkedin />
+                </motion.i>
             </a>
             <a
                 className='icon'
@@ -70,9 +74,10 @@ export default function Socials() {
                     initial={{ y: 100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 1.7, duration: 0.6, type: 'spring' }}
-                    className='fa-brands fa-instagram'
                     aria-hidden='true'
-                ></motion.i>
+                >
+                    <FaInstagram />
+                </motion.i>
             </a>
             <a
                 className='icon'
@@ -86,9 +91,10 @@ export default function Socials() {
                     initial={{ y: 100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 1.5, duration: 0.5, type: 'spring' }}
-                    className='fa-brands fa-twitter'
                     aria-hidden='true'
-                ></motion.i>
+                >
+                    <FaTwitterSquare />
+                </motion.i>
             </a>
         </div>
     );
