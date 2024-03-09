@@ -20,7 +20,7 @@ export default function AnimatedElement({ children, delay, className }) {
     const ctrls = useAnimation();
 
     const { ref, inView } = useInView({
-        threshold: 0.4,
+        threshold: 0.1,
         triggerOnce: true,
     });
 

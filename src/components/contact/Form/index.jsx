@@ -199,6 +199,7 @@ export default function ContactForm() {
                         placeholder={t('contact.input-firstname')}
                         value={firstName}
                         onChange={handleChange}
+                        aria-label={t('contact.input-firstname')}
                     />
                     <input
                         type='text'
@@ -206,6 +207,7 @@ export default function ContactForm() {
                         placeholder={t('contact.input-lastname')}
                         value={lastName}
                         onChange={handleChange}
+                        aria-label={t('contact.input-lastname')}
                     />
                 </div>
                 <div className='email-input-container'>
@@ -215,6 +217,7 @@ export default function ContactForm() {
                         placeholder='Email'
                         value={email}
                         onChange={handleChange}
+                        aria-label='Email'
                     />
                     {!emailValid && <GrValidate className='email-icon' style={{ color: 'red' }} />}{' '}
                     {emailValid && email && (
@@ -229,6 +232,7 @@ export default function ContactForm() {
                     placeholder='Message'
                     value={message}
                     onChange={handleChange}
+                    aria-label='Message'
                 />
                 <div className='error-messages-container'>
                     {firstNameError && <p className='error-message'>{firstNameError}</p>}
