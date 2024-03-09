@@ -86,7 +86,7 @@ export default function Projects() {
                                 name={project.name}
                                 description={project.description}
                                 image={'/projets/' + project.imageUrl}
-                                alt={project.name}
+                                alt={`Image du projet ${project.name}`}
                                 technologies={project.technologies}
                                 github={project.githubLink}
                                 live={project.demoLink}

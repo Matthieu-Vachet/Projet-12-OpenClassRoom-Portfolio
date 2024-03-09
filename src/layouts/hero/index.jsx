@@ -52,7 +52,7 @@ export default function Hero() {
                         </FancyText>
                     </h1>
                     <h3 className='hero_profession'>{data[0].profession}</h3>
-                    <h4>
+                    <h3>
                         <Button
                             text={t('about.button-2')}
                             href='#contact'
@@ -60,7 +60,7 @@ export default function Hero() {
                             width={'15rem'}
                             className='hero_btn'
                         />
-                    </h4>
+                    </h3>
                 </motion.div>
                 <div className='img-icons-section'>
                     <Tilt>

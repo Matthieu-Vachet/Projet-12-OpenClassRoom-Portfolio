@@ -82,6 +82,7 @@ export default function Footer() {
                                     target='_blank'
                                     rel='noopener noreferrer'
                                     href={item.link}
+                                    aria-label={item.label}
                                 >
                                     <i className={item.icon}></i>
                                 </a>
