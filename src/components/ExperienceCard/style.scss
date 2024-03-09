@@ -106,7 +106,7 @@
 
                     img {
                         position: relative;
-                        width: 100%;
+                        width: 90%;
                         object-fit: cover;
                     }
                 }
@@ -256,12 +256,6 @@
         opacity: 0.1;
     }
 }
-
-// @property --a {
-//     syntax: '<angle>';
-//     initial-value: 0deg;
-//     inherits: false;
-// }
 
 @keyframes rotating {
     0% {
