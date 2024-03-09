@@ -20,7 +20,7 @@ export default function AnimatedSkill({ children, delay, className }) {
     const ctrls = useAnimation();
 
     const { ref, inView } = useInView({
-        threshold: 0.5,
+        threshold: 0.1,
         triggerOnce: true,
     });
 
