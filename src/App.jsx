@@ -21,12 +21,12 @@
  */
 
 /* Importation des modules */
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
 /* Importation des composants */
 import NavBar from './layouts/navbar';
-import Loader from './layouts/loader';
+// import Loader from './layouts/loader';
 import Home from './sections/home';
 import About from './sections/about';
 import Blur from './components/background/overlay/blur';
@@ -38,7 +38,8 @@ import Footer from './layouts/footer';
 import { Toaster } from 'sonner';
 
 /* Importation des animations */
-import { LoaderVariants, AppVariants } from './utils/framerMotion/Variante';
+import { AppVariants } from './utils/framerMotion/Variante';
+// import { LoaderVariants, AppVariants } from './utils/framerMotion/Variante';
 
 /* Importation des assets */
 import backgroundImage from './assets/images/Bg-Squares-Black.svg';
@@ -53,22 +54,22 @@ import backgroundImage from './assets/images/Bg-Squares-Black.svg';
 */
 
 function App() {
-    const [loading, setLoading] = useState(true);
+    // const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        setLoading(true);
-        const timer = setTimeout(() => {
-            setLoading(false);
-        }, 4000);
+    // useEffect(() => {
+    //     setLoading(true);
+    //     const timer = setTimeout(() => {
+    //         setLoading(false);
+    //     }, 4000);
 
-        return () => {
-            clearTimeout(timer);
-        };
-    }, []);
+    //     return () => {
+    //         clearTimeout(timer);
+    //     };
+    // }, []);
 
     return (
         <AnimatePresence>
-            {loading ? (
+            {/* {loading ? (
                 <motion.div
                     key='loader'
                     initial='initial'
@@ -78,36 +79,36 @@ function App() {
                 >
                     <Loader />
                 </motion.div>
-            ) : (
-                <motion.div
-                    key='app'
-                    initial='initial'
-                    animate='animate'
-                    exit='exit'
-                    variants={AppVariants}
-                    style={{
-                        backgroundImage: `url(${backgroundImage})`,
+            ) : ( */}
+            <motion.div
+                key='app'
+                initial='initial'
+                animate='animate'
+                exit='exit'
+                variants={AppVariants}
+                style={{
+                    backgroundImage: `url(${backgroundImage})`,
+                }}
+            >
+                <Blur />
+                <NavBar />
+                <Home />
+                <About />
+                <Experience />
+                <Skills />
+                <Projects />
+                <Contact />
+                <Footer />
+                <Toaster
+                    richColors
+                    position='top-right'
+                    toastOptions={{
+                        closeButton: true,
+                        className: 'my-toast',
                     }}
-                >
-                    <Blur />
-                    <NavBar />
-                    <Home />
-                    <About />
-                    <Experience />
-                    <Skills />
-                    <Projects />
-                    <Contact />
-                    <Footer />
-                    <Toaster
-                        richColors
-                        position='top-right'
-                        toastOptions={{
-                            closeButton: true,
-                            className: 'my-toast',
-                        }}
-                    />
-                </motion.div>
-            )}
+                />
+            </motion.div>
+            {/* )} */}
         </AnimatePresence>
     );
 }

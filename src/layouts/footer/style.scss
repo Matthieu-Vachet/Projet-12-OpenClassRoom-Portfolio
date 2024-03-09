@@ -8,7 +8,7 @@
     z-index: -1;
 
     @include mobile {
-        margin-top: 6 rem;
+        margin-top: 6rem;
     }
 
     @include tablet {
@@ -48,7 +48,7 @@
                     &::before {
                         content: '';
                         position: absolute;
-                        left: 20;
+                        left: 20px;
                         bottom: -10px;
                         background-color: var(--basicWhite);
                         height: 2px;
