@@ -17,6 +17,8 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import i18n from './utils/translation/i18n.js';
+import { SpeedInsights } from '@vercel/speed-insights/react';
+import { Analytics } from '@vercel/analytics/react';
 
 /* Importation des données */
 import { I18nextProvider } from 'react-i18next';
@@ -34,6 +36,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Suspense fallback='Loading...'>
                 <DataProvider>
                     <App />
+                    <SpeedInsights />
+                    <Analytics />
                 </DataProvider>
             </Suspense>
         </I18nextProvider>
