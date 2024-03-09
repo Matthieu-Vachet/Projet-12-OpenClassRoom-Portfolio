@@ -61,7 +61,7 @@
                     position: absolute;
                     inset: 0;
                     background: repeating-conic-gradient(
-                        from var(--a),
+                        from var(--a) at 50% 50%,
                         #0ce39a,
                         #69007f,
                         #fc0987,
@@ -76,7 +76,7 @@
                     position: absolute;
                     inset: 0;
                     background: repeating-conic-gradient(
-                        from var(--a),
+                        from var(--a) at 50% 50%,
                         #0ce39a,
                         #69007f,
                         #fc0987,
@@ -257,11 +257,11 @@
     }
 }
 
-@property --a {
-    syntax: '<angle>';
-    initial-value: 0deg;
-    inherits: false;
-}
+// @property --a {
+//     syntax: '<angle>';
+//     initial-value: 0deg;
+//     inherits: false;
+// }
 
 @keyframes rotating {
     0% {
