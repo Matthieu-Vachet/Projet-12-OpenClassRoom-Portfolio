@@ -20,12 +20,14 @@
  */
 
 /* Importation des modules */
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
 /* Importation des composants */
+import Loader from './layouts/loader';
 import NavBar from './layouts/navbar';
 import Home from './sections/home';
+const ParticlesCircle = lazy(() => import('./components/background/particles'));
 const About = lazy(() => import('./sections/about'));
 const Blur = lazy(() => import('./components/background/overlay/blur'));
 const Skills = lazy(() => import('./sections/skills'));
@@ -38,9 +40,6 @@ import { Toaster } from 'sonner';
 /* Importation des animations */
 import { AppVariants } from './utils/framerMotion/Variante';
 
-/* Importation des assets */
-import backgroundImage from './assets/images/Bg-Squares-Black.svg';
-
 /**
     * Composant App
     * Description :
@@ -49,38 +48,61 @@ import backgroundImage from './assets/images/Bg-Squares-Black.svg';
 */
 
 function App() {
+    // Etat pour gérer l'affichage du loader
+    const [loading, setLoading] = useState(true);
+
+    // Simule un temps de chargement de 5 secondes
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 4000);
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
         <AnimatePresence>
-            <motion.div
-                key='app'
-                initial='initial'
-                animate='animate'
-                exit='exit'
-                variants={AppVariants}
-                style={{
-                    backgroundImage: `url(${backgroundImage})`,
-                }}
-            >
-                <Blur />
-                <NavBar />
-                <Home />
-                <Suspense fallback={<div>Loading...</div>}>
-                    <About />
-                    <Experience />
-                    <Skills />
-                    <Projects />
-                    <Contact />
-                    <Footer />
-                </Suspense>
-                <Toaster
-                    richColors
-                    position='top-right'
-                    toastOptions={{
-                        closeButton: true,
-                        className: 'my-toast',
-                    }}
-                />
-            </motion.div>
+            {loading ? (
+                // Affiche le loader pendant le chargement
+                <motion.div
+                    key='loader'
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.5, ease: 'easeInOut' }}
+                >
+                    <Loader />
+                </motion.div>
+            ) : (
+                // Une fois le chargement terminé, affiche l'application
+                <motion.div
+                    key='app'
+                    initial='initial'
+                    animate='animate'
+                    exit='exit'
+                    variants={AppVariants}
+                >
+                    <ParticlesCircle />
+                    <Blur />
+                    <NavBar />
+                    <Home />
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <About />
+                        <Experience />
+                        <Skills />
+                        <Projects />
+                        <Contact />
+                        <Footer />
+                    </Suspense>
+                    <Toaster
+                        richColors
+                        position='top-right'
+                        toastOptions={{
+                            closeButton: true,
+                            className: 'my-toast',
+                        }}
+                    />
+                </motion.div>
+            )}
         </AnimatePresence>
     );
 }
