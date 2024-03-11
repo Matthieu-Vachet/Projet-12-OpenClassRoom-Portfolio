@@ -27,7 +27,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import Loader from './layouts/loader';
 import NavBar from './layouts/navbar';
 import Home from './sections/home';
-const ParticlesCircle = lazy(() => import('./components/background/particles'));
+import ParticlesCircle from './components/background/particles';
 const About = lazy(() => import('./sections/about'));
 const Blur = lazy(() => import('./components/background/overlay/blur'));
 const Skills = lazy(() => import('./sections/skills'));
