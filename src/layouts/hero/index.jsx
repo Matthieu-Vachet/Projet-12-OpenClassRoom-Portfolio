@@ -7,7 +7,6 @@
  */
 
 /* Importation des librairies */
-import { motion } from 'framer-motion';
 import { useContext } from 'react';
 import FancyText from '@carefully-coded/react-text-gradient';
 
@@ -19,7 +18,6 @@ import { useTranslation } from 'react-i18next';
 /* Importation des composants */
 import ScrollMouse from '../../components/scrollMouse';
 import Button from '../../components/button';
-import { HeroVariante, SvgVariante } from '../../utils/framerMotion/Variante';
 import Tilt from 'react-parallax-tilt';
 
 /* Importation des Ressources */
@@ -40,12 +38,7 @@ export default function Hero() {
     return (
         <div className='hero'>
             <div className='hero_content'>
-                <motion.div
-                    initial='initial'
-                    animate='animate'
-                    variants={HeroVariante}
-                    className='hero_text'
-                >
+                <div className='hero_text'>
                     <h1 className='hero_slogan'>
                         <FancyText gradient={{ from: '#0ce39a', to: '#69007f', type: 'linear' }}>
                             {t('hero.slogan')}
@@ -61,13 +54,10 @@ export default function Hero() {
                             className='hero_btn'
                         />
                     </h3>
-                </motion.div>
+                </div>
                 <div className='img-icons-section'>
                     <Tilt>
-                        <motion.img
-                            initial='hidden'
-                            animate='visible'
-                            variants={SvgVariante}
+                        <img
                             className='img-icons'
                             src={islightMode ? IconsVersionBlack : IconsVersionWhite}
                             alt='Image Icons technologies web'
@@ -75,14 +65,9 @@ export default function Hero() {
                     </Tilt>
                 </div>
             </div>
-            <motion.div
-                initial='initial'
-                animate='animate'
-                variants={HeroVariante}
-                className='ScrollMouse'
-            >
+            <div className='ScrollMouse'>
                 <ScrollMouse />
-            </motion.div>
+            </div>
         </div>
     );
 }
