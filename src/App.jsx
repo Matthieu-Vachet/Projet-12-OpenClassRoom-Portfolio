@@ -21,7 +21,6 @@
 
 /* Importation des modules */
 import { lazy, Suspense } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
 
 /* Importation des composants */
 import PreLoader from './layouts/Preloader';
@@ -37,9 +36,6 @@ const Footer = lazy(() => import('./layouts/footer'));
 import { Toaster } from 'sonner';
 import { GridBackground } from './components/background/gridBackground';
 
-/* Importation des animations */
-import { AppVariants } from './utils/framerMotion/Variante';
-
 /**
     * Composant App
     * Description :
@@ -52,13 +48,8 @@ function App() {
         <>
             <PreLoader />
             <GridBackground />
-            <AnimatePresence>
-                <motion.div
-                    key='app'
-                    initial='initial'
-                    animate='animate'
-                    exit='exit'
-                    variants={AppVariants}
+            
+                <div
                 >
                     <Blur />
                     <NavBar />
@@ -79,8 +70,7 @@ function App() {
                             className: 'my-toast',
                         }}
                     />
-                </motion.div>
-            </AnimatePresence>
+                </div>
         </>
     );
 }
