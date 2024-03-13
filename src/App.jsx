@@ -24,6 +24,7 @@ import { lazy, Suspense } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
 /* Importation des composants */
+import PreLoader from './layouts/Preloader';
 import NavBar from './layouts/navbar';
 import Home from './sections/home';
 import ParticlesCircle from './components/background/particles';
@@ -48,36 +49,39 @@ import { AppVariants } from './utils/framerMotion/Variante';
 
 function App() {
     return (
-        <AnimatePresence>
-            <ParticlesCircle />
-            <motion.div
-                key='app'
-                initial='initial'
-                animate='animate'
-                exit='exit'
-                variants={AppVariants}
-            >
-                <Blur />
-                <NavBar />
-                <Home />
-                <Suspense fallback={<div>Loading...</div>}>
-                    <About />
-                    <Experience />
-                    <Skills />
-                    <Projects />
-                    <Contact />
-                    <Footer />
-                </Suspense>
-                <Toaster
-                    richColors
-                    position='top-right'
-                    toastOptions={{
-                        closeButton: true,
-                        className: 'my-toast',
-                    }}
-                />
-            </motion.div>
-        </AnimatePresence>
+        <>
+            <PreLoader />
+            <AnimatePresence>
+                <ParticlesCircle />
+                <motion.div
+                    key='app'
+                    initial='initial'
+                    animate='animate'
+                    exit='exit'
+                    variants={AppVariants}
+                >
+                    <Blur />
+                    <NavBar />
+                    <Home />
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <About />
+                        <Experience />
+                        <Skills />
+                        <Projects />
+                        <Contact />
+                        <Footer />
+                    </Suspense>
+                    <Toaster
+                        richColors
+                        position='top-right'
+                        toastOptions={{
+                            closeButton: true,
+                            className: 'my-toast',
+                        }}
+                    />
+                </motion.div>
+            </AnimatePresence>
+        </>
     );
 }
 
