@@ -35,10 +35,8 @@ export default function ToggleOther() {
         console.log(newMode);
 
         if (newMode === 'dark') {
-            document.body.classList.remove('white-mode');
             toast.success(t('theme.dark'));
         } else {
-            document.body.classList.add('white-mode');
             toast.success(t('theme.light'));
         }
     };

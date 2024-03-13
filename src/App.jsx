@@ -24,6 +24,7 @@ import { lazy, Suspense } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
 /* Importation des composants */
+import PreLoader from './layouts/Preloader';
 import NavBar from './layouts/navbar';
 import Home from './sections/home';
 const About = lazy(() => import('./sections/about'));
@@ -34,12 +35,10 @@ const Experience = lazy(() => import('./sections/Experience'));
 const Contact = lazy(() => import('./sections/Contact'));
 const Footer = lazy(() => import('./layouts/footer'));
 import { Toaster } from 'sonner';
+import { GridBackground } from './components/background/gridBackground';
 
 /* Importation des animations */
 import { AppVariants } from './utils/framerMotion/Variante';
-
-/* Importation des assets */
-import backgroundImage from './assets/images/Bg-Squares-Black.svg';
 
 /**
     * Composant App
@@ -50,38 +49,39 @@ import backgroundImage from './assets/images/Bg-Squares-Black.svg';
 
 function App() {
     return (
-        <AnimatePresence>
-            <motion.div
-                key='app'
-                initial='initial'
-                animate='animate'
-                exit='exit'
-                variants={AppVariants}
-                style={{
-                    backgroundImage: `url(${backgroundImage})`,
-                }}
-            >
-                <Blur />
-                <NavBar />
-                <Home />
-                <Suspense fallback={<div>Loading...</div>}>
-                    <About />
-                    <Experience />
-                    <Skills />
-                    <Projects />
-                    <Contact />
-                    <Footer />
-                </Suspense>
-                <Toaster
-                    richColors
-                    position='top-right'
-                    toastOptions={{
-                        closeButton: true,
-                        className: 'my-toast',
-                    }}
-                />
-            </motion.div>
-        </AnimatePresence>
+        <>
+            <PreLoader />
+            <GridBackground />
+            <AnimatePresence>
+                <motion.div
+                    key='app'
+                    initial='initial'
+                    animate='animate'
+                    exit='exit'
+                    variants={AppVariants}
+                >
+                    <Blur />
+                    <NavBar />
+                    <Home />
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <About />
+                        <Experience />
+                        <Skills />
+                        <Projects />
+                        <Contact />
+                        <Footer />
+                    </Suspense>
+                    <Toaster
+                        richColors
+                        position='top-right'
+                        toastOptions={{
+                            closeButton: true,
+                            className: 'my-toast',
+                        }}
+                    />
+                </motion.div>
+            </AnimatePresence>
+        </>
     );
 }
 

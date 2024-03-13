@@ -1,3 +1,7 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 @import './keyframes.scss';
 @import './variable.scss';
 * {
@@ -104,8 +108,4 @@ ul {
 .my-toast {
     @include Syne(10rem, 700, 0);
     text-transform: none !important;
-}
-
-.white-mode {
-    background-image: url('../assets/images/Bg-Squares-white.svg') !important;
 }

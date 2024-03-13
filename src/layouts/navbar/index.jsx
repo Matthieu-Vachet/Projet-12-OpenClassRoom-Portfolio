@@ -8,10 +8,6 @@
 
 /* Importation des modules */
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-
-/* Importation des composants */
-import { HeaderVariante } from '../../utils/framerMotion/Variante';
 
 /* Importation des données */
 import { navItems } from '../../utils/constants/constants';
@@ -49,12 +45,7 @@ export default function Navbar() {
     }, []);
 
     return (
-        <motion.div
-            initial='initial'
-            animate='animate'
-            variants={HeaderVariante}
-            className='navbar'
-        >
+        <div className='navbar'>
             <nav>
                 {navItems.map((item) => {
                     const Icon = item.icon;
@@ -75,6 +66,6 @@ export default function Navbar() {
                     );
                 })}
             </nav>
-        </motion.div>
+        </div>
     );
 }
