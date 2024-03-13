@@ -27,7 +27,6 @@ import { AnimatePresence, motion } from 'framer-motion';
 import PreLoader from './layouts/Preloader';
 import NavBar from './layouts/navbar';
 import Home from './sections/home';
-import ParticlesCircle from './components/background/particles';
 const About = lazy(() => import('./sections/about'));
 const Blur = lazy(() => import('./components/background/overlay/blur'));
 const Skills = lazy(() => import('./sections/skills'));
@@ -36,6 +35,7 @@ const Experience = lazy(() => import('./sections/Experience'));
 const Contact = lazy(() => import('./sections/Contact'));
 const Footer = lazy(() => import('./layouts/footer'));
 import { Toaster } from 'sonner';
+import { GridBackground } from './components/background/gridBackground';
 
 /* Importation des animations */
 import { AppVariants } from './utils/framerMotion/Variante';
@@ -51,8 +51,8 @@ function App() {
     return (
         <>
             <PreLoader />
+            <GridBackground />
             <AnimatePresence>
-                <ParticlesCircle />
                 <motion.div
                     key='app'
                     initial='initial'
