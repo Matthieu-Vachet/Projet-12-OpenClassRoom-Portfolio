@@ -1,3 +1,5 @@
+import React from 'react';
+
 export function GridBackground() {
     return (
         <div className='h-full w-full dark:bg-black bg-basicOnyx  dark:bg-grid-white/[0.2] bg-grid-white/[0.2] fixed flex items-center justify-center z-0'>

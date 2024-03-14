@@ -1,16 +1,16 @@
-import React from "react";
-import { useEffect } from "react";
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import React from 'react';
+import { useEffect } from 'react';
+import { useAnimation, motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 import './Animation.scss';
 
 type AnimatedSubtitleProps = {
-  text: string;
-  className: string;
-  wordSpace: string;
-  charSpace: string;
-  delay?: number;
+    text: string;
+    className: string;
+    wordSpace: string;
+    charSpace: string;
+    delay?: number;
 };
 
 export default function AnimatedSubtitle({
@@ -28,10 +28,10 @@ export default function AnimatedSubtitle({
 
     useEffect(() => {
         if (inView) {
-            ctrls.start("visible");
+            ctrls.start('visible');
         }
         if (!inView) {
-            ctrls.start("hidden");
+            ctrls.start('hidden');
         }
     }, [ctrls, inView]);
 
@@ -60,12 +60,12 @@ export default function AnimatedSubtitle({
             {text.split(/(\s+)/).map((word, index) => {
                 return word === ' ' ? (
                     ' '
-                    ) : ( 
+                ) : (
                     <motion.span
                         ref={ref}
-                        aria-hidden="true"
+                        aria-hidden='true'
                         key={index}
-                        initial="hidden"
+                        initial='hidden'
                         animate={ctrls}
                         variants={wordAnimation}
                         transition={{
@@ -77,7 +77,7 @@ export default function AnimatedSubtitle({
                         {word.split('').map((character, index) => {
                             return (
                                 <motion.span
-                                    aria-hidden="true"
+                                    aria-hidden='true'
                                     key={index}
                                     variants={characterAnimation}
                                     className={`inline-block ${charSpace}`}
@@ -92,5 +92,3 @@ export default function AnimatedSubtitle({
         </h2>
     );
 }
-
-

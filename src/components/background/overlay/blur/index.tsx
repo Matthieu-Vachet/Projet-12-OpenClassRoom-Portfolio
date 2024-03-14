@@ -4,13 +4,9 @@
  * @returns {JSX.Element} Un élément div dont l'opacité change en fonction du défilement de la page.
  */
 
-/* Importation des modules */
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
-/* Importation des styles */
-import './style.scss';
-
-export default function Blur() {
+const Blur = () => {
     const [scrollOpacity, setScrollOpacity] = useState(1);
 
     const handleScroll = () => {
@@ -19,7 +15,7 @@ export default function Blur() {
         const bodyHeight = document.body.clientHeight;
         const bottomThreshold = bodyHeight - windowHeight - 25;
 
-        const opacity = scrollY >= bottomThreshold ? 0.7 : 1;
+        const opacity = scrollY >= bottomThreshold ? 0 : 1;
         setScrollOpacity(opacity);
     };
 
@@ -35,5 +31,11 @@ export default function Blur() {
         };
     }, []);
 
-    return <div className={`blur-component overlay-mask`} style={{ opacity: scrollOpacity }} />;
-}
+    return (
+        <div
+            className={`fixed inset-0 p-1 w-full h-full backdrop-blur-[8px] pointer-events-none z-50 opacity-${scrollOpacity} overlay-mask`}
+        />
+    );
+};
+
+export default Blur;
