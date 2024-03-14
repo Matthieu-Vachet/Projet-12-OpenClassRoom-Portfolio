@@ -11,9 +11,21 @@
  */
 
 /* Importation des modules */
-import PropTypes from 'prop-types';
+import React from 'react';
 
-export default function Grain({ baseFrequency = '9', numOctaves = 5, w = '100%', h = '100%' }) {
+type GrainProps = {
+    baseFrequency?: string;
+    numOctaves?: number;
+    w?: number | string;
+    h?: number | string;
+};
+
+const Grain: React.FC<GrainProps> = ({
+    baseFrequency = '9',
+    numOctaves = 5,
+    w = '100%',
+    h = '100%',
+}) => {
     const viewBox = '0 0 300 300';
 
     return (
@@ -34,11 +46,6 @@ export default function Grain({ baseFrequency = '9', numOctaves = 5, w = '100%',
             <rect width='100%' height='100%' filter='url(#noiseFilter)' />
         </svg>
     );
-}
-
-Grain.propTypes = {
-    baseFrequency: PropTypes.string,
-    numOctaves: PropTypes.string,
-    w: PropTypes.string,
-    h: PropTypes.string,
 };
+
+export default Grain;

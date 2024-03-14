@@ -11,12 +11,17 @@
  */
 
 /* Importation des modules */
-import PropTypes from 'prop-types';
 import { motion, useAnimation } from 'framer-motion';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
-export default function AnimatedSkill({ children, delay, className }) {
+type AnimatedSkillProps = {
+    children: React.ReactNode;
+    delay: number;
+    className?: string;
+};
+
+export default function AnimatedSkill({ children, delay, className }: AnimatedSkillProps) {
     const ctrls = useAnimation();
 
     const { ref, inView } = useInView({
@@ -61,9 +66,3 @@ export default function AnimatedSkill({ children, delay, className }) {
         </motion.div>
     );
 }
-
-AnimatedSkill.propTypes = {
-    children: PropTypes.node.isRequired,
-    delay: PropTypes.number,
-    className: PropTypes.string,
-};

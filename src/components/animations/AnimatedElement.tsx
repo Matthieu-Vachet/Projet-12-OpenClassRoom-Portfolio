@@ -12,11 +12,16 @@
 
 /* Importation des  modules */
 import { motion, useAnimation } from 'framer-motion';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-import PropTypes from 'prop-types';
 
-export default function AnimatedElement({ children, delay, className }) {
+type AnimatedElementProps = {
+    children: React.ReactNode;
+    delay: number;
+    className: string;
+};
+
+export default function AnimatedElement({ children, delay, className }: AnimatedElementProps) {
     const ctrls = useAnimation();
 
     const { ref, inView } = useInView({
@@ -63,9 +68,3 @@ export default function AnimatedElement({ children, delay, className }) {
         </motion.div>
     );
 }
-
-AnimatedElement.propTypes = {
-    children: PropTypes.node.isRequired,
-    className: PropTypes.string,
-    delay: PropTypes.number,
-};
