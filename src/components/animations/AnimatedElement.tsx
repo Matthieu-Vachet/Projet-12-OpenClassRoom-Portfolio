@@ -17,8 +17,8 @@ import { useInView } from 'react-intersection-observer';
 
 type AnimatedElementProps = {
     children: React.ReactNode;
-    delay: number;
-    className: string;
+    delay?: number;
+    className?: string;
 };
 
 export default function AnimatedElement({ children, delay, className }: AnimatedElementProps) {

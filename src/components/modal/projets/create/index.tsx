@@ -1,0 +1,212 @@
+import React, { useState, useContext } from 'react';
+import { IoCloseCircle } from 'react-icons/io5';
+import Button from '../../../button';
+import { toast } from 'sonner';
+import { useTranslation } from 'react-i18next';
+import { ProjectContext } from '../../../../utils/dataProvider/DataProvider';
+
+import './style.scss';
+
+interface ModalCreateProjetsProps {
+    onClose: () => void;
+}
+
+export default function ModalCreateProjets({ onClose }: ModalCreateProjetsProps) {
+    const { t } = useTranslation();
+    const { refreshProjects } = useContext(ProjectContext);
+    const [projectData, setProjectData] = useState({
+        name: { fr: '', en: '' },
+        description: { fr: '', en: '' },
+        imageUrl: '',
+        category: { fr: '', en: '' },
+        githubLink: '',
+        demoLink: '',
+        technologies: '',
+    });
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setProjectData((prevState) => ({
+            ...prevState,
+            [name]: value,
+        }));
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+
+        try {
+            const response = await fetch(
+                'https://api-rest-portfolio-mauve.vercel.app/Api/v1/projets/create',
+                {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(projectData),
+                },
+            );
+
+            if (!response.ok) {
+                toast.error(t('modal.create.error'));
+            }
+
+            // Si la réponse est OK, fermez la modale
+            onClose();
+            toast.success(t('modal.create.success'));
+            refreshProjects();
+        } catch (error) {
+            toast.error(t('modal.create.error'));
+            console.error(error);
+        }
+    };
+
+    return (
+        <div className='modal-create-container'>
+            <div className='close-icon'>
+                <IoCloseCircle className='close-icon' onClick={onClose} />
+            </div>
+            <h2 className='modal-create-title'>{t('modal.create.title')}</h2>
+            <div className='modal-container'>
+                <div className='modal-container-1'>
+                    <form className='create-form' onSubmit={handleSubmit}>
+                        <div className='create-section'>
+                            <label className='create-label'>
+                                Nom du projet (FR):
+                                <input
+                                    type='text'
+                                    name='name.fr'
+                                    value={projectData.name.fr}
+                                    placeholder='Nom du projet'
+                                    onChange={handleChange}
+                                    required
+                                    className='create-input'
+                                />
+                            </label>
+                            <label className='create-label'>
+                                Nom du projet (EN):
+                                <input
+                                    type='text'
+                                    name='name.en'
+                                    value={projectData.name.en}
+                                    placeholder='Project name'
+                                    onChange={handleChange}
+                                    required
+                                    className='create-input'
+                                />
+                            </label>
+                        </div>
+                        <label className='create-label'>
+                            Lien de Image:
+                            <input
+                                type='text'
+                                name='imageUrl'
+                                value={projectData.imageUrl}
+                                placeholder='https://example.com/image.jpg'
+                                onChange={handleChange}
+                                required
+                                className='create-input'
+                            />
+                        </label>
+                        <div className='create-section'>
+                            <label className='create-label'>
+                                Catégorie (FR):
+                                <input
+                                    type='text'
+                                    name='category.fr'
+                                    value={projectData.category.fr}
+                                    placeholder='Catégorie du projet'
+                                    onChange={handleChange}
+                                    required
+                                    className='create-input'
+                                />
+                            </label>
+                            <label className='create-label'>
+                                Catégorie (EN):
+                                <input
+                                    type='text'
+                                    name='category.en'
+                                    value={projectData.category.en}
+                                    placeholder='Project category'
+                                    onChange={handleChange}
+                                    required
+                                    className='create-input'
+                                />
+                            </label>
+                        </div>
+                        <div className='create-section'>
+                            <label className='create-label'>
+                                Lien Github:
+                                <input
+                                    type='text'
+                                    name='githubLink'
+                                    value={projectData.githubLink}
+                                    placeholder='https://exemple.com'
+                                    onChange={handleChange}
+                                    required
+                                    className='create-input'
+                                />
+                            </label>
+                            <label className='create-label'>
+                                Lien démo:
+                                <input
+                                    type='text'
+                                    name='demoLink'
+                                    value={projectData.demoLink}
+                                    placeholder='https://exemple.com'
+                                    onChange={handleChange}
+                                    required
+                                    className='create-input'
+                                />
+                            </label>
+                        </div>
+                        <label className='create-label'>
+                            Technologies:
+                            <input
+                                type='text'
+                                name='technologies'
+                                value={projectData.technologies}
+                                placeholder='HTML, CSS, JavaScript'
+                                onChange={handleChange}
+                                required
+                                className='create-input'
+                            />
+                        </label>
+                        <Button
+                            text='Créer le projet'
+                            type='submit'
+                            width={'20rem'}
+                            height={'4rem'}
+                        />
+                    </form>
+                </div>
+                <div className='modal-container-2'>
+                    <div className='create-section'>
+                        <label className='create-label'>
+                            Description (FR):
+                            <textarea
+                                name='description.fr'
+                                value={projectData.description.fr}
+                                placeholder='Description du projet'
+                                onChange={handleChange}
+                                required
+                                className='create-textarea'
+                            />
+                        </label>
+                        <label className='create-label'>
+                            Description (EN):
+                            <textarea
+                                name='description.en'
+                                value={projectData.description.en}
+                                placeholder='Project description'
+                                onChange={handleChange}
+                                required
+                                className='create-textarea'
+                            />
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
