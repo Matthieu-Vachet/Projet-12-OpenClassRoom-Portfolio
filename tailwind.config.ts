@@ -9,6 +9,13 @@ export default {
     darkMode: 'media',
     theme: {
         extend: {
+            screens: {
+                mobile: '320px',
+                tablet: '641px',
+                desktop: '1025px',
+                largeDesktop: '1440px',
+                xxlDesktop: '1600px',
+            },
             colors: {
                 basicOnyx: 'rgba(24, 24, 24, 1)',
                 basicWhite: 'rgba(255, 255, 240, 1)',
@@ -39,10 +46,7 @@ export default {
         },
     },
     variants: {
-        extend: {
-            
-            
-        },
+        extend: {},
     },
     plugins: [
         function ({ matchUtilities, theme }: any) {
