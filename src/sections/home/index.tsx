@@ -1,10 +1,7 @@
 import React from 'react';
-/* Importation des composants */
 import Header from '../../layouts/header';
 import Hero from '../../layouts/hero';
 import Social from '../../components/social';
-
-/* Importation des styles */
 import './style.scss';
 
 export default function Home() {

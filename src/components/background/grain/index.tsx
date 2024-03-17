@@ -1,16 +1,3 @@
-/**
- * Composant Grain qui génère un bruit de grain SVG.
- *
- * @param {object} props - Les propriétés passées au composant.
- * @param {string} props.baseFrequency - La fréquence de base pour le bruit fractal.
- * @param {number} props.numOctaves - Le nombre d'octaves pour le bruit fractal.
- * @param {string} props.w - La largeur du SVG.
- * @param {string} props.h - La hauteur du SVG.
- *
- * @returns {JSX.Element} Un SVG qui génère un bruit de grain.
- */
-
-/* Importation des modules */
 import React from 'react';
 
 type GrainProps = {

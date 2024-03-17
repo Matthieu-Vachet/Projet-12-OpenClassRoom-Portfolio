@@ -1,8 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaInstagram, FaTwitterSquare } from 'react-icons/fa';
-
-/* Importation du style */
 import './style.scss';
 
 export default function Socials() {

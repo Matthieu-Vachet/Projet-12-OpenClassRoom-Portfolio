@@ -1,10 +1,7 @@
-/* Importation des modules */
 import React from 'react';
 import { motion } from 'framer-motion';
 import Tilt from 'react-parallax-tilt';
 import { useInView } from 'react-intersection-observer';
-
-/* Importation du style */
 import './style.scss';
 
 type SkillCardsProps = {

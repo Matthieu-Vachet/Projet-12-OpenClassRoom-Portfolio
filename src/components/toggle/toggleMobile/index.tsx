@@ -1,24 +1,22 @@
-/* Importation des modules */
 import React, { useContext, useState } from 'react';
-
-/* Importation des données */
-import { ThemeContext } from '../../../utils/dataProvider/DataProvider';
+import { ThemeContext } from '../../../utils/contexts/DataProvider';
 import { useTranslation } from 'react-i18next';
-
-/* Importation des composants */
 import { toast } from 'sonner';
-
-/* Importation des ressources */
 import { FaRegSquare } from 'react-icons/fa6';
-
-/* Importation du style */
 import './style.scss';
 
 export default function ToggleMobile() {
     const { i18n } = useTranslation();
     const { t } = useTranslation();
-    const { theme, toggleTheme } = useContext(ThemeContext);
     const [currentLanguage, setCurrentLanguage] = useState('fr');
+
+    const context = useContext(ThemeContext);
+
+    if (context === null) {
+        return null;
+    }
+
+    const { theme, toggleTheme } = context;
 
     const changeLanguage = (language: string) => {
         i18n.changeLanguage(language);

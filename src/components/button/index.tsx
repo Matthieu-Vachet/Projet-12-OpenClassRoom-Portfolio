@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './style.scss';
 
 interface ButtonProps {
@@ -10,7 +9,7 @@ interface ButtonProps {
     className?: string;
     height?: string;
     width?: string;
-    rel: string;
+    rel?: string;
     href?: string;
     target?: '_self' | '_blank' | '_parent' | '_top';
 }
