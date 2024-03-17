@@ -1,16 +1,3 @@
-/**
- * Composant AnimatedSkill qui anime un élément de compétence lorsqu'il entre dans le viewport.
- * Il utilise la bibliothèque framer-motion pour l'animation et react-intersection-observer pour détecter quand l'élément est dans le viewport.
- *
- * @param {object} props - Les propriétés passées au composant.
- * @param {React.ReactNode} props.children - Les enfants du composant à animer.
- * @param {number} props.delay - Le délai avant le début de l'animation.
- * @param {string} props.className - La classe CSS à appliquer à l'élément animé.
- *
- * @returns {JSX.Element} Un élément de compétence animé qui devient visible lorsqu'il entre dans le viewport.
- */
-
-/* Importation des modules */
 import { motion, useAnimation } from 'framer-motion';
 import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';

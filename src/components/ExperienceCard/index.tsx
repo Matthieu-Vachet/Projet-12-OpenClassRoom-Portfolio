@@ -1,17 +1,10 @@
-/* Importation des modules */
 import React from 'react';
-
-/* Importation des composants */
 import Tilt from 'react-parallax-tilt';
 import Grain from '../background/grain';
-
-/* Importation des icônes */
 import { IoCalendarNumberOutline } from 'react-icons/io5';
 import { IoIosArrowRoundForward } from 'react-icons/io';
 import { FaGlobeAfrica } from 'react-icons/fa';
 import { GiDiploma } from 'react-icons/gi';
-
-/* Importation du style */
 import './style.scss';
 
 type ExperienceCardProps = {

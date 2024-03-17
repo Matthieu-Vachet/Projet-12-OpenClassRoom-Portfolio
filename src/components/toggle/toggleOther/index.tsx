@@ -1,21 +1,22 @@
 /* Importation des modules */
 import React, { useContext, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ThemeContext } from '../../../utils/dataProvider/DataProvider';
-
-/* Importation des ressources */
+import { ThemeContext } from '../../../utils/contexts/DataProvider';
 import { CiLight } from 'react-icons/ci';
 import { MdDarkMode } from 'react-icons/md';
-
-/* Importation des composants */
 import { toast } from 'sonner';
-
-/* Importation du style */
 import './style.scss';
 
 export default function ToggleOther() {
     const { t } = useTranslation();
-    const { theme, toggleTheme } = useContext(ThemeContext);
+
+    const context = useContext(ThemeContext);
+
+    if (context === null) {
+        return null;
+    }
+
+    const { theme, toggleTheme } = context;
 
     const islightMode = theme === 'light';
 

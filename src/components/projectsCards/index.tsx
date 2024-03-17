@@ -1,17 +1,7 @@
-/* Importation des modules */
-import React, { useContext } from 'react';
-
-/* Importation des données */
-import { AuthContext } from '../../utils/dataProvider/DataProvider';
-
-/* Importation des ressources */
+import React from 'react';
 import { technologyIcons } from '../../utils/constants/constants';
 import { FaGithub, FaGlobe } from 'react-icons/fa';
-import { MdDeleteForever } from 'react-icons/md';
-
-/* Importation des styles */
 import './style.scss';
-import { t } from 'i18next';
 
 type ProjectsCardsProps = {
     id: string;
@@ -23,7 +13,6 @@ type ProjectsCardsProps = {
     live: string;
     technologies: string[];
     categorie: string;
-    onDeleteClick: (id: string) => void;
 };
 
 export default function ProjectsCards({
@@ -36,10 +25,7 @@ export default function ProjectsCards({
     live,
     technologies,
     categorie,
-    onDeleteClick,
 }: ProjectsCardsProps) {
-    const { isLoggedIn } = useContext(AuthContext);
-
     return (
         <div className='projects-cards-container'>
             <div className='projects-cards'>
@@ -54,14 +40,6 @@ export default function ProjectsCards({
                 </div>
                 <div className='projects-cards-content'>
                     <h2 className='projects-cards-title'>{name}</h2>
-                    {isLoggedIn && (
-                        <div className='projects-cards-edit-icons'>
-                            <MdDeleteForever
-                                className='edit-icons'
-                                onClick={() => onDeleteClick(id)}
-                            />
-                        </div>
-                    )}
                     <p className='projects-categorie'>{categorie}</p>
                     <div className='projects-cards-technologies'>
                         {technologies &&

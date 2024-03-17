@@ -1,16 +1,9 @@
-/* Importation des modules React */
 import React, { useTranslation } from 'react-i18next';
-
-/* Importation des composants d'animation */
 import AnimatedSubtitle from '../../components/animations/AnimatedSubtitle';
 import AnimatedText from '../../components/animations/AnimatedText';
 import AnimatedElement from '../../components/animations/AnimatedElement';
-
-/* Importation des composants */
 import Button from '../../components/button';
 import TopScroll from '../../components/topScroll';
-
-/* Importation du style */
 import './style.scss';
 
 export default function About() {

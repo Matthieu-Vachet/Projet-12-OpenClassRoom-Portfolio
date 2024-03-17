@@ -1,16 +1,7 @@
-/**
- * Composant Skills qui affiche la section "Compétences" du site.
- * @returns {JSX.Element} La section "Compétences" avec un sous-titre animé et une liste de cartes de compétences pour chaque catégorie de compétences.
- */
 import React from 'react';
-/* Importation des Animation */
 import AnimatedSubtitle from '../../components/animations/AnimatedSubtitle';
 import AnimatedText from '../../components/animations/AnimatedText';
-
-/* Importation des composants */
 import SkillCards from '../../components/skillCards';
-
-/* Importation des Données */
 import { useTranslation } from 'react-i18next';
 import {
     Backend_skill,
@@ -18,12 +9,11 @@ import {
     Developpement_skill,
     Frontend_skill,
 } from '../../utils/constants/constants';
-
-/* Importation des styles */
 import './style.scss';
 
 export default function Skills() {
     const { t } = useTranslation();
+
     return (
         <section id='skills' className='section' aria-label='Skills section'>
             <div className='skills-container'>

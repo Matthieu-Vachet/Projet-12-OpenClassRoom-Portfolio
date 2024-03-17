@@ -1,9 +1,3 @@
-/**
- * Composant Blur qui modifie l'opacité d'un élément en fonction du défilement de la page.
- *
- * @returns {JSX.Element} Un élément div dont l'opacité change en fonction du défilement de la page.
- */
-
 import React, { useState, useEffect } from 'react';
 
 const Blur = () => {
