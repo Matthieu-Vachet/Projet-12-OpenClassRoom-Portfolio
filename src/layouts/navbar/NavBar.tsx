@@ -4,9 +4,6 @@ import React, { useState, useEffect } from 'react';
 /* Importation des données */
 import { navItems } from '../../utils/constants/constants';
 
-/* Importation des styles */
-import './style.scss';
-
 export default function Navbar() {
     const [activeNav, setActiveNav] = useState('#home');
 
@@ -37,15 +34,15 @@ export default function Navbar() {
     }, []);
 
     return (
-        <div className='navbar'>
-            <nav>
+        <div className='fixed inset-x-0 top-0 z-10 flex justify-center'>
+            <nav className='glassEffect w-max absolute left-[50%] transform -translate-x-1/2 top-[1em] flex items-center gap-[1px] md:gap-[1px] sm:gap-0'>
                 {navItems.map((item) => {
                     const Icon = item.icon;
                     return (
                         <a
                             key={item.id}
                             href={`#${item.id}`}
-                            className={activeNav === `#${item.id}` ? 'active' : ''}
+                            className={`md:w-[4rem] rounded-[10px] flex text-basicWhite justify-center items-center py-[8px] px-[10px] sm:w-[3rem] hover:bg-darkWhite10 active:bg-darkWhite10 ${activeNav === `#${item.id}` ? 'active' : ''}`}
                             onClick={(e) => {
                                 e.preventDefault();
                                 const element = document.querySelector(`#${item.id}`);
@@ -54,7 +51,9 @@ export default function Navbar() {
                                 }
                             }}
                         >
-                            <Icon title={item.title} />
+                            <div className=' text-basicWhite flex items-center justify-center sm:h-1.5 sm:w-1.5'>
+                                <Icon className=' w-1.5 h-1.5' title={item.title} />
+                            </div>
                         </a>
                     );
                 })}

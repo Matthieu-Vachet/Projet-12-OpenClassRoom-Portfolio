@@ -30,7 +30,7 @@ export default function Experience() {
                         <AnimatedElement delay={0.1} key={index}>
                             <ExperienceCard
                                 school={experience.school}
-                                src={'/experiences/' + experience.img}
+                                src={experience.img}
                                 alt={experience.school}
                                 title={experience.title}
                                 startDate={experience.startDate}

@@ -54,7 +54,7 @@ export const TextRevealCard = ({
             onMouseMove={mouseMoveHandler}
             ref={cardRef}
             className={cn(
-                ' xxlDesktop:w-[45rem] rounded-lg relative overflow-hidden flex justify-center',
+                ' 2xl:w-[45rem] w-[15rem] rounded-lg relative overflow-hidden flex justify-center',
                 className,
             )}
         >
@@ -82,7 +82,7 @@ export const TextRevealCard = ({
                         style={{
                             textShadow: '4px 4px 15px rgba(0,0,0,0.5)',
                         }}
-                        className='text-base xxlDesktop:text-[4rem] py-10 font-bold text-white bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-300'
+                        className='text-base 2xl:text-[4rem] text-[2rem] py-10 font-bold text-white bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-300'
                     >
                         {revealText}
                     </p>
@@ -98,7 +98,7 @@ export const TextRevealCard = ({
                 ></motion.div>
 
                 <div className=' overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]'>
-                    <p className='text-base xxlDesktop:text-[4rem] py-10 font-bold bg-clip-text text-transparent bg-[#323238]'>
+                    <p className='text-base 2xl:text-[4rem] py-10 font-bold bg-clip-text text-transparent bg-[#323238]'>
                         {text}
                     </p>
                     <MemoizedStars />

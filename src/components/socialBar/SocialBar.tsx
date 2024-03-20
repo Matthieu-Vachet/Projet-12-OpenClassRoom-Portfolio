@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaInstagram, FaTwitterSquare } from 'react-icons/fa';
-import './style.scss';
 
 export default function Socials() {
     const styles = {
@@ -14,9 +13,12 @@ export default function Socials() {
     };
 
     return (
-        <div className='socialIcons' style={styles.icon}>
+        <div
+            className='sm:w-[100%] md:w-[3%] h-[100vh] absolute flex sm:flex-row md:flex-col sm:justify-center md:justify-end items-center py-[5px] px-[5px] sm:ml-0 md:ml-[1em] sm:bottom-[3em] md:bottom-[4em] lg:bottom-[4.5em] xl:bottom-[3em] sm:top-[7rem] md:top-0 sm:gap-[2em] md:gap-[1em] z-10 '
+            style={styles.icon}
+        >
             <a
-                className='icon'
+                className='text-basicWhite no-underline text-[2.2rem] cursor-pointer duration-[0.3s] hover:text-basicDarkGray hover:scale-120 2xl:text-[2.5rem] 2xl:scale-125'
                 href='https://github.com/Matthieu-Vachet'
                 target='_blank'
                 rel='noopener noreferrer'
@@ -33,7 +35,7 @@ export default function Socials() {
                 </motion.i>
             </a>
             <a
-                className='icon'
+                className='text-basicWhite no-underline text-[2.2rem] cursor-pointer duration-[0.3s] hover:text-basicDarkGray hover:scale-120 2xl:text-[2.5rem] 2xl:scale-125'
                 href='www.linkedin.com/in/matthieu-vachet-46b7231b0'
                 target='_blank'
                 rel='noopener noreferrer'
@@ -50,7 +52,7 @@ export default function Socials() {
                 </motion.i>
             </a>
             <a
-                className='icon'
+                className='text-basicWhite no-underline text-[2.2rem] cursor-pointer duration-[0.3s] hover:text-basicDarkGray hover:scale-120 2xl:text-[2.5rem] 2xl:scale-125'
                 href='https://www.instagram.com/mathunting02/'
                 target='_blank'
                 rel='noopener noreferrer'
@@ -67,7 +69,7 @@ export default function Socials() {
                 </motion.i>
             </a>
             <a
-                className='icon'
+                className='text-basicWhite no-underline text-[2.2rem] cursor-pointer duration-[0.3s] hover:text-basicDarkGray hover:scale-120 2xl:text-[2.5rem] 2xl:scale-125'
                 href='https://twitter.com/ShinyHunting02'
                 target='_blank'
                 rel='noopener noreferrer'
