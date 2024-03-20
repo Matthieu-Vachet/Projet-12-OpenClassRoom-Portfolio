@@ -4,15 +4,21 @@ import AnimatedText from '../../components/animations/AnimatedText';
 import AnimatedElement from '../../components/animations/AnimatedElement';
 import Button from '../../components/button';
 import TopScroll from '../../components/topScroll';
-import './style.scss';
+// import './style.scss';
 
 export default function About() {
     const { t } = useTranslation();
 
     return (
-        <section id='about' className='section' aria-label='About section'>
-            <div className='about-container'>
-                <h1 className='about-section-title section-title'>About</h1>
+        <section
+            id='about'
+            className='section w-[100%] flex flex-col items-center justify-center sm:pb-[3rem] '
+            aria-label='About section'
+        >
+            <div className=' sm:w-[95%] lg:w-[100%] sm:ml-[0px] lg:ml-[2rem] md:items-center md:text-center lg:items-end lg:text-end relative flex flex-col justify-center'>
+                <h1 className=' sm:items-center lg:items-end sm:pr-[0px] lg:pr-[4rem] section-title'>
+                    About
+                </h1>
                 <AnimatedSubtitle
                     text={t('about.title')}
                     className={'about-title title'}

@@ -1,4 +1,15 @@
-// Keyframes scroll mouse
+.animation-scroll-mouse {
+    background-color: var(--basicWhite);
+    animation-name: scroll;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+    animation-iteration-count: infinite;
+}
+
+.scroll-text {
+    animation: blink 2s infinite;
+}
+
 @keyframes scroll {
     0% {
         opacity: 0;
@@ -15,7 +26,6 @@
     }
 }
 
-// Keyframes text "scroll down"
 @keyframes blink {
     0% {
         opacity: 1;
@@ -29,5 +39,3 @@
         opacity: 1;
     }
 }
-
-// Keyframes ellipse top background

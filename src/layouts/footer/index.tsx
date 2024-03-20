@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import { useTranslation } from 'react-i18next';
 
 /* Importation des Données */
-import { UserContext } from '../../utils/dataProvider/DataProvider';
+import { user } from '../../utils/constants/user';
 import { Footer_Link, Footer_Projects, Footer_Follow } from '../../utils/constants/constants';
 
 /* Importation des icônes */
@@ -13,7 +13,6 @@ import { MdCopyright } from 'react-icons/md';
 import './style.scss';
 
 export default function Footer() {
-    const userData = useContext(UserContext);
     const { t } = useTranslation();
 
     return (
@@ -25,19 +24,19 @@ export default function Footer() {
                         <ul className='footer-list'>
                             <li>
                                 <span className='footer-text'>
-                                    {userData[0].name} {userData[0].lastname}
+                                    {user.name} {user.lastname}
                                 </span>
                             </li>
                             <li>
-                                <span className='footer-text'>{userData[0].adress}</span>
+                                <span className='footer-text'>{user.address}</span>
                             </li>
                             <li>
                                 <span className='footer-text'>
-                                    {userData[0].cp} {userData[0].city}
+                                    {user.cp} {user.city}
                                 </span>
                             </li>
                             <li>
-                                <span className='footer-text'>{userData[0].email}</span>
+                                <span className='footer-text'>{user.email}</span>
                             </li>
                         </ul>
                     </div>

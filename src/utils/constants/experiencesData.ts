@@ -14,7 +14,7 @@ export const ExperiencesData: ExperiencesTypes[] = [
         endDate: '2024',
         technologies: ['React', 'Javascript', 'Css', 'Html', 'node'],
         link: 'a venir',
-        img: 'oplogo.webp',
+        img: 'https://raw.githubusercontent.com/Matthieu-Vachet/Images-projets/main/oplogo.webp',
     },
     {
         id: 2,
@@ -28,6 +28,6 @@ export const ExperiencesData: ExperiencesTypes[] = [
         endDate: '2023',
         technologies: ['Aucun'],
         link: 'a venir',
-        img: 'qwenta.webp',
+        img: 'https://raw.githubusercontent.com/Matthieu-Vachet/Images-projets/main/qwenta.webp',
     },
 ];

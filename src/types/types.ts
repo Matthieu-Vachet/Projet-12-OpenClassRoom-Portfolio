@@ -13,7 +13,7 @@ export interface ExperiencesTypes {
 }
 
 export interface ProjectsTypes {
-    id: string;
+    id: number;
     name: string;
     description: string;
     category: string;

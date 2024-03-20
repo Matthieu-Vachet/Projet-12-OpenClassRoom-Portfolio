@@ -9,12 +9,16 @@ export default {
     darkMode: 'media',
     theme: {
         extend: {
+            fontFamily: {
+                'space-grotesk': ['Space Grotesk', 'sans-serif'],
+                syne: ['Syne', 'sans-serif'],
+            },
             screens: {
-                mobile: '320px',
-                tablet: '641px',
-                desktop: '1025px',
-                largeDesktop: '1440px',
-                xxlDesktop: '1600px',
+                sm: '320px',
+                md: '641px',
+                lg: '1024px',
+                xl: '1440px',
+                '2xl': '1600px',
             },
             colors: {
                 basicOnyx: 'rgba(24, 24, 24, 1)',
@@ -32,11 +36,17 @@ export default {
                 button3: '#fc0987',
             },
             spacing: {
+                '0.5': '0.5rem',
                 '1': '1rem',
+                '1.5': '1.5rem',
                 '2': '2rem',
+                '2.5': '2.5rem',
                 '3': '3rem',
+                '3.5': '3.5rem',
                 '4': '4rem',
+                '4.5': '4.5rem',
                 '5': '5rem',
+                '5.5': '5.5rem',
                 '6': '6rem',
                 '7': '7rem',
                 '8': '8rem',
