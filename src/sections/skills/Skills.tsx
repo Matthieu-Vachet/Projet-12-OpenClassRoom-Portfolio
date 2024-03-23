@@ -9,14 +9,14 @@ import {
     Developpement_skill,
     Frontend_skill,
 } from '../../utils/constants/constants';
-import './style.scss';
+import './Skills.scss';
 
 export default function Skills() {
     const { t } = useTranslation();
 
     return (
-        <section id='skills' className='section' aria-label='Skills section'>
-            <div className='skills-container'>
+        <section id='skills' className='section w-[100%] lg:pt-[0px]' aria-label='Skills section'>
+            <div className='sm:w-[95%] lg:w-[100%] sm:m-auto relative flex flex-col'>
                 <h1 className='skills-section-title section-title'>Skills</h1>
                 <AnimatedSubtitle
                     text={t('skills.title')}
@@ -24,8 +24,8 @@ export default function Skills() {
                     charSpace='0.016px'
                     wordSpace='0.016px'
                 />
-                <div className='skills-section'>
-                    <div className='skills-texts'>
+                <div className='sm:w-[100%] lg:w-[95%] flex sm:flex-col lg:flex-row items-center text-center sm:justify-center lg:justify-between sm:ml-[0px] lg:ml-[2rem] sm:mb-[2rem] lg:mb-[5rem] gap-5 '>
+                    <div className=' text-basicWhite uppercase gap-[4rem] opacity-[0.5] sm:text-center lg:text-start sm:scale-y-[1] lg:scale-y-[2] font-bold sm:text-[20px] font-syne xl:text-[25px] 2xl:text-[30px]  '>
                         <AnimatedText text={t('skills.text-1')} />
                     </div>
                     <div className='skill-icons-sections' aria-label='Frontend skills'>
@@ -42,8 +42,8 @@ export default function Skills() {
                         ))}
                     </div>
                 </div>
-                <div className='skills-section'>
-                    <div className='skills-texts'>
+                <div className='sm:w-[100%] lg:w-[95%] flex sm:flex-col lg:flex-row items-center text-center sm:justify-center lg:justify-between sm:ml-[0px] lg:ml-[2rem] sm:mb-[2rem] lg:mb-[5rem] gap-5 '>
+                    <div className=' text-basicWhite uppercase gap-[4rem] opacity-[0.5] sm:text-center lg:text-start sm:scale-y-[1] lg:scale-y-[2] font-bold sm:text-[20px] font-syne xl:text-[25px] 2xl:text-[30px] '>
                         <AnimatedText text={t('skills.text-2')} />
                     </div>
                     <div className='skill-icons-sections' aria-label='Backend skills'>
@@ -60,8 +60,8 @@ export default function Skills() {
                         ))}
                     </div>
                 </div>
-                <div className='skills-section'>
-                    <div className='skills-texts'>
+                <div className='sm:w-[100%] lg:w-[95%] flex sm:flex-col lg:flex-row items-center text-center sm:justify-center lg:justify-between sm:ml-[0px] lg:ml-[2rem] sm:mb-[2rem] lg:mb-[5rem] gap-5 '>
+                    <div className=' text-basicWhite uppercase gap-[4rem] opacity-[0.5] sm:text-center lg:text-start sm:scale-y-[1] lg:scale-y-[2] font-bold sm:text-[20px] font-syne xl:text-[25px] 2xl:text-[30px] '>
                         <AnimatedText text={t('skills.text-3')} />
                     </div>
                     <div className='skill-icons-sections' aria-label='Developpement skills'>
@@ -78,8 +78,8 @@ export default function Skills() {
                         ))}
                     </div>
                 </div>
-                <div className='skills-section'>
-                    <div className='skills-texts'>
+                <div className='sm:w-[100%] lg:w-[95%] flex sm:flex-col lg:flex-row items-center text-center sm:justify-center lg:justify-between sm:ml-[0px] lg:ml-[2rem] sm:mb-[2rem] lg:mb-[5rem] gap-5 '>
+                    <div className=' text-basicWhite gap-[4rem] opacity-[0.5] sm:text-center lg:text-start sm:scale-y-[1] lg:scale-y-[2] font-bold sm:text-[20px] font-syne uppercase xl:text-[25px] 2xl:text-[30px] '>
                         <AnimatedText text={t('skills.text-4')} />
                     </div>
                     <div className='skill-icons-sections' aria-label='Conception skills'>

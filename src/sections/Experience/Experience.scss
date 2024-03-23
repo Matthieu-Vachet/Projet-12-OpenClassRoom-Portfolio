@@ -1,0 +1,63 @@
+@import '../../styles/variable.scss';
+
+.experience-section-title {
+    margin-left: 2rem;
+    text-align: left;
+
+    @include mobile {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    @include tablet {
+        text-align: center;
+        margin-left: 0;
+        @include Syne(90px, 700, 0em);
+    }
+
+    &::before {
+        content: 'Experience';
+        position: absolute;
+        width: calc(100% - 5rem); // réduire la largeur de 5rem
+        top: -40px;
+        left: 40px;
+        text-align: left;
+        @include Syne(150px, 700, 0em);
+        color: var(--basicWhite);
+        opacity: 0.15;
+
+        @include mobile {
+            text-align: center;
+            @include Syne(40px, 700, 0em);
+            top: -15px;
+            left: 60px;
+        }
+
+        @include tablet {
+            text-align: center;
+            @include Syne(90px, 700, 0em);
+            top: -15px;
+            left: 60px;
+        }
+
+        @include desktop {
+            @include Syne(120px, 700, 0em);
+        }
+
+        @include xxlDesktop {
+            @include Syne(200px, 700, 0em);
+        }
+    }
+}
+
+.reverse {
+    flex-direction: row-reverse;
+
+    @include mobile {
+        flex-direction: column;
+    }
+
+    @include tablet {
+        flex-direction: column;
+    }
+}

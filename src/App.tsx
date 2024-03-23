@@ -5,11 +5,11 @@ import React, { lazy, Suspense } from 'react';
 // import PreLoader from './layouts/Preloader';
 import NavBar from './layouts/navbar/NavBar';
 import Home from './sections/home/Home';
-const About = lazy(() => import('./sections/about'));
+const About = lazy(() => import('./sections/about/About'));
 const Blur = lazy(() => import('./components/background/overlay/blur'));
-// const Skills = lazy(() => import('./sections/skills'));
+const Experience = lazy(() => import('./sections/Experience/Experience'));
+const Skills = lazy(() => import('./sections/skills/Skills'));
 // const Projects = lazy(() => import('./sections/projects'));
-// const Experience = lazy(() => import('./sections/Experience'));
 // const Contact = lazy(() => import('./sections/Contact'));
 // const Footer = lazy(() => import('./layouts/footer'));
 import { Toaster } from 'sonner';
@@ -34,8 +34,8 @@ function App() {
                 <Home />
                 <Suspense fallback={<div>Loading...</div>}>
                     <About />
-                    {/* <Experience /> */}
-                    {/* <Skills /> */}
+                    <Experience />
+                    <Skills />
                     {/* <Projects /> */}
                     {/* <Contact /> */}
                     {/* <Footer /> */}

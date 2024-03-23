@@ -1,0 +1,18 @@
+.scroll-top-arrow {
+    animation: bounce 1s infinite;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
