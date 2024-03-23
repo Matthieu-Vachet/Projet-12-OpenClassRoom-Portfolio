@@ -1,0 +1,93 @@
+@import '../../styles/variable.scss';
+
+.skills-section-title {
+    text-align: right;
+    padding-right: 4rem;
+
+    @include mobile {
+        text-align: center;
+        padding-right: 0;
+    }
+    @include tablet {
+        text-align: center;
+        padding-right: 0;
+    }
+
+    &::before {
+        content: 'Skills';
+        position: absolute;
+        width: calc(100% - 5rem); // réduire la largeur de 5rem
+        top: -40px;
+        left: 40px;
+        text-align: right;
+        @include Syne(150px, 700, 0em);
+        color: var(--basicWhite);
+        opacity: 0.2;
+
+        @include mobile {
+            text-align: center;
+            @include Syne(40px, 700, 0em);
+            top: -15px;
+            left: 60px;
+        }
+
+        @include tablet {
+            text-align: center;
+            @include Syne(100px, 700, 0em);
+            top: -15px;
+            left: 60px;
+        }
+
+        @include desktop {
+            @include Syne(120px, 700, 0em);
+        }
+
+        @include xxlDesktop {
+            @include Syne(200px, 700, 0em);
+        }
+    }
+}
+
+.skills-texts {
+    @include Syne(20px, 700, 0.45em);
+
+    @include mobile {
+        @include Syne(20px, 700, 0.2em);
+    }
+    @include tablet {
+        @include Syne(20px, 700, 0.2em);
+    }
+
+    @include desktop {
+        @include Syne(20px, 700, 0.2em);
+    }
+
+    @include largeDesktop {
+        @include Syne(25px, 700, 0.2em);
+    }
+
+    @include xxlDesktop {
+        @include Syne(30px, 700, 0.2em);
+    }
+}
+
+.skill-icons-sections {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    @include mobile {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 3rem;
+        gap: 1rem;
+    }
+    @include tablet {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 3rem;
+        gap: 1rem;
+    }
+}

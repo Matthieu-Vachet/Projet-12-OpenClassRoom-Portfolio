@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { MdKeyboardDoubleArrowUp } from 'react-icons/md';
-import './style.scss';
+import './TopScroll.scss';
 
 export default function TopScroll() {
     const [isVisible, setIsVisible] = useState(false);
@@ -26,10 +26,10 @@ export default function TopScroll() {
     }, []);
 
     return (
-        <div className='scroll-to-top'>
+        <div className='fixed sm:bottom-[10px] md:bottom-[20px] sm:right-[10px] md:right-[20px] cursor-pointer text-basicWhite z-50'>
             {isVisible && (
                 <div onClick={scrollToTop} aria-label='Scroll to top'>
-                    <MdKeyboardDoubleArrowUp className='scroll-top-arrow' />
+                    <MdKeyboardDoubleArrowUp className='sm:text-[3rem] md:text-[5rem] scroll-top-arrow' />
                 </div>
             )}
         </div>
