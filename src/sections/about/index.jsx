@@ -5,11 +5,11 @@
 
 /* Importation des modules React */
 import { useTranslation } from 'react-i18next';
+import { Vortex } from '../../components/background/vortex/vortex';
 
 /* Importation des composants d'animation */
 import AnimatedSubtitle from '../../components/animations/AnimatedSubtitle';
 import AnimatedText from '../../components/animations/AnimatedText';
-import AnimatedElement from '../../components/animations/AnimatedElement';
 
 /* Importation des composants */
 import Button from '../../components/button';
@@ -36,18 +36,20 @@ export default function About() {
                         <AnimatedText delay={0.1} text={t('about.text-2')} />
                         <AnimatedText delay={0.2} text={t('about.text-3')} />
                     </div>
-                    <AnimatedElement
-                        delay={0.3}
-                        className='about-button'
-                        aria-label='About section buttons'
-                    >
-                        <Button
-                            text={t('about.button-1')}
-                            target={'_blank'}
-                            rel='noopener noreferrer'
-                            href='https://drive.google.com/file/d/1zMZp_Z-gkrRHBZe1b1m1yXhWOR7HDjG4/view?usp=drive_link'
-                        />
-                    </AnimatedElement>
+
+                    <div className='about-button' aria-label='About section buttons'>
+                        <Vortex
+                            backgroundColor='transparent'
+                            className=' flex justify-center items-center '
+                        >
+                            <Button
+                                text={t('about.button-1')}
+                                target={'_blank'}
+                                rel='noopener noreferrer'
+                                href='https://drive.google.com/file/d/1zMZp_Z-gkrRHBZe1b1m1yXhWOR7HDjG4/view?usp=drive_link'
+                            />
+                        </Vortex>
+                    </div>
                 </div>
             </div>
             <TopScroll />
