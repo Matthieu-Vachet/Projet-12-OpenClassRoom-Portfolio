@@ -11,19 +11,23 @@
 
 /* Importation des modules */
 import { motion, useAnimation } from 'framer-motion';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-import PropTypes from 'prop-types';
 
 /* Importation des styles */
 import './Animation.scss';
 
-export default function AnimatedTitle({ title, className }) {
+type AnimatedTitleProps = {
+    title: string;
+    className: string;
+};
+
+export default function AnimatedTitle({ title, className }: AnimatedTitleProps) {
     const ctrls = useAnimation();
 
     const { ref, inView } = useInView({
-        threshold: 0.4,
-        triggerOnce: true,
+        threshold: 0.5,
+        triggerOnce: false,
     });
 
     useEffect(() => {
@@ -58,12 +62,16 @@ export default function AnimatedTitle({ title, className }) {
                         key={index}
                         initial='initial'
                         animate={ctrls}
+                        className='flex items-center justify-center overflow-hidden'
                         transition={{
                             delayChildren: index * 0.25,
                             staggerChildren: 0.05,
                         }}
                     >
-                        <motion.span className='animated-title-span' variants={letterAnimation}>
+                        <motion.span
+                            className=' mb-4 inline-block overflow-hidden pt-1 sm:mb-2 md:mb-3 lg:mb-4'
+                            variants={letterAnimation}
+                        >
                             {word}
                         </motion.span>
                     </motion.div>
@@ -72,8 +80,3 @@ export default function AnimatedTitle({ title, className }) {
         </h1>
     );
 }
-
-AnimatedTitle.propTypes = {
-    title: PropTypes.string.isRequired,
-    className: PropTypes.string,
-};

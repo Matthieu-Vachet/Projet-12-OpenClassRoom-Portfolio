@@ -9,7 +9,7 @@
  */
 
 /* Importation des modules */
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 /* Importation des données */
 import { useTranslation } from 'react-i18next';
@@ -59,7 +59,9 @@ export default function ContactForm() {
      * @returns {boolean} `true` si l'adresse email est valide, `false` sinon.
      */
 
-    const validateEmail = (email) => {
+    type Email = string;
+
+    const validateEmail = (email: Email) => {
         const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
         return pattern.test(email);
     };
@@ -70,7 +72,9 @@ export default function ContactForm() {
      * @param {Object} e - L'événement de changement.
      */
 
-    const handleChange = (e) => {
+    type ChangeEvent = React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
+
+    const handleChange = (e: ChangeEvent) => {
         const { name, value } = e.target;
         switch (name) {
             case 'firstname':
@@ -180,7 +184,9 @@ export default function ContactForm() {
      * @param {Object} e - L'événement de soumission.
      */
 
-    const handleSubmit = (e) => {
+    type SubmitEvent = React.FormEvent<HTMLFormElement>;
+
+    const handleSubmit = (e: SubmitEvent) => {
         e.preventDefault();
         if (!isFirstNameValid || !isLastNameValid || !isEmailValid || !isMessageValid) {
             toast.error(t('error.submit'));
@@ -225,7 +231,6 @@ export default function ContactForm() {
                     )}
                 </div>
                 <textarea
-                    type='text'
                     name='message'
                     cols={30}
                     rows={3}

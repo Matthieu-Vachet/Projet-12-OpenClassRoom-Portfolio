@@ -21,9 +21,11 @@
 
 /* Importation des modules */
 import { lazy, Suspense } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+// import { AnimatePresence, motion } from 'framer-motion';
 
 /* Importation des composants */
+import Preloader from './layouts/Preloader/Preloader';
+import { GridBackground } from './components/background/gridBackground';
 import NavBar from './layouts/navbar';
 import Home from './sections/home';
 const About = lazy(() => import('./sections/about'));
@@ -36,10 +38,10 @@ const Footer = lazy(() => import('./layouts/footer'));
 import { Toaster } from 'sonner';
 
 /* Importation des animations */
-import { AppVariants } from './utils/framerMotion/Variante';
+// import { AppVariants } from './utils/framerMotion/Variante';
 
 /* Importation des assets */
-import backgroundImage from './assets/images/Bg-Squares-Black.svg';
+// import backgroundImage from './assets/images/Bg-Squares-Black.svg';
 
 /**
     * Composant App
@@ -50,17 +52,21 @@ import backgroundImage from './assets/images/Bg-Squares-Black.svg';
 
 function App() {
     return (
-        <AnimatePresence>
-            <motion.div
-                key='app'
-                initial='initial'
-                animate='animate'
-                exit='exit'
-                variants={AppVariants}
-                style={{
-                    backgroundImage: `url(${backgroundImage})`,
-                }}
-            >
+        <>
+            <Preloader />
+            <GridBackground />
+            {/* <AnimatePresence>
+                <motion.div
+                    key='app'
+                    initial='initial'
+                    animate='animate'
+                    exit='exit'
+                    variants={AppVariants}
+                    style={{
+                        backgroundImage: `url(${backgroundImage})`,
+                    }}
+                > */}
+            <div>
                 <Blur />
                 <NavBar />
                 <Home />
@@ -80,8 +86,10 @@ function App() {
                         className: 'my-toast',
                     }}
                 />
-            </motion.div>
-        </AnimatePresence>
+            </div>
+            {/* </motion.div>
+            </AnimatePresence> */}
+        </>
     );
 }
 

@@ -16,10 +16,24 @@
  */
 
 /* Importation des modules */
+import React from 'react';
 import PropTypes from 'prop-types';
 
 /* Importation des styles */
 import './style.scss';
+
+interface ButtonProps {
+    text: string;
+    type?: 'button' | 'submit' | 'reset';
+    onClick?: () => void;
+    disabled?: boolean;
+    className?: string;
+    height?: string;
+    width?: string;
+    rel?: string;
+    href?: string;
+    target?: '_blank' | '_self' | '_parent' | '_top' | string;
+}
 
 export default function Button({
     text,
@@ -29,10 +43,11 @@ export default function Button({
     className,
     height,
     width,
+    rel,
     href,
     target,
-}) {
-    const handleClick = (event) => {
+}: ButtonProps) {
+    const handleClick = (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => {
         if (onClick) {
             event.preventDefault();
             onClick();
@@ -48,7 +63,7 @@ export default function Button({
                 style={{ height: `${height}`, width: `${width}` }}
                 aria-label={text}
                 role='button'
-                tabIndex='0'
+                tabIndex={0}
                 onClick={handleClick}
             >
                 <span className='btn-gradient-text'>{text}</span>
@@ -64,7 +79,7 @@ export default function Button({
                 style={{ height: `${height}`, width: `${width}` }}
                 aria-label={text}
                 role='button'
-                tabIndex='0'
+                tabIndex={0}
             >
                 <span className='btn-gradient-text'>{text}</span>
             </button>

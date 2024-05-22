@@ -7,7 +7,7 @@
  */
 
 /* Importation des modules */
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 /* Importation des composants */
@@ -38,7 +38,7 @@ export default function Navbar() {
             });
 
             setActiveNav(activeId);
-            history.pushState(null, null, activeId);
+            history.pushState({}, '', activeId);
         };
 
         window.addEventListener('scroll', navbarHighlighter);
@@ -65,9 +65,10 @@ export default function Navbar() {
                             className={activeNav === `#${item.id}` ? 'active' : ''}
                             onClick={(e) => {
                                 e.preventDefault();
-                                document
-                                    .querySelector(`#${item.id}`)
-                                    .scrollIntoView({ behavior: 'smooth' });
+                                const element = document.querySelector(`#${item.id}`);
+                                if (element) {
+                                    element.scrollIntoView({ behavior: 'smooth' });
+                                }
                             }}
                         >
                             <Icon title={item.title} />

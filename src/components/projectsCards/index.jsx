@@ -57,7 +57,7 @@ export default function ProjectsCards({
                         src={image}
                         alt={alt}
                         aria-label={alt}
-                        tabIndex='0'
+                        tabIndex={0}
                     />
                 </div>
                 <div className='projects-cards-content'>
