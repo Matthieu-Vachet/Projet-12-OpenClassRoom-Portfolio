@@ -28,9 +28,16 @@ import {
     SiPostman,
 } from 'react-icons/si';
 import { TbBrandFramerMotion, TbBrandVscode, TbBrandFigma } from 'react-icons/tb';
+import { IconType } from 'react-icons';
+
+interface NavItemType {
+    id: string;
+    title: string;
+    icon: IconType;
+}
 
 /* Navigation items */
-const navItems = [
+const navItems: NavItemType[] = [
     {
         id: 'home',
         title: 'Home',
@@ -63,8 +70,15 @@ const navItems = [
     },
 ];
 
+interface SkillsType {
+    skill_name: string;
+    Image: IconType;
+    size: number;
+    alt: string;
+}
+
 /* Frontend skills */
-const Frontend_skill = [
+const Frontend_skill: SkillsType[] = [
     {
         skill_name: 'Html',
         Image: DiHtml5,
@@ -110,7 +124,7 @@ const Frontend_skill = [
 ];
 
 /* Backend skills */
-const Backend_skill = [
+const Backend_skill: SkillsType[] = [
     {
         skill_name: 'Node.JS',
         Image: DiNodejsSmall,
@@ -132,7 +146,7 @@ const Backend_skill = [
 ];
 
 /* Developpement skills */
-const Developpement_skill = [
+const Developpement_skill: SkillsType[] = [
     {
         skill_name: 'VS Code',
         Image: TbBrandVscode,
@@ -160,7 +174,7 @@ const Developpement_skill = [
 ];
 
 /* Conception skills */
-const Conception_skill = [
+const Conception_skill: SkillsType[] = [
     {
         skill_name: 'Figma',
         Image: TbBrandFigma,
@@ -199,8 +213,12 @@ const Conception_skill = [
     },
 ];
 
+interface TechnologyIconsType {
+    [key: string]: IconType;
+}
+
 /* Icone des technologies pour l'import de projet via API */
-const technologyIcons = {
+const technologyIcons: TechnologyIconsType = {
     Html: DiHtml5,
     Css: DiCss3,
     Sass: DiSass,
@@ -217,8 +235,13 @@ const technologyIcons = {
     FramerMotion: TbBrandFramerMotion,
 };
 
+interface FooterLinkType {
+    name: string;
+    link: string;
+}
+
 /* Footer (liens) */
-const Footer_Link = [
+const Footer_Link: FooterLinkType[] = [
     {
         name: 'Home',
         link: '#home',
@@ -241,8 +264,13 @@ const Footer_Link = [
     },
 ];
 
+interface FooterProjectsType {
+    name: string;
+    link: string;
+}
+
 /* Footer (projets) */
-const Footer_Projects = [
+const Footer_Projects: FooterProjectsType[] = [
     {
         name: 'ArgentBank',
         link: 'https://projet-11-openclassrooms-argent-bank.vercel.app/',
@@ -265,8 +293,14 @@ const Footer_Projects = [
     },
 ];
 
+interface FooterSocialType {
+    icon: string;
+    link: string;
+    label: string;
+}
+
 /* Footer (réseaux sociaux) */
-const Footer_Follow = [
+const Footer_Follow: FooterSocialType[] = [
     {
         icon: 'fab fa-twitter',
         link: 'https://twitter.com/ShinyHunting02',
@@ -289,8 +323,13 @@ const Footer_Follow = [
     },
 ];
 
+interface certificatesType {
+    name: string;
+    url: string;
+}
+
 /* Certificats section Expérience */
-const certificates = [
+const certificates: certificatesType[] = [
     {
         name: 'Créez votre site web avec HTML5 et CSS3',
         url: 'https://drive.google.com/file/d/16yNEtIREhe_f6DrSnQqU0cmgZO0feYW6/view?usp=drive_link',

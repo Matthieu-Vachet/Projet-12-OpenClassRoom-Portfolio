@@ -1,0 +1,9 @@
+@import '../../../styles/variable.scss';
+
+.gridbg {
+    background-color: var(--basicOnyx);
+
+    .gridmask {
+        background-color: var(--basicOnyx);
+    }
+}

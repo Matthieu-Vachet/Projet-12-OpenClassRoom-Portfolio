@@ -9,6 +9,7 @@
  */
 
 /* Importation des modules */
+import React from 'react';
 import { motion } from 'framer-motion';
 
 import { FaGithub, FaLinkedin, FaInstagram, FaTwitterSquare } from 'react-icons/fa';
@@ -27,7 +28,7 @@ export default function Socials() {
     };
 
     return (
-        <div className='socialIcons' style={styles.socialIcons}>
+        <div className='socialIcons' style={styles.icon}>
             <a
                 className='icon'
                 href='https://github.com/Matthieu-Vachet'
