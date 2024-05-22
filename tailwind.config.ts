@@ -31,6 +31,7 @@ export default {
                 glassGlassDark30: 'rgba(24, 24, 29, 0.3)',
                 borderGlass: 'rgba(255, 255, 255, 0.5)',
                 borderGlassBtn: 'rgba(128, 128, 128, 0.1)',
+                bggridcolor: 'rgba(255, 255, 255, 0.1)',
                 button1: '#0ce39a',
                 button2: '#69007f',
                 button3: '#fc0987',

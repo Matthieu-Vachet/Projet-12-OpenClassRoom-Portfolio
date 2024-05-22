@@ -4,6 +4,7 @@
 
 @import './keyframes.scss';
 @import './variable.scss';
+
 * {
     margin: 0;
     padding: 0;
@@ -108,6 +109,12 @@ ul {
 .my-toast {
     @include Syne(10rem, 700, 0);
     text-transform: none !important;
+}
+
+@layer utilities {
+    .overlay-mask {
+        mask-image: linear-gradient(0deg, rgb(0 0 0 / 100%) 0%, rgb(0 0 0 / 0%) 40%);
+    }
 }
 
 .white-mode {

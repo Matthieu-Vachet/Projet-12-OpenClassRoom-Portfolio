@@ -9,14 +9,17 @@
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
-        gap: 0.5em;
+        gap: 0.7em;
         margin-top: 1.5rem;
         margin-left: 0.25rem;
         z-index: 2;
     }
 
     .vertical-text {
-        @include Syne(12px, 400, 0.15em);
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        @include Syne(14px, 400, 0.15em);
         color: var(--basicWhite);
         writing-mode: vertical-rl;
         transform: rotate(180deg);
