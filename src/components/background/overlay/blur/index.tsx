@@ -9,7 +9,7 @@ const Blur = () => {
         const bodyHeight = document.body.clientHeight;
         const bottomThreshold = bodyHeight - windowHeight - 25;
 
-        const opacity = scrollY >= bottomThreshold ? 0 : 0.5;
+        const opacity = scrollY >= bottomThreshold ? 0 : 1;
         setScrollOpacity(opacity);
     };
 
