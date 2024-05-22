@@ -13,14 +13,26 @@
 
 /* Importation des modules */
 import { motion, useAnimation } from 'framer-motion';
-import PropTypes from 'prop-types';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 /* Importation du style */
 import './Animation.scss';
 
-export default function AnimatedSubtitle({ text, className, wordSpace, charSpace }) {
+type AnimatedSubtitleProps = {
+    text: string;
+    className: string;
+    wordSpace: string;
+    charSpace: string;
+    delay?: number;
+};
+
+export default function AnimatedSubtitle({
+    text,
+    className,
+    wordSpace,
+    charSpace,
+}: AnimatedSubtitleProps) {
     const { ref, inView } = useInView({
         threshold: 0.1, // L'élément est considéré comme dans le viewport quand il est entièrement visible
         triggerOnce: false, // L'observation s'arrête après la première détection
@@ -76,12 +88,7 @@ export default function AnimatedSubtitle({ text, className, wordSpace, charSpace
                             delayChildren: index * 0.25,
                             staggerChildren: 0.05,
                         }}
-                        style={{
-                            display: 'inline-block',
-                            whiteSpace: 'nowrap',
-                            marginRight: wordSpace,
-                        }}
-                        className={`h1-animated`}
+                        className={`inline-block whitespace-nowrap ${wordSpace}`}
                     >
                         {word.split('').map((character, index) => {
                             return (
@@ -89,7 +96,7 @@ export default function AnimatedSubtitle({ text, className, wordSpace, charSpace
                                     aria-hidden='true'
                                     key={index}
                                     variants={characterAnimation}
-                                    style={{ display: 'inline-block', marginRight: charSpace }}
+                                    className={`inline-block ${charSpace}`}
                                 >
                                     {character}
                                 </motion.span>
@@ -101,10 +108,3 @@ export default function AnimatedSubtitle({ text, className, wordSpace, charSpace
         </h1>
     );
 }
-
-AnimatedSubtitle.propTypes = {
-    text: PropTypes.string.isRequired,
-    className: PropTypes.string.isRequired,
-    wordSpace: PropTypes.string,
-    charSpace: PropTypes.string,
-};

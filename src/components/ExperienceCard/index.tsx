@@ -22,7 +22,8 @@
  */
 
 /* Importation des modules */
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
+import React from 'react';
 
 /* Importation des composants */
 import Tilt from 'react-parallax-tilt';
@@ -37,6 +38,22 @@ import { GiDiploma } from 'react-icons/gi';
 /* Importation du style */
 import './style.scss';
 
+type ExperienceCardProps = {
+    school: string;
+    src: string;
+    width?: string;
+    height?: string;
+    title: string;
+    startDate: string;
+    endDate: string;
+    location: string;
+    description: string;
+    diplome: string;
+    reverse?: boolean;
+    index?: string;
+    alt?: string;
+};
+
 export default function ExperienceCard({
     school,
     src,
@@ -49,7 +66,9 @@ export default function ExperienceCard({
     description,
     diplome,
     reverse,
-}) {
+    index,
+    alt,
+}: ExperienceCardProps) {
     return (
         <div className={`experience-content ${reverse ? 'reverse' : ''}`}>
             <div className='experience-cards'>
@@ -88,25 +107,25 @@ export default function ExperienceCard({
                 </div>
             </div>
             <div className='grain'>
-                <Grain baseFrequency='7' numOctaves='3' />
+                <Grain baseFrequency='7' numOctaves={3} />
             </div>
         </div>
     );
 }
 
-ExperienceCard.propTypes = {
-    school: PropTypes.string.isRequired,
-    src: PropTypes.string.isRequired,
-    width: PropTypes.string,
-    height: PropTypes.string,
-    title: PropTypes.string.isRequired,
-    startDate: PropTypes.string.isRequired,
-    endDate: PropTypes.string.isRequired,
-    location: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    diplome: PropTypes.string.isRequired,
-    reverse: PropTypes.bool,
-};
+// ExperienceCard.propTypes = {
+//     school: PropTypes.string.isRequired,
+//     src: PropTypes.string.isRequired,
+//     width: PropTypes.string,
+//     height: PropTypes.string,
+//     title: PropTypes.string.isRequired,
+//     startDate: PropTypes.string.isRequired,
+//     endDate: PropTypes.string.isRequired,
+//     location: PropTypes.string.isRequired,
+//     description: PropTypes.string.isRequired,
+//     diplome: PropTypes.string.isRequired,
+//     reverse: PropTypes.bool,
+// };
 
 ExperienceCard.defaultProps = {
     width: '250px',

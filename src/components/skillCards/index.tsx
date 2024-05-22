@@ -16,7 +16,7 @@
  */
 
 /* Importation des modules */
-import PropTypes from 'prop-types';
+import React from 'react';
 import { motion } from 'framer-motion';
 import Tilt from 'react-parallax-tilt';
 import { useInView } from 'react-intersection-observer';
@@ -24,7 +24,22 @@ import { useInView } from 'react-intersection-observer';
 /* Importation du style */
 import './style.scss';
 
-export default function SkillCards({ name, Image, fontSize, index, alt, color }) {
+type SkillCardsProps = {
+    name: string;
+    Image: React.FC<{
+        className: string;
+        color: string;
+        fontSize: number;
+        alt: string;
+        tabIndex: string;
+    }>;
+    fontSize: number;
+    index: number;
+    alt: string;
+    color: string;
+};
+
+export default function SkillCards({ name, Image, fontSize, index, alt, color }: SkillCardsProps) {
     const { ref, inView } = useInView({
         threshold: 0.6,
         triggerOnce: true,
@@ -61,12 +76,3 @@ export default function SkillCards({ name, Image, fontSize, index, alt, color })
         </motion.div>
     );
 }
-
-SkillCards.propTypes = {
-    name: PropTypes.string.isRequired,
-    Image: PropTypes.func.isRequired,
-    fontSize: PropTypes.number.isRequired,
-    color: PropTypes.string.isRequired,
-    index: PropTypes.number.isRequired,
-    alt: PropTypes.string.isRequired,
-};

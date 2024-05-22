@@ -1,5 +1,5 @@
 /**
- * Composant AnimatedElement qui anime un élément lorsqu'il entre dans le viewport.
+ * Composant AnimatedSkill qui anime un élément de compétence lorsqu'il entre dans le viewport.
  * Il utilise la bibliothèque framer-motion pour l'animation et react-intersection-observer pour détecter quand l'élément est dans le viewport.
  *
  * @param {object} props - Les propriétés passées au composant.
@@ -7,16 +7,21 @@
  * @param {number} props.delay - Le délai avant le début de l'animation.
  * @param {string} props.className - La classe CSS à appliquer à l'élément animé.
  *
- * @returns {JSX.Element} Un élément animé qui devient visible lorsqu'il entre dans le viewport.
+ * @returns {JSX.Element} Un élément de compétence animé qui devient visible lorsqu'il entre dans le viewport.
  */
 
-/* Importation des  modules */
+/* Importation des modules */
 import { motion, useAnimation } from 'framer-motion';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-import PropTypes from 'prop-types';
 
-export default function AnimatedElement({ children, delay, className }) {
+type AnimatedSkillProps = {
+    children: React.ReactNode;
+    delay: number;
+    className: string;
+};
+
+export default function AnimatedSkill({ children, delay, className }: AnimatedSkillProps) {
     const ctrls = useAnimation();
 
     const { ref, inView } = useInView({
@@ -33,18 +38,16 @@ export default function AnimatedElement({ children, delay, className }) {
         }
     }, [ctrls, inView]);
 
-    const ElementVariante = {
-        hidden: {
-            opacity: 0,
-            y: `1em`,
-        },
+    const animationDelay = 0.2;
+
+    const skillVariants = {
+        hidden: { opacity: 0 },
         visible: {
             opacity: 1,
-            y: `0em`,
             transition: {
-                delay: delay,
+                delay: delay * animationDelay,
                 duration: 0.3,
-                ease: [0.9, 0.9, 0.9, 0.9],
+                ease: [0.2, 0.65, 0.3, 0.9],
                 delayChildren: 0.5,
                 staggerChildren: 0.5,
             },
@@ -56,16 +59,10 @@ export default function AnimatedElement({ children, delay, className }) {
             ref={ref}
             initial='hidden'
             animate={ctrls}
-            variants={ElementVariante}
+            variants={skillVariants}
             className={className}
         >
             {children}
         </motion.div>
     );
 }
-
-AnimatedElement.propTypes = {
-    children: PropTypes.node.isRequired,
-    className: PropTypes.string,
-    delay: PropTypes.number,
-};

@@ -9,7 +9,7 @@
  */
 
 /* Importation des modules */
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 /* Importation des ressources */
 import { MdKeyboardDoubleArrowUp } from 'react-icons/md';

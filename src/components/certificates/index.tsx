@@ -6,13 +6,18 @@
  */
 
 /* Importation des données */
+import React from 'react';
 import { certificates } from '../../utils/constants/constants';
 import { useTranslation } from 'react-i18next';
 
 /* Importation des styles */
 import './style.scss';
 
-export default function Certificates() {
+interface CertificatesProps {
+    className?: string;
+}
+
+export default function Certificates({ className }: CertificatesProps) {
     const { t } = useTranslation();
 
     return (
