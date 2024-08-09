@@ -34,8 +34,8 @@ import './style.scss';
 
 export default function Login({ onClose }) {
     const { t } = useTranslation();
-    const [email, setEmail] = useState('vachet.matthieu@icloud.com');
-    const [password, setPassword] = useState('Matthieuvachet061290');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const { setIsLoggedIn, setToken } = useContext(AuthContext);
 
     const handleLogin = async () => {
